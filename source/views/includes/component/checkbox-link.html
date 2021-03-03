@@ -1,0 +1,5 @@
+<a href="#" class="js-checkbox-link checkbox-link {% if include.data.checked %}checked{% endif %}" data-filter-name="{{ include.data.text }}">
+  <span class="checkbox-link__title">{{ include.data.text }}
+    {% if include.data.count %}<span class="checkbox-link__count">({{ include.data.count }})</span>{% endif %}
+  </span>
+</a>

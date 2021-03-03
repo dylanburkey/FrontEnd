@@ -1,0 +1,34 @@
+{% assign e = site.data.press-release-detail[include.data] %}
+
+<div class="press-release-detail">
+  <div class="press-release-detail__meta">
+    {% for item in e.items %}
+    <span class="{{item.class}}">{{item.text}}</span>
+    {% endfor %}
+  </div>
+  <div class="press-release-detail__wrapper">
+    <div class="press-release-detail__article">
+      <h2 class="press-release-detail__title">{{e.title}}</h2>
+      <p class="press-release-detail__subtitle">{{e.subtitle}}</p>
+      <div class="press-release-detail__excerpt">
+        <span class="press-release-detail__location">{{e.location}}</span>
+        <p>{{e.description}}</p>
+      </div>
+      <div class="press-release-detail__content">
+        {% include component/rte.html
+        data="press-release" %}
+      </div>
+      <div class="press-release-detail__documents">
+        {% include component/related-documents.html
+        data="related-documents-two-column" %}
+      </div>
+    </div>
+    <div class="press-release-detail__rail">
+      {% include component/share-cta-links.html %}
+      <div class="press-release-detail__rail-content">
+        {% include component/content-rail.html
+        data="content-rail" %}
+      </div>
+    </div>
+  </div>
+</div>

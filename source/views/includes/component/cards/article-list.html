@@ -1,0 +1,29 @@
+{% assign data = site.data.cards.article-list[include.data][include.index] %}
+
+<div class="card card--article-list">
+	<a href="{{ data.url }}" class="card__image">
+		<div class="card__image-wrapper">
+			<img src="{{ data.imageSrc | prepend: site.baseurl }}" alt="{{ data.imageAlt }}" />
+		</div>
+	</a>
+	<div class="card__content">
+		<a href="{{ data.url }}">
+			<p class="card__meta">
+				{% if data.category %}<span class="card__category">{{ data.category }}</span>{% endif %}
+				{% if data.date %}<span class="card__date">{{ data.date }}</span>{% endif %}
+				{% if data.region %}<span class="card__region">{{ data.region }}</span>{% endif %}
+			</p>
+			<h4 class="card__title">{{ data.title }}</h4>
+			{% if data.description %}
+			<p class="card__description">
+				{{ data.description }}
+			</p>
+			{% endif %}
+		</a>
+		{% if data.download %}
+		<div class="card__download">
+			<a class="card__download-link" data-action="press-kit-download" data-action="press-kit-download" data-file-name="File name" data-file-download-url="https://devcd.lincolnelectric.com/-/media/Press-Kits/download.ashx" href="{{data.download-link}}">{{data.download}}</a>
+		</div>
+		{% endif %}
+	</div>
+</div>

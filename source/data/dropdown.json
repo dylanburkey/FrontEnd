@@ -1,0 +1,343 @@
+{
+  "show-dropdown": {
+    "label": "Items 1-10 of 63",
+    "trigger": {
+      "text": "Show:",
+      "sorting-text": "10 Per Page"
+    },
+    "options": [
+      {
+        "value": "10 Per Page",
+        "text": "10 Per Page",
+        "selected": true
+      },
+      {
+        "value": "25 Per Page",
+        "text": "25 Per Page"
+      },
+      {
+        "value": "50 Per Page",
+        "text": "50 Per Page"
+      },
+      {
+        "value": "100 Per Page",
+        "text": "100 Per Page"
+      }
+    ]
+  },
+  "sort-dropdown": {
+    "trigger": {
+      "text": "Sort By:",
+      "sorting-text": "Price(Low-High)"
+    },
+    "options": [
+      {
+        "value": "Price (High-Low)",
+        "text": "Price (High-Low)"
+      },
+      {
+        "value": "Price (Low-High)",
+        "text": "Price (Low-High)",
+        "selected": true
+      },
+      {
+        "value": "Relevance",
+        "text": "Relevance"
+      },
+      {
+        "value": "New",
+        "text": "New"
+      },
+      {
+        "value": "Name (A to Z)",
+        "text": "Name (A to Z)"
+      },
+      {
+        "value": "Name (Z to A)",
+        "text": "Name (Z to A)"
+      }
+    ]
+  },
+  "region-dropdown": {
+    "trigger": {
+      "text": "Region:",
+      "sorting-text": "US"
+    },
+    "options": [
+      {
+        "value": "US",
+        "text": "US",
+        "selected": true
+      },
+      {
+        "value": "CA",
+        "text": "CA"
+      },
+      {
+        "value": "AR",
+        "text": "AR"
+      },
+      {
+        "value": "BR",
+        "text": "BR"
+      },
+      {
+        "value": "VE",
+        "text": "VE"
+      }
+    ]
+  },
+  "nav-region-dropdown": {
+    "trigger": {
+      "text": "Region:",
+      "sorting-text": "US"
+    },
+    "options": [
+      {
+        "value": "US",
+        "text": "US",
+        "selected": true
+      },
+      {
+        "value": "CA",
+        "text": "CA"
+      },
+      {
+        "value": "AR",
+        "text": "AR"
+      },
+      {
+        "value": "BR",
+        "text": "BR"
+      },
+      {
+        "value": "VE",
+        "text": "VE"
+      }
+    ]
+  },
+  "nav-show-dropdown": {
+    "label": "Items 1-10 of 63",
+    "trigger": {
+      "text": "Show:",
+      "sorting-text": "10 Per Page"
+    },
+    "options": [
+      {
+        "value": "10 Per Page",
+        "text": "10 Per Page",
+        "selected": true
+      },
+      {
+        "value": "25 Per Page",
+        "text": "25 Per Page"
+      },
+      {
+        "value": "50 Per Page",
+        "text": "50 Per Page"
+      },
+      {
+        "value": "100 Per Page",
+        "text": "100 Per Page"
+      }
+    ]
+  },
+  "pdp-diameter": {
+    "label": "Diameter",
+    "trigger": {
+      "text": "Select Diameter"
+    },
+    "options": [
+      {
+        "value": "option-1",
+        "text": "Option 1",
+        "name": "diameter"
+      },
+      {
+        "value": "option-2",
+        "text": "Option 2",
+        "selected": true,
+        "name": "diameter"
+      },
+      {
+        "value": "option-3",
+        "text": "Option 3",
+        "name": "diameter"
+      },
+      {
+        "value": "option-4",
+        "text": "Option 4",
+        "name": "diameter"
+      },
+      {
+        "value": "option-5",
+        "text": "Option 5",
+        "name": "diameter"
+      },
+      {
+        "value": "option-6",
+        "text": "Option 6",
+        "name": "diameter"
+      },
+      {
+        "value": "option-7",
+        "text": "Option 7",
+        "name": "diameter"
+      }
+    ]
+  },
+  "pdp-packages": {
+    "label": "Packages",
+    "disabled": true,
+    "trigger": {
+      "text": "Select Package"
+    },
+    "options": [
+      {
+        "value": "package-a",
+        "text": "Package A",
+        "name": "packages"
+      },
+      {
+        "value": "package-b",
+        "text": "Package B",
+        "name": "packages"
+      },
+      {
+        "value": "package-c",
+        "text": "Package C",
+        "name": "packages"
+      },
+      {
+        "value": "package-d",
+        "text": "Package D",
+        "name": "packages"
+      }
+    ]
+  },
+  "pdp-wire-feeder": {
+    "label": "Model",
+    "disabled": true,
+    "dropdown-style": "image",
+    "trigger": {
+      "text": "Select Model"
+    },
+    "options": [
+      {
+        "value": "model-a",
+        "text": "Dual Power Model A",
+        "name": "models",
+        "title": "Dual Power Model",
+        "description": "Digital Display, Across-the-Arc Sensing or Control Cable Connection. STT Capable.",
+        "sku": "K2614-6",
+        "image": "/images/pdp-helmet-thumb.png"
+      },
+      {
+        "value": "model-b",
+        "text": "Dual Power Model B",
+        "name": "models",
+        "title": "Dual Power Model B",
+        "description": "Digital Display, Across-the-Arc Sensing or Control Cable Connection. STT Capable.",
+        "sku": "K2614-7",
+        "image": "/images/pdp-helmet-thumb.png"
+      },
+      {
+        "value": "model-c",
+        "text": "Dual Power Model C",
+        "name": "models",
+        "title": "Dual Power Model C",
+        "description": "Digital Display, Across-the-Arc Sensing or Control Cable Connection. STT Capable.",
+        "sku": "K2614-8",
+        "image": "/images/pdp-helmet-thumb.png"
+      }
+    ]
+  },
+  "generate-customer-quote": {
+    "label": "State",
+    "trigger": {
+      "text": "Please Select"
+    },
+    "options": [
+      {
+        "value": "option-1",
+        "text": "Option 1",
+        "name": "option"
+      },
+      {
+        "value": "option-2",
+        "text": "Option 2",
+        "selected": true,
+        "name": "option"
+      },
+      {
+        "value": "option-3",
+        "text": "Option 3",
+        "name": "option"
+      },
+      {
+        "value": "option-4",
+        "text": "Option 4",
+        "name": "option"
+      },
+      {
+        "value": "option-5",
+        "text": "Option 5",
+        "name": "option"
+      },
+      {
+        "value": "option-6",
+        "text": "Option 6",
+        "name": "option"
+      },
+      {
+        "value": "option-7",
+        "text": "Option 7",
+        "name": "option"
+      }
+    ]
+  },
+  "customer-quote": {
+    "label": "State",
+    "trigger": {
+      "text": "Please Select"
+    },
+    "options": [
+      {
+        "value": "option-1",
+        "text": "Option 1",
+        "name": "option"
+      },
+      {
+        "value": "option-2",
+        "text": "Option 2",
+        "selected": true,
+        "name": "option"
+      },
+      {
+        "value": "option-3",
+        "text": "Option 3",
+        "name": "option"
+      },
+      {
+        "value": "option-4",
+        "text": "Option 4",
+        "name": "option"
+      },
+      {
+        "value": "option-5",
+        "text": "Option 5",
+        "name": "option"
+      },
+      {
+        "value": "option-6",
+        "text": "Option 6",
+        "name": "option"
+      },
+      {
+        "value": "option-7",
+        "text": "Option 7",
+        "name": "option"
+      }
+    ]
+  }
+}

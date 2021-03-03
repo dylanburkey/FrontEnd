@@ -1,0 +1,371 @@
+{
+	"homepage-featured-products": [
+		{
+			"url": "#1#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Tomahawk&reg; 375 Air",
+			"description": "Plasma Cutter",
+			"sku": "K2806-1",
+			"rating": {
+				"stars": 4,
+				"count": 103
+			},
+			"list-title": "List Price",
+			"pricing": {
+				"list": "$1,723.00",
+				"default": "$1,900.00"
+			},
+			"flag": "Sale",
+			"compare": true
+		},
+		{
+			"url": "#2#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Ranger&reg; 330MPX", 
+			"description": "Welder/Generator Engine Drive (KOHLER&reg;)",
+			"sku": "K2800-1",
+			"rating": {
+				"stars": 5,
+				"count": 99
+			},
+			"list-title": "List Price",
+			"pricing": {
+				"list": "$5,549.00"
+			},
+			"compare": true
+		},
+		{
+			"url": "#3#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "PIPEFAB&trade; READY-PAK&reg;",
+			"description": "Multi-Process Welders",
+			"sku": "K1920-1",
+			"rating": {
+				"stars": 3,
+				"count": 10
+			},
+			"list-title": "List Price",
+			"pricing": {
+				"list": "$14,085.37"
+			},
+			"flag": "New",
+			"compare": true
+		},
+		{
+			"url": "#4#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Power MIG&reg; 210MP with Longer Title", 
+			"description": "MIG Welder",
+			"sku": "K2806-7",
+			"rating": {
+				"stars": 1,
+				"count": 87
+			},
+			"list-title": "List Price",
+			"pricing": {
+				"list": "$1,998.00"
+			},
+			"compare": true
+		}
+	],
+	"modal-related-products": [
+		{
+			"url": "#1#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Tomahawk&reg; 375 Air",
+			"description": "Plasma Cutter",
+			"rating": {
+				"stars": 4,
+				"count": 103
+			}
+		},
+		{
+			"url": "#2#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Ranger&reg; 330MPX",
+			"description": "Welder/Generator Engine Drive (KOHLER&reg;)",
+			"rating": {
+				"stars": 5,
+				"count": 99
+			}
+		},
+		{
+			"url": "#3#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "PIPEFAB&trade; READY-PAK&reg;",
+			"description": "Multi-Process Welders",
+			"rating": {
+				"stars": 3,
+				"count": 10
+			}
+		},
+		{
+			"url": "#4#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title":"Power MIG&reg; 210MP with Longer Title",
+			"description": "MIG Welder",
+			"rating": {
+				"stars": 1,
+				"count": 87
+			}
+		}
+	],
+	"viking-3350-you-may-also-need": [
+		{
+			"url": "#1#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Tomahawk&reg; 375 Air",
+			"sku": "K2806-1",
+			"list-title": "MSRP",
+			"pricing": {
+				"list": "$1,723.00"
+			}
+		},
+		{
+			"url": "#2#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Ranger&reg; 330MPX",
+			"sku": "K2800-1",
+			"list-title": "MSRP",
+			"pricing": {
+				"list": "$5,549.00"
+			}
+		},
+		{
+			"url": "#3#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "PIPEFAB&trade; READY-PAK&reg;",
+			"sku": "K1920-1",
+			"list-title": "MSRP",
+			"pricing": {
+				"list": "$14,085.37"
+			}
+		},
+		{
+			"url": "#4#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Power MIG&reg; 210MP with Longer Title",
+			"sku": "K2806-7",
+			"list-title": "MSRP",
+			"pricing": {
+				"list": "$1,998.00"
+			}
+		},
+		{
+			"url": "#5#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Cinque Power MIG&reg; 210MP with Longer Title",
+			"sku": "K2806-7",
+			"list-title": "MSRP",
+			"pricing": {
+				"list": "$1,998.00"
+			}
+		}
+	],
+	"power-mig-product-offerings": [
+		{
+			"url": "#1#",
+			"imageSrc": "/images/602x430.png",
+			"title": "Tomahawk&reg; 375 Air",
+			"description": "Plasma Cutter",
+			"sku": "K2806-1",
+			"rating": {
+				"stars": 4,
+				"count": 103
+			},
+			"list-title": "List Price",
+			"pricing": {
+				"list": "$1,723.00",
+				"default": "$1,900.00"
+			},
+			"flag": "Sale"
+		},
+		{
+			"url": "#2#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Ranger&reg; 330MPX",
+			"description": "Welder/Generator Engine Drive (KOHLER&reg;)",
+			"sku": "K2800-1",
+			"rating": {
+				"stars": 5,
+				"count": 99
+			},
+			"list-title": "List Price",
+			"pricing": {
+				"list": "$5,549.00"
+			}
+		},
+		{
+			"url": "#3#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "PIPEFAB&trade; READY-PAK&reg;",
+			"description": "Multi-Process Welders",
+			"sku": "K1920-1",
+			"rating": {
+				"stars": 3,
+				"count": 10
+			},
+			"list-title": "List Price",
+			"pricing": {
+				"list": "$14,085.37"
+			},
+			"flag": "New"
+		}
+	],
+	"precision-tig-popular-filler-metal": [
+		{
+			"url": "#1#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "WEARTECH® WT-40 TIG",
+			"rating": {
+				"stars": 4,
+				"count": 45
+			},
+			"description": "Hardfacing",
+			"sku": "B2400-320X915",
+			"aws": {
+				"label": "aws:",
+				"value": "A5.21 ERNICR-A"
+			}
+		},
+		{
+			"url": "#2#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "BLUE MAX®",
+			"rating": {
+				"stars": 4,
+				"count": 45
+			},
+			"description": "Orbital Tig",
+			"sku": "ED034153",
+			"aws": {
+				"label": "aws:",
+				"value": "ER316"
+			}
+		},
+		{
+			"url": "#3#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "TECHALLOY® 4130 TIG",
+			"rating": {
+				"stars": 4,
+				"count": 45
+			},
+			"description": "Low Alloy Steel",
+			"sku": "TG4130062628",
+			"aws": {
+				"label": "aws:",
+				"value": "ER316"
+			}
+		},
+		{
+			"url": "#4#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "TECHALLOY® 208 TIG",
+			"rating": {
+				"stars": 4,
+				"count": 45
+			},
+			"description": "Nickel Alloys",
+			"sku": "TG208062638",
+			"aws": {
+				"label": "aws:",
+				"value": "ERNI-1"
+			}
+		}
+	],
+	"welding-helmets": [
+		{
+			"id": "26879423",
+			"url": "#1#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Tomahawk&reg; 375 Air",
+			"description": "Plasma Cutter",
+			"sku": "K2806-1",
+			"rating": {
+				"stars": 4,
+				"count": 103
+			},
+			"list-title": "List Price",
+			"pricing": {
+				"list": "$1,723.00",
+				"default": "$1,900.00"
+			},
+			"flag": "Sale",
+			"compare": true
+		},
+		{
+			"url": "#2#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Ranger&reg; 330MPX", 
+			"description": "Welder/Generator Engine Drive (KOHLER&reg;)",
+			"sku": "K2800-1",
+			"rating": {
+				"stars": 5,
+				"count": 99
+			},
+			"list-title": "List Price",
+			"pricing": {
+				"list": "$5,549.00"
+			},
+			"compare": true
+		},
+		{
+			"id": "651238795",
+			"url": "#3#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "PIPEFAB&trade; READY-PAK&reg;",
+			"description": "Multi-Process Welders",
+			"sku": "K1920-1",
+			"rating": {
+				"stars": 3,
+				"count": 10
+			},
+			"list-title": "List Price",
+			"pricing": {
+				"list": "$14,085.37"
+			},
+			"flag": "New",
+			"compare": true
+		},
+		{
+			"url": "#4#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Power MIG&reg; 210MP with Longer Title", 
+			"description": "MIG Welder",
+			"sku": "K2806-7",
+			"rating": {
+				"stars": 1,
+				"count": 87
+			},
+			"list-title": "List Price",
+			"pricing": {
+				"list": "$1,998.00"
+			},
+			"compare": true
+		}
+	]
+}

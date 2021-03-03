@@ -1,0 +1,172 @@
+$block: 'product-selector';
+
+.#{$block} {
+  &__title {
+    @include font(headline);
+    @include typography(h2);
+    color: map-get($color, gray-darkest);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: map-get($spacing, x-small);
+    @include desktop {
+      margin-bottom: map-get($spacing, medium);
+    }
+  }
+
+  &__sub-title {
+    @include font(regular);
+    @include typography(p-large);
+    color: map-get($color, gray-darker);
+    text-align: center;
+    margin: 0 0 map-get($spacing, large);
+    @include desktop {
+      margin-bottom: map-get($spacing, xx-large);
+    }
+  }
+
+  &__configure {
+    display: flex;
+    flex-direction: column;
+    @include desktop {
+      flex-flow: row nowrap;
+      justify-content: center;
+    }
+  }
+
+  &__select {
+    padding: map-get($spacing, x-small) + map-get($spacing, small) map-get($spacing, x-small) + map-get($spacing, small) 30px;
+    border: 1px solid map-get($brand, border);
+    background-color: map-get($brand, background);
+    border-radius: $border-radius;
+    @include desktop {
+      padding: map-get($spacing, x-large) map-get($spacing, x-large) 40px;
+      flex-basis: 396px;
+      width: 396px;
+    }
+  }
+  &__select-item {
+    margin-bottom: map-get($spacing, x-small) + map-get($spacing, small);
+    .select {
+      flex-direction: column;
+      align-items: flex-start;
+      &__label {
+        margin-bottom: map-get($spacing, small);
+        line-height: 17px;
+        @include desktop {
+          font-size: 16px;
+          line-height: 19px;
+        }
+      }
+      &__wrapper {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  &__select-cta {
+    display: flex;
+    justify-content: center;
+    .btn {
+      margin-bottom: 0;
+      margin-top: map-get($spacing, x-small);
+      @include desktop {
+        margin-top: map-get($spacing, small);
+      }
+      &:disabled {
+        cursor: not-allowed;
+        opacity: .3;
+      }
+    }
+  }
+  &__primary-product {
+    .card {
+      &__media {
+        &-wrap {
+          img {
+            border-radius: 0;
+            @include desktop {
+              border-top-right-radius: $border-radius;
+            }
+          }
+        }
+      }
+      &__content {
+        @include desktop {
+          padding: 32px 32px 42px 40px;
+        }
+      }
+      @include mobile-only {
+        flex-direction: column;
+        &__media {
+          width: 100%;
+          flex-basis: 100%;
+        }
+        &__content {
+          flex-grow: 1;
+          flex-basis: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      &:hover {
+        border-radius: 0 0 $border-radius $border-radius;
+        @include desktop {
+          border-radius: 0 $border-radius $border-radius 0;
+        }
+      }
+    }
+    @include desktop {
+      flex-basis: 410px;
+      width: 410px;
+    }
+  }
+
+  &__configure--primary-product {
+    .#{$block} {
+      &__select {
+        position: relative;
+        border-radius: $border-radius $border-radius 0 0;
+        &:after, &:before {
+          top: 100%;
+          left: 50%;
+          border: solid transparent;
+          content: " ";
+          height: 0;
+          width: 0;
+          position: absolute;
+          pointer-events: none;
+          z-index: 1;
+        }
+
+        &:after {
+          border-top-color: map-get($brand, background);
+          border-width: 15px;
+          margin-left: -15px;
+        }
+        &:before {
+          border-top-color: map-get($brand, border);
+          border-width: 16px;
+          margin-left: -16px;
+        }
+        @include desktop {
+          border-radius: $border-radius 0 0 $border-radius;
+          &:after, &:before {
+            left: 100%;
+            top: 40%;
+            margin-left: 0;
+            border-top-color: transparent;
+          }
+          &:after {
+            border-left-color: map-get($brand, background);
+            margin-top: -15px;
+          }
+          &:before {
+            border-left-color: map-get($brand, border);
+            margin-top: -16px;
+          }
+        }
+      }
+    }
+  }
+}

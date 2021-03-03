@@ -1,0 +1,44 @@
+{
+  "related-documents-two-column":{
+    "title":"Documents",
+     "items":[
+       {
+         "subtitle":"Construction Firm Gains Productivity Through Extended Stick-Out Welding Procedures",
+         "description":"Case Study",
+         "url":"#test",
+         "docType":"pdf"
+       },
+       {
+         "subtitle":"East End Welding, Inc., Implements Robotic Submerged Arc Welding For Power Generation Application",
+         "description":"Case Study",
+         "url":"#test",
+         "docType":"pdf"
+       },
+       {
+         "subtitle":"East End Welding, Inc., Implements Robotic Submerged Arc Welding For Power Generation Application",
+         "description":"Case Study",
+         "url":"#test",
+         "docType":"video"
+       },
+       {
+         "subtitle":"East End Welding, Inc., Implements Robotic Submerged Arc Welding For Power Generation Application",
+         "description":"Case Study",
+         "url":"#test",
+         "docType":"excel"
+       },
+       {
+         "subtitle":"East End Welding, Inc., Implements Robotic Submerged Arc Welding For Power Generation Application",
+         "description":"Case Study",
+         "url":"#test",
+         "docType":"pdf"
+       },
+       {
+         "subtitle":"Construction Firm Gains Productivity Through Extended Stick-Out Welding Procedures",
+         "description":"Case Study",
+         "url":"#test",
+         "docType":"pdf",
+         "restricted": true
+       }
+     ]
+  }
+}

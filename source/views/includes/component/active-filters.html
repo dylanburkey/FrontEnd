@@ -1,0 +1,10 @@
+{% assign e = site.data.active-filters[include.data] %}
+
+<div class="active-filters">
+  <div class="active-filters-content">
+    <span class="active-filters-content__title">{{e.title}}</span>
+    <p class="active-filters-content__description">{{e.description}}</p>
+    <a href="#" class="active-filters-content__close-btn" data-facet-name="{{e.dataActiveFilter}}"></a>
+  </div>
+  <a class="active-filters__clear-btn js-filters-clear" href="{{e.href}}">{{e.text}}</a>
+</div>

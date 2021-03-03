@@ -1,0 +1,533 @@
+$block: 'hero-product';
+
+.#{$block} {
+
+	@include desktop {
+		padding: map-get($spacing, xxx-large) map-get($spacing, medium);
+	}
+	> .container {
+		@include balance-margins;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		margin: auto;
+		@include desktop {
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-direction: row;
+			//margin-top: 64px;
+		}
+	}
+
+	&__meta {
+		@include desktop {
+			display: block;
+			width: 40%;
+		}
+	}
+
+&__fallback-image {
+	height: 300px;
+}
+
+&__slider {
+	//flex-basis: 80%;
+	width: 80%;
+	display: flex;
+	flex-direction: column-reverse;
+	margin: auto;
+	@include desktop {
+		flex-direction: row;
+		//flex-basis: 60%;
+		width: 60%;
+		padding-right: map-get($spacing, large);
+	}
+
+	.gallery-thumbs {
+		margin-top: map-get($spacing, medium) + map-get($spacing, small);
+		padding-top: map-get($spacing, medium) - 2px;
+		display: flex;
+		@include desktop {
+			margin-right: map-get($spacing, medium);
+			padding: map-get($spacing, x-large)-1px 0;
+			flex-basis: map-get($spacing, xx-large) + map-get($spacing, small);
+			width:  map-get($spacing, xx-large) + map-get($spacing, small);
+			flex-direction: column;
+			max-height: $max-width-text;
+			margin-top: 0;
+		}
+
+		.swiper-wrapper {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+			@include desktop {
+				flex-direction: column;
+				justify-content: flex-start;
+			}
+		}
+
+		.swiper-slide {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			width: map-get($spacing, x-small);
+			height: map-get($spacing, x-small);
+			margin-right: map-get($spacing, xx-small);
+			&:last-of-type {
+				margin: 0;
+			}
+
+			&:after {
+				content:"";
+				width: map-get($spacing, x-small);
+				height: map-get($spacing, x-small);
+				background-color:map-get($color, gray-light);
+				border-radius:4px;
+				position: absolute;
+			}
+
+			@include desktop {
+				//firefox fix for swiper slide right border
+				width: 99%;
+				height: 100%;
+				margin-right: 0;
+				&:after {
+					content: none;
+				}
+			}
+			@include desktop {
+				border: 1px solid map-get($brand, border);
+			}
+			img {
+				width: 100%;
+				visibility: hidden;
+				@include desktop {
+					visibility: visible;
+				}
+			}
+
+			&.swiper-slide-thumb-active {
+				&:after {
+					background-color: map-get($color, gray);
+				}
+				@include desktop {
+					&:after {
+						content: "";
+						position: absolute;
+						bottom: -1px;
+						display: block;
+						width: calc(100% + 2px);
+						left: -1px;
+						height: 3px;
+						z-index: 1;
+						background: map-get($brand, primary);
+					}
+				}
+			}
+		}
+
+	}
+
+	.gallery-top {
+		width: calc(100% - 60px);
+		@include desktop {
+			flex-basis: calc(100% - 60px);
+		}
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		height: map-get($spacing, x-large)-1px;
+		margin-top: - (map-get($spacing, x-large)-1px);
+		position: relative;
+		top: auto;
+		left: auto;
+		bottom: auto;
+		right: auto;
+		background: map-get($color, gray-lightest);
+		width: 100%;
+		display: none;
+		@include desktop {
+			display: flex;
+			&:after {
+				font-size: 32px;
+				font-weight: bold;
+				color: map-get($color, red);
+			}
+
+			&:focus {
+				outline: 0;
+			}
+		}
+		&:after {
+			transform: rotate(90deg) scale(.5);
+		}
+	}
+
+	.swiper-button-prev {
+		top: 0;
+		&:after {
+			@include icon(chevron-left);
+		}
+	}
+
+	.swiper-button-next {
+		bottom: - (map-get($spacing, x-large)-1px);
+ 		&:after {
+			@include icon(chevron-right);
+		}
+	}
+}
+	.gallery-thumbs {
+		.swiper-wrapper {
+			@include desktop {
+				display: block;
+			}
+		}
+	}
+
+	@media only screen and (min-width: 1024px) and (max-width:1280px) {
+		&__slider, &__meta {
+			width: 50%;
+		}
+	}
+
+	&__detail {
+		@include balance-margins;
+		padding: map-get($spacing, large);
+	}
+
+	&__subtitle {
+		@include typography(p-large);
+	}
+
+	&__aws {
+		@include font(headline);
+		@include typography(p-small); 
+
+		a {
+			@include font(regular);
+			font-size: 13px;
+			line-height: 18px;
+			margin-left: map-get($spacing, x-small);
+		}
+	}
+
+	&__add-review {
+		a {
+			font-size: 13px;
+			line-height: 18px;
+		}
+	}
+
+	&__description {
+		@include typography(p-small);
+		@include balance-margins;
+		border-top: 1px solid map-get($brand, border);
+		margin-top: map-get($spacing, medium);
+		padding-top: map-get($spacing, medium);
+	}
+
+	&__input-output-icons {
+		margin: map-get($spacing, medium) 0;
+		@include desktop {
+			margin: map-get($spacing, large) 0 map-get($spacing, x-large) 0;
+		}
+	}
+
+	&__add-to-cart {
+		@include balance-margins;
+		padding: map-get($spacing, large);
+		margin-top: map-get($spacing, x-large);
+		background-color: map-get($color, gray-lightest);
+	}
+
+	&__dropdowns {
+		@include balance-margins;
+	}
+
+	&__dropdown {
+		margin: map-get($spacing, large) 0;
+	}
+
+	&__msrp {
+		@include font(headline);
+		@include typography(p-small);
+		color: map-get($color, gray);
+	}
+
+	&__pricing {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: map-get($spacing, large);
+	}
+
+	&__price {
+		font-weight: bold;
+		p {
+			@include typography(p-small);
+			margin: 0;
+			margin-bottom: map-get($spacing, xx-small);
+
+			&.hero-product__your-price {
+				@include font(headline);
+				@include typography(h2);
+				@include desktop {
+					@include typography(h3);
+				}
+			}
+		}
+	}
+
+	&__sign-in-view-price {
+		text-align: right;
+		@include mobile-only {
+			margin-left: auto;
+		}
+		p, a {
+			@include font(regular);
+			font-size: 13px;
+		}
+		p {
+			margin: 0;
+			color: map-get($color, gray-darker);
+		}
+	}
+
+	&__availability {
+		@include balance-margins;
+		border-bottom: 1px solid map-get($brand, border);
+		margin-bottom: map-get($spacing, large);
+		padding-bottom: map-get($spacing, large);
+		
+		&--in-stock,
+		&--backorder {
+			display: flex;
+		}
+
+		&--backorder {
+			padding-bottom: map-get($spacing, small);
+		}
+		
+		> p {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+		&--left  {
+			display:block;
+		}
+		&--right {
+			p {
+				margin: 2px 4px;
+				color: map-get($color, gray-darkest);
+				@include font(regular);
+				font-size: 14px;
+				letter-spacing: 0;
+				line-height: 18px;
+				@include mobile-only {
+					margin: 1px 4px;
+				}
+			}
+		}
+	}
+
+	&__misc,
+	&__availability {
+		@include font(headline);
+		* {
+			font-size: 14px;
+		}
+	}
+
+	&__misc {
+		p {
+			margin: map-get($spacing, xx-small) 0;
+		}
+	}
+
+	&__availability-quantity {
+		color: map-get($color, gray-darkest);
+		@include font(regular);
+		font-size: 14px;
+		line-height: 19px;
+	}
+
+	&__availability-status {
+		@include typography(p-small);
+		font-weight: bold;
+
+		+ * {
+			&:before {
+				content: "|";
+				color: #979797;
+				margin: 0 map-get($spacing, xx-small);
+			}
+		}
+
+		&--in-stock {
+			color: #095B1F;
+		}
+
+		&--backorder {
+			color: #B5520A;
+		}
+	}
+
+	&__availability-message {
+		margin-top: - map-get($spacing, small);
+		&--backorder {
+			color: #B5520A;
+		}
+	}
+
+	&__quantity {
+		display: flex;
+		align-items: center;
+		margin: map-get($spacing, large) 0;
+		@include mobile-only {
+			flex-wrap: wrap;
+		}
+		&--disabled {
+			opacity: 0.35;
+			pointer-events: none;
+		}
+	}
+
+	&__add-to-list {
+		display:flex;
+		margin: map-get($spacing, large) 0;
+		margin-left: auto;
+		@include mobile-only {
+			display: block;
+		}
+		.hero-product__add-to-list-submit {
+			padding-left: map-get($spacing, medium);
+			padding-right: map-get($spacing, medium);
+			color: map-get($color, red);
+			background-color: transparent;
+			&:disabled {
+				color: map-get($color, gray-light);
+			}
+		}
+		a {
+			@include mobile-only {
+				margin-bottom: 0;
+			}
+		}
+		.add-to-list-select {
+			height: 48px;
+			border: 1px solid map-get($color, gray-light);
+			border-radius: 2px;
+			background-color: map-get($color, white);
+			color: map-get($color, gray-darker);
+			@include font(regular);
+			font-size: 14px;
+			letter-spacing: 0;
+			line-height: 16px;
+			padding: 0 map-get($spacing, small);
+			width: 100%;
+			&:focus{
+				outline-color:  map-get($color, gray-light);
+			}
+			-moz-appearance: none;
+			-webkit-appearance: none;
+			&:-ms-expand {
+				display: none;
+			}
+			
+		}
+	}
+	.add-to-list-success-message {
+		font-size: 15px;
+		line-height: 21px;
+		font-weight: bold;
+		@include font(headline);
+		&--success {
+			color: map-get($color, green);
+		}
+		&--error {
+			color: map-get($color, red);
+		}
+	}
+	&__add-to-list-select {
+		width: 40%;
+		position: relative;
+		margin-right: map-get($spacing, medium);
+		&:after {
+			@include icon(chevron-down);
+				font-size: 14px;
+				line-height: 1;
+				margin-left: map-get($spacing, x-small);
+				position: absolute;
+				top: 17px;
+				right: 14px;
+				pointer-events: none;
+				color: map-get($color, red);
+		}
+		@include mobile-only {
+			width: 100%;
+		}
+	}
+
+	&__unavailable {
+		font-size: 18px;
+		line-height: 23px;
+		font-weight: bold;
+		color: map-get($color, red);
+	}
+
+	.tooltip {
+		@include font(headline);
+		color: map-get($color, red);
+		height: 12px;
+		width: 12px;
+		display: inline-block;
+		border-radius: 100%;
+		line-height: 12px;
+		text-align: center;
+		font-size: 12px;
+		font-weight: bold;
+		margin-left: map-get($spacing, xx-small);
+		cursor: pointer;
+	}
+
+	.dropdown {
+		@include balance-margins;
+		flex-direction: column;
+		align-items: flex-start;
+
+		//fix for IE
+		&__label,
+		&__wrapper {
+			flex: 1 1 auto;
+		}
+
+		&__wrapper {
+			display: block;
+			width: 100%;
+		}
+
+		&__select {
+			width: 100%;
+		}
+
+		&__trigger {
+			&:after {
+				margin-left: auto;
+			}
+		}
+	}
+
+	&__update-price {
+		&.disabled {
+			opacity: .5;
+		}
+	}
+}
+

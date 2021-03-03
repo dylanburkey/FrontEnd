@@ -1,0 +1,104 @@
+{
+	"special-offers": [
+		{
+			"url": "#",
+			"title": "Tomahawk 375 Air",
+			"description":  "Plasma Cutter",
+			"sku": "K2806-1",
+			"list": [
+				"Cuts up to 3/8 inch steel",
+				"Onboard air compressor",
+				"Lorem ipsum dolor setalum vasar"
+			],
+			"image": {
+				"src": "/images/product1-promotions-detail.png",
+				"alt": "Tomahawk 375 Air"
+			},
+			"offer": {
+				"main": {
+					"text": "$250 Savings",
+					"subtext": "$1,473 After Rebate"
+				},
+				"secondary": {
+					"text": "Free Accessories Kit",
+					"subtext": "$480 Value"
+				}
+			}
+		},
+		{
+			"url": "#",
+			"title": "Tomahawk 375 Air",
+			"description":  "Plasma Cutter",
+			"sku": "K2806-1",
+			"list": [
+				"Cuts up to 3/8 inch steel",
+				"Onboard air compressor",
+				"Lorem ipsum dolor setalum vasar"
+			],
+			"image": {
+				"src": "/images/product1-promotions-detail.png",
+				"alt": "Tomahawk 375 Air"
+			},
+			"offer": {
+				"main": {
+					"text": "$250 Savings",
+					"subtext": "$1,473 After Rebate"
+				},
+				"secondary": {
+					"text": "Free Accessories Kit",
+					"subtext": "$480 Value"
+				}
+			}
+		},
+		{
+			"url": "#",
+			"title": "Tomahawk 375 Air",
+			"description":  "Plasma Cutter",
+			"sku": "K2806-1",
+			"list": [
+				"Cuts up to 3/8 inch steel",
+				"Onboard air compressor",
+				"Lorem ipsum dolor setalum vasar"
+			],
+			"image": {
+				"src": "/images/product1-promotions-detail.png",
+				"alt": "Tomahawk 375 Air"
+			},
+			"offer": {
+				"main": {
+					"text": "$250 Savings",
+					"subtext": "$1,473 After Rebate"
+				},
+				"secondary": {
+					"text": "Free Accessories Kit",
+					"subtext": "$480 Value"
+				}
+			}
+		},
+		{
+			"url": "#",
+			"title": "Tomahawk 375 Air",
+			"description":  "Plasma Cutter",
+			"sku": "K2806-1",
+			"list": [
+				"Cuts up to 3/8 inch steel",
+				"Onboard air compressor",
+				"Lorem ipsum dolor setalum vasar"
+			],
+			"image": {
+				"src": "/images/product1-promotions-detail.png",
+				"alt": "Tomahawk 375 Air"
+			},
+			"offer": {
+				"main": {
+					"text": "$250 Savings",
+					"subtext": "$1,473 After Rebate"
+				},
+				"secondary": {
+					"text": "Free Accessories Kit",
+					"subtext": "$480 Value"
+				}
+			}
+		}
+	]
+}

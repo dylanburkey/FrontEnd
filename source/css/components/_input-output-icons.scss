@@ -1,0 +1,51 @@
+$block: 'input-output-icons';
+
+.#{$block} {
+  display: flex;
+  flex-flow: row nowrap;
+  &__item {
+    margin-right: map-get($spacing, large);
+    &:last-of-type {
+      margin-right: 0;
+    }
+    @include desktop {
+      margin-right: map-get($spacing, x-large);
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+  &-item {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    &__title {
+      @include font(headline);
+      color: map-get($color, gray);
+      font-size: 14px;
+      line-height: 24px;
+      margin: 0;
+      margin-right: map-get($spacing, x-small);
+    }
+    &__icons {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+    &__icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 6px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+      @include desktop {
+        width: 28px;
+        height: 28px;
+        margin-right: map-get($spacing,x-small);
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

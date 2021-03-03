@@ -1,0 +1,16 @@
+{
+  "card-promo-details": {
+    "offers": [
+      {
+        "title": "$250 Savings",
+        "subtitle": "($1,473 After Rebate)"
+      },
+      {
+        "secondary-offer": true,
+        "title": "Free Accessory Kit",
+        "subtitle": "($480 Value)",
+        "separator": "- OR -"
+      }
+    ]
+  }
+}

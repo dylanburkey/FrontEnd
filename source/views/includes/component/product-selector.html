@@ -1,0 +1,26 @@
+{% assign p = site.data.product-selector[include.data] %}
+<div class="product-selector" id="{{p.id}}">
+  <div class="product-selector__container container">
+    <h2 class="product-selector__title">{{p.title}}</h2>
+    <p class="product-selector__sub-title">{{p.sub-title}}</p>
+    <div class="product-selector__configure {% if p.related-prod %} product-selector__configure--primary-product{% endif %}">
+      <div class="product-selector__select">
+        <form action="?view-matching-gun">
+          {% for select in p.select-items %}
+            <div class="product-selector__select-item">
+              {% include component/select.html data= select %}
+            </div>
+          {% endfor %}
+          <div class="product-selector__select-cta">
+            <button class="btn" type="submit" disabled>View matching gun</button>
+          </div>
+        </form>
+      </div>
+      {% if p.related-prod %}
+        <div class="product-selector__primary-product">
+          {% include component/cards/content.html data="promotions-detail-magnum-pro" index = 0 %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

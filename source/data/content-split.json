@@ -1,0 +1,170 @@
+{
+	"training-education": {
+		"LargeRight":true,
+		"image": {
+			"small": "/images/784x560.png",
+			"medium": "/images/784x560.png",
+			"large": "/images/784x560.png",
+			"alt": "Welding Equipment alt text here, don't include special characters"
+		},
+		"style": "image-large",
+		"position": "teaser-left",
+		"teaser": {
+			"eyebrow": "Training & Education",
+			"title": "The Roadmap for a New Generation of Welders",
+			"description": "With a century of involvement in welding training, Lincoln Electric offers the industry’s most comprehensive welding education for today’s welder.",
+			"button": {
+				"title": "More on Training Offerings",
+				"href": "#",
+				"style": "link"
+			}
+		}
+	},
+	"welding-equipment-crosslinc": {
+		"LargeLeft":true,
+		"image": {
+			"small": "/images/784x560.png",
+			"medium": "/images/784x560.png",
+			"large": "/images/784x560.png",
+			"alt": "Welding Equipment alt text here, don't include special characters"
+		},
+		"style": "image-large",
+		"position": "teaser-right",
+		"teaser": {
+			"eyebrow": "CROSSLINC TECHNOLOGY®",
+			"title": "Walk Less, Weld More. Full Control with Fewer Cables.",
+			"description": "With a century of involvement in welding training, Lincoln Electric offers the industry’s most comprehensive welding education for today’s welder.",
+			"button": {
+				"title": "Find out more",
+				"href": "#",
+				"style": "link"
+			}
+		}
+	},
+	"7-inch-user-interface--right": {
+		"image": {
+			"small": "/images/784x560.png",
+			"medium": "/images/784x560.png",
+			"large": "/images/784x560.png",
+			"alt": "Welding Equipment alt text here, don't include special characters"
+		},
+		"style": "image",
+		"position": "teaser-left",
+		"teaser": {
+			"eyebrow": "CROSSLINC TECHNOLOGY®",
+			"title": "7-Inch User Interface",
+			"description": "The Advanced features of the Power MIG 360 are communicated through an easy-to-use, highly visible, 7-inch color display, which enhances communication between operator and machine.",
+			"button": {
+				"title": "Find out more",
+				"href": "#",
+				"style": "link"
+			}
+		}
+	},
+	"7-inch-user-interface--left": {
+		"image": {
+			"small": "/images/784x560.png",
+			"medium": "/images/784x560.png",
+			"large": "/images/784x560.png",
+			"alt": "Welding Equipment alt text here, don't include special characters"
+		},
+		"style": "image",
+		"position": "teaser-right",
+		"teaser": {
+			"eyebrow": "CROSSLINC TECHNOLOGY®",
+			"title": "7-Inch User Interface",
+			"description": "The Advanced features of the Power MIG 360 are communicated through an easy-to-use, highly visible, 7-inch color display, which enhances communication between operator and machine.",
+			"button": {
+				"title": "Find out more",
+				"href": "#",
+				"style": "link"
+			}
+		}
+	},
+	"new-equipment": {
+		"smallRight":true,
+		"style": "video",
+		"position": "teaser-left",
+		"teaser": {
+			"eyebrow": "New Equipment",
+			"title": "The New Look of Pipe and Vessel Fabrication",
+			"description": "The next big thing for pipe and vessel fabrication is on its way. Lincoln Electric is bringing you the next generation of welding systems specifically designed for the pipe and vessel industry.",
+			"button": {
+				"title": "Shop New Welding Systems",
+				"href": "#",
+				"style": "link"
+			}
+		},
+		"video": {
+			"embed": "https://www.youtube.com/embed/M7lc1UVf-VE",
+			"title": "The All New PIPEFAB Welding System",
+			"thumbnail": "/images/784x560.png"
+		}
+	},
+	"new-equipment-inline-video": {
+		"smallRight":true,
+		"style": "video-static",
+		"position": "teaser-left",
+		"teaser": {
+			"eyebrow": "New Equipment",
+			"title": "The New Look of Pipe and Vessel Fabrication",
+			"description": "The next big thing for pipe and vessel fabrication is on its way. Lincoln Electric is bringing you the next generation of welding systems specifically designed for the pipe and vessel industry.",
+			"button": {
+				"title": "Shop New Welding Systems",
+				"href": "#",
+				"style": "link"
+			}
+		},
+		"video": {
+			"embed": "https://www.youtube.com/embed/M7lc1UVf-VE",
+			"title": "The All New PIPEFAB Welding System",
+			"thumbnail": "/images/784x560.png"
+		}
+	},
+	"welding-equipment": {
+		"smallLeft":true,
+		"style": "video",
+		"teaser": {
+			"eyebrow": "Introducing",
+			"title": "The All New PIPEFAB™ Welding System",
+			"description": "A next generation welding solution that redefines simplicity and performance in pipe and vessel fabrication. Groundbreaking root-to-cap arc performance, industry-driven simplicity, and unrivaled industry support.",
+			"button": {
+				"title": "Learn More",
+				"href": "#",
+				"style": "link"
+			}
+		},
+		"video": {
+			"embed": "https://www.youtube.com/embed/M7lc1UVf-VE",
+			"title": "The All New PIPEFAB Welding System",
+			"thumbnail": "/images/784x560.png"
+		}
+	},
+	"industry-expertise": {
+		"style": "carousel",
+		"experience-editor-mode": true,
+		"position": "teaser-left",
+		"teaser": {
+			"eyebrow": "Industry Expertise",
+			"title": "Providing solutions for industry-leading, global partners",
+			"button": {
+				"title": "See all industries",
+				"href": "#",
+				"style": "link"
+			}
+		},
+		"carousel": "carousel-items-homepage"
+	},
+	"power-mig-more-machine": {
+		"style": "video",
+		"teaser": {
+			"title": "More Than Just a Machine",
+			"description": "A next generation welding solution that redefines simplicity and performance in pipe and vessel fabrication. Groundbreaking root-to-cap arc performance, industry-driven simplicity, and unrivaled industry support."
+		},
+		"video": {
+			"embed": "https://www.youtube.com/embed/M7lc1UVf-VE",
+			"title": "The All New PIPEFAB Welding System",
+			"thumbnail": "/images/784x560.png"
+		}
+	}
+}

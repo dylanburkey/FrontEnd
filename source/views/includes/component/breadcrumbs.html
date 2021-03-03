@@ -1,0 +1,7 @@
+<div class="breadcrumbs breadcrumbs--background-gray">
+    <nav>
+        {% for item in site.data.breadcrumbs[include.data].items %}
+            {% if item.url %}<a href="{{ item.url }}">{{ item.text }}</a>{% else %}<span>{{ item.text }}</span>{% endif %}
+        {% endfor %}
+    </nav>
+</div>

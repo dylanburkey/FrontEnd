@@ -1,0 +1,60 @@
+{
+  "viking-3350": {
+    "title": "For Pricing & Purchasing Information",
+    "items": [
+      {
+        "href": "tel: 888-417-1950",
+        "icon": "icon-phone",
+        "text": "Call 888-417-1950"
+      },
+      {
+        "href": "mailto: abc@example.com",
+        "icon": "icon-envelope",
+        "text": "Send us a message",
+        "chevron-right": true
+      }
+    ],
+    "cta": {
+      "btn-text": "where to buy",
+      "btn-href": "!#where-to-buy"
+    }
+  },
+  "viking-3350-cant-buy": {
+    "title": "For Pricing & Purchasing Information",
+    "items": [
+      {
+        "href": "tel: 888-417-1950",
+        "icon": "icon-phone",
+        "text": "Call 888-417-1950"
+      },
+      {
+        "href": "mailto: abc@example.com",
+        "icon": "icon-envelope",
+        "text": "Send us a message",
+        "chevron-right": true
+      }
+    ],
+    "cta": false
+  },
+  "precision-tig": {
+    "title": false,
+    "items": [
+      {
+        "href": "!#where-buy",
+        "icon": "icon-pin",
+        "text": "where to buy",
+        "chevron-right": true
+      },
+      {
+        "href": "!#where-rent",
+        "icon": "icon-pin",
+        "text": "where to rent",
+        "chevron-right": true
+      }
+    ],
+    "cta": {
+      "btn-text": "buy now",
+      "btn-href": "!#buy-now"
+    }
+  }
+}

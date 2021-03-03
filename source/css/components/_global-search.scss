@@ -1,0 +1,146 @@
+.global-search {
+    background: map-get($color, gray-lightest);
+
+    &__header {
+        @include balance-margins;
+        display: flex;
+        flex-flow: column-reverse;
+        padding: map-get($spacing, large) 0;
+        box-shadow: inset 0 -1px 0 map-get($brand, border);
+
+        @include desktop {
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: map-get($spacing, xxx-large) 0 map-get($spacing, xx-large);
+        }
+    }
+
+    &__title {
+        margin-bottom: map-get($spacing, x-small);
+    }
+
+    &__results {
+        @include typography(p-large);
+        color: map-get($color, gray-darker);
+        margin-top: 0;
+
+        @include mobile-only {
+            margin-bottom: 0;
+        }
+    }
+
+    &__header-cta {
+        @include balance-margins;
+        padding: map-get($spacing, small) map-get($spacing, medium); 
+        border: 1px solid map-get($brand, border);  
+        border-radius: $border-radius;
+        box-shadow: 0 3px 0 map-get($brand, border);
+        background: map-get($color, white);
+
+        p {
+            margin-bottom: map-get($spacing, xxx-small);
+        }
+
+        a {
+            @include font(headline);
+            @include typography(label);
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top: 0;
+        }
+    }
+
+    &__main {
+        @include desktop {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__nav-item {
+        @include typography(p);
+        @include font(headline);
+        @include link(black);
+        padding: map-get($spacing, medium) map-get($spacing, small);
+        background: none;
+        border: none;
+        appearance: none;
+        display: flex;
+        align-items: center;
+
+        span {
+            margin-left: map-get($spacing, xx-small);
+        }
+
+        @include mobile-only {
+            width: 100%;
+            text-align: left;
+            box-shadow: 0 -1px 0 map-get($brand, border);
+
+            &:after {
+                @include icon(chevron-down);
+                margin-left: auto;
+            }
+        }
+
+        @include desktop {
+            order: -1;
+            padding: map-get($spacing, medium) map-get($spacing, small);
+            margin: 0 map-get($spacing, large);
+        }
+
+        &:before {
+            @include typography(p-large);
+            margin-right: map-get($spacing, x-small);
+        }
+
+        &[data-type="products"]{
+            &:before {
+                @include icon(products);
+            }
+        }
+
+        &[data-type="documents"]{
+            &:before {
+                @include icon(documents);
+            }
+        }
+
+        &[data-type="pages"]{
+            &:before {
+                @include icon(pages);
+            }
+        }
+
+        &.active {
+            color: map-get($brand, primary);
+            font-weight: bold;
+            @include desktop {
+                box-shadow: inset 0 -4px 0 map-get($brand, primary);
+            }
+            span {
+                font-weight: normal;
+            }
+
+            @include mobile-only {                
+                &:after {
+                    @include icon(chevron-up);
+                }
+            }
+        }
+    }
+
+    &__content {
+        display: none;
+        &.active {
+            flex-basis: 100%;
+            display: block;
+            box-shadow: 0 -1px 0 map-get($brand, border);
+            padding: map-get($spacing, medium) 0;
+            @include desktop {
+                padding: map-get($spacing, xx-large) 0;
+            }
+        }
+    }
+}

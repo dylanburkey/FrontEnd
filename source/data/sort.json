@@ -1,0 +1,28 @@
+{
+  "sort":{
+    "title":"Sort By",
+    "items": [
+      {
+        "is-radio":true,
+        "text":"Price(Low-High)"
+      },
+      {
+        "is-radio":true,
+        "text":"Price (High-Low)"
+      },
+      {
+        "is-radio":true,
+        "text":"Price (Low-High)"
+      },
+      {
+        "is-radio":true,
+        "text":"Customer Rating"
+      }
+    ],
+    "close-control": {
+      "id": "sort",
+      "href": "#close-filters",
+      "text": "close"
+    }
+  }
+}

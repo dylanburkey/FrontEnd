@@ -1,0 +1,47 @@
+{% assign data = site.data.cards.discount-center[include.data][include.index] %}
+
+<div class="card card--discount-center" 
+  data-category="{{ data.PRODH_TEXT }}" 
+  data-name="{{ data.MAKTX }}" 
+  data-savings="{{ data.SAVINGS }}" 
+  data-price="{{ data.DISC_PRICE }}">
+  <div class="card__container">
+    <div class="card__image">
+      <a href="#!url-from-sitecore-lookup">
+        <img src="{{ '/images/602x430.png' | prepend: site.baseurl }}" alt="{{ data.image.alt }}"/>
+      </a>
+    </div>
+    <div class="card__content">
+      <h4><a href="#!url-from-sitecore-lookup">{{ data.MAKTX }}</a></h4>
+      <p>{{ data.PRODH_TEXT }} | {{ data.MATNR }}</p>
+      <p>Description from Sitecore lookup, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p><strong>Quantity available:</strong> {{ data.OMENG }}</p>
+      <p><strong>Note:</strong> Image shown for reference. Pre-owned product may differ in appearance.</p>
+    </div>
+  </div>
+  <div class="card__pricing">
+    <p>
+      <span>Net Price</span>
+      <span>{{ data.BLUE_NET }}</span>
+    </p>
+    <p>
+      <span>Discount Price</span>
+      <span>{{ data.DISC_PRICE }}</span>
+    </p>
+    <p>
+      <span>You Save</span>
+      <span>{{ data.SAVINGS }}</span>
+    </p>
+    <div class="card__quantity">
+        {% include component/input-quantity.html %}
+        <a 
+          data-action="add-to-cart" 
+          data-endpoint="https://run.mocky.io/v3/c01ea735-a2f6-4dff-92ea-76dd46a10df8"
+          data-quantity="10"
+          data-price="50.00"
+          data-sku="k1234"
+          data-loading-label="Loading..."
+          class="btn">Add to cart</a>
+      </div>
+  </div>
+</div>

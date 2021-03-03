@@ -1,0 +1,57 @@
+$block: 'checkbox-input';
+
+.#{$block} {
+  display: flex;
+  input {
+    display: none;
+    ~ p {
+      position: relative;
+      padding-left: map-get($spacing, large) +  map-get($spacing, xx-small);
+      color:  map-get($color, gray-darker);
+      @include font(regular);
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: 19px;
+      margin: 0;
+      @include desktop {
+        font-size: 15px;
+      }
+      &:before {
+        @include icon(selected);
+        font-size: 10px;
+        color: transparent;
+        left: map-get($spacing, xx-small);
+        top: map-get($spacing, xx-small);
+        position: absolute;
+        z-index: 1;
+      }
+      &:after {
+        content: '';
+        height: map-get($spacing, medium);
+        width: map-get($spacing, medium);
+        left: 0;
+        position: absolute;
+        top: 0;
+        z-index: 0;
+        box-sizing: border-box;
+        border: 1px solid  map-get($color, gray-light);
+        border-radius: 2px;
+        background-color:  map-get($color, gray-lightest);
+        @include desktop {
+          background-color: map-get($color, white);
+        }
+      }
+    }
+    &:checked {
+      ~ p {
+        &:before {
+          color:  map-get($color, white);
+        }
+        &:after {
+          background-color: map-get($color, red);
+          border: none;
+        }
+      }
+    }
+  }
+}

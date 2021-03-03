@@ -1,0 +1,9 @@
+{% assign e = site.data.search-press-releases[include.data] %}
+
+<div class="search-press-releases">
+  <h4 class="search-press-releases__title">{{e.title}}</h4>
+  <form action="/" class="search-press-releases__form">
+    <input class="search-press-releases__input" type="search" placeholder="{{e.placeholder}}" />
+    <button class="search-press-releases__submit" type="submit">{{e.submit}}</button>
+  </form>
+</div>

@@ -1,0 +1,31 @@
+<div class="global-search">
+    <div class="container">
+        <div class="global-search__header">
+            <div class="global-search__header-main">
+                <h1 class="global-search__title">Results for '<span class="global-search__results-term">tig welders</span>'</h1>
+                <p class="global-search__results"><span class="global-search__total-results-count"></span> Total Results</p>
+            </div>
+            <div class="global-search__header-cta">
+                <p><strong>Looking for Support or Knowledge Articles?</strong></p>
+                <a href="#">Visit Support Center</a>
+            </div>
+        </div>
+        <div class="global-search__main">
+            <a href="#" class="global-search__nav-item active" data-type="products">Products <span class="global-search__results-count"></span></a>
+            <div class="global-search__content active" data-type="products">
+                {% include component/faceted-browse.html
+                    data="welding-helmets" %}
+            </div>
+            <a href="#" class="global-search__nav-item" data-type="documents">Documents <span class="global-search__results-count"></span></a>
+            <div class="global-search__content" data-type="documents">
+                {% include component/faceted-browse.html
+                    data="documents" %}
+            </div>
+            <a href="#" class="global-search__nav-item" data-type="pages">Relevant Pages <span class="global-search__results-count"></span></a>
+            <div class="global-search__content" data-type="pages">
+                {% include component/faceted-browse.html
+                    data="pages" %}
+            </div>
+        </div>
+    </div>
+</div>

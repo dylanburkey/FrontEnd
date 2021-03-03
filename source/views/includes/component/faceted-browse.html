@@ -1,0 +1,127 @@
+{% assign fb = site.data.faceted-browse[include.data] %}
+
+<div class="faceted-browse{% if fb.style %} faceted-browse--{{ fb.style }} all-active{% endif %}" 
+  data-result-count="50"
+  data-compare-url="/url/to/compare"
+  data-compare-up-to-products="Compare up to 4 products"
+  data-compare-button="Compare"
+  data-compare-clear-all="Clear All">
+  <div class="container">
+    {% if fb.filters != false %}
+     <div class="faceted-browse__menu">
+       {% if fb.search %}
+         <div class="faceted-browse__search">
+           {% include component/search-press-releases.html
+           data="search-press-releases" %}
+         </div>
+       {% endif %}
+       {% if fb.region %}
+       <div class="faceted-browse__region-filter">
+            <div class="faceted-browse__region">
+           <div class="faceted-browse__region-dropdown">
+             {% include component/select.html
+             data="region" %}
+           </div>
+         </div>
+           <a class="btn tertiary js-show-filters" href="#filter" data-toggle="filters">filter</a>
+       </div>
+       {% else %}
+       <div class="faceted-browse__cta">
+         <a class="btn tertiary js-show-filters" href="#filter" data-toggle="filters">filter</a>
+         <a class="btn tertiary js-show-sort" href="#sort" data-toggle="sort">sort</a>
+       </div>
+       {% endif %}
+       <div class="faceted-browse__filters">
+        {% include component/filters.html
+          data=fb.filters %}
+       </div>
+       {% if fb.sort-by %}
+         <div class="faceted-browse__sort-by">
+           {% include component/sort.html
+           data="sort" %}
+         </div>
+       {% endif %}
+     </div>
+    {% endif %}
+    <div class="faceted-browse__view">
+      <div class="faceted-browse__nav faceted-browse__nav--top">
+        {% if fb.region %}
+          <div class="faceted-browse__region">
+            <div class="faceted-browse__region-dropdown">
+              {% include component/select.html
+              data="region" %}
+            </div>
+          </div>
+        {% else %}
+          <div class="faceted-browse__show">
+            <div class="faceted-browse__show-dropdown">
+              {% include component/select.html
+                data="show" %}
+            </div>
+          </div>
+        {% endif %}
+        {% if fb.sort-by %}
+          <div class="faceted-browse__sort">
+            <div class="faceted-browse__sort-dropdown">
+              {% include component/select.html
+                data="sort-by" %}
+            </div>
+         </div>
+        {% endif %}
+      </div>
+      {% if fb.filterType != "simple" %}
+      <div class="faceted-browse__active-filters">
+        {% include component/active-filters.html
+        data="active-filters" %}
+      </div>
+      {% endif %}
+      <div class="faceted-browse__results">
+       
+        {% if fb.cardStyle and fb.data %}
+          
+          {% for item in site.data.cards[fb.cardStyle][fb.data] %}
+            {% include component/cards/{{fb.cardStyle}}.html 
+                data=fb.data
+                index=forloop.index0 %}
+          {% endfor %}
+
+        {% else %}
+        
+        {% for item in site.data.cards.article-list[include.data] %}
+            {% include component/cards/article-list.html 
+              data=include.data
+              index=forloop.index0 %}
+          {% endfor %}
+
+          {% for item in site.data.cards.product-list[include.data] %}
+            {% include component/cards/product-list.html 
+              data=include.data
+              index=forloop.index0 %}
+          {% endfor %}
+
+          {% for item in site.data.cards.product-grid[include.data] %}
+            {% include component/cards/product-grid.html 
+              data=include.data
+              index=forloop.index0 %}
+          {% endfor %}
+
+        {% endif %}
+      </div>
+      <div class="faceted-browse__nav faceted-browse__nav--bottom">
+        <div class="faceted-browse__pagination">
+          {% include component/pagination.html
+          data="pagination" %}
+        </div>
+        <div class="faceted-browse__show">
+          <div class="faceted-browse__show-dropdown">
+            {% include component/select.html
+            data="show" %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    {% include component/no-results.html %}
+  </div>
+</div>

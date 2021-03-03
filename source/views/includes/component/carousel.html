@@ -1,0 +1,18 @@
+<div class="carousel swiper-container">
+	<div class="carousel-wrapper swiper-wrapper">
+		{% for obj in site.data.cards[include.style][include.dataName] %}
+			{% include component/cards/{{include.style}}.html
+				class="swiper-slide" 
+				data=obj
+				carousel="true"
+				index=forloop.index0 %}
+		{% endfor %}
+	</div>
+	<!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+</div>
+<div class="swiper-navigation">
+	<!-- If we need navigation buttons -->
+	<div class="swiper-button-prev"></div>
+	<div class="swiper-button-next"></div>
+</div>

@@ -1,0 +1,77 @@
+{% if include.style %}
+	{% capture component %}component/{{include.component}}/{{include.style}}.html{% endcapture %}
+{% else %}
+	{% capture component %}component/{{include.component}}.html{% endcapture %}
+{% endif %}
+
+
+<section{% if include.collapsable %} class="section-collapsable{% if include.pdp-section %} pdp-section{% endif %}" data-accordion{% endif %}{% if include.id %} id="{{include.id}}"{% endif %}>
+	{% if include.title %}
+      {% include component/section-header.html 
+        title=include.title
+        description=include.description
+        collapsable=include.collapsable
+				centered=include.header-centered
+				disclaimer=include.disclaimer
+		sticky-navigation-item = include.sticky-navigation-item %}
+		{% endif %}
+
+    {% if include.collapsable %}<div class="section-wrapper" data-accordion-content>{% endif %}
+
+    {% if include.columns and include.rows %}
+    	<div class="container {% if include.region-selector %} section-region-select{% endif %}">
+				{% if include.region-selector %}
+				<div class="section-regions">
+					<p>News From</p>
+						{% include component/select.html
+							data="region" %}
+						</div>
+				{% endif %}			
+    	{% for row in (1..include.rows) %}
+    		{% assign rowindex = forloop.index0 %}
+    		<div class="cols">
+    			{% for col in (1..include.columns) %}
+		    		<div class="col">
+                        {% if include.style contains ',' %}
+                            {% assign arr = include.style | split: ',' %}
+                            {% capture component %}component/{{include.component}}/{{arr[forloop.index0]}}.html{% endcapture %}
+                        {% endif %}
+
+                        {% if include.styleIndex and include.styleIndex contains ',' %}
+                            {% assign indexArr = include.styleIndex | split: ',' %}
+                            {% capture index %}{{indexArr[forloop.index0]}}{% endcapture %}
+                            {% assign index = index | plus: 0 %}
+                        {% else %}
+		    			   {% assign index = include.columns | times: rowindex | plus: forloop.index0 %}
+                        {% endif %}
+
+		    			{% include {{component}}
+							data=include.data
+							index=index %}
+		    		</div>
+		    	{% endfor %}
+    		</div>
+			{% endfor %}
+			{% if include.button %}
+				{% include component/button.html
+					style=include.btn-style
+					title=include.btn-title %}
+			{% endif %}
+    	</div>
+   	{% else %}
+
+	   	{% include component/{{include.component}}.html
+			style=include.style
+			data=include.data %}
+
+		{% endif %}
+
+		{% if include.cta %}
+			{% include component/section-cta.html
+			style=include.btn-style
+			title=include.btn-title
+			url=include.btn-url %}
+		{% endif %}
+ 
+    {% if include.collapsable %}</div>{% endif %}
+</section>

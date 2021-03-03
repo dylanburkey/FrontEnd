@@ -1,0 +1,78 @@
+{
+  "viking-3350-whats-included": {
+    "title": "What's Included",
+    "items": [
+      {
+        "text": "Helmet Bag | K3096-1"
+      },
+      {
+        "text": "Bandana | K3096-5"
+      },
+      {
+        "text": "5 Outside Cover Lenses"
+      },
+      {
+        "text": "2 Inside Cover Lenses"
+      },
+      {
+        "text": "Sticker Sheet"
+      }
+    ]
+  },
+  "viking-3350-documentation": {
+    "title":"Documentation",
+    "items": [
+      {
+        "text":"Datasheet",
+        "url":"#test",
+        "type":"pdf"
+        
+      }
+    ]
+  },
+  "viking-3350-cad-files": {
+    "title":"CAD Files",
+    "items": [
+      {
+        "text":"CAD File Name",
+        "url":"#test",
+        "type":"pdf"
+      },
+      {
+        "text":"CAD File Name",
+        "url":"#test",
+        "type":"pdf"
+      },
+      {
+        "text":"CAD File Name",
+        "url":"#testdf",
+        "type":"pdf"
+      }
+    ]
+  },
+  "viking-3350-training-education": {
+    "title":"Training & Education",
+    "items": [
+      {
+        "text":"Training File",
+        "url":"#test",
+        "type":"excel"
+      },
+      {
+        "text":"Training File",
+        "url":"#test",
+        "type":"pdf"
+      },
+      {
+        "text":"Education Video",
+        "url":"#test",
+        "type":"video"
+      },
+      {
+        "text":"Education Video",
+        "url":"#test",
+        "type":"video"
+      }
+    ]
+  }
+}

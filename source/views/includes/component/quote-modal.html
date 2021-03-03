@@ -1,0 +1,23 @@
+{% assign e = site.data.quote-modal[include.data] %}
+
+<div class="quote-modal quote-modal--{% if e.style %}{{e.style}}{% endif %}">
+  <button class="quote-modal__close"><span class="icon-close"></span></button>
+  <div class="quote-modal__container">
+    <h2 class="quote-modal__title">{{e.title}}</h2>
+    <p class="quote-modal__description">{{e.description}}</p>
+    <form class="quote-modal__form">
+      {% for item in e.items %}
+      <div class="quote-modal__input-field">
+        <label class="quote-modal__label">{{item.label}}</label>
+        <input type="text" class="quote-modal__input">
+      </div>
+      {% endfor %}
+      {% if e.customer-quote %}
+      {% include component/dropdown.html data="customer-quote" %}
+      {% endif %}
+      {% include component/button.html
+      title="GET QUOTE"
+      url="#!get-quote" %}
+    </form>
+  </div>
+</div>

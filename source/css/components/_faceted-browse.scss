@@ -1,0 +1,244 @@
+$block: 'faceted-browse';
+
+.#{$block} {
+
+  background-color: map-get($color, gray-lightest);
+
+  > .container {
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+    }
+  }
+
+  &__show {
+    @include desktop {
+      display: block;
+    }
+  }
+
+  &__search {
+    @include desktop {
+      padding-bottom:  map-get($spacing, medium) + map-get($spacing, small);
+    }
+  }
+
+  &__cta {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 map-get($spacing, large) 0;
+    @include desktop {
+      display: none;
+    }
+    a.btn {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 50%;
+      justify-content: center;
+      &:first-of-type {
+        border-radius: 4px 0 0 4px;
+        border-right: none;
+        &:hover , &:focus {
+          border-radius: 4px 0 0 4px;
+          border-right: none;
+        }
+      }
+      &:last-of-type {
+        border-radius: 0 4px 4px 0;
+        &:hover, &:focus {
+          border-radius: 0 4px 4px 0;
+        }
+      }
+    }
+  }
+
+  &__region-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:  map-get($spacing, medium) 0  map-get($spacing, large);
+    a {
+      padding:map-get($spacing, small)  map-get($spacing, medium) + map-get($spacing, medium);
+      flex: 1;
+      flex-basis: 50%;
+      margin-left:  map-get($spacing, medium) - map-get($spacing, small);
+      justify-content: center;
+    }
+    
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__region {
+    flex: 1;
+    flex-basis: 50%;
+    margin-right:  map-get($spacing, medium) - map-get($spacing, small);
+  }
+
+  &__nav {
+    &--top {
+      @include desktop {
+        justify-content: space-between;
+        display: block;
+      }
+    }
+
+    &--bottom {
+      justify-content: center;
+      display: flex;
+      position: relative;
+      @include desktop {
+        .#{$block}__show {
+          display: flex;
+          justify-content: flex-end;
+          width: 35%;
+          .dropdown__label {
+            display: none;
+          }
+        }
+        .#{$block}__pagination {
+          display: flex;
+          justify-content: flex-end;
+          width: 65%;
+        }
+      }
+    }
+    
+    @include desktop {
+      padding-bottom:  map-get($spacing, x-small) + map-get($spacing, small);
+      display: flex;
+      flex-flow: row nowrap;
+    }
+  }
+
+  &__results {
+
+    .container {
+      padding: 0;
+      @include mobile-only {
+        .col {
+          margin: 0;
+          padding-bottom: map-get($spacing, medium) + map-get($spacing, xx-small);
+        }
+      }
+    }
+
+    .card--article-list {
+      .card__category {
+        font-weight: bold;
+      }
+      .card__image img {
+        // @include desktop {
+        //   height: 100%;
+        // }
+      }
+
+      .card__meta {
+       @include desktop {
+         margin: 0;
+         padding-bottom: 9px;
+       }
+      }
+
+      .card__title {
+        @include desktop {
+          margin: 0;
+          padding-bottom: 9px;
+        }
+      }
+
+      @include mobile-only {
+        display: block;
+
+        .card__image {
+          float:left;
+          padding: map-get($spacing, medium);
+        }
+
+        .card__content {
+          position: relative;
+          width: 100%;
+        }
+
+        .card__description {
+          clear:left;
+          padding-top:  map-get($spacing, medium);
+          border-top: 1px solid #D0D0D0;
+        }
+
+        .card__title {
+          margin: 0;
+          padding-left: calc(100%/3);
+          padding-bottom: map-get($spacing, large);
+        }
+
+        .card__meta {
+          margin: 0;
+          padding-bottom:  map-get($spacing, x-small);
+          padding-left: 6px;
+          width: calc(100%/3*2);
+        }
+      }
+    }
+
+    @include desktop {
+      padding-bottom: map-get($spacing, large);
+    }
+  }
+
+  &__menu {
+   @include desktop {
+     flex: 1;
+     flex-basis: calc(100%/4);
+     width: calc(100%/4);
+     padding-right:  map-get($spacing, x-large);
+   }
+  }
+
+  &__view {
+   @include desktop {
+     flex: 1;
+     flex-basis: calc(100%/4 * 3);
+     max-width: calc(100%/4 * 3);
+     &:not(:only-of-type){
+      padding-left: map-get($spacing, x-large);
+     }
+     &:only-of-type {
+      max-width: calc(100%/5 * 4);
+     }
+   }
+  }
+
+
+
+  ///// new /////
+  &__results {
+    @include balance-margins;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: - map-get($spacing, medium);
+    margin-right: - map-get($spacing, medium);
+
+    @include mobile-only {
+      background: map-get($color, gray-lightest);
+    }
+
+    .card {
+      height: auto;
+      flex-basis: calc(100% - #{map-get($spacing, medium) * 2});
+      margin: map-get($spacing, medium);
+      &:first-of-type {
+        margin-top: 0;
+      }
+      
+      &[class*="grid"] {
+        @include desktop {
+          margin-top: map-get($spacing, medium);
+          flex-basis: calc(100% / 3 - #{map-get($spacing, medium) * 2});
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,660 @@
+{
+  "sds-form": {
+    "title": "Safety Data Sheets (SDS)",
+    "contact-title": "Need Assistance?",
+    "contact-link": "#",
+    "contact-link-text": "contact our support team",
+    "learn-more": "Learn More",
+    "learn-more-link": "#",
+    "footer-link": "#",
+    "footer-link-text": "Adobe Reader",
+    "footer-text-1": "A * character can be added as a wildcard search parameter.",
+    "footer-text-2": "All PDF files require the most current version of ",
+    "footer-text-3": " to view.",
+    "radios": [
+      {
+        "id": "1",
+        "title": "Safety Data Sheets (SDS)",
+        "link": "#",
+        "link-text":"Learn More"
+      },
+      {
+        "id": "2",
+        "title": "Registration, Evaluation, Authorization, and Restriction of Chemicals (REACH) ",
+        "link": "#",
+        "link-text":"Learn More"
+      },
+      {
+        "id": "3",
+        "title": "Restriction of the Use of Certain Hazardous Substances (RoHS) ",
+        "link": "#",
+        "link-text":"Learn More"
+      },
+      {
+        "id": "4",
+        "title": "Conflict Minerals (CM)",
+        "link": "#",
+        "link-text":"Learn More"
+      },
+      {
+        "id": "5",
+        "title": "Critical Raw Materials (CRM)",
+        "link": "#",
+        "link-text":"Learn More"
+      }
+    ],
+    "forms":[
+      {
+        "title":"Safety Data Sheet Search",
+        "display": true,
+        "id": "1",
+        "safety-data-sheets": true,
+        "error": "This is an error",
+        "products": {
+          "product-name": "Product Name",
+          "product-name-label": "product-name-dropdown",
+          "product-number": "Product Number",
+          "product-number-label": "product-number-label",
+          "product-number-placeholder": "Enter a Product Number",
+          "or-text": "OR",
+          "options": [
+            {
+              "value": "Product 1",
+              "text": "Product 1",
+              "name": "option-1"
+            },
+            {
+              "value": "Product 2",
+              "text": "Product 2",
+              "name": "option-2"
+            },
+            {
+              "value": "Product 3",
+              "text": "Product 3",
+              "name": "option-3"
+            }
+          ]
+        },
+        "manufacturer": {
+          "title": "Manufacturer",
+          "manufacturer-label": "manufacturer-label",
+          "options": [
+            {
+              "value": "",
+              "text": "All Manufacturers",
+              "name": "option-default"
+            },
+            {
+              "value": "Air Liquide Canada Inc.",
+              "text": "Air Liquide Canada Inc.",
+              "name": "option-1"
+            },
+            {
+              "value": "Harris Products Group",
+              "text": "Harris Products Group",
+              "name": "option-2"
+            },
+            {
+              "value": "Indalco Alloys",
+              "text": "Indalco Alloys",
+              "name": "option-3"
+            },
+            {
+              "value": "Lincoln Electric Company",
+              "text": "Lincoln Electric Company",
+              "name": "option-4"
+            },
+            {
+              "value": "Weartech International",
+              "text": "Weartech International",
+              "name": "option-5"
+            }
+          ]
+        },
+        "language": {
+          "title": "Language",
+          "language-label": "language-label",
+          "options": [
+            {
+              "value": "",
+              "text": "All Languages",
+              "name": "option-default"
+            },
+            {
+              "value": "Language 1",
+              "text": "Language 1",
+              "name": "option-1"
+            },
+            {
+              "value": "Language 2",
+              "text": "Language 2",
+              "name": "option-2"
+            },
+            {
+              "value": "Language 3",
+              "text": "Language 3",
+              "name": "option-3"
+            },
+            {
+              "value": "Language 4",
+              "text": "Language 4",
+              "name": "option-4"
+            }
+          ]
+        },
+        "region":{
+          "title": "Region",
+          "items": [
+            {
+              "item":"All regions",
+              "id": "1"
+            },
+            {
+              "item":"China",
+              "id": "2"
+            },
+            {
+              "item":"Europe",
+              "id": "3"
+            },
+            {
+              "item":"North America",
+              "id": "4"
+            }
+          ]
+        },
+        "process":{
+          "title": "Process",
+          "process-label": "process-label",
+          "options": [
+            {
+              "value": "",
+              "text": "All Processes",
+              "name": "option-default"
+            },
+            {
+              "value": "Process 1",
+              "text": "Process 1",
+              "name": "option-1"
+            },
+            {
+              "value": "Process 2",
+              "text": "Process 2",
+              "name": "option-2"
+            },
+            {
+              "value": "Process 3",
+              "text": "Process 3",
+              "name": "option-3"
+            },
+            {
+              "value": "Process 4",
+              "text": "Process 4",
+              "name": "option-4"
+            }
+          ]
+        }
+      },
+      {
+        "title":"Registration, Evaluation, Authorization, and Restirction of Chemicals (REACH)",
+        "display": false,
+        "id": "2",
+        "products": {
+          "product-name": "Product Name",
+          "product-number": "Product Number",
+          "or-text": "OR",
+          "options": [
+            {
+              "value": "",
+              "text": "Select a product name",
+              "name": "option-default"
+            },
+            {
+              "value": "Product 1",
+              "text": "Product 1",
+              "name": "option-1"
+            },
+            {
+              "value": "Product 2",
+              "text": "Product 2",
+              "name": "option-2"
+            },
+            {
+              "value": "Product 3",
+              "text": "Product 3",
+              "name": "option-3"
+            }
+          ]
+        },
+        "manufacturer": {
+          "title": "Manufacturer",
+          "options": [
+            {
+              "value": "",
+              "text": "All Manufacturers",
+              "name": "option-default"
+            },
+            {
+              "value": "Air Liquide Canada Inc.",
+              "text": "Air Liquide Canada Inc.",
+              "name": "option-1"
+            },
+            {
+              "value": "Harris Products Group",
+              "text": "Harris Products Group",
+              "name": "option-2"
+            },
+            {
+              "value": "Indalco Alloys",
+              "text": "Indalco Alloys",
+              "name": "option-3"
+            },
+            {
+              "value": "Lincoln Electric Company",
+              "text": "Lincoln Electric Company",
+              "name": "option-4"
+            },
+            {
+              "value": "Weartech International",
+              "text": "Weartech International",
+              "name": "option-5"
+            }
+          ]
+        },
+        "language": {
+          "title": "Language",
+          "options": [
+            {
+              "value": "",
+              "text": "All Languages",
+              "name": "option-default"
+            },
+            {
+              "value": "Language 1",
+              "text": "Language 1",
+              "name": "option-1"
+            },
+            {
+              "value": "Language 2",
+              "text": "Language 2",
+              "name": "option-2"
+            },
+            {
+              "value": "Language 3",
+              "text": "Language 3",
+              "name": "option-3"
+            },
+            {
+              "value": "Language 4",
+              "text": "Language 4",
+              "name": "option-4"
+            }
+          ]
+        },
+        "region":{
+          "title": "Region",
+          "items": [
+            {
+              "item":"All regions",
+              "id": "1"
+            },
+            {
+              "item":"China",
+              "id": "2"
+            },
+            {
+              "item":"Europe",
+              "id": "3"
+            },
+            {
+              "item":"North America",
+              "id": "4"
+            }
+          ]
+        },
+        "process":{
+          "title": "Process",
+          "options": [
+            {
+              "value": "",
+              "text": "All Processes",
+              "name": "option-default"
+            },
+            {
+              "value": "Process 1",
+              "text": "Process 1",
+              "name": "option-1"
+            },
+            {
+              "value": "Process 2",
+              "text": "Process 2",
+              "name": "option-2"
+            },
+            {
+              "value": "Process 3",
+              "text": "Process 3",
+              "name": "option-3"
+            },
+            {
+              "value": "Process 4",
+              "text": "Process 4",
+              "name": "option-4"
+            }
+          ]
+        }
+      },
+      {
+        "title":"Restriction of the Use of Certain Hazardous Substances (RoHS)",
+        "display": false,
+        "id": "3",
+        "products": {
+          "product-name": "Product Name",
+          "product-number": "Product Number",
+          "or-text": "OR",
+          "options": [
+            {
+              "value": "",
+              "text": "Select a product name",
+              "name": "option-default"
+            },
+            {
+              "value": "Product 1",
+              "text": "Product 1",
+              "name": "option-1"
+            },
+            {
+              "value": "Product 2",
+              "text": "Product 2",
+              "name": "option-2"
+            },
+            {
+              "value": "Product 3",
+              "text": "Product 3",
+              "name": "option-3"
+            }
+          ]
+        },
+        "manufacturer": {
+          "title": "Manufacturer",
+          "options": [
+            {
+              "value": "",
+              "text": "All Manufacturers",
+              "name": "option-default"
+            },
+            {
+              "value": "Air Liquide Canada Inc.",
+              "text": "Air Liquide Canada Inc.",
+              "name": "option-1"
+            },
+            {
+              "value": "Harris Products Group",
+              "text": "Harris Products Group",
+              "name": "option-2"
+            },
+            {
+              "value": "Indalco Alloys",
+              "text": "Indalco Alloys",
+              "name": "option-3"
+            },
+            {
+              "value": "Lincoln Electric Company",
+              "text": "Lincoln Electric Company",
+              "name": "option-4"
+            },
+            {
+              "value": "Weartech International",
+              "text": "Weartech International",
+              "name": "option-5"
+            }
+          ]
+        },
+        "language": {
+          "title": "Language",
+          "options": [
+            {
+              "value": "",
+              "text": "All Languages",
+              "name": "option-default"
+            },
+            {
+              "value": "Language 1",
+              "text": "Language 1",
+              "name": "option-1"
+            },
+            {
+              "value": "Language 2",
+              "text": "Language 2",
+              "name": "option-2"
+            },
+            {
+              "value": "Language 3",
+              "text": "Language 3",
+              "name": "option-3"
+            },
+            {
+              "value": "Language 4",
+              "text": "Language 4",
+              "name": "option-4"
+            }
+          ]
+        },
+        "region":{
+          "title": "Region",
+          "items": [
+            {
+              "item":"All regions",
+              "id": "1"
+            },
+            {
+              "item":"China",
+              "id": "2"
+            },
+            {
+              "item":"Europe",
+              "id": "3"
+            },
+            {
+              "item":"North America",
+              "id": "4"
+            }
+          ]
+        },
+        "process":{
+          "title": "Process",
+          "options": [
+            {
+              "value": "",
+              "text": "All Processes",
+              "name": "option-default"
+            },
+            {
+              "value": "Process 1",
+              "text": "Process 1",
+              "name": "option-1"
+            },
+            {
+              "value": "Process 2",
+              "text": "Process 2",
+              "name": "option-2"
+            },
+            {
+              "value": "Process 3",
+              "text": "Process 3",
+              "name": "option-3"
+            },
+            {
+              "value": "Process 4",
+              "text": "Process 4",
+              "name": "option-4"
+            }
+          ]
+        }
+      },
+      {
+        "title":"Conflict Minerals (CM)",
+        "id": "4",
+        "display": false,
+        "products": {
+          "product-name": "Product Name",
+          "product-number": "Product Number",
+          "or-text": "OR",
+          "options": [
+            {
+              "value": "",
+              "text": "Select a product name",
+              "name": "option-default"
+            },
+            {
+              "value": "Product 1",
+              "text": "Product 1",
+              "name": "option-1"
+            },
+            {
+              "value": "Product 2",
+              "text": "Product 2",
+              "name": "option-2"
+            },
+            {
+              "value": "Product 3",
+              "text": "Product 3",
+              "name": "option-3"
+            }
+          ]
+        },
+        "manufacturer": {
+          "title": "Manufacturer",
+          "options": [
+            {
+              "value": "",
+              "text": "All Manufacturers",
+              "name": "option-default"
+            },
+            {
+              "value": "Air Liquide Canada Inc.",
+              "text": "Air Liquide Canada Inc.",
+              "name": "option-1"
+            },
+            {
+              "value": "Harris Products Group",
+              "text": "Harris Products Group",
+              "name": "option-2"
+            },
+            {
+              "value": "Indalco Alloys",
+              "text": "Indalco Alloys",
+              "name": "option-3"
+            },
+            {
+              "value": "Lincoln Electric Company",
+              "text": "Lincoln Electric Company",
+              "name": "option-4"
+            },
+            {
+              "value": "Weartech International",
+              "text": "Weartech International",
+              "name": "option-5"
+            }
+          ]
+        }
+      },
+      {
+        "title":"Critical Raw Materials (CRM)",
+        "id": "5",
+        "display": false,
+        "products": {
+          "product-name": "Product Name",
+          "product-number": "Product Number",
+          "or-text": "OR",
+          "options": [
+            {
+              "value": "",
+              "text": "Select a product name",
+              "name": "option-default"
+            },
+            {
+              "value": "Product 1",
+              "text": "Product 1",
+              "name": "option-1"
+            },
+            {
+              "value": "Product 2",
+              "text": "Product 2",
+              "name": "option-2"
+            },
+            {
+              "value": "Product 3",
+              "text": "Product 3",
+              "name": "option-3"
+            }
+          ]
+        },
+        "manufacturer": {
+          "title": "Manufacturer",
+          "options": [
+            {
+              "value": "",
+              "text": "All Manufacturers",
+              "name": "option-default"
+            },
+            {
+              "value": "Air Liquide Canada Inc.",
+              "text": "Air Liquide Canada Inc.",
+              "name": "option-1"
+            },
+            {
+              "value": "Harris Products Group",
+              "text": "Harris Products Group",
+              "name": "option-2"
+            },
+            {
+              "value": "Indalco Alloys",
+              "text": "Indalco Alloys",
+              "name": "option-3"
+            },
+            {
+              "value": "Lincoln Electric Company",
+              "text": "Lincoln Electric Company",
+              "name": "option-4"
+            },
+            {
+              "value": "Weartech International",
+              "text": "Weartech International",
+              "name": "option-5"
+            }
+          ]
+        },
+        "language": {
+          "title": "Language",
+          "options": [
+            {
+              "value": "",
+              "text": "All Languages",
+              "name": "option-default"
+            },
+            {
+              "value": "Language 1",
+              "text": "Language 1",
+              "name": "option-1"
+            },
+            {
+              "value": "Language 2",
+              "text": "Language 2",
+              "name": "option-2"
+            },
+            {
+              "value": "Language 3",
+              "text": "Language 3",
+              "name": "option-3"
+            },
+            {
+              "value": "Language 4",
+              "text": "Language 4",
+              "name": "option-4"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

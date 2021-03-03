@@ -1,0 +1,70 @@
+$block: 'notification';
+
+.#{$block} {
+
+  background-color: map-get($color, gray-lightest);
+  &.active {
+    display: none;
+  }
+  @include desktop {
+    position:absolute;
+    //set the negative top to compensate the height of the nav links and notification banner when these are not displayed
+    top: -(map-get($fixed-heights, nav-utility) +map-get($fixed-heights, notification-banner));
+    width: 100%;
+    z-index: 1;
+    max-height: map-get($fixed-heights, notification-banner);
+  }
+
+  &__description {
+    @include font(headline);
+    margin:0;
+    color: map-get($color, gray-darker);
+    letter-spacing: 0;
+    line-height: 18px;
+    font-size: 13px;
+  }
+
+  &__cta {
+    @include font(headline);
+    color: map-get($color, gray-darker);
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 18px;
+    font-size: 13px;
+    padding-left: map-get($spacing, xx-small);
+    @include desktop {
+      padding-left: map-get($spacing, x-small);
+    }
+  }
+  
+  &__content {
+    display: flex;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: auto;
+    padding: map-get($spacing, small) map-get($spacing, small) + map-get($spacing, x-small);
+    @include container(large);
+    @include desktop {
+      align-items: center;
+      padding: map-get($spacing, xx-small) + map-get($spacing, small) map-get($spacing, small) + map-get($spacing, x-small);
+    }
+  }
+
+  &__close-button {
+    position: relative;
+    &:after {
+      @include icon(close);
+      color: map-get($color, gray-darker);
+      font-size: 10px;
+      @include desktop {
+        font-size: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+{% include component/breadcrumbs.html
+    data=page.uid %}
+    
+<div class="article-detail">
+    <div class="container">
+        {% include component/press-release-detail.html 
+            data=page.uid %}
+    </div>
+</div>

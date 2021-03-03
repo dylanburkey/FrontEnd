@@ -1,0 +1,122 @@
+$block: 'search-bar';
+
+.#{$block} {
+	background: map-get($brand, background);
+	box-shadow: 0 2px 4px 0 rgba(45,45,45,0.15);
+	position: relative;
+
+	.container {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		position: inherit;
+	}
+
+	h2, 
+	.search-tags,
+	.search-field {
+		flex-basis: 100%;
+		width: 100%;
+	}
+
+	h2 {
+		margin: 0;
+		@include desktop {
+			font-size: 32px;
+			line-height: 36px;
+			flex-basis: calc(100% / 5);
+			width: calc(100% / 5);
+		}
+	}
+
+	.search-tags {
+		@include desktop {
+			flex-basis: calc(100% / 5 * 1.5);
+			width: calc(100% / 5 * 1.5);
+		}
+	}
+	.search-field-label {
+		display: none;
+	}
+	.search-field {
+		$height: 60px;
+		margin: map-get($spacing, medium) 0 map-get($spacing, x-large);
+		height: $height;
+		display: flex;
+		border-radius: $border-radius;
+		box-shadow: 0 0 6px 4px rgba(18,18,18,0.07);
+
+		@include desktop {
+			margin: 0 map-get($spacing, xx-large);
+			flex-basis: calc(100% / 5 * 2.5 - #{map-get($spacing, xx-large) * 2});
+			width: calc(100% / 5 * 2.5 - #{map-get($spacing, xx-large) * 2});
+		}
+
+		input {
+			@include font(regular);
+			@include typography(p-large);
+			border-radius: $border-radius 0 0 $border-radius;
+			height: 100%;
+			appearance: none;
+			border: 0;
+			padding: 0 map-get($spacing, small);
+			flex-grow: 1;
+			line-height: $height;
+		}
+
+		button {
+			cursor: pointer;
+			width: $height;
+			font-size: 0;
+			position: relative;
+			border: 0;
+			border-radius: 0 $border-radius $border-radius 0;
+			appearance: none;
+			background: map-get($brand, primary);
+			&:after {
+				@include icon(search);
+				@include typography(h4);
+				color: map-get($color, white);
+			}
+		}
+	}
+
+	.search-tags {
+		@include balance-margins;
+
+		p {
+			@include font(headline);
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 16px;
+			line-height: 20px;
+		}
+
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			margin: - map-get($spacing, small)/2;
+			margin-top: map-get($spacing, small);
+			margin-bottom: map-get($spacing, small);
+		}
+
+		li {
+			list-style-type: none;
+			margin: map-get($spacing, small)/2;
+			padding-left: 0;
+            &:before {
+              content: none;
+            }
+			a {
+				@include font(headline);
+				font-weight: bold;
+				background: map-get($color, white);
+				padding: map-get($spacing, xx-small) map-get($spacing, small);
+				box-shadow: 0 0 6px 2px rgba(18,18,18,0.07);
+				font-size: 14px;
+				line-height: 19px;
+				border-radius: $border-radius;
+			}
+		}
+	}
+}

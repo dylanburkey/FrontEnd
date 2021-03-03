@@ -1,0 +1,10 @@
+{% assign a = site.data.notification[include.data] %}
+
+<div class="notification">
+  <div class="notification__wrapper">
+    <div class="notification__content">
+      <div class="notification__description">{{a.description}}<a href="{{a.href}}" class="notification__cta">{{a.text}}</a></div>
+    </div>
+    <span class="notification__close-button"></span>
+  </div>
+</div>

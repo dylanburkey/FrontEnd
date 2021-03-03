@@ -1,0 +1,244 @@
+$block: 'footer';
+
+.#{$block} {
+  background: map-get($color, gray-darkest);
+  border-bottom: 6px solid map-get($brand, primary);
+
+  > div {
+    @include balance-margins;
+    max-width: $max-width;
+    margin: auto;
+    padding: 0;
+
+    @include desktop {
+      padding: map-get($spacing, xxx-large) map-get($spacing, medium) map-get($spacing, large);
+    }
+  }
+
+  &__meta {
+  	display: flex;
+  	align-items: center;
+  	flex-wrap: wrap;
+  	background: map-get($color, black);
+  	color: map-get($color, white);
+
+  	@include desktop {
+  		background: transparent;
+  		flex-wrap: no-wrap;
+  		padding: map-get($spacing, xxx-large) 0 0;
+  	}
+  }
+
+  &__region {
+    @include link(white);
+  	flex-basis: 100%;
+  	padding: map-get($spacing, small) map-get($spacing, medium);
+  	background: map-get($color, gray-darkest);
+    display: flex;
+    align-items: center;
+    @include desktop {
+      justify-content: center;
+    }
+
+    img {
+      margin-right: 10px;
+      @include desktop {
+        width: 22px;
+        height: 100%;
+        display: block;
+      }
+    }
+  	
+  	p {
+  		@include font(headline);
+	    font-weight: bold;
+	    text-transform: uppercase;
+	    font-size: 15px;
+	    line-height: 20px;
+  	}
+
+  	@include desktop {
+  		flex-basis: auto;
+  		padding: 0;
+  		order: 1;
+  		margin-left: map-get($spacing, medium);
+  		background: transparent;
+  	}
+  }
+
+  &__logo {
+  	height: auto;
+  	padding: map-get($spacing, small) map-get($spacing, medium);
+    flex-basis: auto;
+  	width: calc(80px + #{map-get($spacing, medium)} * 2);
+  	@include desktop {
+  		width: auto;
+  		padding: 0;
+  		order: 0;
+  	}
+
+  	img,
+  	svg {
+  		display: block;
+  	}
+  }
+
+  &__copyright {
+  	margin-left: auto;
+  	font-size: 12px;
+  	line-height: 18px;
+  	padding: map-get($spacing, small) map-get($spacing, medium);
+    flex-basis: auto;
+    width: calc(100% - #{calc(80px + #{map-get($spacing, medium)} * 2)});
+  	text-align: right;
+
+  	@include desktop {
+  		width: auto;
+  		padding: 0;
+  		order: 2;
+  		font-size: 13px;
+  		line-height: 19px;
+    }
+  }
+
+  &__copyright:before {
+    content: "\00a9";
+  }
+
+  &__content {
+    @include desktop {
+      display: flex;
+      margin-left: - map-get($spacing, medium);
+      margin-right: - map-get($spacing, medium);
+    }
+  }
+
+  &__column {
+    @include desktop {
+      //assumes we always have 5 columns
+      margin: 0 map-get($spacing, medium) 0;
+      flex-basis: calc(20% - #{map-get($spacing, medium)} * 2);
+      width: calc(20% - #{map-get($spacing, medium)} * 2);
+
+      .link-group {
+        &:not(:last-of-type){
+          margin-bottom: map-get($spacing, xx-large);
+        }
+      }
+    }
+
+    .link-group {
+      @include balance-margins;
+      
+      &__title {
+        padding: map-get($spacing, small) map-get($spacing, medium);
+        margin: 0;
+        font-size: 14px;
+        line-height: 18px;
+
+        @include desktop {
+          padding: 0;
+          margin: 0 0 20px;
+          display: block;
+        }
+      }
+
+      &__items {
+      	@include balance-margins;
+        padding: map-get($spacing, medium);
+        background: map-get($color, white);
+
+        li {
+          list-style-type: none;
+          padding-left: 0;
+          &:before {
+            content: none;
+          }
+        }
+
+        @include desktop {
+          padding: 0;
+          display: block;
+          background: none;
+        }
+
+        .btn {
+          color: map-get($color, white);
+          padding: map-get($spacing, x-small) map-get($spacing, small) map-get($spacing, x-small) 10px;
+          font-size: 14px;
+          @include desktop {
+            margin-top: map-get($spacing, medium);
+            background: map-get($color, white);
+            border-color: map-get($color, white);
+            color: map-get($color, black);
+          }
+          &:hover,
+          &:focus {
+            color: map-get($color, white);
+            @include desktop {
+              background: map-get($color, red);
+              border-color: map-get($color, red);
+              color: map-get($color, white);
+            }
+          }
+
+          span {
+            margin-right: map-get($spacing, x-small);
+          }
+        }
+
+      }
+
+      &.active {
+        .link-group {
+        	&__title {
+        		&:after {
+              @include icon(chevron-up);
+        			@include desktop {
+        				content: none;
+        			}
+        		}
+        	}
+        }
+      }
+    }
+  }
+
+  .social {
+    padding: map-get($spacing, small) map-get($spacing, medium);
+    @include desktop {
+      padding: 0;
+      margin-top: - map-get($spacing, large);
+    }
+
+    ul {
+      display: flex;
+      margin-left: - map-get($spacing, xx-small);
+      margin-right: - map-get($spacing, xx-small);
+
+      li {
+        margin-left: map-get($spacing, xx-small);
+        margin-right: map-get($spacing, xx-small);
+        padding-left: 0;
+        list-style-type: none;
+        &:before {
+          content: none;
+        }
+        a {
+          @include link(white);
+          font-size: 16px;
+          background: map-get($color, red);
+          padding: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: $border-radius;
+        }
+      }
+    }
+
+    .title {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,396 @@
+.compare-results {
+	&__items {
+		width: 100%;
+		display: flex;
+		position: relative;
+		padding-bottom: map-get($spacing, xx-large);
+		overflow-y: hidden;
+		overflow-x: scroll;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		-ms-overflow-style: none;  
+		scrollbar-width: none; 
+
+		div:nth-child(2):nth-last-child(2),
+		div:nth-child(3):nth-last-child(1) {
+			.compare-tray-item__close {
+				display: none;
+			}
+		}
+	}
+	
+	&__scroll-bullets-wrapper {
+		display: none;
+		&.active{
+			@include mobile-only{
+				display: flex;
+				justify-content: center;
+				text-align: center;
+				margin: map-get($spacing, small) 0;
+			}
+		}
+	}
+	&__scroll-bullet {
+		background-color: map-get($color, gray-light);
+		width: 12px;
+		height: 12px;
+		margin-right: map-get($spacing, x-small);
+		border-radius: 8px;
+		&.active {
+			background-color: map-get($color, red);
+		}
+	}
+
+	&__results{
+		&--sticky {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 1;
+			background-color: map-get($color, white);
+			padding-bottom: map-get($spacing, x-large);
+			max-width: calc(1224px + 18px*2);
+			padding-left: 18px;
+			padding-right: 18px;
+			.compare-tray-item__image {
+				display: none;
+			}
+		}
+	}
+	.compare-tray-item {
+		position: relative;
+		flex-grow: 1;
+		padding: 0 map-get($spacing, large);
+		border-left: 1px solid map-get($brand, border);
+		display: flex;
+		flex-direction: column;
+		flex-basis: 25%;
+		width: 25%;
+		min-width: 160px;
+
+		&__close {
+			position: absolute;
+			appearance: none;
+			border: 0;
+			background: none;
+			outline: none;
+			right: map-get($spacing, x-small);
+			top: 4px;
+			font-size: 20px;
+			line-height: 20px;
+			font-weight: bold;
+			padding: 0;
+			z-index: 1;
+			cursor: pointer;
+			&:hover,
+			&:focus {
+				color: map-get($color, red);
+			}
+		}
+
+		&__content {
+			@include balance-margins;
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+		}
+
+		&__image {
+			img {
+				margin: auto;
+				max-width: 250px;
+				width: 100%;
+			}
+		}
+
+		&__title {
+			@include typography(p-large);
+			color: map-get($brand, text);
+			a {
+				@include link(gray-darkest);
+			}
+
+			+ p {
+				margin-top: - map-get($spacing, small);
+			}
+		}
+
+		&__description {
+			@include font(headline);
+			@include typography(p-small);
+			color: map-get($brand, text);
+
+			span {
+				margin: map-get($spacing, x-small);
+			}
+
+			@include desktop {
+				flex-grow: 1;
+			}
+		}
+
+		&__pricing {
+			border-top: 1px solid map-get($brand, border);
+		}
+
+		&__cta {
+			display: block;
+			margin: map-get($spacing, medium) auto;
+			width: 60%;
+			.btn {
+				width: 100%;
+				padding: map-get($spacing, small) 0;
+				@include typography(p-small);
+				display: flex;
+				justify-content: center;
+				&.link {
+					@include link(red);
+					background-color: map-get($color, white);
+					padding: map-get($spacing, small) 0;
+					&:after {
+						content: none;
+					}
+				}
+			}
+		}
+
+		&__add-to-list {
+			display: block;
+			width: 100%;
+			.compare-tray-item__add-to-list-submit {
+				padding-left: map-get($spacing, medium);
+				padding-right: map-get($spacing, medium);
+				color: map-get($color, red);
+				background-color: transparent;
+				&:disabled {
+					color: map-get($color, gray-light);
+				}
+			}
+			.add-to-list-select {
+				height: 48px;
+				border: 1px solid map-get($color, gray-light);
+				border-radius: 2px;
+				background-color: map-get($color, white);
+				color: map-get($color, gray-darker);
+				@include font(regular);
+				font-size: 14px;
+				letter-spacing: 0;
+				line-height: 16px;
+				padding: 0 map-get($spacing, small);
+				width: 100%;
+				&:focus{
+					outline-color:  map-get($color, gray-light);
+				}
+				-moz-appearance: none;
+				-webkit-appearance: none;
+				&:-ms-expand {
+					display: none;
+				}
+				
+			}
+		}
+		.add-to-list-success-message {
+			font-size: 15px;
+			line-height: 21px;
+			font-weight: bold;
+			text-align: center;
+			@include font(headline);
+			&--success {
+				color: map-get($color, green);
+			}
+			&--error {
+				color: map-get($color, red);
+			}
+		}
+
+		&__add-to-list-select {
+			width: 100%;
+			position: relative;
+			&:after {
+				@include icon(chevron-down);
+					font-size: 14px;
+					line-height: 1;
+					margin-left: map-get($spacing, x-small);
+					position: absolute;
+					top: 17px;
+					right: 14px;
+					pointer-events: none;
+					color: map-get($color, red);
+			}
+		}
+
+		&:nth-last-child(n+3):nth-last-child(-n+3):first-child, 
+		&:nth-last-child(n+3):nth-last-child(-n+3):first-child ~ div {
+			&:first-of-type {
+				width: 20%;
+				flex-basis: 20%;
+			}
+			&:not(:first-of-type){
+				width: 40%;
+				flex-basis: 40%
+			}
+		}
+
+		&:nth-last-child(n+4):nth-last-child(-n+4):first-child, 
+		&:nth-last-child(n+4):nth-last-child(-n+4):first-child ~ div,
+		&:nth-last-child(n+5):nth-last-child(-n+5):first-child, 
+		&:nth-last-child(n+5):nth-last-child(-n+5):first-child ~ div {
+			.compare-tray-item__cta {
+				flex-wrap: wrap;
+				justify-content: center;
+				width: 100%;
+				
+				form {
+					width: 100%;
+				}
+
+				.btn {
+					width: 100%;
+					display: block;
+					&.link {
+						display: flex;
+						justify-content: center;
+					}
+				}
+			}
+		}
+
+		&--highlight {
+			align-self: flex-end;
+			margin-bottom: - map-get($spacing, xx-large);
+			border-left: 0;
+			flex-direction: row;
+			display: flex;
+			width: 100%;
+
+			button {
+				@include font(headline);
+				@include typography(p-small);
+				appearance: none;
+				padding: 0;
+				border: 0;
+				display:flex;
+				background: none;
+				text-transform: uppercase;
+				font-weight: bold;
+				position: relative;
+				text-align: left;
+				left: - map-get($spacing, large);
+				outline: none;
+				// flex: 1;
+				// @include desktop {
+				// 	min-width: 190px;
+				// }
+			}
+
+			@include mobile-only {
+				position: absolute;
+				bottom: 0;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__detail {
+		margin: map-get($spacing, x-large) 0;
+	}
+	&__table-first-column {
+		@include mobile-only {
+			display: none;
+		}
+	}
+	&__table-mobile-column-header {
+		display: none;
+		height: 42px;
+		@include mobile-only {
+			display:table-cell;
+			&:before {
+				content: attr(data-title);
+				font-weight: bold;
+				position: absolute;
+			}
+		}
+	}
+	.compare-results-detail-item {
+		h4 {
+			margin: 0;
+			padding: map-get($spacing, medium);
+			text-transform: uppercase;
+			background: map-get($color, white);
+			border: 1px solid map-get($brand, border);
+			box-shadow: 0 1px 3px 0 rgba(23,23,23,0.15);
+			position: relative;
+			&:after {
+				@include icon(chevron-down);
+				color: map-get($color, red);
+				@include typography(p);
+			}
+
+			&[data-accordion-trigger]{
+				pointer-events: auto;
+			}
+		}
+
+		[data-accordion-content]{
+			display: none;
+		}
+
+		&.active {
+			[data-accordion-content]{
+				display: block;
+				overflow: scroll;
+				&::-webkit-scrollbar {
+					display: none;
+				}
+				-ms-overflow-style: none;  
+				scrollbar-width: none; 
+			}
+			h4 {
+				&:after {
+					@include icon(chevron-up);
+				}
+			}
+		}
+
+		tr {
+			width: 100%;
+			word-break: break-word;
+			
+			&.active {
+				background-color: rgba(234,114,0,0.26);
+			}
+		}
+		td,
+		th {
+			@for $i from 1 through 5 {
+				&:nth-last-child(n+#{$i}):nth-last-child(-n+#{$i}):first-child, 
+				&:nth-last-child(n+#{$i}):nth-last-child(-n+#{$i}):first-child ~ td {
+					width: calc(100%/#{$i});
+				}
+			}
+
+			&:nth-last-child(n+3):nth-last-child(-n+3):first-child, 
+			&:nth-last-child(n+3):nth-last-child(-n+3):first-child ~ td {
+				&:first-of-type {
+					width: 20%;
+					flex-basis: 20%;
+				}
+				&:not(:first-of-type){
+					width: 40%;
+					flex-basis: 40%
+				}
+			}
+		}
+
+		td {
+			min-width: 160px;
+			border-right: 1px solid  map-get($brand, border);
+			&:last-of-type {
+				border: none;
+			}
+		}
+	}
+}

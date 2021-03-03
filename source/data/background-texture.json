@@ -1,0 +1,18 @@
+{
+  "small-left":{
+    "background":"url(/images/Background-MixedMedia-SmallLeft.png)",
+    "style":"small-left"
+  },
+  "small-right":{
+    "background":"url(/images/Background-MixedMedia-SmallRight.png)",
+    "style":"small-right"
+  },
+  "large-left":{
+    "background":"url(/images/Background-MixedMedia-LargeLeft.png)",
+    "style":"large-left"
+  },
+  "large-right":{
+    "background":"url(/images/Background-MixedMedia-LargeRight.png)",
+    "style":"large-right"
+  }
+}

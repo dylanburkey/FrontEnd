@@ -1,0 +1,217 @@
+{ 
+  "safety-data-sheets": {
+    "title": "Safety Data Sheets (SDS) Results",
+    "hasResults": true,
+    "back": "Back",
+    "backlink": "#",
+    "alertTooltip":"Receive alerts to your provided email address when your selected records change.",
+    "setupEmailAlerts": "Setup Email Alerts",
+    "setupEmailAlertsText":"Enter your email address to receive alerts when your selected records change.",
+    "setupEmailAlertsLabel":"Email Address",
+    "setupEmailAlertsCTA":"Subscribe",
+    "setupEmailAlertsDisclaimer":"You are about to provide us with your personal information. Please review our Website Privacy Policy on how we collect, use, and retain personal information. By clicking “Accept,” you (1) agree to the manner in which we process your personal information, as described in our Website Privacy Policy, and (2) confirm that you are at least sixteen years (16) of age.",
+    "disclaimer": "Note: These documents are compiled from Lincoln Electric Company and its subsidiaries suppliers with the most up to date information and understanding of our component compositions, and is subject to change at any time. Please regularly refer back to this search, or sign up to our mailing list for REACH, RoHS, CM, CRM or SDS changes. † The information provided contains the most recent updates of Candidate List substances as of date of publication.",
+    "cells":[
+      {
+        "value":"Product Name",
+        "index": 1
+      },
+      {
+        "value":"Size",
+        "index": 2
+      },
+      {
+        "value":"Process",
+        "index": 3
+      },
+      {
+        "value":"Validity Area",
+        "index": 4
+      },
+      {
+        "value":"Language",
+        "index": 5
+      },
+      {
+        "value":"Alerts",
+        "index": 6
+      }
+    ],
+    "rows":[
+      {
+        "cells":[
+          {
+            "items": "c1CrMo",
+            "style":"product-name",
+            "value": "Product Name"
+          },
+          {
+            "items": "1.2mm (3/64”)",
+            "value": "Size"
+          },
+          {
+            "items":"GMAW",
+            "value": "Process"
+          },
+          {
+            "items": "China",
+            "value": "Valability Area"
+          },
+          {
+            "items": "English",
+            "value": "Language"
+          },
+          {
+            "checkbox":"1",
+            "value": "Alerts"
+          }
+        ]
+      },
+      {
+        "cells":[
+          {
+            "items":"a1CrMo",
+            "style":"product-name",
+            "value": "Product Name"
+          },
+          {
+            "items": "1.2mm (3/64”)",
+            "value": "Size"
+          },
+          {
+            "items":"GMAW",
+            "value": "Process"
+          },
+          {
+            "items": "Europe",
+            "value": "Valability Area"
+          },
+          {
+            "items": "English",
+            "value": "Language"
+          },
+          {
+            "checkbox": "2",
+            "value": "Alerts"
+          }
+        ]
+      },
+      {
+        "cells":[
+          {
+            "items": "d1CrMo",
+            "style":"product-name",
+            "value": "Product Name"
+          },
+          {
+            "items": "1.2mm (3/64”)",
+            "value": "Size"
+          },
+          {
+            "items": "GMAW",
+            "value": "Process"
+          },
+          {
+            "items": "North America",
+            "value": "Valability Area"
+          },
+          {
+            "items": "English",
+            "value": "Language"
+          },
+          {
+            "checkbox": "3",
+            "value": "Alerts"
+          }
+        ]
+      },
+      {
+        "cells":[
+          {
+            "items": "b1CrMo",
+            "style":"product-name",
+            "value": "Product Name"
+          },
+          {
+            "items": "1.1mm (.045”)",
+            "value": "Size"
+          },
+          {
+            "items": "GMAW",
+            "value": "Process"
+          },
+          {
+            "items": "China",
+            "value": "Valability Area"
+          },
+          {
+            "items": "English",
+            "value": "Language"
+          },
+          {
+            "checkbox": "4",
+            "value": "Alerts"
+          }
+        ]
+      },
+      {
+        "cells":[
+          {
+            "items": "e1CrMo",
+            "style":"product-name",
+            "value": "Product Name"
+          },
+          {
+            "items": "1.1mm (.045”)",
+            "value": "Size"
+          },
+          {
+            "items": "GMAW",
+            "value": "Process"
+          },
+          {
+            "items": "Europe",
+            "value": "Valability Area"
+          },
+          {
+            "items": "English",
+            "value": "Language"
+          },
+          {
+            "checkbox": "5",
+            "value": "Alerts"
+          }
+        ]
+      },
+      {
+        "cells":[
+          {
+            "items": "f1CrMo",
+            "style":"product-name",
+            "value": "Product Name"
+          },
+          {
+            "items": "1.1mm (.045”)",
+            "value": "Size"
+          },
+          {
+            "items": "GMAW",
+            "value": "Process"
+          },
+          {
+            "items": "North America",
+            "value": "Valability Area"
+          },
+          {
+            "items": "English",
+            "value": "Language"
+          },
+          {
+            "checkbox": "6",
+            "value": "Alerts"
+          }
+        ]
+      }
+    ]
+  }
+}

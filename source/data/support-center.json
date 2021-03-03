@@ -1,0 +1,13 @@
+{
+  "support-center":{
+    "description":"Looking for Tips or Knowledge Center?",
+    "link":"Visit Support Center",
+    "href":"#link-test"
+  },
+  "need-assistance":{
+    "description":"Need Assistance?",
+    "link":"Contact Our Support Team",
+    "href":"#link-test",
+    "style":"assistance"
+  }
+}

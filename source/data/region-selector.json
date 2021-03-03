@@ -1,0 +1,291 @@
+{
+  "region-selector": {
+    "title": "Select Your Region",
+    "description": "Headquartered in Cleveland, Ohio, Lincoln has 60 manufacturing locations, including operations and joint ventures in 19 countries and a worldwide network of distributors and sales offices covering more than 160 countries.",
+    "regions": [
+      {
+        "title": "North, Central, South America",
+        "columns": [
+          {
+            "items": [
+              {
+                "text": "United States",
+                "url": "#!united-states",
+                "language": "English",
+                "image": "/images/US.png"
+              },
+              {
+                "text": "Canada",
+                "url": "#!canada",
+                "language": "English",
+                "image": "/images/CA.png"
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "text": "Argentina",
+                "url": "#!argentina",
+                "language": "English",
+                "image": "/images/AR.png"
+              },
+              {
+                "text": "Canada",
+                "url": "#!canada",
+                "language": "French",
+                "image": "/images/CA.png"
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "text": "Brazil",
+                "url": "#!brazil",
+                "language": "English",
+                "image": "/images/BR.png"
+              },
+              {
+                "text": "Mexico",
+                "url": "#!mexico",
+                "language": "English",
+                "image": "/images/MX.png"
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "text": "Venezuela",
+                "url": "#!venezula",
+                "language": "English",
+                "image": "/images/VE.png"
+              },
+              {
+                "text": "Colombia",
+                "url": "#!colombia",
+                "language": "English",
+                "image": "/images/CO.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Europe, Middle East & Africa",
+        "columns": [
+          {
+            "items": [
+              {
+                "text": "Belgium",
+                "url": "#!belgium",
+                "language": "English",
+                "image": "/images/BE.png"
+              },
+              {
+                "text": "Croatia",
+                "url": "#!croatia",
+                "language": "English",
+                "image": "/images/HR.png"
+              },
+              {
+                "text": "Czech Republic",
+                "url": "#!czech-republic",
+                "language": "English",
+                "image": "/images/CZ.png"
+              },
+              {
+                "text": "Denmark",
+                "url": "#!denmark",
+                "language": "English",
+                "image": "/images/DK.png"
+              },
+              {
+                "text": "Estonia",
+                "url": "#!estonia",
+                "language": "English",
+                "image": "/images/EE.png"
+              },
+              {
+                "text": "Finland",
+                "url": "#!finland",
+                "language": "English",
+                "image": "/images/FI.png"
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "text": "France",
+                "url": "#!france",
+                "language": "English",
+                "image": "/images/FR.png"
+              },
+              {
+                "text": "Germany",
+                "url": "#!germany",
+                "language": "English",
+                "image": "/images/DE.png"
+              },
+              {
+                "text": "Greece",
+                "url": "#!greece",
+                "language": "English",
+                "image": "/images/GR.png"
+              },
+              {
+                "text": "Hungary",
+                "url": "#!hungary",
+                "language": "English",
+                "image": "/images/HU.png"
+              },
+              {
+                "text": "Italy",
+                "url": "#!italy",
+                "language": "English",
+                "image": "/images/IT.png"
+              },
+              {
+                "text": "Latvia",
+                "url": "#!latvia",
+                "language": "English",
+                "image": "/images/LT.png"
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "text": "Lithuania",
+                "url": "#!lithuania",
+                "language": "English",
+                "image": "/images/LT.png"
+              },
+              {
+                "text": "Middle East & Africa",
+                "url": "#!me-africa",
+                "language": "English"
+              },
+              {
+                "text": "Netherlands",
+                "url": "#!netherlands",
+                "language": "English",
+                "image": "/images/NL.png"
+              },
+              {
+                "text": "Norway",
+                "url": "#!norway",
+                "language": "English",
+                "image": "/images/NO.png"
+              },
+              {
+                "text": "Poland",
+                "url": "#!poland",
+                "language": "English",
+                "image": "/images/PL.png"
+              },
+              {
+                "text": "Portugal",
+                "url": "#!portugal",
+                "language": "English",
+                "image": "/images/PT.png"
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "text": "Romania",
+                "url": "#!romania",
+                "language": "English",
+                "image": "/images/RO.png"
+              },
+              {
+                "text": "Russia",
+                "url": "#!russia",
+                "language": "English",
+                "image": "/images/RU.png"
+              },
+              {
+                "text": "Slovakia",
+                "url": "#!slovakia",
+                "language": "English",
+                "image": "/images/SK.png"
+              },
+              {
+                "text": "Spain",
+                "url": "#!spain",
+                "language": "English",
+                "image": "/images/ES.png"
+              },
+              {
+                "text": "Ukraine",
+                "url": "#!ukraine",
+                "language": "English",
+                "image": "/images/UA.png"
+              },
+              {
+                "text": "United Kingdom",
+                "url": "#!uk",
+                "language": "English",
+                "image": "/images/GB.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Asia Pacific",
+        "columns": [
+          {
+            "items": [
+              {
+                "text": "Australia",
+                "url": "#!australia",
+                "language": "English",
+                "image": "/images/AU.png"
+              },
+              {
+                "text": "People's Republic of China",
+                "url": "#!china",
+                "language": "English",
+                "image": "/images/CN.png"
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "text": "India",
+                "url": "#!india",
+                "language": "English",
+                "image": "/images/IN.png"
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "text": "Japan",
+                "url": "#!japan",
+                "language": "English",
+                "image": "/images/JP.png"
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "text": "South East Asia",
+                "url": "#!sea",
+                "language": "English"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

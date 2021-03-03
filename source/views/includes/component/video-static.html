@@ -1,0 +1,12 @@
+<div class="video">
+  <div class="video__wrapper video__wrapper--static">
+    {% assign video = include.data %}
+    <img data-object-fit="cover" class="video__img--inline active" src="{{ video.thumbnail | prepend: site.baseurl }}" />
+    <button class="video__button video__button--inline active" data-inline-video-trigger="video-id-here" >
+      <span class="video__button-content"></span>
+    </button>
+    <div class="video__iframe-wrapper--inline" data-inline="video-id-here">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/-7McZMgXIDk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>

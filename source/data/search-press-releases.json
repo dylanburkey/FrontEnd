@@ -1,0 +1,12 @@
+{
+  "search-press-releases":{
+    "title":"Search Press Releases",
+    "placeholder":"Search",
+    "submit":"Submit"
+  },
+  "no-results":{
+    "title":"Search Again",
+    "placeholder":"lorem ipsum",
+    "submit":"Submit"
+  }
+}

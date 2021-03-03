@@ -1,0 +1,24 @@
+$block: 'section-header';
+
+.#{$block} {
+	@include balance-margins;
+	@include container;
+
+	&__disclaimer {
+		@include typography(p-small);
+		@include balance-margins;
+		margin-top: map-get($spacing, medium);
+		padding-top: map-get($spacing, medium);
+	}
+	&.centered {
+		text-align: center;
+		margin-left: auto!important;
+		margin-right: auto!important;
+
+		[data-accordion-trigger] {
+			@include desktop {
+				justify-content: center;
+			}
+		}
+	}
+}

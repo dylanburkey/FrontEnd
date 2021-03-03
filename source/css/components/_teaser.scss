@@ -1,0 +1,48 @@
+$block: 'teaser';
+
+.#{$block} {
+	@include balance-margins;
+
+	&__wrapper {
+		@include balance-margins;
+	}
+
+	&__eyebrow {
+		@include font(headline);
+		font-weight: bold;
+		color: map-get($color, gray);
+		text-transform: uppercase;
+		margin-bottom: - map-get($spacing, x-small);
+	}
+	
+	&__description {
+		@include typography(p-large);
+		color: map-get($color, gray-darker);
+	}
+
+	&__cta {
+		@include balance-margins;
+
+		.btn {
+			&:nth-last-child(n+2):nth-last-child(-n+2):first-child, 
+			&:nth-last-child(n+2):nth-last-child(-n+2):first-child ~ .btn { 
+				@include desktop {
+					margin: 0 map-get($spacing, small);
+
+				}
+			}
+
+			// &:nth-of-type(2) {
+			// 	margin-top: map-get($spacing, small);
+			// 	@include desktop {
+			// 		margin-top: 0;
+			// 	}
+			// }
+		}
+
+		@include desktop {
+			margin-top: map-get($spacing, xx-large);
+			white-space: nowrap;
+		}
+	}
+}

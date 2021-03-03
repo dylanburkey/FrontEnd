@@ -1,0 +1,110 @@
+{
+  "quote-footer-three":{
+  "meta":{
+    "description":"Net prices are exclusive of any additional changes, allowances or promotional discounts",
+    "title":"** QUOTATION IS VALID FOR 30 DAYS**"
+  },
+  "title":"Quote Approval",
+    "items":[
+      {
+        "description":"Signature:"
+      },
+      {
+        "description":"Name:"
+      },
+      {
+        "description":"Title:"
+      },
+      {
+        "description":"Date:"
+      }
+    ]
+  },
+  "quote-footer-two":{
+    "style":"sales",
+    "title":"Quote Approval",
+    "items":[
+      {
+        "description":"Signature:"
+      },
+      {
+        "description":"Name:"
+      },
+      {
+        "description":"Title:"
+      },
+      {
+        "description":"Date:"
+      }
+    ],
+    "period":{
+      "meta":"**QUOTATION IS VALID FOR 30 DAYS**",
+      "elements":[
+        {
+          "text":"Net Prices are exclusive of any additional charges, allowances or promotional discounts.Net prices do not include freight charges"
+        },
+        {
+          "description":"Terms and Conditions",
+          "text":"https://lincolnelectric.com/terms-and-conditions"
+        },
+        {
+          "text":"Export Sales:Our standard domestic pricing(as shown above) and discount structure does not apply to domestic US distributors"
+        }
+      ]
+    }
+  },
+  "quatation":{
+    "meta":{
+      "description":"Net prices are exclusive of any additional changes, allowances or promotional discounts",
+      "title":"** QUOTATION IS VALID FOR 30 DAYS**"
+    },
+    "title":"Quote Approval",
+    "items":[
+      {
+        "description":"Signature:"
+      },
+      {
+        "description":"Name:"
+      },
+      {
+        "description":"Title:"
+      },
+      {
+        "description":"Date:"
+      }
+    ]
+  },
+  "quatation-sale":{
+    "style":"sales",
+    "title":"Quote Approval",
+    "items":[
+      {
+        "description":"Signature:"
+      },
+      {
+        "description":"Name:"
+      },
+      {
+        "description":"Title:"
+      },
+      {
+        "description":"Date:"
+      }
+    ],
+    "period":{
+      "meta":"**QUOTATION IS VALID FOR 30 DAYS**",
+      "elements":[
+        {
+          "text":"Net Prices are exclusive of any additional charges, allowances or promotional discounts.Net prices do not include freight charges"
+        },
+        {
+          "description":"Terms and Conditions",
+          "text":"https://lincolnelectric.com/terms-and-conditions"
+        },
+        {
+          "text":"Export Sales:Our standard domestic pricing(as shown above) and discount structure does not apply to domestic US distributors"
+        }
+      ]
+    }
+  }
+}

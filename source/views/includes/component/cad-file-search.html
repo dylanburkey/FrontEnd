@@ -1,0 +1,73 @@
+{% assign cad = site.data.cad-file-search[include.data] %}
+
+<div class="cad-file-search container">
+  <div class="cad-file-search__wrapper">
+    <h3 class="cad-file-search__title">{{cad.title}}</h3>
+    <div class="cad-file-search__subtext-wrapper">
+      <p class="cad-file-search__subtext">{{cad.subtext1}}</p>
+      <p class="cad-file-search__subtext">{{cad.subtext2}}
+        <a class="cad-file-search__link">{{cad.link}}</a>
+      </p>
+    </div>
+    <div class="cad-file-search__section-search">
+      <form class="cad-file-search__dropdown">
+        <label class="cad-file-search__dropdown-label" for="{{cad.product-name-label}}">{{cad.product-name}}</label>
+        <div class="cad-file-search__dropdown-wrap">
+          <div class="cad-file-search__dropdown-wrapper">
+            <span class="icon icon-chevron-down cad-file-search__dropdown-arrow"></span>
+            <select class="cad-file-search__dropdown-select" id="{{cad.product-name-label}}" name="">
+              {% for option in cad.options %}
+              <option value="{{option.value}}" name="{{option.name}}">{{option.text}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <button type="submit" class="btn">{{cad.find}}</button>
+        </div>
+      </form>
+      <div class="cad-file-search__section-or-wrapper">
+        <div class="cad-file-search__section-or-divider"></div>
+        <div class="cad-file-search__section-or-text">{{cad.or-text}}</div>
+        <div class="cad-file-search__section-or-divider"></div>
+      </div>
+      <form class="cad-file-search__form-input">
+        {% include component/input-text.html data="find-cad-file" %}
+      </form>
+    </div>
+    {% if cad.results %}
+    <div class="cad-file-search__section-results">
+      {% if cad.results.title %}
+      <p class="cad-file-search__section-results-title">{{cad.results.title}}</p>
+      {% endif %}
+      <div class="cad-file-search__results">
+        <div class="cad-file-search__results-row">
+          <div class="cad-file-search__results-header results-col1">
+            <span class="cad-file-search__results-header-text">{{cad.results.product-name}}</span>
+          </div>
+          <div class="cad-file-search__results-header results-col2">
+            <span class="cad-file-search__results-header-text">{{cad.results.product-number}}</span>
+          </div>
+          <div class="cad-file-search__results-header results-col3">
+            <span class="cad-file-search__results-header-text">{{cad.results.files}}</span>
+          </div>
+        </div>
+        {% for product in cad.results.products %}
+        <div class="cad-file-search__results-row">
+          <div class="cad-file-search__results-product-row results-col1">
+            <span class="cad-file-search__results-text cad-file-search__results-text--gray">{{product.product-name}}</span>
+          </div>
+          <div class="cad-file-search__results-product-row results-col2 ">
+            <span
+              class="cad-file-search__results-text cad-file-search__results-text--gray">{{product.product-number}}</span>
+          </div>
+          <div class="cad-file-search__results-product-row results-col3">
+            <span class="cad-file-search__results-text">{{product.file-1}}</span>
+            <br>
+            <span class="cad-file-search__results-text">{{product.file-2}}</span>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>

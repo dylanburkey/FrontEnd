@@ -1,0 +1,6 @@
+{% assign e = site.data.support-center[include.data] %}
+
+<div class="support-center {% if e.style %}support-center--{{e.style}}{% endif %}">
+  <p class="support-center__description">{{e.description}}</p>
+  <a class="support-center__link" href="{{e.href}}">{{e.link}}</a>
+</div>

@@ -1,0 +1,8 @@
+{% assign tiles = site.data.tiles[include.style][include.data] %}
+
+<div class="tiles">
+{% for tile in tiles %}
+	{% include component/tiles/{{include.style}}.html 
+		e=tile %}
+{% endfor %}
+</div>

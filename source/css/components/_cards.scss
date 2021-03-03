@@ -1,0 +1,107 @@
+$block: 'cards';
+
+.#{$block} {
+	// @include balance-margins;
+
+	// @include desktop {
+	// 	display: flex;
+	// 	flex-wrap: wrap;
+	// 	justify-content: space-between;
+	// 	// margin-left: - map-get($spacing, small);
+	// 	// margin-right: - map-get($spacing, small);
+	// }
+
+
+	// .card {
+
+	// 	&:nth-last-child(n+3):nth-last-child(-n+3):first-child, 
+	// 	&:nth-last-child(n+3):nth-last-child(-n+3):first-child ~ .card {
+	// 		@include desktop {
+	// 			flex-basis: calc(100%/3 - #{map-get($spacing, small) * 2});
+	// 			width: calc(100%/3 - #{map-get($spacing, small) * 2 });
+	// 			// margin: 0 map-get($spacing, small);
+	// 		}
+	// 	}
+
+	// 	@include desktop {
+	// 		flex-basis: calc(100%/4 - #{map-get($spacing, small) * 2});
+	// 		width: calc(100%/4 - #{map-get($spacing, small) * 2 });
+	// 		// margin: map-get($spacing, small) 0;
+	// 	}
+
+	// 	&--promo-detail {
+	// 		@include desktop {
+	// 			flex-basis: calc(100%/2 - #{map-get($spacing, small) * 2});
+	// 			width: calc(100%/2 - #{map-get($spacing, small) * 2 });
+	// 		}
+	// 	}
+
+	// 	&--article-list,
+	// 	&--product-list {
+	// 		@include desktop {
+	// 			width: 100%;
+	// 			flex-basis: 100%;
+	// 		}
+	// 	}
+	// }	
+
+
+	//add class with javascript?
+	&--carousel {
+		display: flex;
+		flex-wrap: nowrap;
+		width: 100%;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		position: relative;
+
+		&:not(.swiper-initialized) {
+			overflow-x: auto;
+		}
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		.swiper-navigation {
+			display: none;
+			@include desktop {
+				display: block;
+			}
+		}
+
+		.swiper-container-initialized {
+			padding: map-get($spacing, small);
+			padding-bottom: map-get($spacing, xx-large);
+		}
+
+		.swiper-button-disabled {
+			display: none;
+		}
+
+		.card {
+			flex-basis: auto;
+			flex-direction: column;
+			box-sizing: border-box;
+
+			&:hover,
+			&:focus {
+				box-shadow: inset 0 0 0 1px map-get($brand, border);
+			}
+
+			&__media,
+			&__content {
+				width: 100%;
+				flex-basis: auto;
+			}
+
+			&__media {
+				img {
+					border-radius: $border-radius $border-radius 0 0;
+					margin: 1px;
+					max-width: calc(100% - 2px);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+<div class="simple-cta">
+	{% if include.data.title or include.data.description %}
+	<div class="simple-cta__content">
+		{% if include.data.title %}<h4 class="simple-cta__title">{{ include.data.title }}</h4>{% endif %}
+		{% if include.data.description %}<p class="simple-cta__description">{{ include.data.description }}</p>{% endif %}
+		{% if include.data.link %}<a href="{{ include.data.link.href }}" class="simple-cta__link"><span class="{{ include.data.link.icon }}"></span>{{ include.data.link.text }}</a>{% endif %}
+	</div>
+	{% endif %}
+	{% if include.data.button %}
+	<div class="simple-cta__button">
+		<a class="btn small" href="{{ include.data.button.url }}">{{ include.data.button.title }}</a>
+	</div>
+	{% endif %}
+</div>

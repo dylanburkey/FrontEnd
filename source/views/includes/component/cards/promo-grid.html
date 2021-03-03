@@ -1,0 +1,10 @@
+{% assign data = site.data.cards.promo-grid[include.data][include.index] %}
+
+<a class="card card--promo-grid" href="{{ data.url }}">
+	<div class="card__image">
+		<img src="{{ data.imageSrc | prepend: site.baseurl }}" alt="{{ data.imageAlt }}" />
+	</div>
+	<p class="card__eyebrow">{{ data.eyebrow }}</p>
+	<h4 class="card__title">{{ data.title }}{% if data.subtitle %}<span>{{ data.subtitle }}</span>{% endif %}</h4>
+	<p class="card__description">{{ data.description }}</p>
+</a>

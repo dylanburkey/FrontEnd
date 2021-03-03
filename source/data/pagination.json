@@ -1,0 +1,35 @@
+{
+  "pagination": {
+    "prev": {
+      "href": "#prev",
+      "icon": "chevron-left"
+    },
+    "next": {
+      "href": "#next",
+      "icon": "chevron-right"
+    },
+    "pages": [
+      {
+        "active": true,
+        "href": "#1",
+        "text": "1"
+      },
+      {
+        "href": "#2",
+        "text": "2"
+      },
+      {
+        "href": "#3",
+        "text": "3"
+      },
+      {
+        "href": "#dots",
+        "text": "..."
+      },
+      {
+        "href": "#10",
+        "text": "10"
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "active-filters": {
+    "href":"#test.clear-all",
+    "text":"CLEAR ALL",
+    "title":"Event:",
+    "description":"FABTECH 2019",
+    "dataActiveFilter": "capability"
+  }
+}

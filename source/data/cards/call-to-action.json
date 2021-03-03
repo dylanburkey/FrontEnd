@@ -1,0 +1,12 @@
+{
+	"newsroom": [
+		{
+			"title": "PR Media Inquiries",
+			"description": "Text explaining this is where you can submit inquiries for media team or investor relations Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm.",
+			"button": {
+				"url": "#!button-url",
+				"text": "Contact our media team"
+			}
+		}
+	],
+}

@@ -1,0 +1,122 @@
+$block: 'quote-footer';
+
+.#{$block} {
+  padding: 0 map-get($spacing, medium) 60px;
+  background:map-get($color, white);
+
+  .quote-footer-meta {
+    padding-bottom: map-get($spacing, x-large);
+
+    &__description {
+      @include font(regular);
+      font-size: 12px;
+      line-height: 21px;
+      color: map-get($color, gray-darkest);
+    }
+
+    &__title {
+      padding-top: map-get($spacing, xx-small);
+      font-size: 12px;
+      line-height: 21px;
+      @include font(regular);
+      color: map-get($color, gray-darkest);
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+  
+  .period-meta {
+    @include font(regular);
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0;
+    font-style: italic;
+    padding-bottom: map-get($spacing, medium);
+    color: map-get($color, gray-darkest);
+  }
+
+  .period-item, .period-terms {
+    @include font(regular);
+    font-size: 12px;
+    line-height: 21px;
+    color: map-get($color, gray-darkest);
+  }
+
+  .period-terms {
+    display: block;
+    margin-bottom: - map-get($spacing, small);
+  }
+
+  .approval {
+    &__title {
+      font-size: 16px;
+      @include font(regular);
+      color: map-get($color, gray-darkest);
+      margin: 0;
+      font-weight: bold;
+      padding-bottom: map-get($spacing, x-small);
+    }
+
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__content {
+      flex: 0 0 45%;
+      display: flex;
+      span {
+        flex-basis: 25%;
+      }
+      input {
+        border: 0;
+        border-bottom: 1px solid map-get($color, black);
+        flex-basis: 75%;
+      }
+    }
+
+    &__item {
+      position: relative;
+      @include font(regular);
+      @include typography(p);
+      color: map-get($color, gray-darkest);
+    }
+  }
+  
+  &--sales {
+    .quote-footer-wrapper {
+      display: flex;
+      &__approval {
+        margin-right: 40px;
+      }
+    }
+    .approval__content {
+      flex: 0 1 auto;
+      padding-bottom: map-get($spacing, x-small);
+
+      span {
+        margin-right: 6px;
+      }
+    }
+
+    .approval__title {
+      padding-bottom: map-get($spacing, medium);
+    }
+
+    .approval__item {
+      margin-right: map-get($spacing, small);
+      font-size: 14px;
+    }
+
+    .quote-footer-wrapper__approval, .quote-footer-wrapper__period {
+      flex: 1;
+    }
+
+    .approval__container {
+      height: 100%;
+      flex-direction: column;
+      justify-content: start;
+    }
+  }
+}

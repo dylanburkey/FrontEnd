@@ -1,0 +1,196 @@
+$block: 'rte';
+
+.#{$block} {
+  ul {
+    li {
+      &:before {
+        background: map-get($color, gray-darkest);
+      }
+    }
+  }
+  img {
+    margin: auto;
+  }
+}
+
+// $block: 'rte';
+
+// .#{$block} {
+//   h1 {
+//     color: map-get($color, gray-darkest);
+//     margin: 0;
+//     font-weight: bold;
+//     letter-spacing: 0;
+//     @include typography(h1);
+//     padding-bottom: map-get($spacing, large);
+//     @include desktop {
+//       padding-bottom: map-get($spacing, xx-small) + map-get($spacing, x-large);
+//     }
+//   }
+
+//   h2 {
+//     @include typography(h2);
+//     color: map-get($color, gray-darkest);
+//     @include font(headline);
+//     font-weight: bold;
+//     letter-spacing: 0;
+//     margin: 0;
+//     padding-bottom: map-get($spacing, large);
+//     @include desktop {
+//       padding-bottom: map-get($spacing, xx-small) + map-get($spacing, x-large);
+//     }
+//   }
+
+//   h3 {
+//     color: map-get($color, gray-darkest);
+//     @include font(headline);
+//     @include typography(h3);
+//     font-weight: bold;
+//     margin: 0;
+//     padding-bottom: map-get($spacing, small);
+//     @include desktop {
+//       padding-bottom: map-get($spacing, large);
+//     }
+//   }
+
+//   h4 {
+//     color: map-get($color, gray-darkest);
+//     @include font(headline);
+//     @include typography(h4);
+//     font-weight: bold;
+//     letter-spacing: 0;
+//     margin: 0;
+//     padding-bottom: map-get($spacing, large);
+//     @include desktop {
+//       color: map-get($color, black);
+//     }
+//   }
+
+//   h5 {
+//     color: map-get($color, black);
+//     @include font(headline);
+//     @include typography(p-large);
+//     font-weight: bold;
+//     letter-spacing: 0;
+//     margin: 0;
+//     padding-bottom:  map-get($spacing, small) +  map-get($spacing, x-small);
+//     @include desktop {
+//       line-height: 22px;
+//     }
+//   }
+
+//   h6 {
+//     color: map-get($color, black);
+//     @include font(headline);
+//     @include typography(p);
+//     font-weight: bold;
+//     letter-spacing: 0;
+//     line-height: 20px;
+//     margin: 0;
+//     padding-bottom:  map-get($spacing, small) +  map-get($spacing, x-small);
+//     @include desktop {
+//       line-height: 20px;
+//     }
+//   }
+
+//   img {
+//     width: 100%;
+//   }
+
+//   p {
+//     color: map-get($color, gray-darker);
+//     @include font(regular);
+//     @include typography(p);
+//     letter-spacing: 0;
+//     margin: 0;
+//     padding-bottom:  map-get($spacing, small) +  map-get($spacing, medium);
+//     @include desktop {
+//       padding-bottom:  map-get($spacing, small) +  map-get($spacing, x-small);
+//     }
+//   }
+
+//   ol {
+//     padding-left: map-get($spacing, x-small) +  map-get($spacing, x-small);
+//     padding-bottom:  map-get($spacing, x-large);
+//     list-style-type: decimal;
+//     @include desktop {
+//       padding-bottom: map-get($spacing, xx-small) + map-get($spacing, x-large);
+//     }
+//     li {
+//       color: map-get($color, gray-darker);
+//       @include font(regular);
+//       letter-spacing: 0;
+//       margin: map-get($spacing, x-small) +  map-get($spacing, x-small) 0;
+//       @include typography(p);
+//       &:first-of-type {
+//         margin-top: 0;
+//       }
+//       &:last-of-type {
+//         margin-bottom: 0;
+//       }
+//     }
+//   }
+
+//   a {
+//     color: map-get($color, red);
+//     @include font(regular);
+//     @include typography(p);
+//     letter-spacing: 0;
+//     padding-bottom: map-get($spacing, x-large);
+//     @include desktop {
+//       padding-bottom: map-get($spacing, large);
+//       line-height: 20px;
+//     }
+//   }
+
+//   ul {
+//     padding-left: map-get($spacing, medium) - map-get($spacing, xx-small);
+//     li {
+//       color:  map-get($color, gray-darker);
+//       @include font(regular);
+//       font-size: 14px;
+//       line-height: 20px;
+//       position: relative;
+
+//       &:before {
+//         content:'';
+//         background:  map-get($color, red);
+//         width: map-get($spacing, xx-small);
+//         height: map-get($spacing, xx-small);
+//         border-radius: 50%;
+//         position: absolute;
+//         left: - (map-get($spacing, medium) - map-get($spacing, x-small));
+//         bottom: map-get($spacing, x-small);
+//         @include desktop {
+//           bottom: map-get($spacing, medium) - map-get($spacing, x-small);
+//         }
+//       }
+
+//       &:first-of-type {
+//         margin-top: 0;
+//       }
+
+//       &:last-of-type {
+//         margin-bottom: 0;
+//       }
+
+//       @include desktop {
+//         margin: map-get($spacing, x-small)  0;
+//         font-size: 16px;
+//         line-height: 24px;
+//       }
+
+//       a {
+//         color: map-get($color, red);
+//         @include font(regular);
+//         @include typography(p);
+//         letter-spacing: 0;
+//         padding-bottom: map-get($spacing, x-large);
+//         @include desktop {
+//           padding-bottom: map-get($spacing, large);
+//           line-height: 20px;
+//         }
+//       }
+//     }
+//   }
+// }

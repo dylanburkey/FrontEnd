@@ -1,0 +1,12 @@
+$block: 'product-features';
+
+.#{$block} {
+
+  header {
+    @include desktop {
+      text-align: center;
+      max-width: inherit;
+      padding-bottom: 0;
+    }
+  }
+}

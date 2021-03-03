@@ -1,0 +1,24 @@
+{% assign e = site.data.quote-table[include.data] %}
+
+<div class="quote-table">
+  <table>
+   <tr class="header">
+      {% for cell in e.cells %}
+      <th>
+        {{cell.value}}
+      </th>
+      {% endfor %}
+    </tr>
+   {% for row in e.rows %}
+   <tr class="{{row.style}}">
+     {% for cell in row.cells %}
+     <td>
+       {% for item in cell.items %}
+         {% if item %}<p>{{item}}</p>{% endif %}
+       {% endfor %}
+     </td>
+     {% endfor %}
+   </tr>
+   {% endfor %}
+  </table>
+</div>

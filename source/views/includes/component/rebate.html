@@ -1,0 +1,11 @@
+{% assign r = site.data.rebate[include.data] %}
+
+<div class="rebate">
+  <p class="rebate__icon">
+    <span class="icon {{r.icon}}"></span>
+    <span class="rebate__icon-text">{{r.icon-text}}</span>
+  </p>
+  <p class="rebate__text">
+    Enter code <span class="rebate__promo-code">{{r.promo-code}}</span>  at checkout for $1,000 off this item!
+  </p>
+</div>

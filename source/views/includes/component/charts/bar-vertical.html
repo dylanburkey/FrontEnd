@@ -1,0 +1,21 @@
+{% assign e = site.data.charts["bar-vertical"][include.data] %}
+
+<div class="chart-block chart-block--vertical">
+  <div class="title">
+    <strong>{{ e.title }}</strong>
+  </div>
+  <div class="chart chart--vertical">
+    {% for item in e.items %}
+    <div class="chart-item">
+      <div class="bar{% if item.highlight %} highlight{% endif %} bar--vertical" style="height: {{item.height}}px"><span class="bar-vertical__text">{{item.value}}</span></div>
+      <div class="label"><strong>{{item.label}}</strong></div>
+    </div>
+    {% endfor %}
+</div>
+</div><div class="mobile-view">
+  <img src="{{e.image.src}}" alt="{{e.image.alt}}" class="mobile-view__img">
+</div>
+
+
+
+

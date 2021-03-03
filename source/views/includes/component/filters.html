@@ -1,0 +1,52 @@
+{% assign filters = site.data.filters[include.data] %}
+
+<div class="filters">
+  <div class="filters__wrapper">
+    {% if filters.title %}
+    <h2 class="filters__title{%if filters.toggle%} filters__title--toggle{% endif %}">{{filters.title}}</h2>
+    {% endif %}
+    {% if filters.toggle %}
+    <div class="filters__toggle-wrapper">
+      <a class="filters__toggle js-filter-toggle" data-closed="true" data-expand="expand all" data-collapse="collapse all">{{filters.toggleText}}</a>
+    </div>
+    {% endif %}
+    <div class="filters__groups">
+      {% for group in filters.groups %}
+        <div {% if group.data-accordion %}data-accordion{% endif %} class="filter-group" data-facet-name="{{group.facet-name}}">
+          <p {% if group.data-accordion-trigger %}data-accordion-trigger{% endif %} class="filter-group__title">{{group.title}}</p>
+          <ul {% if group.data-accordion-content %}data-accordion-content{% endif %} class="filter-group__items">
+          {% if filters.clearFilters %}
+          <li>
+            <div class="filter-item active" data-clear-filters>
+              <a href="#" class="filter-item__link">
+                <span class="filter-item__title">{{ filters.clearFilters }}</span>
+              </a>
+            </div>
+          </li>
+          {% endif %}
+          {% for item in group.items %}
+            <li>
+              <div class="filter-item">
+                {% if item.is-checkbox %}
+                  {% include component/checkbox-link.html
+                  data= item %}
+                {% else %}
+                  <a href="#" class="filter-item__link">
+                    <span class="filter-item__title">{{item.text}}
+                      <span class="filter-item__count">({{item.count}})</span>
+                    </span>
+                  </a>
+                {% endif %}
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="filters__controls">
+    {% include component/filters-controls.html
+    data=filters.filters-controls %}
+  </div>
+</div>

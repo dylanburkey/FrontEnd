@@ -1,0 +1,31 @@
+{% assign data = site.data.cards.promo-detail[include.data][include.index] %}
+
+<a class="card card--promo-detail" href="{{ data.url }}">
+	<div class="card__content">
+		<div>
+			<h3 class="card__title">{{ data.title }}</h3>
+			<p class="card__description">{{ data.description }}{% if data.sku %}<span>|</span>{{ data.sku }}{% endif %}</p>
+			<ul>
+				{% for item in data.list %}
+				<li>{{ item }}</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="card__media">
+			<div class="card__media-wrap">
+				<img src="{{ data.image.src | prepend: site.baseurl }}" alt="{{ data.image.alt }}" />
+			</div>
+		</div>
+	</div>
+	<div class="card__offer">
+		<div class="offer">
+			<h4>{{ data.offer.main.text }}</h4>
+			<p>{{ data.offer.main.subtext }}</p>
+		</div>
+		<div class="offer-separator"><span>- OR -</span></div>
+		<div class="offer offer--secondary">
+			<h4>{{ data.offer.secondary.text }}</h4>
+			<p>{{ data.offer.secondary.subtext }}</p>
+		</div>
+	</div>
+</a>

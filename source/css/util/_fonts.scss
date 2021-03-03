@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Public+Sans:400,400i,700,700i,800i&display=swap');
+
+$fonts-path: "./fonts" !default;
+
+@font-face {
+  font-family: map-get($font, icon);
+  src:  url('#{$fonts-path}/#{map-get($font, icon)}.eot?d7hhl6');
+  src:  url('#{$fonts-path}/#{map-get($font, icon)}.eot?d7hhl6#iefix') format('embedded-opentype'),
+    url('#{$fonts-path}/#{map-get($font, icon)}.ttf?d7hhl6') format('truetype'),
+    url('#{$fonts-path}/#{map-get($font, icon)}.woff?d7hhl6') format('woff'),
+    url('#{$fonts-path}/#{map-get($font, icon)}.svg?d7hhl6##{map-get($font, icon)}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+span[class^="icon-"], 
+span[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: map-get($font, icon) !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+@each $icon-name, $icon in $icons {
+  @if not map-has-key($icons, $icon-name) {
+    @warn "'#{$icon-name}' is not a valid icon name";
+  }
+
+  @else {
+    .icon-#{$icon-name} {
+      &:before {
+        content: $icon;
+      }
+    }
+  } 
+}

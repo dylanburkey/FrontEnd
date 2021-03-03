@@ -1,0 +1,60 @@
+$block: 'breadcrumbs';
+
+.#{$block} {
+  padding-top: map-get($spacing, large)!important;
+  padding-bottom: map-get($spacing, large)!important;
+
+  &--background-gray {
+    background: map-get($brand, background);
+  }
+  
+  nav {
+    @include balance-margins;
+    @include container;
+    display: flex;
+
+    > * {
+      display: none;
+      color: map-get($color, gray-darkest);
+      font-family: map-get($font, headline);
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: 19px;
+      &:last-child {
+        font-weight: bold;
+      }
+      @include desktop {
+        display: inline;
+        font-size: 12px;
+        line-height: 17px;
+
+        &:not(:last-child) {
+          &:after {
+            @include icon(chevron-right);
+            padding: 0 map-get($spacing, x-small);
+            font-size: 10px;
+            color: map-get($color, gray);
+          }
+        }
+      }
+    }
+
+    a {
+      @include link(gray-darkest);
+      &:last-of-type {
+        display: block;
+
+        &:before {
+          @include icon(chevron-left);
+          padding-right: map-get($spacing, x-small);
+          font-size: 10px;
+          color: map-get($color, gray);
+
+          @include desktop {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+}

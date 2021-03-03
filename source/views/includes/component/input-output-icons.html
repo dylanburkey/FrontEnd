@@ -1,0 +1,23 @@
+{% assign io = site.data.input-output-icons[include.data] %}
+<div class="input-output-icons">
+  <div class="input-output-icons__item input-output-icons__item--output">
+    <div class="input-output-icons-item">
+      <p class="input-output-icons-item__title">{{io.output-title}}</p>
+      <div class="input-output-icons-item__icons">
+        {% for icon in io.output-icons %}
+          <img class="input-output-icons-item__icon" src="{{icon.src}}" alt="{{icon.alt}}">
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="input-output-icons__item input-output-icons__item--input">
+    <div class="input-output-icons-item">
+      <p class="input-output-icons-item__title">{{io.input-title}}</p>
+      <div class="input-output-icons-item__icons">
+        {% for icon in io.input-icons %}
+        <img class="input-output-icons-item__icon" src="{{icon.src}}" alt="{{icon.alt}}">
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

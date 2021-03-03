@@ -1,0 +1,33 @@
+{% assign e = site.data.dropdown[include.data] %}
+
+<div class="dropdown{% if e.disabled %} disabled-dropdown{% endif %} ">
+  {% if e.label %}<p class="dropdown__label">{{e.label}}</p>{% endif %}
+  <div class="dropdown__wrapper">
+    <div class="dropdown__select">
+      <p type="button" class="dropdown__trigger">
+        {{e.trigger.text}}
+        {% if e.trigger.sorting-text %}<span class="dropdown__trigger-sorting">{{e.trigger.sorting-text}}</span>{% endif %}
+      </p>
+      <ul class="dropdown__options">
+        {% for option in e.options %}
+          {% if e.dropdown-style == "image" %}
+          <li class="dropdown__option {% if option.selected %}selected{% endif %}" data-value="{{option.value}}"{% if option.name %} data-name="{{option.name}}"{% endif %}>
+            <div class="dropdown__content">
+              <img class="dropdown__image" src="{{option.image | prepend: site.baseurl}}" />
+              <div class="dropdown__body">
+                <p class="dropdown__title">{{option.title}}</p>
+                <p class="dropdown__description">{{option.description}}</p>
+                <p class="dropdown__sku">{{option.sku}}</p>
+              </div>
+            </div>
+          </li>
+          {% else %}
+          <li class="dropdown__option {% if option.selected %}selected{% endif %}" data-value="{{option.value}}"{% if option.name %} data-name="{{option.name}}"{% endif %}>
+            {{option.text}}
+          </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

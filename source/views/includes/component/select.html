@@ -1,0 +1,20 @@
+{% if site.data.select[include.data] %}
+{% assign s = site.data.select[include.data] %}
+{% else %}
+{% assign s = include.data %}
+{% endif %}
+
+<div class="select">
+  {% if s.label %}<p class="select__label">{{s.label}}</p>{% endif %}
+  <div class="select__wrapper" {% if s.select-label %} data-label="{{s.select-label}}"{% endif %}>
+    <div class="select-wrap">
+      <label class="select-label" for="{{s.select-id}}" >Select</label>
+      <select {% if s.product-model %}data-product-model{% endif %} id="{{s.select-id}}" aria-label="{{s.select-aria-label}}">
+        <option selected disabled hidden data-default-option>Select</option>
+        {% for item in s.items %}
+        <option value="{{item.option}}" data-value="{{item.value}}" {% if item.selected %}selected{% endif %} >{{item.option}}</option>
+        {% endfor %}
+      </select>  
+    </div>
+  </div>
+</div>

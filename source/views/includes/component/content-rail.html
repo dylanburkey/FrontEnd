@@ -1,0 +1,32 @@
+{% assign a = site.data.content-rail[include.data] %}
+
+<div class="content-rail">
+  {% include component/simple-cta.html
+          data=a.cta %}
+  <div class="content-rail__content">
+    {% for item in a.items %}
+    <div class="content-rail-item">
+      <h2 class="content-rail-item__title">{{item.title}}</h2>
+      {% for content in item.contents %}
+        <div class="content-rail-item__content">
+          {% if content.style == "article-grid" %}
+            {% include component/cards/article-grid.html
+            data="press-release"
+            index=forloop.index0 %}
+          {% endif %}
+          {% if content.style == "content-image" %}
+          {% include component/cards/content.html
+            data="press-release-content-image"
+          index=0 %}
+          {% endif %}
+          {% if content.style == "content-video" %}
+          {% include component/cards/content.html
+          data="press-release-content-video"
+          index=forloop.index0 %}
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+</div>

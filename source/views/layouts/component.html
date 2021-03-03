@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	{% include core/head.html %}
+	{% capture css %}{% include styles/admin.scss %}{% endcapture %}
+	<style>
+	{{css | scssify}}
+	</style>
+	<body>
+		<main class="main component-view">
+			{% assign parent = site.components | where: "component-id", page.component-type  | first %}
+			{% if page.component-render-data %}
+				
+				{% if page.component-columns and page.component-rows %}
+
+					{% for data-source in page.component-render-data %}
+						<div class="container DO-NOT-INTEGRATE FOR-DISPLAY-ONLY">
+						{% for row in (1..page.component-rows) %}
+							{% assign rowindex = forloop.index0 %}
+							<div class="cols DO-NOT-INTEGRATE FOR-DISPLAY-ONLY">
+								{% for col in (1..page.component-columns) %}
+									<div class="col DO-NOT-INTEGRATE FOR-DISPLAY-ONLY">
+										{% assign index = page.component-columns | times: rowindex | plus: forloop.index0 %}
+										{% include {{ page.component-include-path }}
+											data=data-source
+											index=index %}
+									</div>
+								{% endfor %}
+							</div>
+						{% endfor %}
+						</div>
+					{% endfor %}
+
+				{% else %}
+
+					{% for data-source in page.component-render-data %}
+						{% include {{ page.component-include-path }}
+							data=data-source
+							index=0
+							%}
+					{% endfor %}
+
+				{% endif %}
+
+			{% endif %}
+		</main>
+	</body>
+	<script type="text/javascript" src="{{ 'main.js' | prepend: site.disturl }}"></script>
+</html>

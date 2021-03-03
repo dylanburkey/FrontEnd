@@ -1,0 +1,1470 @@
+$block: 'header';
+
+.#{$block} {
+	$height: 68px;
+
+	box-shadow: 0 2px 4px 0 rgba(49,49,49,0.11);
+	position: relative;
+	@keyframes fadeIn { 
+		0% { 
+			opacity: 0 
+		} to { 
+			opacity: 1
+		}
+	}
+
+	@mixin hide {
+		visibility: hidden;
+		height: 0;
+		opacity: 0;
+		overflow: hidden;
+	}
+
+	@mixin show {
+		visibility: visible;
+		height: auto;
+		opacity: 1;
+		overflow: visible;
+
+		// transition: opacity 200ms ease;
+		ul {
+			li {
+				&:not(.shadow){
+					animation: fadeIn .3s ease-out;
+				}
+			}
+		}
+	}
+
+	@include desktop {
+		margin-top: map-get($fixed-heights, nav-utility);
+		&.notification-exists {
+			margin-top: 84px;
+		}
+	}
+
+
+	.container--large {
+		padding-top: 8px;
+		padding-bottom: 8px;
+		@include desktop {
+			padding-top: 0px;
+			padding-bottom: 0px;
+		}
+	}
+
+	&.notification-closed  {
+		@include desktop {
+			margin-top: 34px;
+		}
+	}
+
+	@include desktop {
+		position: relative;
+		padding: 0;
+	}
+
+	ul, li {
+		margin: 0;
+	}
+
+	ul {
+		li {
+			position: static;
+			padding-left: 0;
+			list-style: none;
+			&:before {
+				content: none;
+			}
+		}
+	}
+
+	a {
+		@include link(black);
+		outline: 0;
+		&:hover,
+		&:focus {
+			color: map-get($brand, primary);
+		}
+	}
+
+	li, form > button {
+		cursor: pointer;
+		&:hover,
+		&:focus {
+			> a {
+				color: map-get($brand, primary);
+			}
+		}
+	}
+
+	&:not(.nav-active) {
+		.nav-primary-controls {
+			margin-left: - map-get($spacing, medium);
+		}
+		.nav-menu-mobile {
+			margin-right: - map-get($spacing, medium);
+		}
+	}
+
+	.logo {
+		display: flex;
+		align-items: center;
+		img {
+			height: 32px;
+			display: block;
+			@include desktop {
+				height: 42px;
+			}
+		}
+		@include mobile-only {
+			margin-right: map-get($spacing, small);
+		}
+	}
+
+	.skip-link {
+		position: absolute;
+		left: -999px;
+		width: 1px;
+		height: 1px;
+		top: auto;
+	}
+
+	.nav-primary-controls,
+	.nav-secondary-controls {
+		@include desktop {
+			display: none!important;
+		}
+	}
+
+	.nav-secondary-controls {
+		background: map-get($color, white);
+		border-bottom: 1px solid map-get($brand, border);
+	}
+
+	.nav-primary-controls {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.nav-links,
+	.nav-menu-close {
+		display: none;
+	}
+
+
+	.nav-menu-toggle,
+	.nav-menu-close {
+		font-size: 0;
+		line-height: 0;
+		height: 40px;
+		padding: 0 map-get($spacing, medium);
+	}
+
+	.nav-menu-toggle {
+		&:after {
+			@include icon(menu);
+			font-size: 20px;
+			line-height: 40px;
+		}
+	}
+
+	.nav-menu-close {
+		&:after {
+			@include icon(close);
+			font-size: 12px;
+			line-height: 40px;
+		}
+	}
+
+
+	.nav {
+		@include desktop {
+			padding-left: map-get($spacing, large);
+		}
+
+		li {
+			a {
+				border-bottom: 1px solid map-get($brand, border);
+				@include desktop {
+					border: 0;
+				}
+			}
+
+			&:last-of-type {
+				// a {
+				// 	border: 0;
+				// }
+			}
+
+			&.child-wrap-col {
+				a {
+					border: 0;
+				}
+			}
+		}
+
+		a {
+			@include font(headline);
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 15px;
+			display: block;
+			line-height: 19px;
+			padding: map-get($spacing, medium);
+			
+			
+			@include desktop {
+				padding: map-get($spacing, small) 0;
+				//border: 0;
+				text-transform: none;
+				font-weight: normal;
+				display: inline-block;
+			}
+		}
+
+		.nav-menu-back {
+			display: none;
+		}
+	}
+
+	.nav-utility {
+		display: none;
+
+		li {
+			a, form {
+				display: flex;
+				align-items: baseline;
+				border: 0;
+				padding-top: map-get($spacing, x-small);
+				padding-bottom: map-get($spacing, x-small);
+				text-transform: none;
+
+				&:before {
+					margin-right: map-get($spacing, xx-small);
+					font-size: 13px;
+				}
+			}
+
+			.nav-utility-nested-item {
+				a {
+					@include mobile-only {
+						margin-left: map-get($spacing, medium);
+					}
+				}
+			}
+
+			&.pin {
+				> a {
+					&:before {
+						@include icon(pin);
+					}
+				}
+			}
+
+			&.about-us {
+				> a {
+					&:before {
+						@include icon(about-us);
+					}
+
+					&:focus {
+						color: map-get($color, white);
+					}
+				}
+			}
+
+			&.help {
+				> a {
+					&:before {
+						@include icon(help);
+					}
+
+					&:focus {
+						color: map-get($color, white);
+					}
+				}
+			}
+
+			&.safety {
+				> a {
+					&:before {
+						@include icon(safety);
+					}
+				}
+			}
+			&.sign-in {
+				> a, form > button {
+					&:before {
+						@include icon(user);
+					}
+					background-color: map-get($color, gray-darkest);
+					border: none;
+				}
+			}
+			&.shopping-cart {
+				background-color: map-get($color, red);
+				> a {
+					&:before {
+						@include icon(cart);
+					}
+				}
+			}
+			&.sign-in, &.shopping-cart {
+				display: none;
+				@include desktop {
+					display: flex;
+				}
+			}
+		}
+
+		.has-dropdown {
+			> a {
+				&:after {
+					margin-left: map-get($spacing, xx-small);
+				}
+			}
+			&.active {
+				background: map-get($color, gray-lightest);
+				position: relative;
+				@include desktop {
+					background: map-get($color, gray-thumbs);
+					border-top: solid 3px map-get($color, red);
+					//Prevents text from shifting down
+					margin-top: -3px;
+					&:focus {
+						color: map-get($color, white);
+					}
+
+					> a {
+						color: map-get($color, white);
+					}
+				}
+			}
+		}
+
+		> .container {
+			display: flex;
+			flex-direction: column;
+
+			.nav-utility-menu {
+				order: 0;
+			}
+			.region-selector-link {
+				order: 1;
+				padding: 0;
+			}
+			.region-selector {
+
+				> img {
+					height: 15px;
+					width: 22px;
+					margin-right: map-get($spacing, x-small);
+				}
+			}
+		}
+
+		.nav-utility-item {
+			&.active {
+				.nav-utility-dropdown-content {
+					a {
+						font-weight: normal;
+					}
+					@include desktop {
+						color: map-get($color, white);
+						line-height: 19px;
+					}
+				}
+			}
+			@include desktop {
+				height: 100%;
+				display: flex;
+				align-items: center;
+				padding: 0 map-get($spacing, small);
+
+				> a, form > button {
+					@include link(white);
+					font-weight: bold;
+				}
+			}
+		}
+
+		@include desktop {
+			position: absolute;
+			top: -(map-get($fixed-heights, nav-utility));
+			left: 0;
+			width: 100%;
+			height: map-get($fixed-heights, nav-utility);
+			background: map-get($color, gray-darkest);
+			display: block;
+
+			> .container {
+				flex-direction: row;
+				justify-content: space-between;
+				height: 100%;
+				align-items: center;
+				.nav-utility-menu {
+					order: 1;
+					height: 100%;
+					align-items: center;
+				}
+				.region-selector-link {
+					order: 0;
+					padding-left: map-get($spacing, medium);
+					white-space: nowrap;
+				}
+			}
+
+			.nav-utility-menu {
+				display: flex;
+			}
+			.nav-utility-item {
+				white-space: nowrap;
+			}
+			li {
+				a, form > button {
+					@include font(headline);
+					padding: 0;
+					font-size: 14px;
+					line-height: 1;
+				}
+			}
+			.nav-utility-nested-item {
+				margin-bottom: map-get($spacing, x-small);
+				display: flex;
+				justify-content: center;
+				> a {
+						@include link(white);
+
+						@include desktop {
+							color: map-get($color, white);
+						}
+				}
+			}
+		}
+		@media (max-width: 1250px) {
+			> .container {
+				.region-selector-link {
+					padding-left: map-get($spacing, x-small);
+					img {
+						min-width: 22px;
+					}
+					p {
+						font-size: 11px;
+						white-space: nowrap;
+					}
+				}
+				.nav-sold-to {
+					font-size: 11px;
+				}
+				.nav-utility-item {
+					a {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+		&.hide,
+		.hide {
+			> li {
+				&:not(.active) {
+					display: none;
+					@include desktop {
+						display: flex;
+					}
+				}
+			}
+		}
+	}
+
+	&.nav-active {
+
+		.nav-links,
+		.nav-menu-close {
+			display: block;
+		}
+
+		.nav-links {
+			> .l1 {
+				> a {
+					background: map-get($color, white);
+				}
+			}
+
+			@include desktop {
+				display: flex;
+			}
+		}
+
+		.nav-utility {
+			display: block;
+		}
+
+		.nav-primary-controls {
+			height: 40px;
+			width: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			background: map-get($color, gray-darkest);
+			z-index: 10;
+
+			.nav-menu-toggle {
+				pointer-events: none;
+				font-size: 14px;
+				line-height: 40px;
+				&:after {
+					content: none;
+				}
+			}
+			
+			a {
+				@include link(white);
+				font-weight: bold;
+			}
+
+			@include desktop {
+				height: auto;
+				width: auto;
+				position: static;
+				top: auto;
+				left: auto;
+				background: transparent;
+			}
+		}
+
+		.nav {
+			position: absolute;
+			width: 100%;
+			height: calc(100vh - 40px);
+			top: 40px;
+			left: 0;
+			z-index: 100;
+			background: map-get($color, gray-lightest);
+			overflow: auto;
+
+			@include desktop {
+				height: auto;
+				width: auto;
+				position: static;
+				top: auto;
+				left: auto;
+				background: transparent;
+				overflow: visible;
+			}
+
+			.nav-menu-back {
+				display: none;
+				&:before {
+					@include icon(chevron-left);
+					font-size: 10px;
+					margin-right: map-get($spacing, xx-small);
+				}
+				&.hide {
+					display: none;
+				}
+				&.show {
+					display: flex;
+					align-items: center;
+				}
+			}
+
+
+		}
+	}
+
+	.nav-links {
+		position: relative;
+		@include desktop {
+			display: flex;
+			position: static;
+			align-items: center;
+			height: 100%;
+		}
+
+		&.hide,
+		.hide {
+			> li {
+				&:not(.active) {
+					display: none;
+					@include desktop {
+						display: block;
+					}
+				}
+			}
+
+			+ .nav-utility {
+				@include hide;
+			}
+		}
+		.has-dropdown {
+			&.active {
+				> a {
+					@include desktop {
+						box-shadow: inset 0 -4px 0 0 map-get($brand, primary);
+
+						&:hover,
+						&:focus {
+							box-shadow: inset 0 -4px 0 0 map-get($brand, primary);
+						}
+					}
+				}
+			}
+		}
+		&.hidden {
+			@include hide;
+		}
+	}
+
+	.l1 {
+		@include desktop {
+			margin: 0 map-get($spacing, medium);
+			height: 100%;
+		}
+		@media (min-width:1024px) and (max-width:1150px){
+			margin: 0 map-get($spacing, x-small);
+		}
+		> a {
+			@include desktop {
+				@include font(headline);
+				@include link(black);
+				font-weight: bold;
+				text-transform: uppercase;
+				font-size: 17px;
+				line-height: 23px;
+				//vert center
+				height: 100%;
+				border-bottom: 3px solid transparent;
+			}
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	.has-dropdown {
+		> a {
+			&:after {
+				@include icon(chevron-right);
+				font-size: 10px;
+				@include desktop {
+					content: none;
+				}
+			}
+		}
+
+		> .nav-dropdown-content {
+			display: none;
+			position: relative;
+			@include desktop {
+				box-shadow: 0 2px 2px 0 rgba(25, 25, 25, 0.2);
+				&:after {
+					content: "";
+					box-shadow: 0 2px 2px 0 rgba(25, 25, 25, 0.2);
+					position: absolute;
+					left: 0;
+					top: -10px;
+					width: 100%;
+					z-index: 102;
+					height: 10px;
+				}
+			}
+		}
+
+		.primary-ul {
+			margin-left: - map-get($spacing, medium);
+			margin-right: - map-get($spacing, medium);
+			padding-left: map-get($spacing, medium);
+			padding-right: map-get($spacing, medium);
+		}
+
+		> .nav-utility-dropdown-content {
+			display: none;
+		}
+		&.mobile-has-dropdown {
+			&.active {
+				> a {
+					display: flex;
+				}
+			}
+		}
+		&.active {
+			> a {
+				display: none;
+				@include desktop {
+					@include link(red);
+					display: flex;
+
+					&:hover,
+					&:focus {
+						color: map-get($color, red);
+					}
+				}
+			}
+			> .nav-dropdown-content {
+				display: block;
+				> .container {
+					> ul {
+						@include desktop {
+							position: relative;
+							padding: map-get($spacing, large) 0;
+						}
+					}
+				}
+				@include desktop {
+					position: absolute;
+					background: map-get($color, white);
+					left: 0;
+					top: 100%;
+					width: 100%;
+					z-index: 100;
+				}
+			}
+
+			> .nav-utility-dropdown-content {
+				display: block;
+				margin-left: - map-get($spacing, medium);
+				margin-right: - map-get($spacing, medium);
+				> .container {
+					> ul {
+						@include desktop {
+							position: relative;
+							padding: map-get($spacing, small) 0px;
+						}
+					}
+				}
+				@include desktop {
+					position: absolute;
+					background: map-get($color, gray-lightest);
+					left: 0;
+					top: 100%;
+					width: auto;
+					min-width: 160px;
+					z-index: 100;
+					border-radius: 0 0 4px 4px;
+					box-shadow: 0 2px 4px 0 rgba(15,15,15,0.14);
+					background: map-get($color, gray-thumbs);
+					transform: translateX(18px);
+				}
+			}
+		}
+	}
+
+	.has-children {
+		
+		@include desktop {
+			width: 20%;
+		}
+
+		&.active {
+			> a {
+				@include desktop {
+					display: flex;
+				}
+			}
+
+			> .children-wrap {
+				//display: block;
+				@include show;
+
+				@include desktop {
+					//display: none;
+					@include hide;
+				}
+			}
+		}
+
+		> a {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			&:after {
+				@include icon(chevron-right);
+				font-size: 10px;
+				@include desktop {
+					content: none;
+				}
+			}
+		}
+
+		> .children-wrap {
+			//display: none;
+			@include hide;
+		}
+
+		&:hover,
+		&:focus {
+			> a {
+				&:after {
+					@include icon(chevron-right);
+					font-size: 10px;
+				}
+			}
+			> .children-wrap {
+
+				@include desktop {
+					// display: block;
+					@include show;
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 80%;
+					margin-left: 20%;
+					min-height: 100%;
+					padding: map-get($spacing, large);
+					box-shadow: inset 4px 0px 2px -2px rgba(25, 25, 25, 0.2);
+
+					&:before {
+				    	content: "";
+				    	background: map-get($color, white);
+							position: absolute;
+							left: -100%;
+							top: 0;
+							bottom: 0;
+							width: 100%;
+							z-index: -1;
+							height: 100%;	
+
+							left: calc(-100% + -100%/3 + 72px);
+							width: calc(100% + 100%/3 - 72px);
+				    }
+
+				    &.grid {
+						display: flex;
+					}
+				}
+			}
+		}
+	}
+
+	> .container {
+		display: flex;
+		> * {
+			@include desktop {
+				height: $height;
+				align-items: center;
+			}
+		}
+	}
+
+	@include desktop {
+
+
+		//link styling
+		.l2 {
+			a {
+				padding: map-get($spacing, small);
+				padding-left: map-get($spacing, large);
+			}
+			&:not(.has-children){
+				&:hover,
+				&:focus {
+					a {
+						text-decoration: underline;
+					}
+				}
+			}
+			&.has-children {
+				&:hover,
+				&:focus {
+					> a {
+						background: map-get($color, gray-lightest);
+					}
+				}
+			}
+
+			> a {
+				@include font(headline);
+				font-weight: bold;
+				font-size: 16px;
+				line-height: 22px;
+			}
+			
+			.child-wrap-col {
+				flex-basis: calc(100%/3);
+				width: calc(100%/3);
+				padding-right: map-get($spacing, large);
+			}
+
+			> .children-wrap {
+				background: map-get($color, gray-lightest);
+				&:after {
+					background: map-get($color, gray-lightest);
+				}
+			}
+
+			.children-wrap {
+				box-shadow: none;
+				.shadow {				
+			  	&:after {
+						content: "";
+						box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+						position: absolute;
+						left: -125%;
+						bottom: 0px;
+						width: 500%;
+						z-index: -2;
+						height: 10px;
+					}
+				}
+
+				&:after {
+					content: "";
+		    	position: absolute;
+		    	right: 0;
+		    	top: 0;
+		    	bottom: 0;
+		    	height: 100%;
+		    	left: 100%;
+		    	width: 100%;
+		    	z-index: -1;
+			   }
+			}
+		}
+
+		.l3 {
+			&.has-children {
+				width: calc(25% + #{map-get($spacing, small) * 2})!important;
+			}
+
+			&:not(.has-children){
+				&:hover,
+				&:focus {
+					a {
+						text-decoration: underline;
+					}
+				}
+			}
+			&.has-children {
+				&:hover,
+				&:focus {
+					> a {
+						background: map-get($color, gray-lighter);
+					}
+				}
+			}
+
+
+			.child-wrap-col {
+				flex-basis: calc(100%/2);
+				width: calc(100%/2);
+			}
+
+			.children-wrap {
+				background: map-get($color, gray-lighter);
+				margin-left: calc(25% + #{map-get($spacing, small) * 3})!important;
+
+				.shadow {
+					position: absolute;
+			    top: 0;
+			    height: 100%;
+			    left: calc(-100%/3 - 16px);
+			    width: calc(100%/3 + 16px);
+			    background: map-get($color, gray-lightest);
+			    z-index: -1;
+			    box-shadow: inset 2px 0px 2px 0px rgba(25, 25, 25, 0.2);
+			    
+			    &:after {
+						content: "";
+						box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+
+						position: absolute;
+						left: -250%;
+						bottom: 0px;
+						width: 1000%;
+						z-index: -10;
+						height: 10px;
+					}
+				}
+
+				&:before {
+					$white: calc(100%/3 * 2 - #{map-get($spacing, small) * 3});
+					$gray: calc(100%/3);
+					//background: linear-gradient(to right, white $white, map-get($color, gray-lightest) $gray)!important;
+				}
+				&:after {
+			    	background: map-get($color, gray-lighter);
+			    	z-index: 0;
+			    }
+			}
+		}
+	}
+
+	.child-wrap-col {
+		ul {
+			li {
+				.link-item {
+					@include balance-margins;
+					display: flex;
+					align-items: center;
+					padding: map-get($spacing, small) map-get($spacing, medium);
+
+					&--promo {
+						max-width: 300px;
+						background: map-get($color, white);
+						border-radius: $border-radius;
+						box-shadow: 0 0 6px 4px rgba(18,18,18,0.07);
+						padding: 0;
+						flex-direction: column;
+						margin: map-get($spacing, large) auto;
+						@include desktop {
+							margin-left: map-get($spacing, x-large);
+							margin-bottom: 100px;
+						}
+
+						img {
+							width: 100%;
+							border-radius: $border-radius $border-radius 0 0;
+						}
+
+						.link-item__title {
+							@include font(headline);
+							@include typography(p);							
+							font-weight: bold;
+						}
+
+						.link-item__description {
+							font-size: 14px;
+							line-height: 20px;
+						}
+
+						.link-item__content {
+							padding: map-get($spacing, large);
+						}
+
+					}
+
+					&:not(.link-item--promo){
+						img {
+							width: 80px;
+							height: 80px;
+							flex-basis: 80px;
+							margin-right: map-get($spacing, small);
+						}
+					}
+
+					&__title,
+					&__description {
+						@include font(regular);
+						text-transform: none;
+						font-weight: normal;
+						display: block;
+					}
+
+					&__title {
+						font-size: 15px;
+						line-height: 24px;
+						font-weight: bold;
+					}
+
+					&__description {
+						font-size: 12px;
+						line-height: 17px;
+						color: map-get($color, gray-darker);
+					}
+				}
+			}
+		}
+	}
+
+	.nav-utility-menu {
+		padding-top: map-get($spacing, small);
+		@include desktop {
+			padding-top: 0;
+		}
+		li {
+			a {
+				padding: map-get($spacing, small);
+				@include desktop {
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	.region-selector {
+		padding: map-get($spacing, small);
+		&.hidden {
+			@include hide;
+		}
+		@include desktop {
+			padding: 0;
+			color: map-get($color, white);
+		}
+	}
+
+	.nav-menu-mobile {
+		align-self: center;
+		margin-left: auto;
+		padding-right: map-get($spacing, medium);
+		&-links {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+		&-item {
+			&.mobile-has-dropdown {
+				position: relative;
+				a {
+					&:after {
+						display: none;
+					}
+				}
+				&.active {
+					.nav-utility-dropdown-content {
+						display: block;
+						margin-left: - map-get($spacing, medium);
+						margin-right: - map-get($spacing, medium);
+						> .container {
+							> ul {
+									position: relative;
+									padding: map-get($spacing, small) 0px;
+							}
+						}
+						position: absolute;
+						left: -60px;
+						top: 37px;
+						width: auto;
+						min-width: 160px;
+						z-index: 100;
+						border-radius: 0 0 4px 4px;
+						box-shadow: 0 2px 4px 0 rgba(15,15,15,0.14);
+						background: map-get($color, white);
+						transform: translateX(18px);
+						.nav-utility-nested-item {
+							display: flex;
+							justify-content: center; 
+							margin-bottom: map-get($spacing, xx-small);
+						}
+					}
+				}
+			}
+			margin-right: map-get($spacing, medium);
+			a, form {
+				display: flex;
+				align-items: center;
+				@include font(headline);
+				padding: 0;
+				font-size: 14px;
+				line-height: 1;
+				font-weight: bold;
+			}
+			span {
+				&:before {
+					font-size: 18px;
+					line-height: 1;
+					height: 100%;
+				}
+				&.icon-cart {
+					margin-right: map-get($spacing, xx-small);
+				}
+			}
+			&:last-of-type {
+				margin-right: 0;
+			}
+			&.sign-in {
+				height: 17px;
+				&--signed-in {
+					position: relative;
+					> a, form > button {
+						&:after {
+							content: "";
+							@include icon(selected);
+							font-size: 10px;
+							background: map-get($color, red);
+							color: map-get($color, white);	
+							height: 12px;
+							width: 12px;
+							border-radius: 50%;
+							padding: 1px;
+							position: absolute;
+							display: inline-flex;
+							align-items: center;
+							justify-content: center;
+							right: -11px;
+							top: -2px;
+						}
+					}
+				}
+				> a, form > button {
+					&:before {
+						@include icon(user);
+						font-size: map-get($spacing, medium);
+					}
+					font-size: 0;
+					line-height: 0;
+					background-color: white;
+					border: none;
+					padding: 0;
+				}
+			}
+		}
+		@include desktop {
+			display: none;
+		}
+	}
+	.nav-search {
+		height: 66px;
+		align-self: center;
+		display: none;
+		margin-left: auto;
+		top: 100%;
+		left: 0;
+		padding: 10px;
+		width: 100%;
+		background: map-get($color, gray-lightest);
+		position: absolute;
+
+		&__form-group {
+			display: none;
+		}
+
+		&__trigger {
+			display: none;
+
+			@include font(regular);
+			height: 100%;
+			align-items: center;
+			height: 100%;
+			appearance: none;
+			border: 0;
+			cursor: pointer;
+			font-size: 16px;
+
+			@include desktop {
+				display: flex;
+			}
+
+			span {
+				margin-left: map-get($spacing, x-small)
+			}
+		}
+
+		&.active {
+			display: block;
+
+			@media (max-width: 1300px){
+				width: 250px;
+			}
+
+			@include mobile-only {
+				z-index: 2;
+				width: 100%;
+			}
+
+			.nav-search__form-group {
+				display: flex;
+				height: 100%;
+				@include mobile-only {
+					border: 1px solid map-get($color, gray-light);
+					border-radius: 4px;
+					background-color: map-get($color, white);
+					flex-direction: row-reverse;
+				}
+			}
+			.nav-search__submit {
+				@include mobile-only {
+					padding: 0;
+					&:after {
+						display: none;
+					}
+				}
+			}
+			.nav-search__input {
+				/* clears the 'X' from Chrome */
+				&::-webkit-search-cancel-button,
+				&::-webkit-search-cancel-button,
+        &::-webkit-search-results-button,
+				&::-webkit-search-results-decoration { 
+					display: none;
+				}
+
+				/* clears the 'X' from Internet Explorer */
+				&::-ms-clear { display: none; width : 0; height: 0; }
+				&::-ms-reveal { display: none; width : 0; height: 0; }
+				
+				@include mobile-only {
+					margin-right: 0;
+					margin-left: 16px;
+				}
+			}
+			.nav-search__backdrop {
+				@include mobile-only {
+					margin: 10px -10px 0;
+					height: 100vh;
+					background-color: map-get($color, gray-darkest);
+					opacity: 0.5;
+				}
+			}
+
+			.nav-search__trigger {
+				display: none;
+			}
+		}
+		
+		&__close {
+			appearance: none;
+			border: 0;
+			margin-right: map-get($spacing, x-small);
+			padding-bottom: 0;
+			background: transparent;
+			font-size: 0;
+			span {
+				font-size: 13px;
+			}
+		}
+
+		&__form {
+			display: flex;
+			align-items: center;
+			height: 100%;
+			border-bottom: 1px solid map-get($brand, border);
+			box-sizing: content-box;
+			width: 100%;
+
+			@include desktop {
+				animation: grow 200ms, fadeIn 600ms;
+				animation-fill-mode: forwards;
+				animation-delay: 0, 200ms;
+				width: auto;
+
+				@keyframes grow {
+					0% {
+						width: 0;
+					}
+					100% {
+						width: 280px;
+					}
+				}
+
+				@keyframes fadeIn {
+					0% {
+						opacity: 0;
+					}
+					50% {
+						opacity: 0;
+					}
+					100% {
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		&__input,
+		&__submit {
+			@include font(regular);
+			height: 100%;
+			appearance: none;
+			border: 0;
+			font-size: 16px;
+			background: transparent;
+		}
+
+		&__input {
+            width: 100%;
+			padding: 0;
+			margin-right: map-get($spacing, x-small);
+            outline: none;
+		}
+
+		&__input-label {
+			display: none;
+		}
+		
+		&__submit {
+			font-size: 0;
+			line-height: 0;
+			border-radius: 0 $border-radius $border-radius 0;
+			background: transparent;
+			&:after {
+				@include icon(search);
+				font-size: 16px;
+				line-height: 1;
+				height: 100%;
+			}
+		}
+		@include desktop {
+			display: flex;
+			position: relative;
+			top: auto;
+			padding: 0;
+			height: 46px;
+			left: auto;
+			width: auto;
+			background: none;
+		}
+	}
+
+	.region-selector {
+		display: flex;
+		align-items: center;
+		svg {
+			width: 22px;
+			height: 100%;
+			margin-right: 7px;
+			display: block;
+		}
+
+		p {
+			@include font(headline);
+			color:  map-get($color, gray-darkest);
+			font-size: 13px;
+			font-weight: bold;
+			letter-spacing: 0;
+			line-height: 22px;
+			margin: 0;
+			@include desktop {
+				color: map-get($color, white);
+				font-size: 13.5px;
+			}
+		}
+	}
+
+
+	.container__title {
+		@include font(headline);
+		@include typography(p-large);
+		color:  map-get($color, red);
+		font-weight: bold;
+		letter-spacing: 0;
+		line-height: 19px;
+		margin: 0;
+		padding: 20px map-get($spacing, medium);
+		text-transform: uppercase;
+		&:after {
+			@include icon(chevron-right);
+			margin-left: map-get($spacing, xx-small);
+			font-size: 13px;
+		}
+	}
+
+	.nav-sold-to {
+		@include font(headline);
+		font-weight: bold;
+		font-size: 13px;
+		margin-top: map-get($spacing, medium);
+		margin-left: map-get($spacing, small);	
+		margin-right: map-get($spacing, small);	
+		pointer-events: none;
+
+		@include desktop {
+			color: map-get($color, white);
+			margin-left: map-get($spacing, medium);	
+			margin-top: 0;
+			margin-right: auto;
+		} 
+		a {
+			@include font(headline);
+			text-decoration: none;
+			color: inherit;
+			font-size: 13px;
+			font-weight: bold;
+			padding: 0;
+			@media (max-width: 1250px) {
+				font-size: 11px; 
+			}
+		}
+	}
+}

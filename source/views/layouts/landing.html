@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% capture css %}{% include styles/admin.scss %}{% endcapture %}
+	<style>
+	{{css | scssify}}
+	</style>
+    <body>
+        <main class="admin-landing">
+            <h2>Pages</h2>
+            <ul>
+            {% for i in site.pages | sort: 'title' %}
+                {% if i.url != page.url %}
+                <li><a href="{{ i.url | prepend: site.baseurl }}">{{i.title}}</a></li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+
+            <h2>Components</h2>
+            <ul>
+            {% for i in site.components | sort: 'title' %}
+                {% if i.url != page.url %}
+                <li><a href="{{ i.url | prepend: site.baseurl }}">{{i.title}}</a></li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+.cookie-policy {
+
+    @keyframes fadein {
+        0% { opacity: 0; }
+        100% { opacity: 1;}
+    }
+
+    padding: map-get($spacing, medium) 0;
+    @include desktop {
+        padding: map-get($spacing, large) 0;
+    }
+
+    background: map-get($color, gray-lightest);
+    animation: fadein .5s forwards;
+    border-top: 1px solid map-get($brand, border);
+    box-shadow: 0 2px 2px 0 rgba(25, 25, 25, 0.2);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    bottom: 0;
+
+    &__options {
+        button {
+            font-size: 12px;
+            line-height: 15px;
+            @include desktop {
+                font-size: 14px;
+                line-height: 19px;
+            }
+            margin-right: map-get($spacing, small);
+            padding: map-get($spacing, x-small) map-get($spacing, medium);
+        }
+    }
+
+    &__content {
+        @include typography(p-large);
+        @include desktop {
+            @include typography(p);
+        }
+
+        a {
+            display: block;
+            @include desktop {
+                display: inline;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,97 @@
+h1, 
+h2, 
+h3,
+h4,
+h5,
+h6,
+b, strong {
+	@include font(headline);
+	font-weight: bold;
+
+	i, em {
+		font-style: italic;
+	}
+}
+
+i, em {
+	font-style: italic;
+
+	b, strong {
+		font-weight: bold;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: map-get($color, gray-darkest);
+	margin: 20px 0 15px;
+	@include desktop {
+		margin: map-get($spacing, medium) 0;
+	}
+
+	+ p,
+	+ blockquote {
+		margin-top: map-get($spacing, xx-small);
+		@include desktop {
+			margin-top: map-get($spacing, x-small);
+		}
+	}
+}
+
+h1 {
+	@include typography(h1);
+}
+
+h2 {
+	@include typography(h2);
+}
+
+h3 {
+	@include typography(h3);
+}
+
+h4 {
+	@include typography(h4);
+}
+
+p, li {
+	@include typography(p);
+	margin: map-get($spacing, x-small) 0;
+
+	@include desktop {
+		margin: map-get($spacing, small) 0;
+	}
+}
+
+li {
+	@include desktop {
+		margin: map-get($spacing, xx-small) 0;
+	}
+}
+
+ul {
+	@include desktop {
+		margin: map-get($spacing, small) 0;
+	}
+	
+	li {
+		// @include li;
+		list-style-type: disc;
+		margin-left: 16px;
+	}
+}
+
+p.large {
+	@include typography(p-large);
+}
+
+sup,
+sub {
+	//force it to be 60% of whatever it was
+	font-size: 60%;
+	//adjust the line-height
+  line-height: 1;
+}
+
+sup {
+	vertical-align: super;
+}

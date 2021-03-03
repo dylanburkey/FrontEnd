@@ -1,0 +1,21 @@
+{% assign e = site.data.pagination[include.data] %}
+
+<div class="pagination">
+  <div class="pagination__prev">
+    <a class="pagination__prev-link" href="{{e.prev.href}}" aria-label="previous">
+      <span class="icon icon-{{e.prev.icon}}"></span>
+    </a>
+  </div>
+  <ul class="pagination__items">
+    {% for page in e.pages %}
+    <li class="pagination__item {% if page.active %}active{% endif %}">
+      <a class="pagination__link" href="{{page.href}}">{{page.text}}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  <div class="pagination__next">
+    <a class="pagination__next-link" href="{{e.next.href}}" aria-label="next">
+      <span class="icon icon-{{e.next.icon}}"></span>
+    </a>
+  </div>
+</div>

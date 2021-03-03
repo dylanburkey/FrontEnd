@@ -1,0 +1,97 @@
+{
+	"tig-welders": [
+		{
+			"id": "191281311",
+			"title": "Precision TIG 275 Ready-Pak", 
+			"url": "#!precision-tig-275",
+			"subtitle": "TIG Welder",
+			"sku": " K2619-1",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"rating": {
+				"stars": 4,
+				"count": 103
+			},
+			"pricing": {
+				"list": "$4,073,00"
+			},
+			"description": "The Precision TIG&reg; 275 is a versatile shop machine for any type of TIG or Stick welding maintenance application, including the use of 5/32-in. (4.0 mm) stick electrode. Also features the patented Micro-Start&trade; II..."
+		}
+	],
+	"welding-helmets": [
+		{
+			"id": "182301113",
+			"url": "#1",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Tomahawk&reg; 375 Air",
+			"description": "Plasma Cutter",
+			"sku": "K2806-1",
+			"rating": {
+				"stars": 4,
+				"count": 103
+			},
+			"list-title": "List Price",
+			"pricing": {
+				"list": "$1,723.00",
+				"default": "$1,900.00"
+			},
+			"flag": "Sale",
+			"compare": true
+		},
+		{
+			"url": "#2",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Ranger&reg; 330MPX", 
+			"description": "A portable TIG and stick welder that gives hobbyists, makers, small-scale fabricators and craftsmen room to develop their technical and creative skills. With more confidence, you can take advantage of the machine’s",
+			"sku": "K2800-1",
+			"rating": {
+				"stars": 5,
+				"count": 99
+			},
+			"list-title": "List Price",
+			"pricing": {
+				"list": "$5,549.00"
+			},
+			"rebate": true,
+			"compare": true
+		},
+		{
+			"id": "153198471",
+			"url": "#3",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "PIPEFAB&trade; READY-PAK&reg;",
+			"description": "Multi-Process Welders",
+			"sku": "K1920-1",
+			"rating": {
+				"stars": 3,
+				"count": 10
+			},
+			"list-title": "List Price",
+			"pricing": {
+				"list": "$14,085.37"
+			},
+			"flag": "New",
+			"compare": true
+		},
+		{
+			"url": "#4",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Power MIG&reg; 210MP with Longer Title", 
+			"description": "The Precision TIG® 275 is a versatile shop machine for any type of TIG or Stick welding maintenance application, including the use of 5/32-in. (4.0 mm) stick electrode. Also features the patented Micro-Start™ II...",
+			"sku": "K2806-7",
+			"rating": {
+				"stars": 1,
+				"count": 87
+			},
+			"list-title": "List Price",
+			"pricing": {
+				"list": "$1,998.00"
+			},
+			"compare": true
+		}
+	]
+}

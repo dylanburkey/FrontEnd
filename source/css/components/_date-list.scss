@@ -1,0 +1,137 @@
+.date-list {
+	@include balance-margins;
+	ul {
+		@include balance-margins;
+		margin: map-get($spacing, large) 0;
+		
+		@include desktop {
+			margin: map-get($spacing, xx-large) 0;
+		}
+
+		li {
+			padding-left: 0;
+			margin: map-get($spacing, medium) 0;
+			list-style: none;
+			@include desktop {
+				padding-right: map-get($spacing, xxx-large);
+				margin: map-get($spacing, x-large) 0;
+			}
+			&:before {
+				content: none;
+			}
+
+			a {
+				@include link(black);
+				display: flex;
+				transition: 200ms all;
+				&:hover,
+				&:focus {
+					.date-list__day {
+						background: map-get($color, red);
+						color: map-get($color, white);
+					}
+
+					.date-list__title {
+						color: map-get($color, red);
+					}
+				}
+			}
+		}
+	}
+
+	&__date {
+		@include font(headline);
+		font-weight: bold;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		color: map-get($color, red);
+		text-align: center;
+	}
+
+
+	&__day {
+		height: 32px;
+		width: 32px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid;
+		transition: 200ms all;
+	}
+
+	&__month {
+		text-transform: uppercase;
+		font-size: 12px;
+		line-height: 1;
+		margin-top: map-get($spacing, xx-small);
+	}
+
+	&__content {
+		@include balance-margins;
+		padding-left: map-get($spacing, medium);
+	}
+
+	&__title {
+		@include typography(p-large);
+		margin-bottom: map-get($spacing, x-small);
+	}
+
+	&__meta {
+		font-size: 14px;
+		line-height: 19px;
+		color: map-get($color, gray-dark);
+		display: flex;
+		flex-wrap: wrap;
+		span {
+			display: flex;
+			align-items: center;
+			&:after {
+				content: "";
+				margin: 0 map-get($spacing, x-small);
+				display: inline-block;
+				height: 75%;
+				width: 1px;
+				background: map-get($color, gray);
+			}
+			&:last-of-type {
+				&:after {
+					content: none;
+				}
+			}
+
+			&.date-list__category {
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+//target second .date-list on mobile only
+.cols {
+	.col {
+		+ .col {
+			.date-list {
+				@include mobile-only {
+					padding-top: map-get($spacing, large);
+					margin-top: map-get($spacing, x-large);
+					border-top: 1px solid map-get($brand, border);
+				}
+				@include desktop {
+					position: relative;
+					&:before {
+						content: "";
+						width: 1px;
+						height: 100%;
+						background: map-get($brand, border);
+						display: block;
+						position: absolute;
+						top: 0;
+						left: - map-get($spacing, xx-large);
+					}
+				}
+			}
+		}
+	}
+}

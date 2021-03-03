@@ -1,0 +1,13 @@
+{
+	"newsroom": [
+		{
+			"title": "Corporate Communications",
+			"description": "Description text, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm. Lorem ipsum dolor sit amet tempor aluni san.",
+			"contact": {
+				"name": "Amanda Butler",
+				"phone": "216-935-3877",
+				"email": "jhlebak@wearefalls.com"
+			}
+		}
+	]
+}

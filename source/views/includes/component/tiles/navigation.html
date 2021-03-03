@@ -1,0 +1,18 @@
+{% if include.e %}
+{% assign data = include.e %}
+{% else %}
+{% assign data = site.data.tiles.navigation[include.data][include.index] %}
+{% endif %}
+<div class="tile tile--navigation">
+	<div class="tile__image">
+		<img src="{{ data.image | prepend: site.baseurl }}" />
+	</div>
+	<div class="tile__content">
+		<h3 class="tile__title"><a href="{{data.url}}">{{data.title}}</a></h3>
+		<ul>
+			{% for item in data.items %}
+			<li><a href="{{item.url}}">{{item.title}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,17 @@
+{% assign e = site.data.input-text[include.data] %}
+
+<div class="input-text">
+  <label class="input-text__label" for="{{e.input-label}}">{{e.label}}</label>
+  <div class="input-text__wrapper">
+    <input class="input-text__input{% if e.error %} input-error{% endif %}{% if include.cert-center-input %} {{include.cert-center-input}}{% endif %}" {% if e.placeholder %}placeholder="{{e.placeholder}}"{% endif %} type="text" id="{{e.input-label}}"/>
+    {% if e.btn-text %}
+    <button type="submit" class="btn">{{e.btn-text}}</button>
+    {% endif %}
+  </div>
+  {% if e.error-text %}
+  <p class="input-text__error {% if e.error %}input-error{% endif %}">{{e.error-text}}</p>
+  {% endif %}
+  {% if e.text %}
+  <p class="input-text__text">{{e.text}}</p>
+  {% endif %}
+</div>

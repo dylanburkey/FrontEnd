@@ -1,0 +1,110 @@
+$block: 'content-rail';
+
+.#{$block} {
+
+  .content-rail-item {
+    padding: 0  map-get($spacing, medium) map-get($spacing, large) + map-get($spacing, xx-small);
+    border-bottom: 1px solid map-get($color, gray-light);
+    &:last-of-type {
+      border: none;
+    }
+
+  &__title {
+    @include font(headline);
+     color: map-get($color, gray-darkest);
+     font-size: 18px;
+     font-weight: bold;
+     letter-spacing: 0;
+     line-height: 22px;
+     margin: 0;
+     padding: map-get($spacing, large) 0 map-get($spacing, x-small) + map-get($spacing, small);
+    @include desktop {
+      padding: 0 0  map-get($spacing, medium) +  map-get($spacing, small);
+    }
+   }
+
+  &__content {
+    padding-bottom: map-get($spacing, medium);
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+
+    @include desktop {
+      padding-bottom: map-get($spacing, x-small) + map-get($spacing, small);
+    }
+  }
+
+  @include desktop {
+    padding: map-get($spacing, large) + map-get($spacing, xx-small) map-get($spacing, x-large) map-get($spacing, x-large);
+    }
+  }
+
+  .simple-cta__content {
+    h4 {
+      @include desktop {
+        color: map-get($color, gray-darkest);
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  .simple-cta__button {
+    padding:  map-get($spacing, medium) +  map-get($spacing, xx-small) 0 0;
+    width: 100%;
+    @include desktop {
+     margin-top: 0;
+     padding-top: map-get($spacing, small) + map-get($spacing, medium);
+   }
+    a {
+      text-align: center;
+    }
+  }
+
+  .simple-cta__content {
+    flex-basis: auto;
+  }
+
+  .card--article-grid {
+    &.card {
+      box-shadow: 0 0 6px 4px rgba(18,18,18,0.07);
+      background: map-get($color, white);
+      @include desktop {
+        box-shadow:none;
+      }
+
+      .card__image {
+        margin-right: 0;
+        img {
+          height: 100%;
+        }
+      }
+
+      .card__content {
+        padding:  map-get($spacing, medium) map-get($spacing, small) map-get($spacing, large) + map-get($spacing, xx-small) map-get($spacing, x-small) + map-get($spacing, small);
+        @include desktop {
+          padding: map-get($spacing, medium) map-get($spacing, large) map-get($spacing, medium) + map-get($spacing, x-small);
+        }
+
+        .card__title {
+          font-size: 18px;
+          line-height: 23px;
+          @include mobile-only {
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+      }
+
+      .card__category {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .card--content {
+    .card__media-wrap {
+      height: 100%;
+    }
+  }
+}

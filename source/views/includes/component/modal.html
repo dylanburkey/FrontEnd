@@ -1,0 +1,24 @@
+{% assign e = site.data.modal[include.data] %}
+
+<div class="modal" data-modal-activate-on-load="{{e.activateOnPageLoad}}" >
+  <!-- Text trigger is an example, more trigger types can be added  -->
+  {% if e.textTrigger %}
+    <a class="modal__trigger">{{e.textTrigger}}</a>
+  {% endif %}
+  <div class="modal-content">
+    <button class="modal__close"><span class="icon-close"></span></button>
+    <div class="modal__body">
+      <h2 class="modal__title">{{e.title}}</h2>
+      <ul class="modal__list">
+        {% for item in e.items %}
+        <li>
+          {{item.text}}
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="modal__cta">
+        {% include component/button.html title="SHOP PRE-OWNED" url="#!shop-pre-owned" %}
+      </div>
+    </div>
+  </div>
+</div>

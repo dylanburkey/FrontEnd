@@ -1,0 +1,36 @@
+{% assign a = site.data.quote-footer[include.data] %}
+
+<div class="quote-footer {% if a.style %}quote-footer--{{a.style}}{% endif %}">
+  {% if a.meta %}
+  <div class="quote-footer-meta">
+    <span class="quote-footer-meta__description">{{a.meta.description}}</span>
+    <p class="quote-footer-meta__title">{{a.meta.title}}</p>
+  </div>
+  {% endif %}
+  <div class="quote-footer-wrapper">
+    <div class="quote-footer-wrapper__approval">
+      <p class="approval__title">
+        {{a.title}}
+      </p>
+      <div class="approval__container">
+      {% for item in a.items %}
+        <div class="approval__content">
+          <span class="approval__item">{{item.description}}</span>
+          <input type="text" class="signature" />
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+    {% if a.period %}
+    <div class="quote-footer-wrapper__period">
+      <span class="period-meta">
+        {{a.period.meta}}
+      </span>
+      {% for element in a.period.elements %}
+      {% if element.description %}<span class="period-terms">{{element.description}}</span>{% endif %}
+      <p class="period-item">{{element.text}}</p>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>

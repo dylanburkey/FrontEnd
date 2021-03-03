@@ -1,0 +1,115 @@
+$block: 'link-group';
+
+.#{$block} {
+  &__title {
+    @include font(headline);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 19px;
+
+    @include desktop {
+      font-size: 15px;
+      line-height: 20px;
+      // &:before {
+      //   content: "";
+      //   height: 2px;
+      //   width: 35px;
+      //   background: map-get($brand, primary);
+      //   display: block;
+      //   position: relative;
+      //   top: map-get($spacing, large);
+      // }
+    }
+
+    .footer & {
+      color: map-get($color, white);
+
+      @include desktop {
+        position: relative;
+        &:before {
+          content: "";
+          height: 2px;
+          width: 35px;
+          background: map-get($brand, primary);
+          display: block;
+          position: absolute;
+          bottom: -10px;
+        }
+      }
+    }
+  }
+
+  &__items {
+    li {
+      margin: map-get($spacing, small) 0;
+      font-size: 14px;
+      line-height: 19px;
+
+      @include desktop {
+        margin: map-get($spacing, x-small) 0;
+        font-size: 13px;
+        line-height: 18px;
+      }
+
+      a {
+        .footer & {
+          @include link(black);
+          @include desktop {
+            @include link(white);
+          }
+        }
+      }
+    }
+  }
+
+  .facebook {
+    &:after {
+      @include icon(facebook);
+    }
+  }
+
+  .twitter {
+    &:after {
+      @include icon(twitter);
+    }
+  }
+
+  .youtube {
+    &:after {
+      @include icon(youtube);
+    }
+  }
+
+  .instagram {
+    &:after {
+      @include icon(instagram);
+    }
+  }
+
+  .linkedin {
+    &:after {
+      @include icon(linkedin);
+    }
+  }
+
+  .facebook, .twitter, .youtube, .linkedin, .instagram {
+    border-radius: 4px;
+    background-color: map-get($brand, primary);
+    margin-right: map-get($spacing, x-small);
+    width: map-get($spacing, large);
+    height: map-get($spacing, large);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:after {
+      position: relative;
+      color: map-get($color, white);
+    }
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: row;
+  }
+}

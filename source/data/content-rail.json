@@ -1,0 +1,43 @@
+{
+ "content-rail":{
+   "cta": {
+     "title": "MEDIA CONTACTS",
+     "button": {
+       "title": "CONTACT OUR MEDIA TEAM",
+       "href": "#"
+     }
+   },
+   "items":[
+     {
+       "title":"RELATED PRESS RELEASES",
+       "contents":[
+         {
+           "style":"article-grid"
+         },
+         {
+           "style":"article-grid"
+         }
+       ]
+     },
+     {
+       "title":"TRENDING",
+       "contents":[
+         {
+           "style":"content-image"
+         }
+       ]
+     },
+     {
+       "title":"VIDEOS",
+       "contents":[
+         {
+           "style":"content-video"
+         },
+         {
+           "style":"content-video"
+         }
+       ]
+     }
+   ]
+ }
+}

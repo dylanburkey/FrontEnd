@@ -1,0 +1,44 @@
+$block: 'quote-recipient';
+
+.#{$block} {
+
+  display: flex;
+  flex-direction: row;
+  border-top: 2px solid  map-get($color, gray);
+  border-bottom: 2px solid  map-get($color, gray);
+  padding: map-get($spacing, small) map-get($spacing, large) map-get($spacing, large);
+
+  .quote-recipient-content {
+    &__description {
+      display: block;
+      @include font(regular);
+      @include typography(p);
+      color: map-get($color, gray-darkest);
+    }
+
+    &__title {
+      margin: 0;
+      @include font(regular);
+      font-weight: bold;
+      @include typography(p);
+      color: map-get($color, gray-darkest);
+    }
+  }
+
+  &__wrapper {
+    flex: 1;
+  }
+  
+  &--sales {
+    .quote-recipient__wrapper {
+      &:last-of-type {
+        .quote-recipient-content {
+          display: flex;
+        }
+        .quote-recipient-content__title, .quote-recipient-content__description {
+          flex: 1;
+        }
+      }
+    }
+  }
+}

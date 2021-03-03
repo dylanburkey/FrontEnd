@@ -1,0 +1,30 @@
+import 'core-js';
+import './util/Polyfill';
+
+import './components/TrademarkFix';
+import './components/Carousel';
+import './components/Header';
+import './components/ScrollableTable';
+import './components/Accordion';
+import './components/StickyNavigation';
+import './components/Dropdown';
+import './components/InputQuantity';
+import './components/Filters';
+import './components/StickyNavigationPromotions';
+import './components/Modal';
+import './components/Product-Selector';
+import './components/GlobalSearchTabs';
+import './components/FilteredBrowse';
+import './components/AddToCart';
+import './components/SdsForm';
+import './components/FillerMetalCertification';
+import './components/SafetyDataSheets';
+import './components/Video';
+
+import './components/SearchBox';
+import './components/CookiePolicy';
+import './components/Compare';
+import './components/StickyCompareResult';
+import './components/CertCenter';
+import './components/AddToList';
+import './components/PressKitDownload';

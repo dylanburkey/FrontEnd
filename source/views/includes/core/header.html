@@ -1,0 +1,203 @@
+{% assign e = site.data.navigation %}
+<header class="header">
+	{% include component/notification.html
+	data="notification" %}
+	<div class="container container--large">
+		<div class="nav-primary-controls">
+			<a href="#menu" class="nav-menu-toggle">Menu</a>
+			<a href="#close" class="nav-menu-close">Close</a>
+		</div>
+		<a href="#main-content" class="skip-link">Skip to main content</a>
+		<a href="#" class="logo">
+			<img src="{{ '/images/logo.svg' | prepend: site.baseurl }}" alt="lincoln electric logo"/>
+		</a>
+		<nav class="nav" title="nav links">
+			<div class="nav-secondary-controls">
+				<a href="#back" class="nav-menu-back">Go Back</a>
+			</div>
+			<ul class="nav-links" id="nav-links">
+				{% for item in e.nav-links %}
+				<li class="l1{% if item.children %} has-dropdown{% endif %}">
+					<a href="{{item.url  | prepend: site.baseurl }}">{{item.title}}</a>
+					{% if item.children %}
+					<!-- start level 2 / full dropdown -->
+					<div class="nav-dropdown-content">
+						<div class="container container--large" data-item-next-sibling="next-sibling">
+							<ul class="primary-ul">
+								<!-- start l2 -->
+								{% for l2 in item.children %}
+								<li class="l2{% if l2.columns or l2.children %} has-children{% endif %}">
+									<a class="l2-link" href="{{l2.url | prepend: site.baseurl}}" data-item-title-mobile="All {{l2.title}}">{{l2.title}}</a>
+
+									{% if l2.children %}
+									<!-- start l3 children -->
+									<ul class="children-wrap">
+										<li class="shadow"></li>
+										{% for l3 in l2.children %}
+										<li class="l3{% if l3.columns or l3.children %} has-children{% endif %}">
+												<a href="{{l3.url | prepend: site.baseurl}}">{{l3.title}}</a>
+
+												{% if l3.children %}
+												<!-- start l4 -->
+												<ul class="children-wrap">
+													<li class="shadow"></li>
+													{% for l4 in l3.children %}
+													<li>
+															<a href="{{l4.url | prepend: site.baseurl}}">{{l4.title}}</a>
+													</li>
+													{% endfor %}
+												</ul>
+												<!-- end l4-->
+												{% endif %}
+
+												{% if l3.columns %}
+												<!--start l4 columns-->
+												<ul class="children-wrap{% if l3.style %} {{l3.style}}{% endif %}">
+													<li class="shadow"></li>
+													{% for col in l3.columns %}
+														<li class="child-wrap-col">
+															<ul>
+															{% for link in col.items %}
+																<li>
+																	<a href="{{ link.url | prepend: site.baseurl }}" class="link-item">
+																		{% if link.image %}<img src="{{ link.image.src | prepend: site.baseurl }}" alt="{{ link.title }}" />{% endif %}
+																		<span class="link-item___content">
+																			<span class="link-item__title">{{link.title}}</span>
+																			{% if link.description %}<span class="link-item__description">{{link.description}}</span>{% endif %}
+																		</span>
+																	</a>
+																</li>
+															{% endfor %}
+															</ul>
+														</li>
+													{% endfor %}
+												</ul>
+												<!-- end l4 columns -->
+												{% endif %}
+
+										</li>
+										{% endfor %}
+									</ul>
+									<!-- end l3 children -->
+									{% endif %}
+
+									{% if l2.columns %}
+									<!--start l3 columns-->
+									<ul class="children-wrap{% if l2.style %} {{l2.style}}{% endif %}">
+										<li class="shadow"></li>
+										{% for col in l2.columns %}
+											<li class="child-wrap-col">
+												<ul>
+												{% for link in col.items %}
+													<li>
+														<a href="{{ link.url | prepend: site.baseurl}}" class="link-item{% if link.style == 'promo' %} link-item--promo{% endif %}">
+															{% if link.image %}<img src="{{ link.image.src | prepend: site.baseurl }}" alt="{{ link.title }}"/>{% endif %}
+														 	<span class="link-item__content">
+																<span class="link-item__title">{{link.title}}</span>
+																{% if link.description %}<span class="link-item__description">{{link.description}}</span>{% endif %}
+															</span>
+														</a>
+													</li>
+												{% endfor %}
+												</ul>
+											</li>
+										{% endfor %}
+									</ul>
+									<!-- end l3 columns -->
+									{% endif %}
+								</li>
+								{% endfor %}
+								<!-- end l2 -->
+							</ul>
+						</div>
+					</div>
+					<!-- end level 2 / full dropdown -->
+					{% endif %}
+				</li>
+				{% endfor %}
+			</ul>
+			<div class="nav-utility">
+				<div class="container container--large">
+					<a class="region-selector-link" href="#">
+						<div class="region-selector">
+								<img src="{{ '/images/US.png' | prepend: site.baseurl }}" alt="flag"/>
+								<p>EN</p>
+						</div>
+					</a>
+					<div class="nav-sold-to">000012345 ACME Enterprises / Cleveland, OH / Lincoln Electric USA / US</div>
+					<ul class="nav-utility-menu">
+						{% for item in e.nav-utility-links %}
+							<li class="nav-utility-item {{item.class}}{% if item.children %} has-dropdown{% endif %}">
+								<a href={{item.url}}>{{item.title}}</a>
+								{% if item.children %}
+								<div class="nav-utility-dropdown-content">
+									<div class="container container--large" data-item-next-sibling="next-sibling">
+										<ul class="nav-utility-dropdown-list">
+											{% for nested-item in item.children %}
+											<li class="nav-utility-nested-item">
+												<a href="{{nested-item.url | prepend: site.baseurl}}" data-item-title-mobile="All {{nested-item.title}}">{{nested-item.title}}</a>
+											</li>
+											{% endfor %}
+										</ul>
+									</div>
+								</div>
+								{% endif %}
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="nav-menu-mobile">
+			<ul class="nav-menu-mobile-links">
+				{% for item in e.nav-menu-mobile %}
+					{% if item.form %}
+						<li class="nav-menu-mobile-item sign-in">
+							<form action="{{item.url}}" id="{{item.id}}" method="post">            
+								<button type="submit">Submit</button>
+							</form>   
+						</li>
+					{% elsif item.children %}
+						<li class="nav-menu-mobile-item has-dropdown mobile-has-dropdown">
+							<a href={{item.url}} aria-label="{{item.title}}">
+								<span class="icon-{{item.class}}"></span>
+								{{item.title}}
+							</a>
+							<div class="nav-utility-dropdown-content">
+								<div class="container">
+									<ul class="nav-utility-dropdown-list">
+										{% for nested-item in item.children %}
+										<li class="nav-utility-nested-item">
+											<a href="{{nested-item.url | prepend: site.baseurl}}">{{nested-item.title}}</a>
+										</li>
+										{% endfor %}
+									</ul>
+								</div>
+							</div>
+						</li>	
+					{% else %}
+						<li class="nav-menu-mobile-item">
+							<a href={{item.url}} aria-label="{{item.title}}">
+								<span class="icon-{{item.class}}"></span>
+								{{item.title}}
+							</a>
+						</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="nav-search">
+			<button class="nav-search__trigger">Search <span class="icon-search"></span></button>
+			<div class="nav-search__form-group">
+				<button class="nav-search__close">Close Search<span class="icon-close"></span></button>
+				<form action="/" class="nav-search__form">
+					<label class="nav-search__input-label" for="nav-search-input">Search</label>
+					<input class="nav-search__input" type="search" placeholder="Search" id="nav-search-input" aria-label="search" />
+					<button class="nav-search__submit" type="submit">Submit</button>
+				</form>	
+			</div>
+			<div class="nav-search__backdrop"></div>
+		</div>
+	</div>
+
+</header>

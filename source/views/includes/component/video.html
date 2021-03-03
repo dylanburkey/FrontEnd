@@ -1,0 +1,18 @@
+<div class="video">
+  <div class="video__wrapper">
+  	{% assign video = include.data %}
+	<img data-object-fit="cover" src="{{ video.thumbnail | prepend: site.baseurl }}"/>
+	<button class="video__button" data-modal-trigger="video-id-here">
+		<span class="video__button-content"></span>
+	</button>
+  </div>
+</div>
+
+<div class="modal" data-modal="video-id-here" data-modal-activate-on-load="false">
+	<div class="modal-content">
+		<button class="modal-close" data-modal-close><span class="icon-close"></span></button>
+		<div class="modal-body">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/-7McZMgXIDk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+</div>

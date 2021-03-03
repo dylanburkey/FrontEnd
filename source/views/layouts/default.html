@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+	{% include core/head.html %}
+	<body>
+		{% include core/header.html %}
+		<main class="main">{{ content }}</main>
+		{% include core/footer.html %}
+	</body>
+	<script type="text/javascript" src="{{ 'main.js' | prepend: site.disturl }}"></script>
+</html>

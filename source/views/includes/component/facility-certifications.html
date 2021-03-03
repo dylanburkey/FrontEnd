@@ -1,0 +1,49 @@
+{% assign facility-cert = site.data.facility-certifications[include.data] %}
+
+<div class="facility-certifications container">
+  <div class="facility-certifications__wrapper">
+    <h3 class="facility-certifications__title">{{facility-cert.title}}</h3>
+    <form class="facility-certifications__section-search">
+      <div class="facility-certifications__dropdown">
+        <label class="facility-certifications__dropdown-label" for="{{facility-cert.certification-label}}">{{facility-cert.certification}}</label>
+        <div class="facility-certifications__dropdown-wrap">
+          <div class="facility-certifications__dropdown-wrapper">
+            <span class="icon icon-chevron-down facility-certifications__dropdown-arrow"></span>
+            <select class="facility-certifications__dropdown-select" id="{{facility-cert.certification-label}}" name="">
+              {% for option in facility-cert.options %}
+              <option value="{{option.value}}" name="{{option.name}}">{{option.text}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn">{{facility-cert.find}}</button>
+    </form>
+    <div class="facility-certifications__section-results">
+      <div class="facility-certifications__section-header">
+        <p class="facility-certifications__section-results-title">{{facility-cert.results.title}}</p>
+        <form class="facility-certifications__select-wrapper">
+          <p class="facility-certifications__select-label">{{fmc.agency-certifications.filter-by}}</p>
+          {% include component/select.html data="facility-certifications" %}
+        </form>
+      </div>
+      {% for result-block in facility-cert.results.result-blocks %}
+      <div class="facility-certifications__results-wrapper">
+        <p class="facility-certifications__results-subtitle">{{result-block.subtitle}}</p>
+        <div class="facility-certifications__result">
+          {% for result-line in result-block.lines %}
+          <div class="facility-certifications__result-line">
+            <span class="facility-certifications__result-category">{{result-line.label}}</span>
+            <span class="facility-certifications__result-text">{{result-line.name}}</span>
+          </div>
+          {% endfor %}
+          <div class="facility-certifications__result-links">
+            <a class="facility-certifications__result-link">{{result-block.link-1}}</a>
+            <a class="facility-certifications__result-link">{{result-block.link-2}}</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

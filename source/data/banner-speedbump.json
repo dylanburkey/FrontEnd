@@ -1,0 +1,40 @@
+{
+  "newsroom": {
+    "title": "Stay up-to-date with Lincoln Electric",
+    "description": "Subscribe today to recieve the latest press releases",
+    "buttons": [
+      {
+        "button": {
+          "title": "Get news updates",
+          "href": "#sign-up"
+        }
+      },
+      {
+        "button": {
+          "title": "Investor alerts",
+          "href": "#sign-up",
+          "style": "tertiary-inverse-solid"
+        }
+      }
+    ]   
+  },
+  "promotions-detail": {
+    "title": "Prefer to purchase in-store?",
+    "description": "Find a distributor and claim your reward!",
+    "buttons": [
+      {
+        "button": {
+          "title": "Rebate Instructions",
+          "href": "#rebate-instructions"
+        }
+      },
+      {
+        "button": {
+          "title": "Find A Distributor",
+          "href": "#find-distributor",
+          "style": "tertiary-inverse-solid"
+        }
+      }
+    ]
+  }
+}

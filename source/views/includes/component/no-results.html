@@ -1,0 +1,26 @@
+<div class="no-results">
+  <h3>Sorry, we couldn't find any product results for your search.</h3>
+  <ul>
+      <li>Please double check your spelling</li>
+      <li>Try more generic search terms (e.g., TIG welder, fume control)</li>
+      <li>Navigate to a product category using the site navigation above or the links below</li>
+  </ul>
+  <p><strong>Search Again</strong></p>
+  <div class="no-results__search-again">
+      <div class="search">
+          <form action="#" class="search__form">
+              <input class="search__input" type="search" placeholder="Search" aria-label="search">
+              <button class="search__submit" type="submit">Submit</button>
+          </form>
+      </div>
+  </div>
+  <p><strong>Need Assistance?</strong> <a href="#">Contact Our Support Team</a></p>
+  <hr />
+  <h3>Browse Our Popular Product Offerings</h3>
+  {% include component/section.html
+      component="tiles" 
+      style="navigation"
+      columns="3"
+      rows="1"
+      data="homepage-product-offerings" %}
+</div>

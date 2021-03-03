@@ -1,0 +1,377 @@
+$block: 'content-split';
+
+.#{$block} {
+	
+
+	&:not(.content-split--image-large){
+		@include container;
+	}
+
+	// &--image-large {
+	// 	margin-top: ;
+	// 	margin-bottom: ;
+	// }
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		@include desktop {
+			flex-direction: row;
+			align-items: center;
+		}
+	}
+
+  &--image {
+		&:not(.content-split--teaser-right) {
+			.#{$block}__image {
+				@include desktop {
+					padding-right: map-get($spacing, xx-large);
+				}
+			}
+		}
+		.#{$block}__media {
+			@include desktop {
+				min-width: 50%;
+				max-width: 50%;
+			}
+		}
+	}
+	
+	&--image-large {
+		
+		.#{$block}__media {
+			@include desktop {
+				flex-basis: 50%;
+				width: 50%;
+			}
+		}
+
+		&.#{$block}--teaser-left {
+			@include desktop {
+				.#{$block}__content {
+					flex-direction: row-reverse;
+				}
+				.#{$block}__teaser {
+					.teaser {
+						margin: 0;
+					}
+				}
+				.#{$block}__image-large {
+					&:before {
+						right: 0;
+						left: auto;
+					}
+				}
+			}
+		}
+		&.#{$block}--teaser-right {
+			@include desktop {
+				.#{$block}__content {
+					display: block;
+				}
+			}
+		}
+
+		.#{$block}__teaser {
+			padding: map-get($spacing, large) map-get($spacing, medium);
+
+			@include desktop {
+				@include content-overlay;
+		    height: auto;
+		    display: flex;
+		    align-items: center;
+
+				.teaser {
+					padding-left: map-get($spacing, xx-large);
+					flex-basis: 50%;
+					width: 50%;
+					margin-left: auto;
+				}
+			}
+		}
+
+		.#{$block}__image-large {
+			padding: map-get($spacing, medium) map-get($spacing, medium) 0 map-get($spacing, medium);
+			margin-bottom: map-get($spacing, small);
+			position: relative;
+			&:before {
+				position: absolute;
+				content: "";
+				left: 0;
+				top: 0;
+				bottom: 0;
+				background: map-get($color, gray-darkest);
+				width: 100%;
+				height: 90%;
+			}
+
+			@include desktop {
+				position: static;
+				padding: map-get($spacing, xxx-large) map-get($spacing, xx-large) map-get($spacing, xxx-large) 0;
+				&:before {
+					width: 40%;
+					height: 100%;
+				}
+			}
+
+			img,
+			picture {
+				border-radius: 1px 1px $border-radius $border-radius;
+				box-shadow: 0 0 6px 4px rgba(18,18,18,0.07);
+				position: relative;
+				z-index: 1;
+				width: 100%;
+
+				@include desktop {
+					border-radius: 0 $border-radius $border-radius 0;
+				}
+			}
+		}
+
+		.background-texture {
+			display: none;
+			@include desktop {
+				display: block;
+				&--large-left, &--large-right {
+					background-size: contain;
+					background-position: center;
+				}
+			}
+		}
+	}
+
+	&--video, &--video-static {
+		.#{$block}__content {
+			flex-direction: column-reverse;
+			@include desktop {
+				flex-direction: row;
+			}
+		}
+		.#{$block}__media {
+			@include desktop {
+				margin-top: 30px;
+				margin-right: map-get($spacing, xxx-large);
+				margin-top: 0;
+			}
+		}
+		&.#{$block}--teaser-left {
+			.#{$block}__media {
+				@include desktop {
+					margin-left: map-get($spacing, xxx-large);
+					margin-right: 0;
+				}
+			}
+		}
+
+		.background-texture {
+			display: none;
+			@include desktop {
+				display: block;
+				&--small-right, &--small-left {
+					background-size: cover;
+					top: 0;
+					right: 0;
+				}
+			}
+		}
+	}
+
+	&--video,
+	&--carousel,
+	&--video-static {
+		.#{$block}__media {
+			@include desktop {
+				//flex-basis: 60%; firefox fix
+				width: 60%;
+			}
+		}
+		.#{$block}__teaser {
+			@include desktop {
+				//flex-basis: 40%; firefox fix
+				width: 40%;
+			}
+		}
+	}
+
+	&--carousel {
+		&.#{$block}--teaser-left {
+			.#{$block}__media {
+        @include desktop {
+        }
+			}
+      .#{$block}__teaser {
+        @include desktop {
+          padding-right: map-get($spacing, xxx-large);
+        }
+      }
+		}
+    &.#{$block}--teaser-right {
+      .#{$block}__media {
+        @include desktop {
+        }
+      }
+      .#{$block}__teaser {
+        @include desktop {
+          padding-left: map-get($spacing, xxx-large);
+        }
+      }
+    }
+	}
+
+	&--teaser-left {
+		.#{$block}__teaser {
+			z-index: 1;
+			order: 0;
+			margin-top: map-get($spacing, large);
+			
+			@include desktop {
+				margin-bottom: 0;
+				margin-top: 0;
+				padding-right: map-get($spacing, xx-large);
+			}
+		}
+		.#{$block}__media {
+			order: 1;
+
+			@include desktop {
+				// padding-left: map-get($spacing, xx-large);
+			}
+		}
+	}
+
+	&--teaser-right {
+		&.#{$block}--image {
+			.#{$block}__content {
+				@include mobile-only {
+					flex-direction: column;
+				}
+			}
+		}
+		.#{$block}__content {
+			flex-direction: column;
+			@include desktop {
+				flex-direction: row;
+			}
+		}
+		.#{$block}__image { 
+			@include desktop {
+				padding-right: map-get($spacing, xx-large);
+			}
+		}
+
+		.#{$block}__image-large {
+			@include desktop {
+				padding: map-get($spacing, xxx-large) 0 map-get($spacing, xxx-large) map-get($spacing, xx-large);
+				
+				img,
+				picture {
+					border-radius: $border-radius 0 0 $border-radius;
+				}
+
+				&:before {
+					right: auto;
+					left: 0;
+				}
+			}
+		}
+
+		.#{$block}__teaser {
+			order: 0;
+			margin-bottom: map-get($spacing, large);
+			.teaser {
+				@include desktop {
+					//padding-right: 48px;
+					padding-left: 0;
+					margin-left: auto;
+				}
+			}
+
+			@include desktop {
+				margin-bottom: 0;
+			}
+		}
+		.#{$block}__media {
+			order: 1;
+
+			@include desktop {
+				padding-right: map-get($spacing, xx-large);
+				order: 0;
+			}
+		}
+	}
+
+	.swiper-pagination-bullet {
+		width: map-get($spacing, small);
+		height: map-get($spacing, small);
+	}
+	
+	.swiper-pagination-bullet-active {
+		background-color: map-get($color, red);
+	}
+	.teaser__cta {
+		a {
+			&:after {
+				font-size: 12px;
+			}
+		}
+	}
+
+	.swiper-button-prev, .swiper-button-next {
+		color: map-get($color, red);
+		font-weight: bold;
+		width: map-get($spacing, medium);
+		height: map-get($spacing, medium);
+		&:focus {
+			outline: 0;
+		}
+		&:after {
+			font-size: 24px;
+		}
+	}
+
+
+	.swiper-button-next {
+		right: - map-get($spacing, large);
+		left: auto;
+	}
+
+	.swiper-button-prev {
+		left: - map-get($spacing, large);
+		right: auto;
+	}
+
+	.cards--carousel .swiper-container-initialized {
+		padding-left: 0;
+		padding-right: 0;
+		@include desktop {
+			padding-left: map-get($spacing, small);
+			padding-right: map-get($spacing, small);
+		}
+	}
+	.swiper-container {
+		&:not(.swiper-container-initialized) {
+			width: 100%;
+      .swiper-wrapper {
+        display: flex;
+        flex-flow: row;
+        overflow-x: auto;
+        .card {
+          flex-basis: 294px;
+          flex-grow: 1;
+          margin-right: map-get($spacing, medium);
+          &:last-of-type {
+            margin-right: 0;
+          }
+          @include desktop {
+            flex-basis: calc(100%/2 - #{map-get($spacing, large)});
+            margin-right: map-get($spacing, large);
+            &:last-of-type {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+		}
+	}
+}

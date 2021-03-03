@@ -1,0 +1,496 @@
+{
+  "filters":{
+    "title":"Filter By",
+    "toggle": true,
+    "toggleText": "expand all",
+    "groups":[
+      {
+        "data-accordion": true,
+        "data-accordion-trigger": true,
+        "data-accordion-content": true,
+        "title": "CATEGORY",
+        "facet-name": "category",
+        "items": [
+          {
+            "text":"Square Wave",
+            "count": "1"
+          },
+          {
+            "text":"Invertec",
+            "count": "2"
+          },
+          {
+            "text":"Precision TIG",
+            "count": "12"
+          },
+          {
+            "text":"Aspect",
+            "count": "7"
+          }
+        ]
+      },
+      {
+        "data-accordion": true,
+        "data-accordion-trigger": true,
+        "data-accordion-content": true,
+        "title": "CAPABILITY",
+        "facet-name": "capability",
+        "items": [
+          {
+            "is-checkbox":true,
+            "text":"TIG Hi-Freq",
+            "count": "12"
+          },
+          {
+            "is-checkbox":true,
+            "text":"TIG Pulse",
+            "count": "6"
+          },
+          {
+            "is-checkbox":true,
+            "text":"TIG Scratch",
+            "count": "18"
+          },
+          {
+            "is-checkbox":true,
+            "text":"TIG Touch",
+            "count": "9"
+          }
+        ]
+      },
+      {
+        "data-accordion": true,
+        "data-accordion-trigger": true,
+        "data-accordion-content": true,
+        "title": "INPUT HERTZ",
+        "facet-name": "input hertz",
+        "items": [
+          {
+            "is-checkbox":true,
+            "text":"50",
+            "count": "7"
+          },
+          {
+            "is-checkbox":true,
+            "text":"60",
+            "count": "12"
+          },
+          {
+            "is-checkbox":true,
+            "text":"50/60",
+            "count": "16"
+          }
+        ]
+      },
+      {
+        "data-accordion": true,
+        "data-accordion-trigger": true,
+        "data-accordion-content": true,
+        "title": "INPUT PHASE",
+        "facet-name": "input phase",
+        "items": [
+          {
+            "is-checkbox":true,
+            "text":"1",
+            "count": "12"
+          },
+          {
+            "is-checkbox":true,
+            "text":"3",
+            "count": "11"
+          },
+          {
+            "is-checkbox":true,
+            "text":"1/3",
+            "count": "6"
+          }
+        ]
+
+      },
+      {
+        "data-accordion": true,
+        "data-accordion-trigger": true,
+        "data-accordion-content": true,
+        "title": "INPUT VOLTAGE",
+        "facet-name": "input voltage",
+        "items": [
+          {
+            "is-checkbox":true,
+            "text":"110/115/120",
+            "count": "14"
+          },
+          {
+            "is-checkbox":true,
+            "text":"200/208",
+            "count": "6"
+          },
+          {
+            "is-checkbox":true,
+            "text":"220/230/240",
+            "count": "8"
+          },
+          {
+            "is-checkbox":true,
+            "text":"380/400/415",
+            "count": "11"
+          },
+          {
+            "is-checkbox":true,
+            "text":"460",
+            "count": "9"
+          },
+          {
+            "is-checkbox":true,
+            "text":"575",
+            "count": "6"
+          }
+        ]
+      },
+      {
+        "data-accordion": true,
+        "data-accordion-trigger": true,
+        "data-accordion-content": true,
+        "title": "MAX OUTPUT (AMPS)",
+        "facet-name": "max output (amps)",
+        "items": [
+          {
+            "is-checkbox":true,
+            "text":"≥200",
+            "count": "16"
+          },
+          {
+            "is-checkbox":true,
+            "text":"≥300",
+            "count": "21"
+          },
+          {
+            "is-checkbox":true,
+            "text":"≥400",
+            "count": "13"
+          }
+        ]
+      },
+      {
+        "data-accordion": true,
+        "data-accordion-trigger": true,
+        "data-accordion-content": true,
+        "title": "WEIGHT (LBS)",
+        "facet-name": "weight (lbs)",
+        "items": [
+          {
+            "is-checkbox":true,
+            "text":"≤40",
+            "count": "10"
+          },
+          {
+            "is-checkbox":true,
+            "text":"≤80",
+            "count": "12"
+          },
+          {
+            "is-checkbox":true,
+            "text":"≤150",
+            "count": "22"
+          }
+        ]
+      },
+      {
+        "data-accordion": true,
+        "data-accordion-trigger": true,
+        "data-accordion-content": true,
+        "title": "POLARITY",
+        "facet-name": "polarity",
+        "items": [
+          {
+            "is-checkbox":true,
+            "text":"DC",
+            "count": "13"
+          },
+          {
+            "is-checkbox":true,
+            "text":"AC",
+            "count": "19"
+          },
+          {
+            "is-checkbox":true,
+            "text":"AC/DC",
+            "count": "9"
+          }
+        ]
+      }
+    ],
+    "filters-controls":{
+      "btn-count": true,
+      "clear-control": {
+        "href": "#clear-filters",
+        "text": "clear filters"
+      },
+      "close-control": {
+        "id": "filters",
+        "href": "#close-filters",
+        "text": "close"
+      }
+    }
+  },
+  "newsroom-filters":{
+    "title":"Filter By",
+    "groups":[
+      {
+        "data-accordion": true,
+        "data-accordion-trigger": true,
+        "data-accordion-content": true,
+        "title": "YEAR",
+        "facet-name": "year",
+        "items": [
+          {
+            "is-checkbox":true,
+            "text":"2020",
+            "count": "11"
+          },
+          {
+            "is-checkbox":true,
+            "text":"2019",
+            "count": "2"
+          },
+          {
+            "is-checkbox":true,
+            "text":"2018",
+            "count": "12"
+          },
+          {
+            "is-checkbox":true,
+            "text":"2017",
+            "count": "7"
+          },
+          {
+            "is-checkbox":true,
+            "text":"2016",
+            "count": "9"
+          },
+          {
+            "is-checkbox":true,
+            "text":"2015",
+            "count": "10"
+          }
+        ]
+      },
+      {
+        "data-accordion": true,
+        "data-accordion-trigger": true,
+        "data-accordion-content": true,
+        "title": "PRODUCT TYPE",
+        "facet-name": "product type",
+        "items": [
+          {
+            "is-checkbox":true,
+            "text":"Product Type One",
+            "count": "12"
+          },
+          {
+            "is-checkbox":true,
+            "text":"Product Type Two",
+            "count": "6"
+          },
+          {
+            "is-checkbox":true,
+            "text":"Product Type Three",
+            "count": "18"
+          },
+          {
+            "is-checkbox":true,
+            "text":"Product Type Four",
+            "count": "9"
+          }
+        ]
+      },
+      {
+        "data-accordion": true,
+        "data-accordion-trigger": true,
+        "data-accordion-content": true,
+        "title": "TOPIC",
+        "facet-name": "topic",
+        "items": [
+          {
+            "is-checkbox":true,
+            "text":"Product",
+            "count": "7"
+          },
+          {
+            "is-checkbox":true,
+            "text":"Corporate",
+            "count": "12"
+          },
+          {
+            "is-checkbox":true,
+            "text":"Education",
+            "count": "16"
+          },
+          {
+            "is-checkbox":true,
+            "text":"Topic Four",
+            "count": "7"
+          },
+          {
+            "is-checkbox":true,
+            "text":"Topic Five",
+            "count": "12"
+          },
+          {
+            "is-checkbox":true,
+            "text":"Topic Six",
+            "count": "16"
+          }
+        ]
+      },
+      {
+        "data-accordion": true,
+        "data-accordion-trigger": true,
+        "data-accordion-content": true,
+        "title": "INDUSTRY",
+        "facet-name": "industry",
+        "items": [
+          {
+            "is-checkbox":true,
+            "text":"Heavy Fabrication",
+            "count": "7"
+          },
+          {
+            "is-checkbox":true,
+            "text":"Automotive",
+            "count": "12"
+          },
+          {
+            "is-checkbox":true,
+            "text":"Offshore",
+            "count": "16"
+          },
+          {
+            "is-checkbox":true,
+            "text":"Pipeline",
+            "count": "7"
+          },
+          {
+            "is-checkbox":true,
+            "text":"Maintenance & Repair",
+            "count": "12"
+          },
+          {
+            "is-checkbox":true,
+            "text":"Chemical Processing",
+            "count": "16"
+          },
+          {
+            "is-checkbox":true,
+            "text":"General Fabrication",
+            "count": "7"
+          },
+          {
+            "is-checkbox":true,
+            "text":"Shipbuilding",
+            "count": "12"
+          },
+          {
+            "is-checkbox":true,
+            "text":"Power Generation",
+            "count": "16"
+          }
+        ]
+
+      },
+      {
+        "data-accordion": true,
+        "data-accordion-trigger": true,
+        "data-accordion-content": true,
+        "title": "EVENT",
+        "facet-name": "event",
+        "items": [
+          {
+            "is-checkbox":true,
+            "active":true,
+            "text":"FABTECH 2019",
+            "count": "15"
+          },
+          {
+            "is-checkbox":true,
+            "text":"CONEXPO-CON/AGG",
+            "count": "12"
+          },
+          {
+            "is-checkbox":true,
+            "text":"Offshore Technology Conference",
+            "count": "16"
+          },
+          {
+            "is-checkbox":true,
+            "text":"Lorem Ipsum Dolor",
+            "count": "7"
+          },
+          {
+            "is-checkbox":true,
+            "text":"Lorem Ipsum Dolor",
+            "count": "12"
+          },
+          {
+            "is-checkbox":true,
+            "text":"Lorem Ipsum Dolor",
+            "count": "16"
+          },
+          {
+            "is-checkbox":true,
+            "text":"Lorem Ipsum Dolor",
+            "count": "7"
+          },
+          {
+            "is-checkbox":true,
+            "text":"Lorem Ipsum Dolor",
+            "count": "12"
+          },
+          {
+            "is-checkbox":true,
+            "text":"Lorem Ipsum Dolor",
+            "count": "16"
+          }
+        ]
+      }
+    ],
+    "filters-controls":{
+      "btn-count": true,
+      "clear-control": {
+        "href": "#clear-filters",
+        "text": "clear filters"
+      },
+      "close-control": {
+        "id": "filters",
+        "href": "#close-filters",
+        "text": "close"
+      }
+    }
+  },
+  "discount-center-filters":{
+    "clearFilters": "Show All",
+    "groups":[
+      {
+        "title": "Browse by category",
+        "facet-name": "category",
+        "items": [
+          {
+            "text":"MIG Welder",
+            "count": "11"
+          },
+          {
+            "text":"TIG Welder",
+            "count": "2"
+          },
+          {
+            "text":"Automatic Feeders",
+            "count": "12"
+          },
+          {
+            "text":"Magnum",
+            "count": "7"
+          }
+        ]
+      }
+    ]
+  }
+}

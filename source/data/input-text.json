@@ -1,0 +1,83 @@
+{
+  "find-cad-file": {
+    "label": "Search By Product Number",
+    "input-label": "search-by-product-number",
+    "placeholder": "Enter a Product Name",
+    "btn-text": "find"
+  },
+  "q1-certificates": {
+    "label": "Input Q1 Lot Number",
+    "input-label": "cert-input-q1-lot-number",
+    "btn-text": "get pdf",
+    "placeholder": "Enter a Lot Number",
+    "error": true,
+    "error-text": "Please choose a certificate type",
+    "text": "Example: Q1 Lot 12135190, enter 12135190 into the field"
+  },
+  "conformance": {
+    "label": "Search By Name / Cert # / Classification",
+    "input-label": "search-by-name-cert-classification",
+    "placeholder": "Enter a Name",
+    "btn-text": "find"
+  },
+  "wire-flux-input-1": {
+    "label": "Input Q1 Lot Number",
+    "input-label": "wire-flux-1-input-q1-lot-number",
+    "placeholder": "Enter a Lot Number",
+    "text": "Example: Q1 Wire Lot 13220339, enter 13220339 into the field"
+  },
+  "wire-flux-input-2": {
+    "label": "Input Q1 Flux Lot Number",
+    "input-label": "wire-flux-2-input-q1-lot-number",
+    "placeholder": "Enter a Lot Number",
+    "text": "Example: Q1 Flux Lot 13364702, enter 13364702 into the field"
+  },
+  "wire-flux-input-3": {
+    "label": "Company name",
+    "input-label": "wire-flux-3-company-name",
+    "placeholder": "Enter a Company name"
+  },
+  "q2certificates": {
+    "label": "Search By Lot Number",
+    "input-label": "cert-input-q2-lot-number",
+    "placeholder": "Enter a Lot Number",
+    "btn-text": "find",
+    "text": "Example: Q1 Lot 12135190, enter 12135190 into the field"
+  },
+  "customized-cert-input-1": {
+    "label": "Supplied To*",
+    "input-label": "custom-cert-1-supplied-to",
+    "placeholder": "Supplied to"
+  },
+  "customized-cert-input-2": {
+    "label": "Order Number*",
+    "input-label": "custom-cert-2-order-number",
+    "placeholder": "Enter a Order Number"
+  },
+  "customized-cert-input-3": {
+    "label": "Production Code Number*",
+    "input-label": "custom-cert-3-code-number",
+    "placeholder": "Enter a Production Code Number"
+  },
+  "customized-cert-input-4": {
+    "label": "Production Code Number*",
+    "input-label": "custom-cert-4-code-number",
+    "placeholder": "Enter a Production Code Number"
+  },
+  "customized-cert-input-5": {
+    "label": "Size*",
+    "input-label": "custom-cert-5-size",
+    "placeholder": "Size"
+  },
+  "customized-cert-input-6": {
+    "label": "Comments",
+    "input-label": "custom-cert-6-comments",
+    "placeholder": "Comment"
+  },
+  "customized-cert-input-7": {
+    "label": "Email Address*",
+    "input-label": "custom-cert-7-email-address",
+    "placeholder": "Enter an Email Address",
+    "text": "Separate multiple addresses with a semicolon (;)"
+  }
+}

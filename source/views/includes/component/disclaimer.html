@@ -1,0 +1,10 @@
+{% assign e = site.data.disclaimer[include.data] %}
+
+<div class="disclaimer">
+  <h2 class="disclaimer__title">{{e.title}}</h2>
+  <div class="disclaimer__wrapper">
+    <span class="disclaimer__text">{{e.text}}</span>
+    <p class="disclaimer__description">{{e.description}}</p>
+    <a href="{{e.href}}" class="disclaimer__link">{{e.link}}</a>
+  </div>
+</div>

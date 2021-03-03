@@ -1,0 +1,8 @@
+{% assign cards = site.data.cards[include.style][include.data] %}
+
+<div class="cards">
+{% for card in cards.items %}
+	{% include component/cards/{{include.style}}.html 
+		data=card %}
+{% endfor %}
+</div>

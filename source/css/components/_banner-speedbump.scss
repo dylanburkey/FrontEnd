@@ -1,0 +1,51 @@
+$block: 'banner-speedbump';
+
+.#{$block} {
+	background: map-get($color, black);
+	padding: map-get($spacing, small) map-get($spacing, medium);
+	text-align: center;
+	@include desktop { 
+		text-align: left;
+		padding: map-get($spacing, xx-large) map-get($spacing, medium);
+	}
+
+	.teaser {
+		&__title,
+		&__description {
+			color: map-get($color, white);
+		}
+
+		&__wrapper {
+			@include desktop {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+		}
+
+		&__content {
+			@include balance-margins;
+			padding: map-get($spacing, medium) 0;
+
+			@include desktop {
+				margin-right: map-get($spacing, xx-large);
+				text-align: left;
+			}
+		}
+
+		&__cta {
+			margin-top: 0;
+			padding: map-get($spacing, medium) 0;
+			.btn {
+				display: block;
+				margin: map-get($spacing, small) auto;
+				//talk to design
+				max-width: 400px;
+
+				@include desktop {
+					display: inline-block;
+				}
+			}
+		}
+	}
+}

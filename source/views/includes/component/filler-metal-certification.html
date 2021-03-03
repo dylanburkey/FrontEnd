@@ -1,0 +1,599 @@
+{% assign fmc = site.data.filler-metal-certification[include.data] %}
+
+<div class="filler-metal-certification container">
+  {% include component/back-link.html %}
+  <!-- BEGIN include as is. JS hook -->
+  <div class="filler-metal-certification__nav-active-item">
+    <h3 class="filler-metal-certification__nav-active-item-title"></h3>
+    <span class="icon filler-metal-certification__nav-active-item-icon"></span>
+  </div>
+  <!-- END include as is. JS hook -->
+  <div class="filler-metal-certification__nav-wrapper">
+    <div class="filler-metal-certification__nav-item active">
+      <a href="#">{{fmc.nav-text-1}}</a>
+    </div>
+    <div class="filler-metal-certification__nav-item">
+      <a href="#">{{fmc.nav-text-2}}</a>
+    </div>
+    <div class="filler-metal-certification__nav-item">
+      <a href="#">{{fmc.nav-text-3}}</a>
+    </div>
+    <div class="filler-metal-certification__nav-item">
+      <a href="#">{{fmc.nav-text-4}}</a>
+    </div>
+    <div class="filler-metal-certification__nav-item">
+      <a href="#">{{fmc.nav-text-5}}</a>
+    </div>
+  </div>
+  <!-- START Certificates of conformance -->
+  <div class="filler-metal-certification__wrapper">
+    <h3 class="filler-metal-certification__section-title">{{fmc.conformance.title}}</h3>
+    <p class="filler-metal-certification__section-subtitle">{{fmc.conformance.subtitle}}</p>
+    <div class="filler-metal-certification__section-search">
+      <form class="filler-metal-certification__dropdown">
+        <label class="filler-metal-certification__dropdown-label" for="{{fmc.conformance.product-name-label}}">{{fmc.conformance.product-name}}</label>
+        <div class="filler-metal-certification__dropdown-wrap">
+          <div class="filler-metal-certification__dropdown-wrapper">
+            <span class="icon icon-chevron-down filler-metal-certification__dropdown-arrow"></span>
+            <select class="filler-metal-certification__dropdown-select" id="{{fmc.conformance.product-name-label}}" name="">
+              {% for option in fmc.conformance.options %}
+              <option value="{{option.value}}" name="{{option.name}}">{{option.text}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <button type="submit" class="btn">{{fmc.conformance.find}}</button>
+        </div>
+      </form>
+      <div class="filler-metal-certification__section-or-wrapper">
+        <div class="filler-metal-certification__section-or-divider"></div>
+        <div class="filler-metal-certification__section-or-text">{{fmc.conformance.or-text}}</div>
+        <div class="filler-metal-certification__section-or-divider"></div>
+      </div>
+      <form class="filler-metal-certification__form-input">
+        {% include component/input-text.html data="conformance" %}
+      </form>
+    </div>
+    {% if fmc.conformance.exact-matches %}
+    <div class="filler-metal-certification__section-results">
+      <p class="filler-metal-certification__section-results-title">{{fmc.conformance.exact-matches.title}}</p>
+      <div class="filler-metal-certification__results">
+        <div class="filler-metal-certification__results-row">
+          <div class="filler-metal-certification__results-header results-col1">
+            <span
+              class="filler-metal-certification__results-header-text">{{fmc.conformance.exact-matches.product-name}}</span>
+          </div>
+          <div class="filler-metal-certification__results-header results-col2">
+            <span
+              class="filler-metal-certification__results-header-text">{{fmc.conformance.exact-matches.classification}}</span>
+          </div>
+        </div>
+        {% for match in fmc.conformance.exact-matches.matched-products%}
+        <div class="filler-metal-certification__results-row">
+          <div class="filler-metal-certification__results-product-row results-col1">
+            <span class="filler-metal-certification__results-text">{{match.product-name}}</span>
+            <span
+              class="filler-metal-certification__results-text filler-metal-certification__results-text--id">{{match.product-number}}</span>
+          </div>
+          <div class="filler-metal-certification__results-product-row results-col2">
+            <span class="filler-metal-certification__results-text">{{match.classification}}</span>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+    {% if fmc.conformance.possible-matches %}
+    <div class="filler-metal-certification__section-results">
+      <p class="filler-metal-certification__section-results-title">{{fmc.conformance.possible-matches.title}}</p>
+      <p class="filler-metal-certification__section-subtitle">{{fmc.conformance.possible-matches.subtitle}}</p>
+      <p class="filler-metal-certification__section-results-title">
+        {{fmc.conformance.possible-matches.possible-matches}}</p>
+      <div class="filler-metal-certification__results">
+        <div class="filler-metal-certification__results-row">
+          <div class="filler-metal-certification__results-header results-col1">
+            <span class="filler-metal-certification__results-header-text">{{fmc.possible-matches.product-name}}</span>
+          </div>
+          <div class="filler-metal-certification__results-header results-col2">
+            <span class="filler-metal-certification__results-header-text">{{fmc.possible-matches.classification}}</span>
+          </div>
+        </div>
+        {% for match in fmc.conformance.possible-matches.matched-products%}
+        <div class="filler-metal-certification__results-row">
+          <div class="filler-metal-certification__results-product-row results-col1">
+            <span class="filler-metal-certification__results-text">{{match.product-name}}</span>
+            <span
+              class="filler-metal-certification__results-text filler-metal-certification__results-text--gray">{{match.product-number}}</span>
+          </div>
+          <div class="filler-metal-certification__results-product-row results-col2">
+            <span class="filler-metal-certification__results-text">{{match.classification}}</span>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+    {% if fmc.conformance.no-matches-found %}
+    <div class="filler-metal-certification__section-results">
+      <p class="filler-metal-certification__section-results-title">{{fmc.conformance.no-matches-found.title}}</p>
+      <p class="filler-metal-certification__section-subtitle">{{fmc.conformance.no-matches-found.subtitle}}</p>
+    </div>
+    {% endif %}
+  </div>
+  <!-- END Certificates of conformance -->
+  <!-- START Q1 Certificates -->
+  <div class="filler-metal-certification__wrapper">
+    <h3 class="filler-metal-certification__section-title">{{fmc.q1certificates.title}}</h3>
+    <p class="filler-metal-certification__section-subtitle">{{fmc.q1certificates.subtitle}}</p>
+    <form class="filler-metal-certification__section-wrapper">
+      <div class="filler-metal-certification__section-radios">
+        <div class="filler-metal-certification__section-radio-wrapper">
+          {% for radio in fmc.q1certificates.radios %}
+          <div class="filler-metal-certification__section-radio">
+            <label class="radio-container filler-metal-certification__section-radio-container "
+              for="fmc-radio-{{radio.id}}">
+              <input class="js-cert-center-forms-radio-inputs radio-input" type="radio" data-id="{{radio.id}}"
+                id="fmc-radio-{{radio.id}}" name="fmc-radios">
+              <span
+                class="filler-metal-certification__section-radio-checkmark {% if fmc.q1certificates.error %}certificates-error{% endif %} radio-checkmark"></span>
+              <h2
+                class="filler-metal-certification__section-radio-title {% if fmc.q1certificates.error %}certificates-error{% endif %} radio-text">
+                {{radio.title}}</h2>
+              <p class="filler-metal-certification__section-radio-subtitle radio-text">{{radio.subtitle}}</p>
+            </label>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="filler-metal-certification__section-input">
+        {% include component/input-text.html data="q1-certificates" %}
+      </div>
+    </form>
+    {% if fmc.q1certificates.results %}
+    <div class="filler-metal-certification__section-results">
+      <p class="filler-metal-certification__section-results-title">{{fmc.q1certificates.results.title}}</p>
+      <div class="filler-metal-certification__results">
+        <div class="filler-metal-certification__results-row">
+          <div class="filler-metal-certification__results-header results-col1">
+            <span
+              class="filler-metal-certification__results-header-text">{{fmc.q1certificates.results.file-name}}</span>
+          </div>
+          <div class="filler-metal-certification__results-header results-col2">
+            <span
+              class="filler-metal-certification__results-header-text">{{fmc.q1certificates.results.description}}</span>
+          </div>
+        </div>
+        {% for file in fmc.q1certificates.results.files %}
+        <div class="filler-metal-certification__results-row">
+          <div class="filler-metal-certification__results-product-row results-col1">
+            <span class="filler-metal-certification__results-text">{{file.file-name}}</span>
+          </div>
+          <div class="filler-metal-certification__results-product-row results-col2">
+            <span
+              class="filler-metal-certification__results-text filler-metal-certification__results-text--gray">{{file.description}}</span>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+    {% if fmc.q1certificates.no-results %}
+    <div class="filler-metal-certification__section-results">
+      <p class="filler-metal-certification__section-results-title">{{fmc.q1certificates.no-results.title}}</p>
+      <p class="filler-metal-certification__section-results-subtitle">{{fmc.q1certificates.no-results.subtitle}}</p>
+    </div>
+    {% endif %}
+  </div>
+  <!-- END Q1 Certificates -->
+  <!-- START Wire and Flux Combination Certificate -->
+  <div class="filler-metal-certification__wrapper">
+    <h3 class="filler-metal-certification__section-title">{{fmc.wire-flux.title}}</h3>
+    <form class="filler-metal-certification__section-inputs-wrapper">
+      {% include component/input-text.html data="wire-flux-input-1" %}
+      {% include component/input-text.html data="wire-flux-input-2" %}
+      {% include component/input-text.html data="wire-flux-input-3" %}
+      <div>
+        <button type="submit" class="btn">{{fmc.wire-flux.get-pdf}}</button>
+      </div>
+    </form>
+    {% if fmc.wire-flux.results %}
+    <div class="filler-metal-certification__section-results">
+      <p class="filler-metal-certification__section-results-title">{{fmc.wire-flux.results.title}}</p>
+      <div class="filler-metal-certification__results">
+        <div class="filler-metal-certification__results-row">
+          <div class="filler-metal-certification__results-header results-col1">
+            <span class="filler-metal-certification__results-header-text">{{fmc.wire-flux.results.file-name}}</span>
+          </div>
+          <div class="filler-metal-certification__results-header results-col2">
+            <span class="filler-metal-certification__results-header-text">{{fmc.wire-flux.results.description}}</span>
+          </div>
+        </div>
+        {% for file in fmc.wire-flux.results.files %}
+        <div class="filler-metal-certification__results-row">
+          <div class="filler-metal-certification__results-product-row results-col1">
+            <span class="filler-metal-certification__results-text">{{file.file-name}}</span>
+          </div>
+          <div class="filler-metal-certification__results-product-row results-col2">
+            <span
+              class="filler-metal-certification__results-text filler-metal-certification__results-text--gray">{{file.description}}</span>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+    {% if fmc.wire-flux.no-results %}
+    <div class="filler-metal-certification__section-results">
+      <p class="filler-metal-certification__section-results-title">{{fmc.wire-flux.no-results.title}}</p>
+      <p class="filler-metal-certification__section-results-subtitle">{{fmc.wire-flux.no-results.subtitle}}</p>
+    </div>
+    {% endif %}
+  </div>
+  <!-- END Wire and Flux Combination Certificate -->
+  <!-- START Q2 Certificates -->
+  <div class="filler-metal-certification__wrapper">
+    <h3 class="filler-metal-certification__section-title">{{fmc.q2certificates.title}}</h3>
+    <p class="filler-metal-certification__section-subtitle">{{fmc.q2certificates.subtitle}}</p>
+    <form class="filler-metal-certification__input-q2-wrapper">
+      {% include component/input-text.html data="q2certificates" %}
+    </form>
+    {% if fmc.q2certificates.results %}
+    <div class="filler-metal-certification__section-results">
+      <p class="filler-metal-certification__section-results-title">{{fmc.q2certificates.results.title}}</p>
+      <div class="filler-metal-certification__results">
+        <div class="filler-metal-certification__results-row">
+          <div class="filler-metal-certification__results-header results-col1 results-col1--q2">
+            <span
+              class="filler-metal-certification__results-header-text">{{fmc.q2certificates.results.lot-number}}</span>
+          </div>
+          <div class="filler-metal-certification__results-header results-col2 results-col2--q2">
+            <span
+              class="filler-metal-certification__results-header-text">{{fmc.q2certificates.results.description}}</span>
+          </div>
+          <div class="filler-metal-certification__results-header results-col3 results-col3--q2">
+            <span
+              class="filler-metal-certification__results-header-text">{{fmc.q2certificates.results.product-name}}</span>
+          </div>
+        </div>
+        {% for file in fmc.q2certificates.results.files %}
+        <div class="filler-metal-certification__results-row">
+          <div class="filler-metal-certification__results-product-row results-col1 results-col1--q2">
+            <span class="filler-metal-certification__results-text">{{file.lot-number}}</span>
+          </div>
+          <div class="filler-metal-certification__results-product-row results-col2 results-col2--q2">
+            <span
+              class="filler-metal-certification__results-text filler-metal-certification__results-text--gray">{{file.description}}</span>
+          </div>
+          <div class="filler-metal-certification__results-product-row results-col3 results-col3--q2">
+            <span
+              class="filler-metal-certification__results-text filler-metal-certification__results-text--gray">{{file.product-name}}</span>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  <!-- END Q2 Certificates -->
+  <!-- START Agency Certifications -->
+  <div class="filler-metal-certification__wrapper">
+    <h3 class="filler-metal-certification__section-title">{{fmc.agency-certifications.title}}</h3>
+    <form class="filler-metal-certification__select-wrapper">
+      <p class="filler-metal-certification__select-label">{{fmc.agency-certifications.filter-by}}</p>
+      {% include component/select.html data="agency" %}
+    </form>
+    {% if fmc.agency-certifications.results %}
+    <div class="filler-metal-certification__section-results filler-metal-certification__section-results--agency">
+      {% if fmc.agency-certifications.results.title %}
+      <p class="filler-metal-certification__section-results-title">{{fmc.agency-certifications.results.title}}</p>
+      {% endif %}
+      <div class="filler-metal-certification__results">
+        <div class="filler-metal-certification__results-row">
+          <div class="filler-metal-certification__results-header results-col1 results-col1--q2">
+            <span
+              class="filler-metal-certification__results-header-text">{{fmc.agency-certifications.results.product-name}}</span>
+          </div>
+          <div class="filler-metal-certification__results-header results-col2 results-col2--q2">
+            <span
+              class="filler-metal-certification__results-header-text">{{fmc.agency-certifications.results.certificate-number}}</span>
+          </div>
+          <div class="filler-metal-certification__results-header results-col3 results-col3--q2">
+            <span
+              class="filler-metal-certification__results-header-text">{{fmc.agency-certifications.results.agency-name}}</span>
+          </div>
+        </div>
+        {% for product in fmc.agency-certifications.results.products %}
+        <div class="filler-metal-certification__results-row">
+          <div class="filler-metal-certification__results-product-row results-col1 results-col1--q2">
+            <span class="filler-metal-certification__results-text">{{product.product-name}}</span>
+          </div>
+          <div class="filler-metal-certification__results-product-row results-col2 results-col2--q2">
+            <span
+              class="filler-metal-certification__results-text filler-metal-certification__results-text--gray">{{product.certificate-number}}</span>
+          </div>
+          <div class="filler-metal-certification__results-product-row results-col3 results-col3--q2">
+            <span
+              class="filler-metal-certification__results-text filler-metal-certification__results-text--gray">{{product.agency-name}}</span>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  <!-- END Agency Certifications -->
+  <!-- START AWS D1.8 Certificates -->
+  <div class="filler-metal-certification__wrapper">
+    <h3 class="filler-metal-certification__section-title">{{fmc.aws.title}}</h3>
+    <form class="filler-metal-certification__section-dropdowns-wrapper">
+      <div class="filler-metal-certification__dropdown">
+        <label class="filler-metal-certification__dropdown-label" for="{{fmc.aws.product.product-name-label}}">{{fmc.aws.product.product-name}}</label>
+        <div class="filler-metal-certification__dropdown-wrap">
+          <div class="filler-metal-certification__dropdown-wrapper">
+            <span class="icon icon-chevron-down filler-metal-certification__dropdown-arrow"></span>
+            <select class="filler-metal-certification__dropdown-select" id="{{fmc.aws.product.product-name-label}}" name="">
+              {% for option in fmc.aws.product.options %}
+              <option value="{{option.value}}" name="{{option.name}}">{{option.text}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="filler-metal-certification__dropdown">
+        <label class="filler-metal-certification__dropdown-label" for="{{fmc.aws.diameter.diameter-label}}">{{fmc.aws.diameter.diameter}}</label>
+        <div class="filler-metal-certification__dropdown-wrap">
+          <div class="filler-metal-certification__dropdown-wrapper">
+            <span class="icon icon-chevron-down filler-metal-certification__dropdown-arrow"></span>
+            <select class="filler-metal-certification__dropdown-select" id="{{fmc.aws.diameter.diameter-label}}" name="">
+              {% for option in fmc.aws.diameter.options %}
+              <option value="{{option.value}}" name="{{option.name}}">{{option.text}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button class="btn">{{fmc.aws.btn-text}}</button>
+      </div>
+    </form>
+    <div class="filler-metal-certification__section-subtitle">{{fmc.aws.or-text}} <a href="#">{{fmc.aws.link}}</a></div>
+    {% if fmc.aws.results %}
+    <div class="filler-metal-certification__section-results">
+      {% if fmc.aws.results.title %}
+      <p class="filler-metal-certification__section-results-title">{{fmc.aws.results.title}}</p>
+      {% endif %}
+      <div class="filler-metal-certification__results">
+        <div class="filler-metal-certification__results-row">
+          <div class="filler-metal-certification__results-header results-col1 results-col1--q2">
+            <span class="filler-metal-certification__results-header-text">{{fmc.aws.results.product-name}}</span>
+          </div>
+          <div class="filler-metal-certification__results-header results-col2 results-col2--q2">
+            <span class="filler-metal-certification__results-header-text">{{fmc.aws.results.diameter}}</span>
+          </div>
+          <div class="filler-metal-certification__results-header results-col3 results-col3--q2">
+            <span class="filler-metal-certification__results-header-text">{{fmc.aws.results.classification}}</span>
+          </div>
+        </div>
+        {% for product in fmc.aws.results.products %}
+        <div class="filler-metal-certification__results-row">
+          <div class="filler-metal-certification__results-product-row results-col1 results-col1--q2">
+            <span class="filler-metal-certification__results-text">{{product.product-name}}</span>
+            <br>
+            <span
+              class="filler-metal-certification__results-text filler-metal-certification__results-text--gray">{{product.product-label}}</span>
+          </div>
+          <div class="filler-metal-certification__results-product-row results-col2 results-col2--q2">
+            <span
+              class="filler-metal-certification__results-text filler-metal-certification__results-text--gray">{{product.diameter}}</span>
+          </div>
+          <div class="filler-metal-certification__results-product-row results-col3 results-col3--q2">
+            <span
+              class="filler-metal-certification__results-text filler-metal-certification__results-text--gray">{{product.classification-1}}</span>
+            <br>
+            <span
+              class="filler-metal-certification__results-text filler-metal-certification__results-text--gray">{{product.classification-2}}</span>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+    {% if fmc.aws.results-or-view %}
+    <div class="filler-metal-certification__section-results">
+      {% if fmc.aws.results.title %}
+      <p class="filler-metal-certification__section-results-title">{{fmc.aws.results.title}}</p>
+      {% endif %}
+      <div class="filler-metal-certification__results">
+        <div class="filler-metal-certification__results-row">
+          <div class="filler-metal-certification__results-header results-col1 results-col1--q2">
+            <span
+              class="filler-metal-certification__results-header-text">{{fmc.aws.results-or-view.product-name}}</span>
+          </div>
+          <div class="filler-metal-certification__results-header results-col2 results-col2--q2">
+            <span class="filler-metal-certification__results-header-text">{{fmc.aws.results-or-view.diameter}}</span>
+          </div>
+          <div class="filler-metal-certification__results-header results-col3 results-col3--q2">
+            <span
+              class="filler-metal-certification__results-header-text">{{fmc.aws.results-or-view.classification}}</span>
+          </div>
+        </div>
+        {% for product in fmc.aws.results-or-view.products %}
+        <div class="filler-metal-certification__results-row">
+          <div class="filler-metal-certification__results-product-row results-col1 results-col1--q2">
+            <span class="filler-metal-certification__results-text">{{product.product-name}}</span>
+            <span
+              class="filler-metal-certification__results-text filler-metal-certification__results-text--gray">{{product.product-label}}</span>
+          </div>
+          <div class="filler-metal-certification__results-product-row results-col2 results-col2--q2">
+            <span
+              class="filler-metal-certification__results-text filler-metal-certification__results-text--gray">{{product.diameter}}</span>
+          </div>
+          <div class="filler-metal-certification__results-product-row results-col3 results-col3--q2">
+            <span
+              class="filler-metal-certification__results-text filler-metal-certification__results-text--gray">{{product.classification-1}}</span>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  <!-- END AWS D1.8 Certificates -->
+  <!-- START AWS D1.1 Certificates -->
+  <div class="filler-metal-certification__wrapper">
+    <h3 class="filler-metal-certification__section-title">{{fmc.aws-d11.title}}</h3>
+    <p class="filler-metal-certification__section-text">{{fmc.aws-d11.text}}</p>
+    {% if fmc.aws-d11.results %}
+    <div class="filler-metal-certification__section-results">
+      <div class="filler-metal-certification__results">
+        <div class="filler-metal-certification__results-row">
+          <div class="filler-metal-certification__results-header results-col1">
+            <span class="filler-metal-certification__results-header-text">{{fmc.aws-d11.results.product-name}}</span>
+          </div>
+          <div class="filler-metal-certification__results-header results-col2">
+            <span class="filler-metal-certification__results-header-text">{{fmc.aws-d11.results.gas}}</span>
+          </div>
+        </div>
+        {% for product in fmc.aws-d11.results.products %}
+        <div class="filler-metal-certification__results-row">
+          <div class="filler-metal-certification__results-product-row results-col1">
+            <span class="filler-metal-certification__results-text">{{product.product-name}}</span>
+            <span
+              class="filler-metal-certification__results-text filler-metal-certification__results-text--gray">{{product.product-label}}</span>
+          </div>
+          <div class="filler-metal-certification__results-product-row results-col2">
+            <span class="filler-metal-certification__results-text filler-metal-certification__results-text--gray">{{product.gas}}</span>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  <!-- END AWS D1.1 Certificates -->
+  <!-- START Customized Certificate of Conformance -->
+  <div class="filler-metal-certification__wrapper">
+    <h3 class="filler-metal-certification__section-title">{{fmc.customized-cert.title}}</h3>
+    <p class="filler-metal-certification__section-required">{{fmc.customized-cert.required}}</p>
+    <h5 class="filler-metal-certification__error-message">{{fmc.customized-cert.error}}</h5>
+    <form class="filler-metal-certification__customized-cert-form" action="#" method="get">
+      <div class="filler-metal-certification__section-search filler-metal-certification__section-search--custom-certs">
+        <div class="filler-metal-certification__dropdown">
+          <label class="filler-metal-certification__dropdown-label" for="{{fmc.customized-cert.product-name-label}}">{{fmc.customized-cert.product-name}}</label>
+          <div class="filler-metal-certification__dropdown-wrap">
+            <div class="filler-metal-certification__dropdown-wrapper">
+              <span class="icon icon-chevron-down filler-metal-certification__dropdown-arrow"></span>
+              <select class="filler-metal-certification__dropdown-select js-customized-cert-form-product-input" id="{{fmc.customized-cert.product-name-label}}" name="" value="default">
+                <option value="default" name="default">Select a product name</option>
+                {% for option in fmc.customized-cert.product-options %}
+                <option value="{{option.value}}" name="{{option.name}}">{{option.text}}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="filler-metal-certification__section-or-wrapper">
+          <div class="filler-metal-certification__section-or-divider"></div>
+          <div class="filler-metal-certification__section-or-text">{{fmc.customized-cert.or-text}}</div>
+          <div class="filler-metal-certification__section-or-divider"></div>
+        </div>
+        <div class="filler-metal-certification__dropdown">
+          <label class="filler-metal-certification__dropdown-label" for="{{fmc.customized-cert.certificate-number-label}}">{{fmc.customized-cert.certificate-number}}</label>
+          <div class="filler-metal-certification__dropdown-wrap">
+            <div class="filler-metal-certification__dropdown-wrapper">
+              <span class="icon icon-chevron-down filler-metal-certification__dropdown-arrow"></span>
+              <select class="filler-metal-certification__dropdown-select js-customized-cert-form-product-select" id="{{fmc.customized-cert.certificate-number-label}}" name="" value="default">
+                <option value="default" name="default">Select a certificate number</option>
+                {% for option in fmc.customized-cert.certificate-number-options %}
+                <option value="{{option.value}}" name="{{option.name}}">{{option.text}}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="filler-metal-certification__input-wrapper">
+        {% include component/input-text.html data="customized-cert-input-1" %}
+      </div>
+      <div class="filler-metal-certification__input-wrapper">
+        {% include component/input-text.html data="customized-cert-input-2" %}
+      </div>
+      <div class="filler-metal-certification__section-search filler-metal-certification__section-search--custom-certs">
+        {% include component/input-text.html data="customized-cert-input-3" cert-center-input="js-customized-cert-form-code-input-1" %}
+        <div class="filler-metal-certification__section-or-wrapper">
+          <div class="filler-metal-certification__section-or-divider"></div>
+          <div class="filler-metal-certification__section-or-text">{{fmc.customized-cert.or-text}}</div>
+          <div class="filler-metal-certification__section-or-divider"></div>
+        </div>
+        {% include component/input-text.html data="customized-cert-input-4" cert-center-input="js-customized-cert-form-code-input-2" %}
+      </div>
+      <div class="filler-metal-certification__input-wrapper">
+        {% include component/input-text.html data="customized-cert-input-5" %}
+      </div>
+      <div class="filler-metal-certification__input-wrapper">
+        {% include component/input-text.html data="customized-cert-input-6" %}
+      </div>
+      <div class="filler-metal-certification__input-wrapper">
+        {% include component/input-text.html data="customized-cert-input-7" %}
+      </div>
+      <div class="filler-metal-certification__form-actions-wrapper">
+        <button class="btn" type="submit">{{fmc.customized-cert.btn-submit}}</button>
+        <button class="btn quaternary" type="reset">{{fmc.customized-cert.btn-reset}}</button>
+      </div>
+    </form>
+  </div>
+  <!-- END Customized Certificate of Conformance -->
+  <!-- START Private Label Certificates -->
+  <div class="filler-metal-certification__wrapper">
+    <h3 class="filler-metal-certification__section-title">{{fmc.private-label.title}}</h3>
+    <form class="filler-metal-certification__private-label-dropdown-wrapper">
+      <div class="filler-metal-certification__dropdown">
+        <label class="filler-metal-certification__dropdown-label" for="{{fmc.private-label.product-name-label}}">{{fmc.private-label.product-name}}</label>
+        <div class="filler-metal-certification__dropdown-wrap">
+          <div class="filler-metal-certification__dropdown-wrapper">
+            <span class="icon icon-chevron-down filler-metal-certification__dropdown-arrow"></span>
+            <select class="filler-metal-certification__dropdown-select" id="{{fmc.private-label.product-name-label}}" name="">
+              {% for option in fmc.private-label.options %}
+              <option value="{{option.value}}" name="{{option.name}}">{{option.text}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <button type="submit" class="btn">{{fmc.private-label.find}}</button>
+        </div>
+      </div>
+    </form>
+    {% if fmc.private-label.results %}
+    <div class="filler-metal-certification__section-results">
+      <div class="filler-metal-certification__results">
+        <div class="filler-metal-certification__results-row">
+          <div class="filler-metal-certification__results-header results-col1">
+            <span
+              class="filler-metal-certification__results-header-text">{{fmc.private-label.results.product-name}}</span>
+          </div>
+          <div class="filler-metal-certification__results-header results-col2">
+            <span
+              class="filler-metal-certification__results-header-text">{{fmc.private-label.results.classification}}</span>
+          </div>
+        </div>
+        {% for product in fmc.private-label.results.products %}
+        <div class="filler-metal-certification__results-row">
+          <div class="filler-metal-certification__results-product-row results-col1">
+            <span class="filler-metal-certification__results-text">{{product.product-name}}</span>
+            <span
+              class="filler-metal-certification__results-text filler-metal-certification__results-text--gray">{{product.product-label}}</span>
+          </div>
+          <div class="filler-metal-certification__results-product-row results-col2">
+            <span class="filler-metal-certification__results-text">{{product.classification}}</span>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  <!-- END Private Label Certificates -->
+  <p class="filler-metal-certification__footer-text">
+    {{fmc.footer-text1}}
+    <a>{{fmc.footer-link}}</a>
+    {{fmc.footer-text2}}
+  </p>
+</div>

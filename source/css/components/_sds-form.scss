@@ -1,0 +1,325 @@
+$block: 'sds-forms';
+
+.#{$block} {
+  padding: 60px 40px;
+
+  &__select {
+    padding-bottom: map-get($spacing, xx-large);
+    position: relative;
+  }
+
+  &__contact {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 1px solid map-get($color, gray-light);
+    border-radius: 4px;
+    padding: 15px 38px 19px 20px;
+    @include mobile-only {
+      position: relative;
+      margin: map-get($spacing, large) 0;
+      max-width: 300px;
+    }
+  }
+
+  &__contact-text {
+    color: #171717;
+    @include font(headline);
+    @include typography(p);
+    font-weight: bold;
+    letter-spacing: 0;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  &__contact-link {
+    color: map-get($color, red);
+    @include font(headline);
+    @include typography(label);
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 19px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    color: #171717;
+    @include font(headline);
+    @include typography(h3);
+    font-weight: bold;
+    letter-spacing: 0;
+    width: 60%;
+    display: inline;
+  }
+
+  &__learn-more {
+    color: map-get($color, red);
+    @include font(regular);
+    @include typography(label);
+    letter-spacing: 0;
+    margin-left: 5px;
+  }
+
+  &__radio-wrapper {
+    width: 60%;
+    display: none; // used to hide navigation between multiple forms
+  }
+
+  &__radio {
+    display: flex;
+    margin: 10px 0;
+  }
+
+  .radio-container {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 5px;
+    color: map-get($color, gray-darker);
+    @include font(regular);
+    @include typography(label);
+    letter-spacing: 0;
+    cursor: pointer;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+
+      &:checked {
+        ~.radio-checkmark {
+          background-color: map-get($color, white);
+
+          &:after {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .radio-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    background-color: #eee;
+    border-radius: 50%;
+    border: 1px solid rgba(102, 102, 102, 0.45);
+    background-color: map-get($color, gray-lightest);
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      top: 3px;
+      left: 3px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: map-get($color, red);
+    }
+  }
+
+  .radio-text {
+    color: map-get($color, gray-darker);
+    @include font(regular);
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 19px;
+    margin: 0;
+  }
+
+  &__radio-link {
+    color: map-get($color, red);
+    @include font(regular);
+    @include typography(label);
+    letter-spacing: 0;
+    margin-left: 5px;
+  }
+
+  &__form {
+    display: none; // used to hide extra forms 
+
+    &.active {
+      display: block;
+    }
+
+    .btn {
+      padding: 13px 58px;
+      margin: 40px 0 32px;
+    }
+  }
+
+  &__forms-title {
+    display: none; // used to hide extra forms
+    color: map-get($color, black);
+    @include font(headline);
+    @include font(h4);
+    font-weight: bold;
+    letter-spacing: 0;
+    margin: 45px 0;
+  }
+
+  &__forms-section {
+    margin: 28px 0;
+
+    &--products {
+      display: flex;
+      align-items: center;
+      width: 85%;
+      @media (max-width: 768px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  }
+
+  &__forms-section-or-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 20px 22px 0 22px;
+  }
+
+  &__forms-section-or-text {
+    color: #171717;
+    @include font(headline);
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+
+  &__forms-section-or-divider {
+    height: 1px;
+    background-color: #979797;
+    width: 14px;
+    margin: 0 6px;
+  }
+
+  &__forms-region-radio-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__region-radio {
+    display: flex;
+    margin-right: 20px;
+  }
+
+  &__forms-input {
+    width: 100%;
+    max-width: 331px;
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+
+  &__forms-input-text {
+    margin: 0;
+    color: #171717;
+    @include font(regular);
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 17px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  &__forms-input-type-text {
+    padding: 15px; 
+    @include font(regular);
+    font-size: 14px;
+    line-height: 16px;
+    color: map-get($color, gray );
+    box-sizing: border-box;
+    height: 48px;
+    width: 100%;
+    border: 1px solid map-get($color, gray-light);
+    border-radius: 4px;
+    background-color: map-get($color, white);
+    &--error {
+      border-color: map-get($color, red);
+    }
+  }
+
+  &__dropdown {
+    @include balance-margins;
+    margin: map-get($spacing, large) 0;
+    width: 100%;
+    max-width: 331px;
+    margin: 0;
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+
+  &__dropdown-wrapper {
+    position: relative;
+  }
+
+  &__dropdown-label {
+    color: #171717;
+    @include font(regular);
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 17px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  &__dropdown-select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #D0D0D0;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    appearance: none;
+    color: map-get($color, gray-dark);
+    @include font(regular);
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 16px;
+
+    //hide select arrows
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    &::-ms-expand {
+      display: none;
+    }
+
+    &--error {
+      border-color: map-get($color, red);
+    }
+  }
+
+  &__dropdown-arrow {
+    pointer-events: none;
+    position: absolute;
+    right: 18px;
+    top: 17px;
+    width: 11px;
+    height: 11px;
+    color: map-get($color, red);
+    &:before {
+      margin-left: -8px;
+      padding-left: 8px;
+      background-color: map-get($color, white);
+    }
+  }
+
+  &__error-message {
+    color: map-get($color, red);
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+}

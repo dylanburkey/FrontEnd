@@ -1,0 +1,160 @@
+$block: 'dropdown';
+
+.#{$block} {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  &__label {
+    @include font(regular);
+    @include typography(p-small);
+    font-weight: bold;
+    color: map-get($color, gray-darkest);
+    line-height: 15px;
+    margin: 0;
+    @include desktop {
+      line-height: 17px;
+      margin-right: map-get($spacing, medium);
+    }
+  }
+  &.disabled-dropdown {
+    opacity: 0.35;
+    pointer-events: none;
+  }
+  &__wrapper {
+    display: none;
+    position: relative;
+    @include desktop {
+      display: block;
+    }
+  }
+
+  .open {
+    .#{$block}__select {
+      box-shadow: 0 2px 4px 0 rgba(123,123,123,0.28);
+      border-radius: 2px 2px 0 0;
+    }
+    .#{$block}__trigger {
+      &:after {
+        @include icon(chevron-up);
+      }
+    }
+    .#{$block}__options {
+      display: block;
+      pointer-events: all;
+      box-shadow: 0 2px 4px 0 rgba(123,123,123,0.28);
+    }
+  }
+
+  &__select {
+    border: 1px solid map-get($color, gray-light);
+    border-bottom: none;
+    background-color: map-get($color, white);
+    border-radius: 2px;
+  }
+
+  &__trigger {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: map-get($color, white);
+    @include font(regular);
+    font-size: 14px;
+    line-height: 16px;
+    color: map-get($color, gray-darker);
+    padding: 13px 14px;
+    margin: 0;
+    outline: 0;
+    cursor: pointer;
+    border-bottom: 1px solid  map-get($color, gray-light);
+    &:after {
+      margin-left: map-get($spacing, small);
+      @include icon(chevron-down);
+      border-radius: 0 0 99px 99px;
+      color:  map-get($color, red);
+      font-size: 14px;
+    }
+  }
+
+  &__trigger-sorting {
+    margin-left: map-get($spacing, xx-small);
+    font-weight: bold;
+  }
+
+  &__options {
+    display: none;
+    // padding: map-get($spacing, small);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    transition: all 0.5s;
+    pointer-events: none;
+    z-index: 2;
+    background-color: map-get($color, white);
+    border: 1px solid map-get($color, gray-light);
+    border-top: none;
+    border-radius: 0 0 2px 2px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  &__image {
+    height: 100%;
+    width: 85px;
+    margin-right: map-get($spacing, small);
+  }
+
+  &__body {
+    @include balance-margins;
+    padding-right: map-get($spacing, small)
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 0;
+  }
+
+  &__sku,
+  &__description {
+    margin-top: map-get($spacing, x-small);
+    font-size: 12px;
+    line-height: 14px;;
+  }
+
+  &__description {
+    margin-bottom: 0;
+  }
+
+  &__option {
+    @include font(regular);
+    color: map-get($color, gray-darker);
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: map-get($spacing, small);
+    &:last-of-type {
+      margin: 0;
+    }
+    &:before {
+      content: none;
+    }
+    &:hover {
+      cursor: pointer;
+      background: map-get($brand, background);
+    }
+    &.selected {
+      font-weight: bold;
+      &:after {
+        @include icon(selected);
+        margin-left: auto;
+      }
+    }
+  }
+}

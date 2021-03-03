@@ -1,0 +1,25 @@
+{
+	"general": {
+		"title": "What can we help you find?",
+		"placeholder": "Search",
+		"smallLeft":true,
+		"smallRight":true,
+		"tags": {
+			"label": "Popular searches",
+			"items": [
+				{
+					"text": "Welding Helmets",
+					"url": "?term=welding-helmets"
+				},
+				{
+					"text": "SDS",
+					"url": "?term=SDS"
+				},
+				{
+					"text": "Welding Safety",
+					"url": "?term=welding-safety"
+				}
+			]
+		}
+	}
+}

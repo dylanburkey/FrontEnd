@@ -1,0 +1,72 @@
+{
+	"current-offers":  [
+		{
+			"url": "#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "$412 Rebate",
+			"description":  "Buy a Square Wave TIG 200 TIG Welder and receive a $412 Visa gift card rebate.",
+			"eyebrow": "Square Wave TIG 200"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "$250 Rebate",
+			"subtitle": "or Free Accessory Kit",
+			"description":  "Buy a Tomahawk 375 Air Plasma Cutter and choose between a $250 Visa gift card rebate or a free accessory kit.",
+			"eyebrow": "Tomahawk 375 Air"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "$700 Rebate",
+			"subtitle": "or Free Accessory Kit",
+			"description":  "Buy a Tomahawk 1500 Plasma Cutter and choose between a $700 end user rebate or a free accessory kit.",
+			"eyebrow": "Tomahawk 1500"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "$499 Rebate",
+			"description":  "End Users save up to $499 on the Power MIG 256 Welding Machine.",
+			"eyebrow": "Power MIG 256"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "$412 Rebate",
+			"description":  "Buy a Square Wave TIG 200 TIG Welder and receive a $412 Visa gift card rebate.",
+			"eyebrow": "Square Wave TIG 200"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "$250 Rebate",
+			"subtitle": "or Free Accessory Kit",
+			"description":  "Buy a Tomahawk 375 Air Plasma Cutter and choose between a $250 Visa gift card rebate or a free accessory kit.",
+			"eyebrow": "Tomahawk 375 Air"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "$700 Rebate",
+			"subtitle": "or Free Accessory Kit",
+			"description":  "Buy a Tomahawk 1500 Plasma Cutter and choose between a $700 end user rebate or a free accessory kit.",
+			"eyebrow": "Tomahawk 1500"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "$499 Rebate",
+			"description":  "End Users save up to $499 on the Power MIG 256 Welding Machine.",
+			"eyebrow": "Power MIG 256"
+		}
+	]
+}

@@ -1,0 +1,105 @@
+$block: 'related-products';
+
+.#{$block} {
+  &__title {
+    @include font(headline);
+    color: map-get($color, gray-darkest);
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 28px;
+    margin-bottom: map-get($spacing, x-large);
+    @include desktop {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: map-get($spacing, xx-large);
+    }
+  }
+
+  &__cards {
+    .swiper-pagination {
+      display: none;
+    }
+
+    .card {
+      @include mobile-only {
+        flex-direction: column;
+        &__media {
+          width: 100%;
+          flex-basis: 100%;
+        }
+        &__content {
+          flex-grow: 1;
+          flex-basis: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+
+    &.swiper-initialized {
+      position: relative;
+      @include mobile-only {
+        .swiper-navigation {
+          display: none;
+        }
+      }
+      .swiper-button-disabled {
+        display: none;
+      }
+      .swiper-button-prev, .swiper-button-next {
+        color: map-get($color, red);
+        font-weight: bold;
+        width: map-get($spacing, medium);
+        height: map-get($spacing, medium);
+        &:focus {
+          outline: 0;
+        }
+        &:after {
+          font-size: 18px;
+        }
+      }
+
+
+      .swiper-button-next {
+        right: - map-get($spacing, large);
+        left: auto;
+      }
+
+      .swiper-button-prev {
+        left: - map-get($spacing, large);
+        right: auto;
+      }
+    }
+
+    &:not(.swiper-initialized) {
+      .swiper-navigation {
+        display: none;
+      }
+      .carousel-wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        overflow-x: auto;
+        .card {
+          flex-grow: 0;
+          flex-shrink: 0;
+          flex-basis: 280px;
+          width: 280px;
+          margin-right: 15px;
+          &:last-of-type {
+            margin-right: 0;
+          }
+          @include desktop {
+            flex-basis: 288px;
+            width: 288px;
+            flex-shrink: 1;
+            margin-right: map-get($spacing, large);
+            &:last-of-type {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

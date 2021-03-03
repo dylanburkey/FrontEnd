@@ -1,0 +1,211 @@
+// GUTTERS //
+$gutter: (
+	thin: (
+		small: 16px,
+		medium: 32px
+	),
+	thick: (
+		small: 32px,
+		medium: 48px
+	)
+);
+
+// WIDTHS //
+$max-width: 1224px;
+$max-width-medium: 960px;
+$max-width-large: 1440px;
+$max-width-text: 500px;
+
+$max-widths: (
+	default: 1224px,
+	medium: 960px,
+	large: 1440px
+);
+
+// BREAKPOINTS //
+$breakpoint-medium: 1024px; //guessing, consult with Laura
+
+// FONTS //
+$font: (
+	regular: "Public Sans",
+	headline: "Noto Sans",
+	icon: "icomoon",
+	minion: "MinionPro-Regular"
+);
+
+// ICONS //
+$icons: (
+	add: "\e900",
+	backorder: "\e901",
+	cart: "\e902",
+	chat: "\e903",
+	chevron-down: "\e904",
+	chevron-left: "\e905",
+	chevron-right: "\e906",
+	chevron-up: "\e907",
+	close: "\e908",
+	compare: "\e909",
+	facebook: "\e90a",
+	help: "\e910",
+	instagram: "\e911",
+	linkedin: "\e912",
+	menu: "\e91f",
+	newsletter: "\e920",
+	pdf: "\e921",
+	phone: "\e922",
+	pin: "\e923",
+	play: "\e924",
+	safety: "\e925",
+	search: "\e926",
+	selected: "\e927",
+	star: "\e928",
+	twitter: "\e929",
+	user: "\e92a",
+	video: "\e92b",
+	warning: "\e92c",
+	youtube: "\e92d",
+	rebate: "\e92e",
+	envelope: "\e9b4",
+	download: "\e92f",
+	print: "\e930",
+	share: "\e931",
+	pages: "\e932",
+	documents: "\e933",
+	products: "\e934",
+	about-us: "\e90b",
+	xlsx: "\e90c",
+	gated: "\e90d"
+);
+
+// ICONS LINKS //
+$icons-links: (
+	pdf: (icon:pdf, color:#B81830),
+	video: (icon:video, color:#B81830),
+	xlsx: (icon:xlsx, color: #B81830)
+);
+
+
+// COLORS //
+$color: (
+	red: #B81830,
+	green: #095B1F,
+	yellow: #E5B100,
+	gray-darkest: #181818,
+	gray-darker: #404040,
+	gray-dark: #4F4F4F,
+	gray: #666666,
+	gray-light: #D0D0D0,
+	gray-lighter: #E9E9E9,
+	gray-lightest: #F4F4F4,
+	white: #FFFFFF,
+	black: #000000,
+	gray-thumbs: #242424,
+	orange: #B5520A,
+	orange-dark: #EA7200
+);
+
+$brand: (
+	primary: map-get($color, red),
+	text: map-get($color, gray-darkest),
+	border: map-get($color, gray-light),
+	background: map-get($color, gray-lightest)
+);
+
+$spacing: (
+	xxx-small: 2px,
+	xx-small: 4px,
+	x-small: 8px,
+	small: 12px,
+	medium: 18px,
+	large: 24px,
+	x-large: 36px,
+	xx-large: 48px,
+	xxx-large: 72px
+);
+
+$border-radius: 4px;
+
+$typography: (
+	desktop: (
+		h1-banner: (
+			font-size: 48px,
+			line-height: 51px
+		),
+		h1: (
+			font-size: 40px,
+			line-height: 45px
+		),
+		h2: (
+			font-size: 35px,
+			line-height: 42px
+		),
+		h3: (
+			font-size: 24px,
+			line-height: 28px
+		),
+		h4: (
+			font-size: 20px,
+			line-height: 24px
+		),
+		p-large: (
+			font-size: 18px,
+			line-height: 26px
+		),
+		p: (
+			font-size: 16px,
+			line-height: 24px
+		),
+		p-small: (
+			font-size: 15px,
+			line-height: 21px
+		),
+		label: (
+			font-size: 14px,
+			line-height: 20px
+		)
+
+	),
+	mobile: (
+		h1-banner: (
+			font-size: 28px,
+			line-height: 33px
+		),
+		h1: (
+			font-size: 28px,
+			line-height: 33px
+		),
+		h2: (
+			font-size: 22px,
+			line-height: 28px
+		),
+		h3: (
+			font-size: 18px,
+			line-height: 22px
+		),
+		h4: (
+			font-size: 16px,
+			line-height: 20px
+		),
+		p-large: (
+			font-size: 15px,
+			line-height: 22px
+		),
+		p: (
+			font-size: 14px,
+			line-height: 22px
+		),
+		p-small: (
+			font-size: 13px,
+			line-height: 18px
+		),
+		label: (
+			font-size: 13px,
+			line-height: 18px
+		)
+	)
+);
+
+$fixed-heights: (
+		nav-utility: 34px,
+		notification-banner: 50px,
+);

@@ -1,0 +1,106 @@
+$block: 'select';
+
+.#{$block} {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  
+  &__label {
+    @include font(regular);
+    font-size: 13px;
+    font-weight: bold;
+    color: map-get($color, gray-darkest);
+    line-height: 15px;
+    margin: 0;
+    @include mobile-only {
+      padding-bottom: map-get($spacing, xx-small) + map-get($spacing, medium);
+    }
+    @include desktop {
+      font-size: 15px;
+      line-height: 17px;
+      margin-right: map-get($spacing, medium);
+    }
+  }
+
+  &__wrapper {
+    @include mobile-only {
+      display: none;
+    }
+    @include font(regular);
+    font-size: 14px;
+    line-height: 16px;
+    padding: 0 map-get($spacing, small);   
+    // width: 100%;
+    // padding: 13px map-get($spacing, medium) - map-get($spacing, xx-small);
+    border: 1px solid map-get($color, gray-light);
+    background-color: map-get($color, white);
+    border-radius: $border-radius;
+    display: flex;
+    align-items: center;
+  }
+
+  .select-wrap {
+    position: relative;
+    height: 46px;
+    .select-label {
+      display: none;
+    }
+    &:after {
+      @include icon(chevron-down);
+      pointer-events: none;
+      color: map-get($color, red);
+      margin-left: map-get($spacing, small);
+      position: absolute;
+      right: 0;
+      transform: translateY(-50%);
+      margin: auto;
+      top: 50%;
+    }
+
+    select {
+      @include font(regular);
+      font-weight: bold;
+      background: none;
+      width: 100%;
+      border: 0;
+      flex-grow: 1;
+      appearance: none;
+      color: map-get($color, gray-darker);
+      font-size: inherit;
+      line-height: inherit;
+      outline: none;
+      margin: 0 map-get($spacing, xx-small);
+      height: 100%;
+      width: 100%;
+      padding-right: map-get($spacing, x-large);
+      option {
+        letter-spacing: 0;
+        line-height: 16px;
+        border: 1px solid map-get($color, gray-light);
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+    //removing select arrow for ie
+    select::-ms-expand {
+      display: none;
+    }
+    select::-ms-value {
+      background: none;
+      color: map-get($color, gray-darker);
+    }
+  }
+
+  &__wrapper[data-label] {
+    &:before {
+      content: attr(data-label);
+    }
+    // .select-wrap {
+    //   width: 125px;
+    //   @include desktop {
+    //     width: 150px;
+    //   }
+    // }
+  }
+}

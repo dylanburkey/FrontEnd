@@ -1,0 +1,43 @@
+$block: 'region-selector';
+
+.#{$block} {
+
+  h4 {
+    + .cols {
+      > .col {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .region {
+    @include desktop {
+      margin: map-get($spacing, xx-large) 0;
+    }
+  }
+
+  .region-item {
+    margin: map-get($spacing, large) 0;
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      height: 100%;
+      margin-right: map-get($spacing, small);
+    }
+
+    &__country {
+      @include font(headline);
+      font-weight: bold;
+      color: map-get($color, black);
+      margin-right: map-get($spacing, small);
+    }
+
+    &__language {
+      font-size: 14px;
+    }
+  }
+}

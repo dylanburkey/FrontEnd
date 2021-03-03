@@ -1,0 +1,36 @@
+{% assign data = site.data.date-list[include.data][include.index] %}
+{% assign len = site.data.date-list[include.data] | size | minus: 1 %}
+
+{% if include.index <= len %}
+
+<div class="date-list">
+	<h2>{{ data.title }}</h2>
+	<ul>
+		{% for item in data.items %}
+		<li>
+			<a href="{{item.url}}">
+				<div class="date-list__date">
+					<span class="date-list__day">{{ item.day }}</span>
+					<span class="date-list__month">{{ item.month }}</span>
+				</div>
+				<div class="date-list__content">
+					<h4 class="date-list__title">{{ item.title }}</h4>
+					<p class="date-list__meta">
+						{% if item.category %}<span class="date-list__category">{{ item.category }}</span>{% endif %}
+						<span>{{ item.date }}</span>
+						<span>{{ item.region }}</span>
+					</p>
+				</div>
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+	<div class="date-list__cta">
+		{% include component/button.html
+			style="tertiary"
+			title="View All"
+			url="#/link-to-all-of-type" %}
+	</div>
+</div>
+
+{% endif %}

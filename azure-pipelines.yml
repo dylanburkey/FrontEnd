@@ -1,0 +1,39 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: UseRubyVersion@0
+  inputs:
+    versionSpec: '>= 2.4'
+  displayName: 'Install Ruby'
+- task: NodeTool@0
+  inputs:
+    versionSpec: '12.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    gem install jekyll
+    gem install jekyll-tidy
+    bundle install --path vendor
+  displayName: 'gem install and bundle install'
+
+- script: |
+    npm install
+    npm run build
+  displayName: 'npm install and build'
+
+- task: CopyFiles@2
+  displayName: 'Copy Dist Files'
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)/public/dist'
+    OverWrite: true
+    TargetFolder: '$(Build.ArtifactStagingDirectory)/dist'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: dist
+  displayName: 'Publish dist artifact'

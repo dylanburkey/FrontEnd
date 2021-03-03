@@ -1,0 +1,16 @@
+{% assign a = site.data.quote-recipient[include.data] %}
+
+<div class="quote-recipient {% if a.style %}quote-recipient--{{a.style}}{% endif %}">
+  {% for wrapper in a.wrappers %}
+  <div class="quote-recipient__wrapper">
+    {% for content in wrapper.contents %}
+    <div class="quote-recipient-content">
+      <p class="quote-recipient-content__title">{{content.title}}</p>
+      {% for text in content.texts %}
+      <span class="quote-recipient-content__description">{{text.description}}</span>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endfor %}
+</div>

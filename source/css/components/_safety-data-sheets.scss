@@ -1,0 +1,359 @@
+$block: 'safety-data-sheets';
+
+.#{$block} {
+  padding: 35px 45px 75px;
+
+  &__backlink {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 13px;
+
+    &:hover {
+      cursor: pointer
+    }
+  }
+
+  &__backlink-icon {
+    font-size: 11px;
+  }
+
+  &__title {
+    @include font(regular);
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 40px;
+  }
+
+  &__alert-tooltip {
+    position: relative;
+    display: inline-block;
+
+    @media (max-width: 768px) {
+      width: 35%;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .#{$block}__alert-tooltip-text {
+        visibility: visible;
+      }
+    }
+  }
+
+  &__alert-tooltip-text {
+    visibility: hidden;
+    width: 350px;
+    bottom: 200%;
+    left: 50%;
+    margin-left: -270px;
+    padding: 17px;
+    background-color: map-get($color, white);
+    color: map-get($color, gray-dark);
+    @include font(regular);
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 20px;
+    border: 1px solid map-get($color, gray-light);
+    box-shadow: -1px 2px 3px 0 rgba(44, 44, 44, 0.2);
+    position: absolute;
+    z-index: 1;
+    @media (max-width: 768px) {
+      font-weight: bold;
+      left: 205px;
+      width: 200px;
+      bottom: 40px;
+    }
+  }
+
+  &__alert-tooltip-triangle {
+    position: absolute;
+    bottom: -11px;
+    right: 66px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 11px 10.5px 0 10.5px;
+    border-color: map-get($color, gray-light) transparent transparent transparent; 
+    @media (max-width: 768px) { 
+      right: 110px;
+    }
+  }
+
+  &__alert-icon {
+    margin-left: 5px;
+
+    &:after {
+      content: '?';
+      background-color: map-get($color, red);
+      display: inline-block;
+      @include font(regular);
+      font-weight: bold;
+      text-align: center;
+      border-radius: 50%;
+      width: 18px;
+      font-size: 12px;
+      color: map-get($color, white);
+      text-decoration: none;
+    }
+
+    &--mobile {
+      display: none;
+      @media (max-width: 768px){
+        display: block;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__no-results {
+    width: 60%;
+    @media (max-width: 768px){
+      width: 100%;
+    }
+  }
+
+  &__no-results-title{
+    color: map-get($color, gray-darkest);
+    @include font(headline);
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 18px;
+    margin-bottom: map-get($spacing, medium);
+  }
+
+  &__no-results-text {
+    color: map-get($color, gray-darker);
+    @include font(regular);
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 20px;
+  }
+
+  .table-header {
+    background-color: map-get($color, white);
+
+    th {
+      @include font(headline);
+      color: #171717;
+      padding: 0;
+      padding-bottom: 15px;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 18px;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .row {
+    background-color: map-get($color, white);
+    border-top: 1px solid map-get($color, gray-light);
+
+    td {
+      @include font(headline);
+      color: #171717;
+      padding: 0;
+      font-size: 14px;
+      line-height: 18px;
+      vertical-align: middle;
+
+      .safety-data-sheets__table-cell {
+        margin: 17px 0;
+        @media (max-width: 768px){
+          margin: 0;
+        }
+      }
+      @media (max-width: 768px){
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 18px 0;
+
+        &.#{$block}__table-data-alerts {
+          &:before {
+            width: auto;
+          }
+          .checkbox-input {
+            width: 50%;
+          }
+        }
+
+        &:before {
+          align-self: center;
+          content: attr(data-table-header);
+          width: 100%;
+          color: #171717;
+          @include font(regular);
+          font-size: 15px;
+          font-weight: bold;
+          letter-spacing: 0;
+          line-height: 18px;
+        }
+        p { 
+          width: 100%;
+        }
+        .checkbox-input {
+          width: 100%;
+          height: 38px;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  &__sort {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__sort-wrapper {
+    display: flex;
+    margin-left: 5px;
+  }
+
+  &__sort-up {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 2.5px 5px 2.5px;
+    border-color: transparent transparent map-get($color, gray-light) transparent;
+    margin-left: -5px;
+    margin-top: -7px;
+
+    &.active {
+      border-color: transparent transparent map-get($color, gray-dark) transparent;
+    }
+  }
+
+  &__sort-down {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 2.5px 0 2.5px;
+    border-color: map-get($color, gray-light) transparent transparent transparent;
+
+    &.active {
+      border-color: map-get($color, gray-dark) transparent transparent transparent;
+    }
+  }
+
+  &__table-cell {
+    &--product-name {
+      color: map-get($color, red);
+    }
+  }
+
+  .cell-checkbox {
+    margin-bottom: 15px;
+  }
+
+  &__disclaimer {
+    color: map-get($color, gray-darker);
+    @include font(regular);
+    @include typography(label);
+    letter-spacing: 0;
+    width: 90%;
+    @media (max-width: 768px){
+      width: 100%;
+    }
+  }
+  &__footer {
+    display: none;
+
+    &--active {
+      display: flex;
+      z-index: 1;
+      height: auto;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      padding: 35px 0 20px;
+      justify-content: center;
+      background-color: white;
+      border: 1px solid map-get($color, gray-light);
+      box-shadow: 0 -3px 4px 0 rgba(53, 53, 53, 0.14);
+      @include mobile-only {
+        display: block
+      }
+    }
+  }
+
+  &__footer-wrapper {
+    display: flex;
+    width: 90%;
+    @include mobile-only {
+      display: block
+    }
+  }
+  &__footer-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    background: none;
+    padding: map-get($spacing, small);
+    @include typography('p-large');
+    cursor: pointer;
+    z-index: 101;
+    &:focus {
+      outline: 0;
+    }
+    @include desktop {
+      padding: map-get($spacing, large);
+      @include typography('p');
+    }
+  }
+
+  &__footer-left {
+    width: 35%;
+    padding-right: 24px;
+    border-right: 1px solid map-get($color, gray-light);
+    @include mobile-only {
+      width:100%;
+      padding-left:46px;
+      border: 0;
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      color: #171717;
+      @include font(headline);
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 28px;
+    }
+
+    p {
+      color: map-get($color, gray-darker);
+      @include font(regular);
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 21px;
+    }
+  }
+
+  &__footer-right {
+    width: 65%;
+    padding-left: 38px;
+    @include mobile-only {
+      width:100%;
+    }
+    iframe {
+      width: 100%;
+      // min-height: 204px;
+      height: 215px;
+      @include mobile-only {
+        height: 270px
+      }
+    }
+  }
+}

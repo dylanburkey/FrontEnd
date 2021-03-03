@@ -1,0 +1,144 @@
+{
+	"homepage-product-offerings": [
+		{
+			"image": "/images/602x430.png",
+			"title": "Welding Equipment",
+			"url": "#",
+			"items": [
+				{
+					"title": "MIG Welders",
+					"url": "#"
+				},
+				{
+					"title": "TIG Welders",
+					"url": "#"
+				},
+				{
+					"title": "Advanced Process Welders",
+					"url": "#"
+				},
+				{
+					"title": "Stick Welders",
+					"url": "#"
+				}
+			]
+		},
+		{
+			"image": "/images/602x430.png",
+			"title": "Safety",
+			"url": "#",
+			"items": [
+				{
+					"title": "Fume Control",
+					"url": "#"
+				},
+				{
+					"title": "Helmets & Shields",
+					"url": "#"
+				},
+				{
+					"title": "Apparel",
+					"url": "#"
+				},
+				{
+					"title": "Gloves",
+					"url": "#"
+				}
+			]
+		},
+		{
+			"image": "/images/602x430.png",
+			"title": "Filler Metals",
+			"url": "#",
+			"items": [
+				{
+					"title": "Sticks & Rods",
+					"url": "#"
+				},
+				{
+					"title": "Alloys",
+					"url": "#"
+				},
+				{
+					"title": "Safety Consumables",
+					"url": "#"
+				},
+				{
+					"title": "Tips & Mixers",
+					"url": "#"
+				}
+			]
+		}
+	],
+	"welding-equipment-product-offerings": [
+		{
+			"image": "/images/602x430.png",
+			"title": "Automation",
+			"url": "#",
+			"items": [
+				{
+					"title": "Robotic Automation",
+					"url": "#"
+				},
+				{
+					"title": "Cutting Automation",
+					"url": "#"
+				},
+				{
+					"title": "Robotic Wire Feeders",
+					"url": "#"
+				},
+				{
+					"title": "Robotic Power Sources",
+					"url": "#"
+				}
+			]
+		},
+		{
+			"image": "/images/602x430.png",
+			"title": "Cutting Equipment",
+			"url": "#",
+			"items": [
+				{
+					"title": "Handheld Air Plasma Cutters",
+					"url": "#"
+				},
+				{
+					"title": "CNC Plasma Cutting Tablets",
+					"url": "#"
+				},
+				{
+					"title": "Mechanized Air Plasma Cutters",
+					"url": "#"
+				},
+				{
+					"title": "Pipe & Tube Cutting Machines",
+					"url": "#"
+				}
+			]
+		},
+		{
+			"image": "/images/602x430.png",
+			"title": "Guns & Torches",
+			"url": "#",
+			"items": [
+				{
+					"title": "Semiautomatic Welding Guns",
+					"url": "#"
+				},
+				{
+					"title": "TIG Torches",
+					"url": "#"
+				},
+				{
+					"title": "Spool/Push-Pull Guns",
+					"url": "#"
+				},
+				{
+					"title": "Innershield Welding Guns",
+					"url": "#"
+				}
+			]
+		}
+	]
+}

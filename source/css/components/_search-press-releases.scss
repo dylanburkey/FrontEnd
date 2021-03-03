@@ -1,0 +1,73 @@
+$block: 'search-press-releases';
+
+.#{$block} {
+  border: 1px solid map-get($color, gray-light);
+  border-radius: 4px;
+  background-color: map-get($color, white);
+  padding:  map-get($spacing, medium) -  map-get($spacing, xx-small) map-get($spacing, x-small) +  map-get($spacing, small)  map-get($spacing, xx-small) +  map-get($spacing, medium);
+  box-sizing: border-box;
+
+  &__title {
+    @include font(headline);
+    margin: 0;
+    color: map-get($color, gray-darkest);
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 24px;
+    padding-bottom: map-get($spacing, small);
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:  map-get($spacing, xx-large) - map-get($spacing, xx-small);
+    /* clears the 'X' from Internet Explorer */
+    input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+    input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+    /* clears the 'X' from Chrome */
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration { display: none;
+    }
+  }
+
+  &__input {
+    -webkit-appearance:none;
+    @include font(regular);
+    width: 100%;
+    height: 100%;
+    border: 1px solid map-get($color, gray-light);
+    border-radius: 4px;
+    padding: 0  map-get($spacing, xx-large) - map-get($spacing, xx-small) 0  map-get($spacing, xx-small) + map-get($spacing, small);
+    outline: none;
+    color: map-get($color, gray-darker);
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 16px;
+  }
+
+  &__submit {
+    font-size: 0;
+    margin-left: -(map-get($spacing, xx-large) - map-get($spacing, xx-small));
+    line-height: 0;
+    border-radius: 0 4px 4px 0;
+    background: transparent;
+    width:  map-get($spacing, xx-large) - map-get($spacing, xx-small);
+    border: none;
+    cursor: pointer;
+    &:focus {
+      outline: 0;
+    }
+    &:after {
+      @include icon(search);
+      font-size: 16px;
+      line-height: 1;
+      height: 100%;
+      color: map-get($color, red);
+    }
+  }
+}

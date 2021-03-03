@@ -1,0 +1,61 @@
+{% assign e = site.data.content-split[include.data] %}
+<div class="content-split{% if e.style %} content-split--{{e.style}}{% endif %}{% if e.position %} content-split--{{e.position}}{% endif %}">
+	{% if e.smallLeft %}{% include component/background-texture.html
+	data="small-left" %}{% endif %}
+	{% if e.smallRight %}{% include component/background-texture.html
+	data="small-right" %}{% endif %}
+	<div>
+		<div class="content-split__content">
+			{% if e.LargeLeft %}{% include component/background-texture.html
+			data="large-left" %}{% endif %}
+			{% if e.LargeRight %}{% include component/background-texture.html
+			data="large-right" %}{% endif %}
+			<div class="content-split__media">
+				{% if e.style == "carousel" %}
+					{% if e.experience-editor-mode %}
+						<h3>This view only applies to Experience Editor</h3>
+					{% endif %}
+					<div class="cards cards--carousel{% if e.experience-editor-mode %} experience-editor-mode{% endif %}" data-visible-card-count="2">
+					{% include component/carousel.html
+						style="content"
+						dataName=e.carousel %}
+					</div>
+				{% endif %}
+
+				{% if e.style == "video" %}
+					{% include component/video.html 
+						data=e.video %}
+				{% endif %}
+				{% if e.style == "video-static" %}
+					{% include component/video-static.html 
+						data=e.video %}
+				{% endif %}
+				
+				{% if e.style == "image" %}
+					<div class="content-split__image">
+						{% include component/responsive-image.html
+							small=e.image.small
+							medium=e.image.medium
+							large=e.image.large
+							alt=e.image.alt %}
+					</div>
+				{% endif %}
+
+				{% if e.style == "image-large" %}
+					<div class="content-split__image-large">
+						{% include component/responsive-image.html
+							small=e.image.small
+							medium=e.image.medium
+							large=e.image.large
+							alt=e.image.alt %}
+					</div>
+				{% endif %}
+			</div>
+			<div class="content-split__teaser">
+				{% assign e = site.data.content-split[include.data] %}
+				{% include component/teaser.html
+						data=e.teaser %}
+			</div>
+		</div>
+	</div>
+</div>

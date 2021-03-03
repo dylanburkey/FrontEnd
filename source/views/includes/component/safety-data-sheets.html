@@ -1,0 +1,93 @@
+{% assign sds = site.data.safety-data-sheets[include.data] %}
+
+<div class="safety-data-sheets" data-result="{{sds.hasResults}}">
+  <a href="{{sds.backlink}}" class="safety-data-sheets__backlink">
+    <span class="icon icon-chevron-left safety-data-sheets__backlink-icon"></span> 
+    {{ sds.back }}
+  </a>
+  <p class="safety-data-sheets__title">{{ sds.title }}</p>
+  <!-- No Safety Data Sheets Found -->
+  <div class="safety-data-sheets__no-results">
+    <p class="safety-data-sheets__no-results-title">No Safety Data Sheets Found</p>
+    <p class="safety-data-sheets__no-results-text">
+      This material / product does not exist as entered. Please reenter the information or
+      <a href="#">contact us </a>
+      if you believe this is in error.
+    </p>
+  </div>
+  <!-- No Safety Data Sheets Found -->
+  <div class="safety-data-sheets__table">
+    <table id="js-sds-table">
+      <thead>
+        <tr class="table-header">
+          {% for cell in sds.cells %}
+          <th>
+            {{cell.value}}
+            {% if cell.value == "Alerts" %}
+              <div class="safety-data-sheets__alert-tooltip">
+                <span class="safety-data-sheets__alert-icon"></span>
+                <span class="safety-data-sheets__alert-tooltip-text">
+                  {{sds.alertTooltip}}
+                  <span class="safety-data-sheets__alert-tooltip-triangle"></span>
+                </span>
+              </div>
+            {% else %}
+              <div class="safety-data-sheets__sort">
+                <div class="safety-data-sheets__sort-wrapper">
+                  <span class="safety-data-sheets__sort-down" id="js-sds-table-sort-down-{{cell.index}}"></span>
+                  <span class="safety-data-sheets__sort-up" id="js-sds-table-sort-up-{{cell.index}}"></span>
+                </div>
+              </div>
+            {% endif %}
+          </th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in sds.rows %}
+        <tr class="row">
+          {% for cell in row.cells %}
+          <td {% if cell.value == "Alerts" %}class="safety-data-sheets__table-data-alerts"{%endif %} data-table-header="{{cell.value}}">
+            {% if cell.value == "Alerts" %}
+              <div class="safety-data-sheets__alert-tooltip">
+                <span class="safety-data-sheets__alert-icon safety-data-sheets__alert-icon--mobile"></span>
+                <span class="safety-data-sheets__alert-tooltip-text">
+                  {{sds.alertTooltip}}
+                  <span class="safety-data-sheets__alert-tooltip-triangle"></span>
+                </span>
+              </div>
+            {% endif %}  
+            {% for item in cell.items %}
+              {% if item %}<p class="safety-data-sheets__table-cell {% if cell.style %} safety-data-sheets__table-cell--{{cell.style}} {% endif %}">{{item}}</p>{% endif %}
+            {% endfor %}
+            {% for checkbox in cell.checkbox %}
+              {% if checkbox %}
+              <label class="checkbox-input">
+                <input name="alert-checkbox" id="alert-checkbox-{{checkbox}}" type="checkbox" value="alert-checkbox-{{checkbox}}" />
+                <p class="cell-checkbox">
+                  <span></span>
+                </p>
+              </label>
+              {% endif %}
+            {% endfor %}
+          </td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p class="safety-data-sheets__disclaimer">{{sds.disclaimer}}</p>
+  <div class="safety-data-sheets__footer">
+    <button class="safety-data-sheets__footer-close" id ="js-hide-footer"><span class="icon-close"></span></button>
+    <div class="safety-data-sheets__footer-wrapper">
+      <div class="safety-data-sheets__footer-left">
+        <h3>{{sds.setupEmailAlerts}}</h3>
+        <p>{{sds.setupEmailAlertsText}}</p>
+      </div>
+      <div class="safety-data-sheets__footer-right">
+        <div id="iFrameWrapper"><div id="ffDialog"></div><div id="ffLookupDialog"></div><iframe frameborder="0" scrolling="no" name="ffEmbedFrame" id="ffEmbedFrame"></iframe><script type="text/javascript">function FFSetIframeSize(t,e){var n=document.getElementById("ffEmbedFrame");n.height=t,n.width=e}var i=document.getElementById("ffEmbedFrame");i=i.contentWindow?i.contentWindow:i.contentDocument.document?i.contentDocument.document:i.contentDocument,i.document.open(),i.document.write('<script type="text/javascript" id="jsFastForms" src="https://sfapi-sandbox.formstack.io/FormEngine/Scripts/Main.js?d=1ZCX5t6U4RuxqWEvYJWrap0Z0zyLNNdpNE-Bu5bz4lDSKIC5nw8iFYaftJv2Z9Ac"></' + 'script>'),i.document.close();</script></div>
+      </div>
+    </div>
+  </div>
+</div>

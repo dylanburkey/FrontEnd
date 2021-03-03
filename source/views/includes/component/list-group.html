@@ -1,0 +1,12 @@
+{% assign e = site.data.list-group[include.data] %}
+
+<div class="list-group">
+  <h4 class="list-group__title">{{e.title}}</h4>
+  <ul class="list-group__items">
+    {% for item in e.items %}
+    <li class="list-group-item">
+      {% if item.url %}<a class="list-group-item-link{% if item.type %} list-group-item-link--{{item.type}}{% endif %}" href="{{item.url}}">{% else %}<span>{% endif %}{{item.text}}{% if item.url %}</a>{% else %}</span>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>

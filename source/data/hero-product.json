@@ -1,0 +1,218 @@
+{
+  "viking-3350": {
+    "vertical": true,
+    "items": [
+      {
+        "image": {
+          "thumbnail": "/images/pdp-helmet-thumb.png",
+          "small": "/images/pdp-helmet.png",
+          "medium": "/images/pdp-helmet.png",
+          "large": "/images/pdp-helmet.png",
+          "alt": "Full width product detail"
+        }
+      },
+      {
+        "image": {
+          "thumbnail": "/images/pdp-helmet-2-thumb.png",
+          "fallback": "hero-product__fallback-image",
+          "small": "/images/pdp-helmet-2.png",
+          "medium": "/images/pdp-helmet-2.png",
+          "large": "/images/pdp-helmet-2.png",
+          "alt": "Full width product detail"
+        }
+      },
+      {
+        "image": {
+          "thumbnail": "/images/pdp-helmet-thumb.png",
+          "small": "/images/pdp-helmet.png",
+          "medium": "/images/pdp-helmet.png",
+          "large": "/images/pdp-helmet.png",
+          "alt": "Full width product detail"
+        }
+      },
+      {
+        "image": {
+          "thumbnail": "/images/pdp-helmet-2-thumb.png",
+          "small": "/images/pdp-helmet-2.png",
+          "medium": "/images/pdp-helmet-2.png",
+          "large": "/images/pdp-helmet-2.png",
+          "alt": "Full width product detail"
+        }
+      },
+      {
+        "image": {
+          "thumbnail": "/images/pdp-helmet-thumb.png",
+          "small": "/images/pdp-helmet.png",
+          "medium": "/images/pdp-helmet.png",
+          "large": "/images/pdp-helmet.png",
+          "alt": "Full width product detail"
+        }
+      },
+      {
+        "image": {
+          "thumbnail": "/images/pdp-helmet-2-thumb.png",
+          "small": "/images/pdp-helmet-2.png",
+          "medium": "/images/pdp-helmet-2.png",
+          "large": "/images/pdp-helmet-2.png",
+          "alt": "Full width product detail"
+        }
+      },
+      {
+        "image": {
+          "thumbnail": "/images/pdp-helmet-thumb.png",
+          "small": "/images/pdp-helmet.png",
+          "medium": "/images/pdp-helmet.png",
+          "large": "/images/pdp-helmet.png",
+          "alt": "Full width product detail"
+        }
+      },
+      {
+        "image": {
+          "thumbnail": "/images/pdp-helmet-2-thumb.png",
+          "small": "/images/pdp-helmet-2.png",
+          "medium": "/images/pdp-helmet-2.png",
+          "large": "/images/pdp-helmet-2.png",
+          "alt": "Full width product detail"
+        }
+      },
+      {
+        "image": {
+          "thumbnail": "/images/pdp-helmet-thumb.png",
+          "small": "/images/pdp-helmet.png",
+          "medium": "/images/pdp-helmet.png",
+          "large": "/images/pdp-helmet.png",
+          "alt": "Full width product detail"
+        }
+      }
+    ],
+    "card-content": {
+      "contentDescription":true,
+      "cardClickable": true,
+      "title": {
+        "text": "VIKING 3350"
+      },
+      "description": {
+        "text": "Welding Helmet"
+      },
+      "sku": "K4034-4",
+      "rating": {
+        "stars": 5,
+        "count": 4.0
+      },
+      "list-title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "pricing": {
+        "list": "<span class=\"rebate\">REBATE </span>Enter code CASH-50 at checkout for $50 off this item!"
+      }
+    }
+  },
+  "superarc-l-56": {
+    "vertical": true,
+    "items": [
+      {
+        "image": {
+          "thumbnail": "/images/pdp-helmet-thumb.png",
+          "small": "/images/pdp-helmet.png",
+          "medium": "/images/pdp-helmet.png",
+          "large": "/images/pdp-helmet.png",
+          "alt": "Full width product detail"
+        }
+      },
+      {
+        "image": {
+          "thumbnail": "/images/pdp-helmet-2-thumb.png",
+          "small": "/images/pdp-helmet-2.png",
+          "medium": "/images/pdp-helmet-2.png",
+          "large": "/images/pdp-helmet-2.png",
+          "alt": "Full width product detail"
+        }
+      },
+      {
+        "image": {
+          "thumbnail": "/images/pdp-helmet-thumb.png",
+          "small": "/images/pdp-helmet.png",
+          "medium": "/images/pdp-helmet.png",
+          "large": "/images/pdp-helmet.png",
+          "alt": "Full width product detail"
+        }
+      },
+      {
+        "image": {
+          "thumbnail": "/images/pdp-helmet-2-thumb.png",
+          "small": "/images/pdp-helmet-2.png",
+          "medium": "/images/pdp-helmet-2.png",
+          "large": "/images/pdp-helmet-2.png",
+          "alt": "Full width product detail"
+        }
+      },
+      {
+        "image": {
+          "thumbnail": "/images/pdp-helmet-thumb.png",
+          "small": "/images/pdp-helmet.png",
+          "medium": "/images/pdp-helmet.png",
+          "large": "/images/pdp-helmet.png",
+          "alt": "Full width product detail"
+        }
+      },
+      {
+        "image": {
+          "thumbnail": "/images/pdp-helmet-2-thumb.png",
+          "small": "/images/pdp-helmet-2.png",
+          "medium": "/images/pdp-helmet-2.png",
+          "large": "/images/pdp-helmet-2.png",
+          "alt": "Full width product detail"
+        }
+      },
+      {
+        "image": {
+          "thumbnail": "/images/pdp-helmet-thumb.png",
+          "small": "/images/pdp-helmet.png",
+          "medium": "/images/pdp-helmet.png",
+          "large": "/images/pdp-helmet.png",
+          "alt": "Full width product detail"
+        }
+      },
+      {
+        "image": {
+          "thumbnail": "/images/pdp-helmet-2-thumb.png",
+          "small": "/images/pdp-helmet-2.png",
+          "medium": "/images/pdp-helmet-2.png",
+          "large": "/images/pdp-helmet-2.png",
+          "alt": "Full width product detail"
+        }
+      },
+      {
+        "image": {
+          "thumbnail": "/images/pdp-helmet-thumb.png",
+          "small": "/images/pdp-helmet.png",
+          "medium": "/images/pdp-helmet.png",
+          "large": "/images/pdp-helmet.png",
+          "alt": "Full width product detail"
+        }
+      }
+    ],
+    "card-content": {
+      "contentDescription":true,
+      "cardClickable": true,
+      "title": {
+        "text": "SUPERARC L-56"
+      },
+      "description": {
+        "text": "MIG Wire"
+      },
+      "conformances":{
+        "name":"AWS: ER70S-6",
+        "conformances-link":"All Conformances",
+        "href":"#test.conformances"
+      },
+      "contentUnauthenticated":true,
+      "rating": {
+        "stars": 5,
+        "count": 5.0
+      },
+      "list-title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "pricing": {
+      }
+    }
+
+  }
+}

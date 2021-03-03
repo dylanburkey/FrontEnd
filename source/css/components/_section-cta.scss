@@ -1,0 +1,10 @@
+$block: 'section-cta';
+
+.#{$block} {
+	@include balance-margins;
+	@include container;
+	margin-top: map-get($spacing, medium);
+	@include desktop {
+		margin-top: map-get($spacing, x-large);
+	}
+}

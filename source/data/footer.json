@@ -1,0 +1,291 @@
+{
+ "columns": [
+  {
+    "groups": [
+      {
+        "active": true,
+        "title": "Products",
+        "items": [
+          {
+            "text": "Equipment",
+            "url": "#!equipment",
+            "target": "_blank"
+          },
+          {
+            "text": "Consumables",
+            "url": "#!consumables"
+          },
+          {
+            "text": "Safety",
+            "url": "#!safety"
+          },
+          {
+            "text": "Accessories",
+            "url": "#!accessories"
+          },
+          {
+            "text": "New Products",
+            "url": "#!new-products"
+          },
+          {
+            "text": "Where to Buy or Rent",
+            "url": "#!where-to-buy-or-rent"
+          }
+        ]
+      },
+      {
+        "title": "Solutions",
+        "items": [
+          {
+            "text": "Automation Solutions",
+            "url": "#!automation-solutions",
+            "target": "_blank"
+          },
+          {
+            "text": "Fabrication & Additive Solutions",
+            "url": "#!fabrication-additive"
+          },
+          {
+            "text": "Checkpoint Monitoring Solutions",
+            "url": "#!checkpoint-monitoring-solutions"
+          },
+          {
+            "text": "Education Solutions",
+            "url": "#!education-solutions"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "groups": [
+      {
+        "title": "Safety",
+        "items": [
+          {
+            "text": "Welding Safety Training Information",
+            "url": "#!welding-safety-training-information",
+            "target": "_blank"
+          },
+          {
+            "text": "Welding Fume Control Products",
+            "url": "#!welding-fume-control-products"
+          },
+          {
+            "text": "Helmets & Shields",
+            "url": "#!helmets-and-shields"
+          },
+          {
+            "text": "Safety Apparel",
+            "url": "#!safety-apparel"
+          },
+          {
+            "text": "Safety Data Sheets",
+            "url": "#!safety-data-sheets"
+          }
+        ]
+      },
+      {
+        "title": "Education",
+        "items": [
+          {
+            "text": "About WTTC",
+            "url": "#!about-wttc",
+            "target": "_blank"
+          },
+          {
+            "text": "Programs",
+            "url": "#!programs"
+          },
+          {
+            "text": "Course Catalog",
+            "url": "#!course-catalog"
+          },
+          {
+            "text": "WTTC Resources",
+            "url": "#!wttc-resources"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "groups": [
+      {
+        "title": "Industries we serve",
+        "items": [
+          {
+            "text": "Heavy Fabrication",
+            "url": "#!heavy-fabrication",
+            "target": "_blank"
+          },
+          {
+            "text": "Automotive/Transportation",
+            "url": "#!automotive-transportation"
+          },
+          {
+            "text": "Pipeline",
+            "url": "#!pipeline"
+          },
+          {
+            "text": "Maintenance & Repair",
+            "url": "#!maintenance-repair"
+          },
+          {
+            "text": "Offshore",
+            "url": "#!offshore"
+          },
+          {
+            "text": "Browse all Industry Solutions",
+            "url": "#!browse-all-industry-solutions"
+          }
+        ]
+      },
+      {
+        "title": "Business Partners",
+        "items": [
+          {
+            "text": "MyLincoln",
+            "url": "#!my-lincoln",
+            "target": "_blank"
+          },
+          {
+            "text": "Alloy Surcharge",
+            "url": "#!alloy-surcharge"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "groups": [
+      {
+        "title": "Corporate",
+        "items": [
+          {
+            "text": "Corporate",
+            "url": "#!corporate",
+            "target": "_blank"
+          },
+          {
+            "text": "Investor Relations",
+            "url": "#!investor-relations"
+          },
+          {
+            "text": "Sustainability",
+            "url": "#!sustainability"
+          },
+          {
+            "text": "Careers",
+            "url": "#!careers"
+          },
+          {
+            "text": "Logo Merchandise Store",
+            "url": "#!logo-merchandise-store"
+          },
+          {
+            "text": "James F Lincoln Foundation (JFLF)",
+            "url": "#!james-f-lincoln-foundation"
+          },
+          {
+            "text": "Industry Certifications",
+            "url": "#!industry-certifications"
+          },
+          {
+            "text": "Legal",
+            "url": "#!legal"
+          },
+          {
+            "text": "Suppliers",
+            "url": "#!suppliers"
+          },
+          {
+            "text": "Subsidiaries & Affiliates",
+            "url": "#!subsidiaries-affiliates"
+          },
+          {
+            "text": "Visitor Information",
+            "url": "#!visitor-information"
+          },
+          {
+            "text": "Media Newsroom",
+            "url": "#!media-newsroom"
+          },
+          {
+            "text": "California Supply Chains Act",
+            "url": "#!california-supply-chains-act"
+          },
+          {
+            "text": "Modern Slavery Act Disclosure",
+            "url": "#!modern-slavery-act-disclosure"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "groups": [
+      {
+        "title": "Support",
+        "items": [
+          {
+            "text": "Support Center",
+            "url": "#!support-center",
+            "target": "_blank"
+          },
+          {
+            "text": "Contact Us",
+            "url": "#!contact-us"
+          }
+        ]
+      },
+      {
+        "title": "Stay Connected",
+        "items": [
+          {
+            "text": "News & Events",
+            "url": "#!news-events",
+            "target": "_blank"
+          },
+          {
+            "text": "Newsletter Sign Up",
+            "url": "#!newsletter-sign-up",
+            "target": "_blank",
+            "style": "btn",
+            "icon": "newsletter"
+          }
+        ]
+      }
+    ],
+    "social": {
+      "items": [
+        {
+          "title": "Facebook",
+          "icon": "facebook",
+          "url": "#facebook"
+        },
+        {
+          "title": "Twitter",
+          "icon": "twitter",
+          "url": "#twitter"
+        },
+        {
+          "title": "Youtube",
+          "icon": "youtube",
+          "url": "#youtube"
+        },
+        {
+          "title": "Instagram",
+          "icon": "instagram",
+          "url": "#instagram"
+        },
+        {
+          "title": "Linkedin",
+          "icon": "linkedin",
+          "url": "#linkedin"
+        }
+      ]
+    }
+  }
+ ]
+}

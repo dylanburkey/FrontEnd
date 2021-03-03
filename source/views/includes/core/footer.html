@@ -1,0 +1,35 @@
+{% assign e = site.data.footer %}
+<footer class="footer">
+    <div>
+        <div class="footer__content">
+            {% for column in e.columns %}
+             <div class="footer__column">
+                 {% for group in column.groups %}
+                    {% include component/link-group.html
+                        data = group %}
+                 {% endfor %}
+                 {% if column.social %}
+                    <div class="social">
+                        <ul>
+                        {% for item in column.social.items %}
+                            <li><a href="{{item.url}}" aria-label="{{item.title}}"><span class="icon icon-{{item.icon}}"></span><span class="title">{{item.title}}</span></a></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                 {% endif %}
+             </div>
+            {% endfor %}
+        </div>
+        <div class="footer__meta">
+            <a href="#" class="footer__region">
+                <img src="{{ '/images/US.png' | prepend: site.baseurl }}" alt="flag" />
+                <p>US - English</p>
+            </a>
+            <a href="#" class="footer__logo">
+                <img src="{{ '/images/logo.svg' | prepend: site.baseurl }}" alt="lincoln electric logo"/>
+            </a>
+            <p class="footer__copyright">2020 Lincoln Electric. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+{% include component/cookie-nag.html %}

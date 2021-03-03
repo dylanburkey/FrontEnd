@@ -1,0 +1,143 @@
+{
+  "facility-certifications": {
+    "title": "Find Certifications",
+    "certification": "Select Certification",
+    "certification-label": "select-certification-label",
+    "options": [{
+        "value": "Select a product name",
+        "text": "Select a product name",
+        "name": "option-default"
+      },
+      {
+        "value": "Product name 1",
+        "text": "Product name 1",
+        "name": "option-1"
+      },
+      {
+        "value": "Product name 2",
+        "text": "Product name 2",
+        "name": "option-2"
+      },
+      {
+        "value": "Product name 3",
+        "text": "Product name 3",
+        "name": "option-3"
+      }
+    ],
+    "find": "find",
+    "results": {
+      "title": "ISO 9001",
+      "result-blocks": [{
+          "subtitle": "Country Name",
+          "lines": [{
+              "label": "City: ",
+              "name": "City Name"
+            },
+            {
+              "label": "Facility Name: ",
+              "name": "Lincoln Electric Company of Canada, LP"
+            },
+            {
+              "label": "Facility Type: ",
+              "name": "Manufacturing"
+            },
+            {
+              "label": "Product Type: ",
+              "name": " Consumables, Equipment"
+            }
+          ],
+          "link-1": "Download English",
+          "link-2": "Download French"
+        },
+        {
+          "subtitle": "Country Name",
+          "lines": [{
+              "label": "City: ",
+              "name": "City Name"
+            },
+            {
+              "label": "Facility Name: ",
+              "name": "Lincoln Electric Company of Canada, LP"
+            },
+            {
+              "label": "Facility Type: ",
+              "type": "Manufacturing"
+            },
+            {
+              "label": "Product Type: ",
+              "type": " Consumables, Equipment"
+            }
+          ],
+          "link-1": "Download English",
+          "link-2": "Download French"
+        },
+        {
+          "subtitle": "Country Name",
+          "lines": [{
+              "label": "City: ",
+              "name": "City Name"
+            },
+            {
+              "label": "Facility Name: ",
+              "name": "Lincoln Electric Company of Canada, LP"
+            },
+            {
+              "label": "Facility Type: ",
+              "name": "Manufacturing"
+            },
+            {
+              "label": "Product Type: ",
+              "name": " Consumables, Equipment"
+            }
+          ],
+          "link-1": "Download English",
+          "link-2": "Download French"
+        },
+        {
+          "subtitle": "Country Name",
+          "lines": [{
+              "label": "City: ",
+              "name": "City Name"
+            },
+            {
+              "label": "Facility Name: ",
+              "name": "Lincoln Electric Company of Canada, LP"
+            },
+            {
+              "label": "Facility Type: ",
+              "name": "Manufacturing"
+            },
+            {
+              "label": "Product Type: ",
+              "name": " Consumables, Equipment"
+            }
+          ],
+          "link-1": "Download English",
+          "link-2": "Download French"
+        },
+        {
+          "subtitle": "Country Name",
+          "lines": [{
+              "label": "City: ",
+              "name": "City Name"
+            },
+            {
+              "label": "Facility Name: ",
+              "name": "Lincoln Electric Company of Canada, LP"
+            },
+            {
+              "label": "Facility Type: ",
+              "name": "Manufacturing"
+            },
+            {
+              "label": "Product Type: ",
+              "name": " Consumables, Equipment"
+            }
+          ],
+          "link-1": "Download English",
+          "link-2": "Download French"
+        }
+      ]
+    }
+  }
+}

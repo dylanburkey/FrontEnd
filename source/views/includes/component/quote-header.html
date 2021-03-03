@@ -1,0 +1,12 @@
+{% assign e = site.data.quote-header[include.data] %}
+
+<div class="quote-header {% if e.style %}quote-header--{{e.style}}{% endif %}">
+  <a href="#" class="logo">
+    <img src="{{ '/images/logo.svg' | prepend: site.baseurl }}" alt="lincoln electric logo"/>
+  </a>
+  <div class="quote-header__wrapper">
+   <p class="quote-header__description">{{e.description}}</p>
+    {% for item in e.items %}
+    <p class="quote-header__item">{{item.title}}<span class="{{item.class}}">{{item.text}}</span></p>
+    {% endfor %}  </div>
+</div>

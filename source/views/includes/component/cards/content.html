@@ -1,0 +1,48 @@
+{% if include.carousel %}
+	{% assign data = include.data %}
+	{% assign len = data | size | minus: 1 %}
+{% else %}
+	{% assign data = site.data.cards.content[include.data][include.index] %}
+	{% assign len = site.data.cards.content[include.data] | size | minus: 1 %}
+{% endif %}
+
+{% if include.index <= len %}
+
+<a class="card card--content{% if include.class %} {{ include.class }}{% endif %}" href="{{ data.url }}">
+	<div class="card__media">
+		<div class="card__media-wrap">
+			{% if data.video %}
+			<div class="video">
+				<div class="video__wrapper">
+				  	<img src="{{ data.imageSrc | prepend: site.baseurl }}" alt="{{ data.imageAlt }}" />
+					<button class="video__button" 
+						  data-modal-trigger="unique-id-can-be-anything-must-match-modal">▶</button>
+				</div>
+			</div>
+			<div class="modal" data-modal="unique-id-can-be-anything-must-match-modal" data-modal-activate-on-load="false">
+				<div class="modal-content">
+					<button class="modal-close" data-modal-close><span class="icon-close"></span></button>
+					<div class="modal-body">
+						<iframe src="{{ data.video.embedUrl }}"></iframe>
+					</div>
+				</div>
+			</div>
+			{% else %}
+			<img src="{{ data.imageSrc | prepend: site.baseurl }}" alt="{{ data.imageAlt }}" />
+			{% endif %}
+		</div>
+	</div>
+	<div class="card__content">
+		<div class="card__wrapper">
+			{% if data.eyebrow %}
+			<p class="card__eyebrow">{{ data.eyebrow }}</p>
+			{% endif %}
+			<h4 class="card__title">{{ data.title }}</h4>
+			{% if data.description %}
+			<p class="card__description">{{ data.description }}{% if data.sku %}<span>|</span>{{ data.sku }}{% endif %}</p>
+			{% endif %}
+		</div>
+	</div>
+</a>
+
+{% endif %}

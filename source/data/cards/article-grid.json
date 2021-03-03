@@ -1,0 +1,60 @@
+{
+	"latest-news": [
+		{
+			"url": "",
+			"title": "Lincoln Electric Launches POWER MIG&reg; 140 MP&reg;",
+			"category": "Product",
+			"date": "January 20, 2020",
+			"region": "US",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+		},
+		{
+			"url": "",
+			"title": "Lincoln Electric Announces the Prism Compact Air Filtration System",
+			"category": "Product",
+			"date": "December 19, 2019",
+			"region": "US",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+		},
+		{
+			"url": "",
+			"title": "ORNL and Lincoln Electric to Advance Large-Scale Metal Additive Technology",
+			"category": "Corporate",
+			"date": "October 24, 2019",
+			"region": "US",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+		},
+		{
+			"url": "",
+			"title": "Introducing VRTEX Virtual Reality Welding Simulators",
+			"category": "Education",
+			"date": "September 16, 2019",
+			"region": "US",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+		}
+	],
+	"press-release":[
+		{
+			"url": "",
+			"title": "Lincoln Electric Expands Hardfacing Consumables Product Line",
+			"category": "Product",
+			"date": "December 12, 2019",
+			"region": "US",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+		},
+		{
+			"url": "",
+			"title": "Lincoln Electric Provides New UltraCore® Stainless Flux-Cored Wires",
+			"category": "Product",
+			"date": "December 12, 2019",
+			"region": "US",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+		}
+	]
+}

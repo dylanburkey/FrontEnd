@@ -1,0 +1,328 @@
+main {
+	> section {
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3),
+		&:nth-child(n+3):nth-child(odd){
+			background: map-get($brand, background);
+		}
+	}
+}
+
+section {
+	position: relative;
+
+	> div {
+		padding-top: map-get($spacing, large);
+		padding-bottom: map-get($spacing, large);
+
+		@include desktop {
+			padding-top: map-get($spacing, xxx-large);
+			padding-bottom: map-get($spacing, xxx-large);
+		}
+
+		&.banner,
+		&.content-split--image-large,
+		&.hero,
+		&.hero-product,
+		&.breadcrumbs {
+			padding-top: 0;
+			padding-bottom: 0;
+
+			@include desktop {
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+		}
+	}
+
+	> header {
+		padding-top: map-get($spacing, large);
+		padding-bottom: map-get($spacing, medium);
+		@include desktop {
+			padding-top: map-get($spacing, xxx-large);
+			padding-bottom: map-get($spacing, large);
+		}
+
+		+ div {
+			padding-top: 0;
+			@include desktop {
+				padding-bottom: map-get($spacing, xxx-large);
+			}
+		}
+	}
+
+	// > div {
+
+	// 	&:not(.banner):not(.content-split--image):not(.hero):not(.hero-product):not(.banner-speedbump) {
+	// 		padding-top: map-get($spacing, large);
+	// 		padding-bottom: map-get($spacing, large);
+
+	// 		@include desktop {
+	// 			padding-top: map-get($spacing, xxx-large);
+	// 			padding-bottom: map-get($spacing, xxx-large);
+	// 		}
+	// 	}
+
+	// 	// &.content-split--image {
+	// 	// 	&:nth-of-type(even){
+	// 	// 		background: map-get($brand, background);
+	// 	// 	}
+	// 	// }
+
+	// 	&.search-bar {
+	// 		@include desktop {
+	// 			//varies in design
+	// 			padding-top: 60px;
+	// 			padding-bottom: 60px;
+	// 		}
+	// 	}
+
+	// 	&.breadcrumbs {
+	// 		padding-top: map-get($spacing, medium)!important;
+	// 		padding-bottom: map-get($spacing, medium)!important;
+	// 	}
+
+
+	// }
+
+}
+
+.section-region-select {
+	position: relative;
+}
+.section-regions {
+	display: flex;
+	margin-bottom: map-get($spacing, medium);
+
+	@include desktop {
+		position: absolute;
+		top: -65px;
+		right: map-get($spacing, medium);
+	}
+
+	p {
+		color: map-get($color, gray-darkest);
+		@include font(headline);
+		font-size: 14px;
+		font-weight: bold;
+		letter-spacing: 0;
+		line-height: 19px;
+		text-transform: uppercase;
+		margin-right: map-get($spacing, small);
+	}
+
+	.select__wrapper {
+		background-color: map-get($color,gray-lightest);
+
+		.select-wrap {
+			height: 35px;
+			.select-label {
+				display: none;
+			}
+		}
+
+		@include mobile-only {
+			display: flex;
+			width: 100%;
+			.select-wrap {
+				width: 100%;
+				.select-label {
+					display: none;
+				}
+			}
+		}
+	}
+
+	@include mobile-only {
+		display: block;
+	}
+}
+// .section-wrapper {
+// 	padding-top: map-get($spacing, large);
+// 	padding-bottom: map-get($spacing, large);
+
+// 	@include desktop {
+// 		padding-top: map-get($spacing, xxx-large);
+// 		padding-bottom: map-get($spacing, xxx-large);
+// 	}
+// }
+
+// .section-header {
+// 	padding-top: map-get($spacing, large);
+// 	padding-bottom: map-get($spacing, small);
+
+// 	@include desktop {
+// 		padding-top: map-get($spacing, xxx-large);
+// 		padding-bottom: map-get($spacing, large);
+// 	}
+
+// 	+ .section-wrapper,
+// 	+ div:not(.banner):not(.content-split--image):not(.hero):not(.hero-product):not(.banner-speedbump) {
+// 		padding-top: map-get($spacing, small);
+// 		padding-bottom: map-get($spacing, large);
+
+// 		@include desktop {
+// 			padding-top: map-get($spacing, large);
+// 			padding-bottom: map-get($spacing, xxx-large)!important;
+// 		}
+// 	}
+
+// 	.section-collapsable & {
+// 		@include desktop {
+// 			padding-top: map-get($spacing, xxx-large);
+// 			padding-bottom: map-get($spacing, large);
+// 		}
+
+// 		+ .section-wrapper {
+// 			padding-top: map-get($spacing, medium)!important;
+// 		}
+// 	}
+// }
+
+
+//simple container class
+.container {
+	@include balance-margins;
+	@include container;
+
+	&--large {
+		@include container(large);
+	}
+
+	//nested containers
+	.container {
+		padding: 0;
+	}
+
+  .cols {
+    @include desktop {
+      display: flex!important;
+      flex-wrap: wrap;
+      margin-left: - map-get($spacing, small);
+      margin-right: - map-get($spacing, small);
+    }
+
+		.col {
+			&:nth-last-child(n+1):nth-last-child(-n+1):first-child,
+			&:nth-last-child(n+1):nth-last-child(-n+1):first-child ~ .col {
+				@include desktop {
+					flex-basis: calc(100%/1 - #{map-get($spacing, small) * 2});
+					width: calc(100%/1 - #{map-get($spacing, small) * 2 });
+					margin: map-get($spacing, small);
+				}
+			}
+
+			&:nth-last-child(n+2):nth-last-child(-n+2):first-child,
+			&:nth-last-child(n+2):nth-last-child(-n+2):first-child ~ .col {
+				@include desktop {
+					flex-basis: calc(100%/2 - #{map-get($spacing, small) * 2});
+					width: calc(100%/2 - #{map-get($spacing, small) * 2 });
+					margin: map-get($spacing, small);
+				}
+			}
+
+			&:nth-last-child(n+3):nth-last-child(-n+3):first-child,
+			&:nth-last-child(n+3):nth-last-child(-n+3):first-child ~ .col {
+				@include desktop {
+					flex-basis: calc(100%/3 - #{map-get($spacing, small) * 2});
+					width: calc(100%/3 - #{map-get($spacing, small) * 2 });
+					margin: map-get($spacing, small);
+				}
+			}
+
+			margin: map-get($spacing, small) 0;
+
+			//anything else, 4+ columns
+			@include desktop {
+				flex-basis: calc(100%/4 - #{map-get($spacing, small) * 2});
+				width: calc(100%/4 - #{map-get($spacing, small) * 2 });
+				margin: map-get($spacing, small);
+			}
+		}
+	}
+}
+
+.region > h4:after {
+	color: map-get($color, red);
+}
+
+[data-accordion] {
+  [data-accordion-trigger], .has-collapsable-attribute {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    &:after {
+      @include icon(chevron-down);
+      font-size: 10px;
+      @include desktop {
+        content: none;
+      }
+    }
+    @include desktop {
+      //kill the toggling
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+
+  [data-accordion-content] {
+    display: none;
+    @include desktop {
+      display: block;
+    }
+  }
+
+  &.active {
+      [data-accordion-trigger] {
+          &:after {
+              @include icon(chevron-up);
+              @include desktop {
+                  content: none;
+              }
+          }
+      }
+
+      [data-accordion-content] {
+          display: block;
+      }
+  }
+
+  //overriding and adding styles for link-group from filters
+  .filters & {
+    [data-accordion-trigger] {
+      &:after {
+          border-radius: 0 0 99px 99px;
+          color:  map-get($color, red);
+          font-size: 14px;
+          @include desktop {
+            @include icon(chevron-down);
+          }
+      }
+      @include desktop {
+          //override the toggling
+          cursor: pointer;
+          pointer-events: auto;
+      }
+    }
+
+    [data-accordion-content] {
+        display: none;
+    }
+
+    &.active {
+      [data-accordion-trigger] {
+          &:after {
+              @include desktop {
+                @include icon(chevron-up);
+              }
+          }
+      }
+      [data-accordion-content] {
+        display: block;
+      }
+    }
+  }
+}

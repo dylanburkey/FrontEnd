@@ -1,0 +1,137 @@
+$block: 'related-documents';
+
+.#{$block} {
+
+  &__title {
+    @include font(headline);
+    @include typography(h2);
+    color: map-get($color, gray-darkest);
+    font-weight: bold;
+    letter-spacing: 0;
+    padding: map-get($spacing, medium) + map-get($spacing, x-small) 0 map-get($spacing, medium) + map-get($spacing, small);
+    margin: 0!important;
+    @include desktop {
+      padding: map-get($spacing, large) + map-get($spacing, x-large) 0 map-get($spacing, xx-large) - map-get($spacing, xx-small);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: map-get($spacing, large) + map-get($spacing, xx-small);
+    @include desktop {
+      padding-bottom: map-get($spacing, xxx-large) - map-get($spacing, x-small);
+      margin-left: - map-get($spacing, small);
+      margin-right: - map-get($spacing, small);
+      
+      //using "between" queries, in case we have minimum 2 and maximum 6 items, split list in 2 columns
+       li:nth-last-child(n+2):nth-last-child(-n+6):first-child,
+       li:nth-last-child(n+2):nth-last-child(-n+6):first-child ~ li {
+         flex-basis: calc(100%/2 - #{map-get($spacing, small) * 2});
+         width: calc(100%/2 - #{map-get($spacing, small) * 2 });
+         margin: 0 map-get($spacing, small);
+       }
+
+      //using "at-least" query, in case we have minimum 6 items, split list in 3 columns
+       li:nth-last-child(n+6), li:nth-last-child(n+6) ~ li {
+        flex-basis: calc(100%/3 - #{map-get($spacing, small) * 2});
+        width: calc(100%/3 - #{map-get($spacing, small) * 2 });
+        margin:0 map-get($spacing, small);
+      }
+    }
+  }
+
+  .related-documents-item {
+    padding-left: 0;
+    margin: 0;
+    padding-bottom: map-get($spacing, large);
+    width: 100%;
+    list-style-type: none;
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+    &:before {
+      content: none;
+    }
+    .related-documents__link {
+      display: flex;
+      &:before {
+        background: transparent;
+        width: auto;
+        height: auto;
+        position: relative;
+        top: map-get($spacing, xx-small);
+        padding-right: map-get($spacing, medium) - map-get($spacing, small) + map-get($spacing, xx-small);
+        color: map-get($color, red);
+        font-size: 24px;
+      }
+      &--pdf {
+        &:before {
+          @include icon(pdf);
+        }
+      }
+      &--excel, &--xlsx, &--xlsm, &--xlsb,
+      &--xltx, &--xltm, &--xls, &--xlt,
+      &--xml, &--cvl, &--clv {
+        &:before {
+          @include icon(xlsx);
+          margin-left: 3px;
+          width: map-get($spacing, large);
+        }
+      }
+      &--video {
+        &:before {
+          @include icon(video);
+        }
+      }
+    }
+
+    &__content {
+      width: 100%;
+    }
+
+    &__subtitle {
+      @include font(headline);
+      color: map-get($color, black);
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: 0;
+      line-height: 21px;
+      display: flex;
+      margin: 0;
+      padding-bottom: map-get($spacing, medium) - map-get($spacing, small);
+      @include desktop {
+        font-size: 16px;
+      }
+      &--restricted {
+        &:after {
+          @include icon(gated);
+          background: transparent;
+          padding: 0 map-get($spacing, small);
+          margin-top: map-get($spacing, xxx-small);
+          width: auto;
+          height: auto;
+          position: relative;
+          top: auto;
+          padding-right: map-get($spacing, xx-small);
+          @include mobile-only {
+            margin-top: map-get($spacing, xx-small);
+          }
+        }
+      }
+    }
+
+    &__description {
+      @include font(regular);
+      color: map-get($color, gray-darker);
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: 19px;
+      margin: 0;
+    }
+
+    @include desktop {
+      padding-bottom: map-get($spacing, x-large) - map-get($spacing, xx-small);
+    }
+  }
+}

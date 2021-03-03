@@ -1,0 +1,63 @@
+.no-results {
+    > p {
+        margin-top: map-get($spacing, x-large);
+
+        @include desktop {
+            margin-top: map-get($spacing, xx-large);
+        }
+    }
+
+    &__search-again {
+        .search {
+            height: 46px;
+            align-self: center;
+            display: block;
+            margin-left: auto;
+    
+            &__form {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                @include desktop {
+                  width: 380px;
+                }
+            }
+    
+            &__input,
+            &__submit {
+                @include font(regular);
+                height: 100%;
+                appearance: none;
+                border: 0;
+                font-size: 16px;
+            }
+    
+            &__input {
+                width: 100%;
+                border: 1px solid map-get($brand, border);
+                border-radius: $border-radius/2;
+                padding: 0 map-get($spacing, small);
+                padding-right: map-get($spacing, xx-large);
+                outline: none;
+                &:focus {
+                    border-color: map-get($color, gray);
+                }
+            }
+    
+            &__submit {
+                font-size: 0;
+                margin-left: - map-get($spacing, xx-large);
+                line-height: 0;
+                border-radius: 0 $border-radius $border-radius 0;
+                background: transparent;
+                width: map-get($spacing, xx-large);
+                &:after {
+                    @include icon(search);
+                    font-size: 18px;
+                    line-height: 1;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

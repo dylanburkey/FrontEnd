@@ -1,0 +1,670 @@
+{
+  "nav-links": [
+    {
+      "title": "Solutions",
+      "url": "#solutions",
+      "children": [
+        {
+          "title": "Solutions By Industry",
+          "url": "/solutions-by-industry/",
+          "style": "grid",
+          "columns": [
+            {
+              "items": [
+                {
+                  "title": "Automotive",
+                  "image": {
+                    "src": "/images/auto-nav.png"
+                  },
+                  "url": "#automotive",
+                  "description": "Stronger, lighter, and more exotic materials for manufacturing."
+                },
+                {
+                  "title": "Heavy Fabrication",
+                  "image": {
+                    "src": "/images/heavyfab-nav.png"
+                  },
+                  "url": "#heavy-fabrication",
+                  "description": "Robust advanced power sources & processes for heavy equipment."
+                },
+                {
+                  "title": "Offshore",
+                  "url": "#offshore",
+                  "image": {
+                    "src": "/images/offshore-nav.png"
+                  },
+                  "description": "Welding products for harsh environments"
+                },
+                {
+                  "title": "Pipeline",
+                  "url": "#pipeline",
+                  "image": {
+                    "src": "/images/pipeline-nav.png"
+                  },
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do"
+                }
+              ]
+            },
+            {
+              "items": [
+                {
+                  "title": "Pipe Mill",
+                  "url": "#pipe-mill",
+                  "image": {
+                    "src": "/images/pipemill-nav.png"
+                  },
+                  "description": "Stronger, lighter, and more exotic materials for manufacturing."
+                },
+                {
+                  "title": "Maintenance & Repair",
+                  "url": "#maintenance-repair",
+                  "image": {
+                    "src": "/images/maintanence-nav.png"
+                  },
+                  "description": "Robust advanced power sources & processes for heavy equipment."
+                },
+                {
+                  "title": "Chemical Processing",
+                  "url": "#chemical-processing",
+                  "image": {
+                    "src": "/images/chemical-nav.png"
+                  },
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do"
+                },
+                {
+                  "title": "Structural",
+                  "url": "#structural",
+                  "image": {
+                    "src": "/images/structural-nav.png"
+                  },
+                  "description": "Lorem ipsum dolor sit amet"
+                }
+              ]
+            },
+            {
+              "items": [
+                {
+                  "title": "General Fabrication",
+                  "url": "#general-fabrication",
+                  "image": {
+                    "src": "/images/genfab-nav.png"
+                  },
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do"
+                },
+                {
+                  "title": "Shipbuilding",
+                  "url": "#shipbuilding",
+                  "image": {
+                    "src": "/images/shipbuilding-nav.png"
+                  },
+                  "description": "Lorem ipsum dolor sit amet"
+                },
+                {
+                  "title": "Power Generation",
+                  "url": "#power-generation",
+                  "image": {
+                    "src": "/images/powergen-nav.png"
+                  },
+                  "description": "Lorem ipsum dolor sit amet"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Solutions By Process",
+          "url": "#solutions-by-process"
+        },
+        {
+          "title": "Software Solutions",
+          "url": "#software-solutions",
+          "style": "grid",
+          "columns": [
+            {
+              "items": [
+                {
+                  "title": "Case Study",
+                  "url": "#case-study",
+                  "image": {
+                    "src": "/images/software1-solutions.png"
+                  },
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do"
+                },
+                {
+                  "title": "Another Case Study",
+                  "url": "#another case-study",
+                  "image": {
+                    "src": "/images/software2-solutions.png"
+                  },
+                  "description": "Lorem ipsum dolor sit amet"
+                },
+                {
+                  "title": "Case Study",
+                  "url": "#case-study",
+                  "image": {
+                    "src": "/images/software3-solutions.png"
+                  },
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do"
+                }
+              ]
+            },
+            {
+              "items": [
+                {
+                  "title": "Case Study",
+                  "url": "#case-study",
+                  "image": {
+                    "src": "/images/software1-solutions.png"
+                  },
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do"
+                },
+                {
+                  "title": "Another Case Study",
+                  "url": "#another case-study",
+                  "image": {
+                    "src": "/images/software2-solutions.png"
+                  },
+                  "description": "Lorem ipsum dolor sit amet"
+                },
+                {
+                  "title": "Case Study",
+                  "url": "#case-study",
+                  "image": {
+                    "src": "/images/software3-solutions.png"
+                  },
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do"
+                }
+              ]
+            },
+            {
+              "items": [
+                {
+                  "style": "promo",
+                  "title": "Checkpoint Production Data Monitoring",
+                  "url": "#destination-url",
+                  "image": {
+                    "src": "/images/menu-image.png"
+                  },
+                  "description": "Delivers the precise information you need for maximizing welding productivity and performance."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Services",
+          "url": "#services",
+          "children": [
+            {
+              "title": "Automation Services",
+              "url": "#automation-services",
+              "style": "grid",
+              "columns": [
+                {
+                  "items": [
+                    {
+                      "title": "Installation",
+                      "url": "#installation",
+                      "image": {
+                        "src": "/images/software1-solutions.png"
+                      },
+                      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do"
+                    },
+                    {
+                      "title": "Integration",
+                      "url": "#integration",
+                      "image": {
+                        "src": "/images/software2-solutions.png"
+                      },
+                      "description": "Lorem ipsum dolor sit amet"
+                    },
+                    {
+                      "title": "Retrofit",
+                      "url": "#retrofit",
+                      "image": {
+                        "src": "/images/software3-solutions.png"
+                      },
+                      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Hardfacing Business",
+              "url": "#hardfacing-business"
+            },
+            {
+              "title": "Additive",
+              "url": "#additive"
+            },
+            {
+              "title": "Built to Print",
+              "url": "#built-to-print"
+            },
+            {
+              "title": "Technical Services",
+              "url": "#technical-services"
+            },
+            {
+              "title": "Consulting",
+              "url": "#consulting"
+            },
+            {
+              "title": "Software",
+              "url": "#software"
+            },
+            {
+              "title": "Machine Center",
+              "url": "#machine-center"
+            },
+            {
+              "title": "Preventitive Maintenance",
+              "url": "#preventitive-maintenance"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Products",
+      "url": "#products",
+      "children": [
+        {
+          "title": "Browse By Brand",
+          "url": "#browse-by-brand",
+          "style": "grid",
+          "columns": [
+            {
+              "items": [
+                {
+                  "title": "Lincoln Electric",
+                  "url": "#lincoln-electric",
+                  "image": {
+                    "src": "/images/bybrandlogo.png"
+                  },
+                  "description": "Lorem ipsum dolar set amet."
+                },
+                {
+                  "title": "Harris",
+                  "url": "#harris",
+                  "image": {
+                    "src": "/images/bybrandlogo.png"
+                  },
+                  "description": "Lorem ipsum dolar set amet."
+                },
+                {
+                  "title": "Arc Products",
+                  "url": "#arc-products",
+                  "image": {
+                    "src": "/images/bybrandlogo.png"
+                  },
+                  "description": "Lorem ipsum dolar set amet."
+                },
+                {
+                  "title": "Askaynak",
+                  "url": "#askaynak",
+                  "image": {
+                    "src": "/images/bybrandlogo.png"
+                  },
+                  "description": "Lorem ipsum dolar set amet."
+                },
+                {
+                  "title": "Burny Kaliburn",
+                  "url": "#burny-kaliburn",
+                  "image": {
+                    "src": "/images/bybrandlogo.png"
+                  },
+                  "description": "Lorem ipsum dolar set amet."
+                }
+              ]
+            },
+            {
+              "items": [
+                {
+                  "title": "Indalco",
+                  "url": "#indalco",
+                  "image": {
+                    "src": "/images/bybrandlogo.png"
+                  },
+                  "description": "Lorem ipsum dolar set amet."
+                },
+                {
+                  "title": "Metrode",
+                  "url": "#metrode",
+                  "image": {
+                    "src": "/images/bybrandlogo.png"
+                  },
+                  "description": "Lorem ipsum dolar set amet."
+                },
+                {
+                  "title": "Python X",
+                  "url": "#python-x",
+                  "image": {
+                    "src": "/images/bybrandlogo.png"
+                  },
+                  "description": "Lorem ipsum dolar set amet."
+                },
+                {
+                  "title": "Robolution",
+                  "url": "#robolution",
+                  "image": {
+                    "src": "/images/bybrandlogo.png"
+                  },
+                  "description": "Lorem ipsum dolar set amet."
+                },
+                {
+                  "title": "Techalloy",
+                  "url": "#techalloy",
+                  "image": {
+                    "src": "/images/bybrandlogo.png"
+                  },
+                  "description": "Lorem ipsum dolor sit amet"
+                }
+              ]
+            },
+            {
+              "items": [
+                {
+                  "title": "Vernon Tool",
+                  "url": "#vernon-tool",
+                  "image": {
+                    "src": "/images/bybrandlogo.png"
+                  },
+                  "description": "Lorem ipsum dolor sit amet"
+                },
+                {
+                  "title": "Vizient",
+                  "url": "#vizient",
+                  "image": {
+                    "src": "/images/bybrandlogo.png"
+                  },
+                  "description": "Lorem ipsum dolor sit amet"
+                },
+                {
+                  "title": "Weartech",
+                  "url": "#weartech",
+                  "image": {
+                    "src": "/images/bybrandlogo.png"
+                  },
+                  "description": "Lorem ipsum dolor sit amet"
+                },
+                {
+                  "title": "Wolf Robotics",
+                  "url": "#wolf-robotics",
+                  "image": {
+                    "src": "/images/bybrandlogo.png"
+                  },
+                  "description": "Lorem ipsum dolor sit amet"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Browse By Industry",
+          "url": "#browse-by-industry"
+        },
+        {
+          "title": "Equipment",
+          "url": "#equipment",
+          "style": "grid",
+          "children": [
+            {
+              "title": "Welding Equipment",
+              "url": "#welding-equipment",
+              "style": "grid",
+              "columns": [
+                {
+                  "items": [
+                    {
+                      "title": "MIG(GMAW)",
+                      "url": "#mig",
+                      "image": {
+                        "src": "/images/welding1.png"
+                      },
+                      "description": "Lorem ipsum dolor sit amet"
+                    },
+                    {
+                      "title": "TIG(GTAW)",
+                      "url": "#tig",
+                      "image": {
+                        "src": "/images/welding2.png"
+                      },
+                      "description": "Lorem ipsum dolor sit amet"
+                    },
+                    {
+                      "title": "Stick(SMAW)",
+                      "url": "#stick",
+                      "image": {
+                        "src": "/images/welding1.png"
+                      },
+                      "description": "Lorem ipsum dolor sit amet"
+                    },
+                    {
+                      "title": "Multiprocess",
+                      "url": "#multiprocess",
+                      "image": {
+                        "src": "/images/welding2.png"
+                      },
+                      "description": "Lorem ipsum dolor sit amet"
+                    },
+                    {
+                      "title": "Multioperator",
+                      "url": "multioperator",
+                      "image": {
+                        "src": "/images/welding1.png"
+                      },
+                      "description": "Lorem ipsum dolor sit amet"
+                    }
+                  ]
+                },
+                {
+                  "items": [
+                    {
+                      "title": "Engine Drive",
+                      "url": "#engine-drive",
+                      "image": {
+                        "src": "/images/welding2.png"
+                      },
+                      "description": "Lorem ipsum dolor sit amet"
+                    },
+                    {
+                      "title": "Submerged Arc",
+                      "url": "#submerged-arc",
+                      "image": {
+                        "src": "/images/welding1.png"
+                      },
+                      "description": "Lorem ipsum dolor sit amet"
+                    },
+                    {
+                      "title": "Training Equipment",
+                      "url": "#training-equipment",
+                      "image": {
+                        "src": "/images/welding2.png"
+                      },
+                      "description": "Lorem ipsum dolor sit amet"
+                    },
+                    {
+                      "title": "Weld Fume Control",
+                      "url": "#weld-fume-control",
+                      "image": {
+                        "src": "/images/welding1.png"
+                      },
+                      "description": "Lorem ipsum dolor sit amet"
+                    },
+                    {
+                      "title": "Wire Feeders",
+                      "url": "#wire-feeders",
+                      "image": {
+                        "src": "/images/welding2.png"
+                      },
+                      "description": "Lorem ipsum dolor sit amet"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Cutting Equipment",
+              "url": "#cutting-equipment"
+            },
+            {
+              "title": "Guns & Torches",
+              "url": "#guns-and-torches"
+            },
+            {
+              "title": "Training Equipment",
+              "url": "#training-equipment"
+            },
+            {
+              "title": "Specialty Gas",
+              "url": "#specialty-gas"
+            },
+            {
+              "title": "Gas Control",
+              "url": "#gas-control"
+            },
+            {
+              "title": "Accessories",
+              "url": "#accessories"
+            },
+            {
+              "title": "Certified Pre-Owned",
+              "url": "#certified-pre-owned"
+            }
+          ]
+        },
+        {
+          "title": "Consumables",
+          "url": "#consumables"
+        },
+        {
+          "title": "Safety",
+          "url": "#safety"
+        },
+        {
+          "title": "New Products",
+          "url": "#new-products"
+        },
+        {
+          "title": "Promotions",
+          "url": "#promotions"
+        }
+      ]
+    },
+    {
+      "title": "Automation",
+      "url": "#automation"
+    },
+    {
+      "title": "Education",
+      "url": "#education"
+    },
+    {
+      "title": "Resources",
+      "url": "#resources"
+    }
+  ],
+  "nav-utility-links": [
+    {
+      "title": "Safety",
+      "url": "#safety",
+      "class": "safety"
+    },
+    {
+      "title": "Help",
+      "url": "#help",
+      "class": "help",
+      "children": [
+        {
+          "title": "Support Center",
+          "url": "/support-center/"
+        },
+        {
+          "title": "Support Center",
+          "url": "/support-center/"
+        },
+        {
+          "title": "Support Center",
+          "url": "/support-center/"
+        },
+        {
+          "title": "Support Center",
+          "url": "/support-center/"
+        }
+      ]
+    },
+    {
+      "title": "Where to Buy/Rent",
+      "url": "#pin",
+      "class": "pin"
+    },
+    {
+      "title": "Sign In",
+      "url": "#sign-in",
+      "class": "sign-in"
+    },
+    {
+      "title": "3",
+      "url": "#shopping-cart",
+      "class": "shopping-cart"    }
+  ],
+  "nav-menu-mobile": [
+    {
+      "url": "#search",
+      "class": "search"
+    },
+    {
+      "url":"#aboutUs",
+      "class": "about-us",
+      "children": [
+        {
+          "title": "About Us",
+          "url": "/About Us/"
+        },
+        {
+          "title": "Support Center",
+          "url": "/support-center/"
+        },
+        {
+          "title": "Careers",
+          "url": "/careers/"
+        },
+        {
+          "title": "Investor Relations",
+          "url": "/investor-relations/"
+        },
+        {
+          "title": "Sustainability",
+          "url": "/sustainability/"
+        }
+      ]
+    },
+    {
+      "url":"#help",
+      "class": "help",
+      "children": [
+        {
+          "title": "Ask the experts",
+          "url": "/ask-the-experts/"
+        },
+        {
+          "title": "Support Center",
+          "url": "/support-center/"
+        }
+      ]
+    },
+    {
+      "url": "#",
+      "class": "user",
+      "form": true,
+      "id": "login-form"
+    },
+    {
+      "url": "#shopping-cart",
+      "class": "cart",
+      "title": "3"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+image: starefossen/ruby-node:latest
+
+cache:
+  paths:
+    - vendor/
+    - node_modules/
+
+before_script:
+  - gem install jekyll
+  - gem install jekyll-tidy
+  - bundle install --path vendor
+  - yarn install
+
+stages:
+  - build
+  - deploy
+
+build:
+  only: 
+    - master
+    - develop
+    - new
+  stage: build
+  script:
+    - yarn build -d public/
+  artifacts:
+    when: on_success
+    paths:
+      - public
+
+pages:
+  only: 
+    - master
+    - develop
+  stage: deploy
+  script:
+  - echo 'Deploying site'
+  artifacts:
+    paths:
+    - public

@@ -1,0 +1,26 @@
+{
+  "input-output-icons": {
+    "output-title": "Output",
+    "output-icons": [
+      {
+        "src": "/images/ItemOutputIcon_CC.gif",
+        "alt": "ItemOutputIcon_ACDC"
+      },
+      {
+        "src": "/images/ItemOutputIcon_ACDC.gif",
+        "alt": "ItemOutputIcon_CC"
+      }
+    ],
+    "input-title": "Input",
+    "input-icons": [
+      {
+        "src": "/images/ItemInputIcon_60Hz.gif",
+        "alt": "ItemOutputIcon_ACDC"
+      },
+      {
+        "src": "/images/ItemInputIcon_1Phase.gif",
+        "alt": "ItemOutputIcon_CC"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+<section{% if include.collapsable %} class="section-collapsable{% if include.pdp-section %} pdp-section{% endif %}" data-accordion{% endif %}{% if include.id %} id="{{include.id}}"{% endif %}>
+	{% if include.title %}
+      {% include component/section-header.html 
+        title=include.title
+        description=include.description
+        collapsable=include.collapsable
+        centered=include.header-centered
+		sticky-navigation-item = include.sticky-navigation-item %}
+    {% endif %}
+
+    {% if include.collapsable %}<div class="section-wrapper" data-accordion-content>{% endif %}
+

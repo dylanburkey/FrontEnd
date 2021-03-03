@@ -1,0 +1,41 @@
+{% assign e = site.data.banner[include.data] %}
+
+<div class="banner{% if e.style %} banner--{{e.style}}{% endif %}" id="main-content">
+	<div class="banner__has-gradient">
+		<div class="banner__media">
+			<div class="banner__media-wrapper">
+			{% include component/responsive-image.html 
+				small=e.image.small
+				medium=e.image.medium
+				large=e.image.large
+				alt=e.image.alt %}
+			</div>
+		</div>
+    <div class="banner__wrapper">
+	    <div class="banner__content">
+        <div class="banner__content-text banner__content-text--{{e.text-color}}">
+					{% if e.eyebrow %}<p class="banner__eyebrow">{{ e.eyebrow }}</p>{% endif %}
+					<h1 class="banner__title">{{e.text}}</h1>
+          <p class="banner__description">{{e.description}}</p>
+					{% if e.buttons %}
+            <p class="banner__buttons">
+              {% for button in e.buttons %}
+                {% include component/button.html
+                style=button.button.style
+                title=button.button.title
+                url=button.button.href %}
+              {% endfor %}
+					</p>
+					{% endif %}
+        </div>
+	    </div>
+			{% if e.cta %}
+				<div class="banner__cta-overlay">
+					<div class="banner__cta">
+						{% include component/simple-cta.html data=e.cta%}
+					</div>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</div>

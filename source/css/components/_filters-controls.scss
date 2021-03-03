@@ -1,0 +1,59 @@
+$block: 'filters-controls';
+$block2: 'sort-controls';
+
+.#{$block}, .#{$block2} {
+  border-top: 1px solid  map-get($color, gray-light);
+  padding: map-get($spacing, large) 0;
+
+  &__wrapper {
+    max-width: 256px;
+    margin: 0 auto;
+  }
+
+  &__top, &__bottom {
+    margin: 0;
+    text-align: center;
+  }
+
+  a.btn {
+    width: 100%;
+    opacity: 0.3;
+    justify-content: center;
+    cursor: not-allowed;
+    .btn-count {
+      margin: 0 map-get($spacing, xx-small);
+    }
+    &.enabled {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+
+  &__bottom {
+    margin-top: map-get($spacing, medium) - map-get($spacing, xx-small);
+    a {
+      @include font(headline);
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 18px;
+      color: map-get($color, gray-darkest);
+      text-transform: capitalize;
+      margin-right: map-get($spacing, xx-large);
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__close-btn {
+    position: relative;
+    &:before {
+      @include icon(close);
+      color: map-get($color, black);
+      font-size: 10px;
+      padding-right: 5px;
+      font-weight: bold;
+    }
+  }
+}
+

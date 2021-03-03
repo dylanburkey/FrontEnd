@@ -1,0 +1,191 @@
+$block: 'banner';
+
+.#{$block} {
+
+  position: relative;
+  &__media {
+    width: 100%;
+    height: 0;
+    padding-top: calc(360 / 1440 * 100%);
+    position: relative;
+    margin: 0;
+
+    @include mobile-only {
+      padding-top: 0;
+      height: 160px;
+    }
+    
+  }
+  &__media-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  > div {
+    position: relative;
+  }
+
+  &__has-gradient {
+    &:before {
+      content: "";
+      position: absolute!important;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.79) 70.96%, rgba(0,0,0,0) 100%);
+      z-index: 1;
+    }
+  }
+
+
+  &__content {
+    @include content-overlay;
+
+    > * {
+      //random guess, talk to design
+      @include desktop {
+        max-width: 640px;
+      }
+      @media (max-width: 1250px){
+        max-width: 760px;
+
+      }
+    }
+
+    * {
+      color: map-get($color, white);
+    }
+  }
+
+  &__content-text {
+    &--white {
+      @include balance-margins;
+      > * {
+        color: map-get($color, white);
+      }
+    }
+    &--black {
+      @include balance-margins;
+      > * {
+        color: map-get($color, black);
+      }
+    }
+  }
+
+  &__title {
+    @include typography(h1-banner);
+    margin-top: 0;
+    margin-bottom: map-get($spacing, x-small);
+    @include desktop {
+      margin-bottom: map-get($spacing, medium);
+    }
+  }
+
+  &__description {
+    opacity: 0.9;
+    @include font(regular);
+    @include typography(p-large);
+
+    //comps slightly larger
+    @include desktop {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+  &__buttons {
+    margin-top: map-get($spacing, small) + map-get($spacing, medium);
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    @include desktop {
+      margin-top: map-get($spacing, xx-large);
+      flex-direction: row;
+      a {
+        &:first-of-type {
+          margin-right: map-get($spacing, medium);
+        }
+      }
+    }
+  }
+
+  &__eyebrow {
+    @include font(headline);
+    @include typography(p);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: map-get($spacing, xx-small);
+    @include desktop {
+      margin-bottom: map-get($spacing, small);
+    }
+  }
+
+  &--light {
+    > div {
+      &:before {
+        background: linear-gradient(90deg, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.79) 70.96%, rgba(0,0,0,0) 100%);
+      }
+    }
+
+    .#{$block}__content {
+       * {
+         color: map-get($color, black);
+       }
+    }
+  }
+
+  &__cta-overlay {
+     @include desktop {
+      @include content-overlay;
+     }
+  }
+
+  &__cta {
+    @include balance-margins;
+    background: map-get($brand, background);
+    padding: map-get($spacing, large) map-get($spacing, medium);
+    position: relative;
+    z-index: 1;
+
+    @include desktop {
+      max-width: 275px;
+      border-radius: $border-radius;
+      background: map-get($color, gray-darkest);
+      padding: map-get($spacing, large);
+      margin-left: auto;
+    }
+
+    > * {
+      @include desktop {
+        color: map-get($color, white);
+      }
+    }
+  }
+  &--call-to-action {
+    .#{$block}__media {
+      height: 430px;
+      @include desktop {
+        height: 550px;
+      }
+    }
+  }
+
+  @media (min-width: 1440px){
+    &__media {
+      height: 360px;
+      padding-top: 0;
+    }
+  }
+}

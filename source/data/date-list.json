@@ -1,0 +1,59 @@
+{
+	"newsroom": [
+		{
+			"title": "Press Releases",
+			"items": [
+				{
+					"date": "February 7, 2020",
+					"day": "7",
+					"month": "Feb",
+					"title": "Lincoln Electric Announces New Magnum Pro&reg; Curve&trade; HDE&trade; Welding Gun Line",
+					"category": "Product",
+					"region": "US"
+				},
+				{
+					"date": "December 12, 2019",
+					"day": "12",
+					"month": "Dec",
+					"title": "Lincoln Electric Announces the Prism Compact Air Filtration System",
+					"category": "Education",
+					"region": "US"
+				},
+				{
+					"date": "November 18, 2019",
+					"day": "18",
+					"month": "Nov",
+					"title": "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut",
+					"category": "Corporate",
+					"region": "US"
+				}
+			]
+		},
+		{
+			"title": "Upcoming Events",
+			"items": [
+				{
+					"date": "February 3, 2020",
+					"day": "3",
+					"month": "Feb",
+					"title": "Lincoln Electric to Present at the Barclays Industrial Select Conference",
+					"region": "US"
+				},
+				{
+					"date": "March 4, 2020",
+					"day": "4",
+					"month": "Mar",
+					"title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut",
+					"region": "US"
+				},
+				{
+					"date": "April 16, 2020",
+					"day": "16",
+					"month": "Apr",
+					"title": "Consectetur adipiscing elit, sed do eiusmod tempor",
+					"region": "US"
+				}
+			]
+		}
+	]
+}

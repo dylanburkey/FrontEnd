@@ -1,0 +1,100 @@
+<div class="filtered-browse filtered-browse--discount-center">
+    <div class="container">
+        <div class="filtered-browse__menu">
+            <div class="link-filters">
+                <p class="link-filters__title">Browse by Category</p>
+                <ul class="link-filters__items">
+                    <li class="active"><button>Show All</button></li>
+                    <li data-category="Automatic Feeders"><button>Automatic Feeders</button></li>
+                    <li data-category="CC/CV Welders"><button>CC/CV Welders</button></li>
+                    <li data-category="CV Welders"><button>CV Welders</button></li>
+                    <li data-category="Engine Driven"><button>Engine Driven</button></li>
+                    <li data-category="Machine Accessories"><button>Machine Accessories</button></li>
+                    <li data-category="Magnum"><button>Magnum</button></li>
+                    <li data-category="Plasma"><button>Plasma</button></li>
+                    <li data-category="Stick Welders"><button>Stick Welders</button></li>
+                    <li data-category="TIG Welders"><button>TIG Welders</button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="filtered-browse__content">
+            <div class="filtered-browse__menu">
+                <div class="filtered-browse__select filtered-browse__select--show">
+                    <div class="select">
+                        <p class="select__label">Items <span class="pagination-count"></span>-<span class="show-count"></span> of <span class="total-count"></span></p>
+                        <div class="select__wrapper" data-label="Show:">
+                            <div class="select-wrap">
+                                <label class="filtered-browse__label" for="show-per-page-select-1">Show per page</label>
+                                <select id="show-per-page-select-1">
+                                    <option value="10" selected="selected">10 Per Page</option>
+                                    <option value="25">25 Per Page</option>
+                                    <option value="50">50 Per Page</option>
+                                    <option value="100">100 Per Page</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filtered-browse__select filtered-browse__select--sort">
+                    <div class="select">
+                        <div class="select__wrapper" data-label="Sort By:">
+                          <div class="select-wrap">
+                            <label class="filtered-browse__label" for="sort-select">sort</label>
+                            <select id="sort-select">
+                                <option value="priceDesc">Price - High to Low</option>
+                                <option value="priceAsc">Price - Low to High</option>
+                                <option value="nameDesc">Name - Desc</option>
+                                <option value="nameAsc" selected="selected">Name - Asc</option>
+                                <option value="valueDesc">Discount Value - High to Low</option>
+                            </select>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% if site.data.cards.discount-center.discount-center-preowned %}
+            <div class="filtered-browse__results">
+                {% for item in site.data.cards.discount-center.discount-center-preowned %}
+                    {% include component/cards/discount-center.html 
+                        data="discount-center-preowned"
+                        index=forloop.index0 %}
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="filtered-browse__no-results">
+                <h3>No results were found</h3>
+            </div>
+            {% endif %}
+            <div class="filtered-browse__menu filtered-browse__menu--footer">
+                <div class="filtered-browse__pagination">
+                    <div class="filtered-browse__prev">
+                        <a class="filtered-browse__prev-link" aria-label="previous">
+                            <span class="icon icon-chevron-left"></span>
+                        </a>
+                    </div>
+                    <div class="filtered-browse__pagination-items"></div>
+                    <div class="filtered-browse__next">
+                        <a class="filtered-browse__next-link" aria-label="next">
+                            <span class="icon icon-chevron-right"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="filtered-browse__select filtered-browse__select--show">
+                    <div class="select">
+                        <div class="select__wrapper" data-label="Show:">
+                            <div class="select-wrap">
+                                <label class="filtered-browse__label" for="show-per-page-select-2">Show per page</label>
+                                <select id="show-per-page-select-2">
+                                    <option value="10" selected="selected">10 Per Page</option>
+                                    <option value="25">25 Per Page</option>
+                                    <option value="50">50 Per Page</option>
+                                    <option value="100">100 Per Page</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

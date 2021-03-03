@@ -1,0 +1,35 @@
+{% if site.data.teaser[include.data] %}
+{% assign e = site.data.teaser[include.data] %}
+{% else %}
+{% assign e = include.data %}
+{% endif %}
+
+<div class="teaser">
+	<div class="teaser__wrapper">
+		<div class="teaser__content{% if e.text-color %} teaser__content--{{e.text-color}}{% endif %}">
+			{% if e.eyebrow %}<p class="teaser__eyebrow">{{ e.eyebrow }}</p>{% endif %}
+			<h2 class="teaser__title">{{ e.title }}</h2>
+			{% if e.description %}<p class="teaser__description">{{ e.description }}</p>{% endif %}
+		</div>
+		
+		{% if e.button %}
+		<p class="teaser__cta">
+			{% include component/button.html
+				style=e.button.style
+				title=e.button.title
+				url=e.button.href %}
+		</p>
+		{% endif %}
+
+		{% if e.buttons %}
+			<p class="teaser__cta">
+			{% for button in e.buttons %}
+				{% include component/button.html
+					style=button.button.style
+					title=button.button.title
+					url=button.button.href %}
+			{% endfor %}
+			</p>
+		{% endif %}
+	</div>
+</div>

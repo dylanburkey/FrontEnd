@@ -1,0 +1,183 @@
+{
+  "dark": {
+    "text": "Lorem ipsum dolor sit amet",
+    "text-color": "black",
+    "description": "Lorem ipsum dolor sit amet consec tetur adipiscing elit. Morbi et sollicitudin.",
+    "image": {
+    	"small": "/images/1440x360-dark.png",
+    	"medium": "/images/1440x360-dark.png",
+    	"large": "/images/1440x360-dark.png"
+    },
+    "imageAlt": "Image alt text, should always be added for accessibility"
+  },
+  "welding-equipment":{
+    "text": "Welding Equipment",
+    "text-color": "white",
+    "description": "Welding on heavy equipment requires robust products and cutting-edge processes.",
+    "image": {
+    	"small": "/images/banner.png",
+    	"medium": "/images/banner.png",
+    	"large": "/images/banner.png",
+    	"alt": "Welding Equipment alt text here, don't include special characters"
+    }
+  },
+  "solutions-by-industry":{
+    "text": "Solutions By Industry",
+    "text-color": "white",
+    "description": "Welding on heavy equipment requires robust products and cutting-edge processes.",
+    "image": {
+        "small": "/images/banner.png",
+        "medium": "/images/banner.png",
+        "large": "/images/banner.png",
+        "alt": "Welding Equipment alt text here, don't include special characters"
+    }
+  },
+  "newsroom":{
+    "text": "Newsroom",
+    "text-color": "black",
+    "description": "News & events lorem ipsum here. Duis nisl justo, efficitur sit amet ex id, volutpat facilisis orci. Viverra Luctus varius.",
+    "image": {
+      "small": "/images/banner.png",
+      "medium": "/images/banner.png",
+      "large": "/images/banner.png",
+      "alt": "Welding Equipment alt text here, don't include special characters"
+    }
+  },
+  "promotions":{
+    "text": "Promotions",
+    "text-color": "black",
+    "description": "Buy red, save green! Check out our current promotions for great savings. Offers valid January 13th through March 31st, 2020",
+    "image": {
+      "small": "/images/banner-promotions.png",
+      "medium": "/images/banner-promotions.png",
+      "large": "/images/banner-promotions.png",
+      "alt": "Welding Equipment alt text here, don't include special characters"
+    }
+  },
+  "heavy-fabrication":{
+    "style":"call-to-action",
+    "text": "Heavy Fabrication",
+    "text-color": "white",
+    "description": "Welding on heavy equipment requires robust products and cutting-edge processes.",
+    "image": {
+      "small": "/images/banner-heavy-fabrication.png",
+      "medium": "/images/banner-heavy-fabrication.png",
+      "large": "/images/banner-heavy-fabrication.png",
+      "alt": "Banner heavy-fabrication"
+    },
+    "cta": {
+      "title": "Ask The Experts",
+      "description": "Get help from Lincoln Electric welding experts.",
+      "button": {
+        "title": "Contact Us",
+        "href": "#"
+      }
+    }
+  },
+  "promotions-detail":{
+    "text": "Plasmania Plus",
+    "text-color": "white",
+    "eyebrow": "Tomahawk&reg; Plasma Cutters",
+    "description": "Save up to $700 Instantly or get a free Accessory Kit when you purchase a Lincoln Electric Tomahawk Hand Held Plasma Cutter.",
+    "image": {
+      "small": "/images/banner-promotions-detail.png",
+      "medium": "/images/banner-promotions-detail.png",
+      "large": "/images/banner-promotions-detail.png",
+      "alt": "banner-promotions-detail"
+    }
+  },
+  "power-mig":{
+    "text": "Promotions",
+    "text-color": "white",
+    "description": "Buy red, save green! Check out our current promotions for great savings. Offers valid January 13th through March 31st, 2020",
+    "image": {
+      "small": "/images/banner-promotions.png",
+      "medium": "/images/banner-promotions.png",
+      "large": "/images/banner-promotions.png",
+      "alt": "Welding Equipment alt text here, don't include special characters"
+    }
+  },
+  "promotions-landing-page":{
+    "text": "Promotions",
+    "text-color": "black",
+    "description": "Buy red, save green! Check out our current promotions for great savings. Offers valid January 13th through March 31st, 2020",
+    "image": {
+      "small": "/images/banner-promotions.png",
+      "medium": "/images/banner-promotions.png",
+      "large": "/images/banner-promotions.png",
+      "alt": "Welding Equipment alt text here, don't include special characters"
+    }
+  },
+  "industry-detail-page": {
+    "text": "Heavy Fabrication",
+    "text-color": "black",
+    "description": "Welding on heavy equipment requires robust products and cutting-edge processes.",
+    "image": {
+      "small": "/images/banner-heavy-fabrication.png",
+      "medium": "/images/banner-heavy-fabrication.png",
+      "large": "/images/banner-heavy-fabrication.png",
+      "alt": "Banner heavy-fabrication"
+    }
+  },
+  "press-releases":{
+    "text": "Press Releases",
+    "text-color": "white",
+    "description": "Lincoln Electric news lorem ipsum nisl justo, efficitur sit amet ex id, volutpat facilisis orci",
+    "image": {
+      "small": "/images/press-banner.png",
+      "medium": "/images/press-banner.png",
+      "large": "/images/press-banner.png",
+      "alt": "Welding Equipment alt text here, don't include special characters"
+    }
+  },
+  "magnum-pro":{
+    "style":"call-to-action",
+    "text-color": "black",
+    "text": "Magnum® PRO CurveTM HDETM",
+    "description": "Robust. Versatile. Comfortable.",
+    "image": {
+      "small": "/images/banner-promotions-detail-magnum-pro.png",
+      "medium": "/images/banner-promotions-detail-magnum-pro.png",
+      "large": "/images/banner-promotions-detail-magnum-pro.png",
+      "alt": "Banner Magnum Pro"
+    },
+    "buttons": [
+      {
+        "button": {
+          "title": "Configure Your Gun",
+          "href": "#configure-your-gun"
+        }
+      },
+      {
+        "button": {
+          "title": "Product Specs",
+          "href": "#product-specs",
+          "style": "tertiary-solid"
+        }
+      }
+    ],
+    "cta": {
+      "title": "Contact a Sales Rep",
+      "link": {
+        "icon": "icon-phone",
+        "text": "888-417-1950",
+        "href": "tel:888-417-1950"
+      },
+      "button": {
+        "title": "Send us a message",
+        "url": "#send-message"
+      }
+    }
+  },
+  "certified-preowned": {
+    "text": "Certified Pre-Owned Equipment",
+    "text-color": "black",
+    "description": "Description text lorem ipsum dolor sit amet consec tetur adipiscing elit. Morbi et sollicitudin",
+    "image": {
+      "small": "/images/banner-heavy-fabrication.png",
+      "medium": "/images/banner-heavy-fabrication.png",
+      "large": "/images/banner-heavy-fabrication.png",
+      "alt": "Banner heavy-fabrication"
+    }
+  }
+}

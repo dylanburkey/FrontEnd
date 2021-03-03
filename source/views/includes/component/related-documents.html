@@ -1,0 +1,19 @@
+{% assign e = site.data.related-documents[include.data] %}
+
+<div class="related-documents">
+    <div class="container">
+      <h2 class="related-documents__title">{{e.title}}</h2>
+      <ul class="related-documents__list">
+        {% for item in e.items %}
+        <li class="related-documents-item">
+          <a class="related-documents__link{% if item.docType %} related-documents__link--{{item.docType}}{% endif %}" href="{{item.url}}">
+            <div class="related-documents-item__content">
+              <h4 class="related-documents-item__subtitle {% if item.restricted %}related-documents-item__subtitle--restricted{% endif %}">{{item.subtitle}}</h4>
+              <p class="related-documents-item__description">{{item.description}}</p>
+            </div>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+</div>

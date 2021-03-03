@@ -1,0 +1,9 @@
+<div class="pricing">
+	<p class="pricing__title">MSRP</p>
+	<div class="pricing__body">
+		<span class="current">{{ include.current }}</span>
+		{% if include.original %}
+		<span class="original">{{ include.original }}</span>
+		{% endif %}
+	</div>
+</div>

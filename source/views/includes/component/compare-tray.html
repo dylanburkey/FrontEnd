@@ -1,0 +1,29 @@
+<div class="compare-tray">
+	<div class="compare-tray__items">
+		<div class="compare-tray-item">
+			<div class="compare-tray-item__image">
+				<a href="#"><img src="/images/product-4.jpg" /></a>
+			</div>
+			<div class="compare-tray-item__content">
+				<p class="compare-tray-item__title"><a href="#"><strong>ASPECT® 375 AC/DC</strong></a></p>
+				<p class="compare-tray-item__description">TIG Welder | K3945-1</p>
+				<div  class="compare-tray-item__pricing">
+					<div class="pricing">
+						<span class="pricing__label">MSRP</span>
+						<span class="pricing__msrp">$5,784.00</span>
+					</div>
+				</div>
+			</div>
+			<button class="compare-tray-item__close">&times;</button>
+		</div>
+	</div>
+	<div class="compare-tray__menu">
+		<p class="compare-tray__title"><strong>Compare up to 4 products</strong></p>
+		<button class="compare-tray__clear-all">Clear All</button>
+		<div class="compare-tray__cta">
+		{% include component/button.html
+			title="Compare"
+			url="#" %}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,45 @@
+$block: 'input-quantity';
+
+.#{$block} {
+  align-self: stretch;
+  display: flex;
+  background: map-get($color, white);
+  border: 1px solid map-get($brand, border);
+  border-right: 0;
+  border-radius: $border-radius 0 0 $border-radius;
+  padding: 0 map-get($spacing, x-small);
+
+  input {
+    @include font(headline);
+    @include typography(p-small);
+    appearance: none;
+    background: none;
+    border: 0;
+    width: 30px;
+    text-align: center;
+    outline: 0;
+
+    &[type="button"] {
+      @include typography(h3);
+      color: map-get($color, red);
+      font-weight: bold;
+      cursor: pointer;
+      &[disabled]{
+        opacity: .5;
+      }
+    }
+
+    &[type="text"]{
+      width: 50px;
+    }
+  }
+
+  + .btn {
+    border-radius: 0 $border-radius $border-radius 0;;
+    padding-left: map-get($spacing, medium);
+    padding-right: map-get($spacing, medium);
+    @include mobile-only {
+      margin-bottom : 0;
+    }
+  }
+}

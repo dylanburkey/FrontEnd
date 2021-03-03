@@ -1,0 +1,21 @@
+{% assign e = site.data.overview[include.data] %}
+
+<div class="overview">
+  <div class="container">
+    <div class="overview__main">
+      {{ e.features }}
+      {% include component/disclaimer.html
+      data="viking-3350-disclaimer" %}
+    </div>
+    <div class="overview__rail">
+      {% include component/list-group.html
+        data="viking-3350-whats-included" %}
+      {% include component/list-group.html
+        data="viking-3350-documentation" %}
+      {% include component/list-group.html
+        data="viking-3350-cad-files" %}
+      {% include component/list-group.html
+        data="viking-3350-training-education" %}
+    </div>
+  </div>
+</div>

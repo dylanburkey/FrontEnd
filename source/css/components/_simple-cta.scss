@@ -1,0 +1,60 @@
+$block: 'simple-cta';
+
+.#{$block} {
+	display: flex;
+	align-items: center;
+
+	@include desktop {
+		display: block;
+	}
+
+	&__content {
+		@include balance-margins;
+		flex-basis: 50%;
+		flex-grow: 1;
+	}
+
+  &__title {
+    margin-bottom: 0!important;
+    @include desktop {
+      color: map-get($color, white);
+    }
+  }
+
+  &__link {
+    display: block;
+    @include font(regular);
+    color: map-get($color, gray-darker);
+    font-size: 14px;
+    margin-top: map-get($spacing, x-small);
+    span {
+      margin-right: map-get($spacing, xx-small);
+    }
+    @include desktop {
+      color: map-get($color, white);
+      margin-top: map-get($spacing, small);
+    }
+  }
+
+	&__button {
+		// padding-left: map-get($spacing, large);
+		a {
+			margin-bottom: 0;
+		}
+		@include desktop {
+			padding-left: 0;
+			margin-top: map-get($spacing, medium);
+		}
+
+		> .btn {
+			&:not(.link).small {
+				padding: 12px;
+			}
+			@include desktop {
+				width: 100%;
+				text-align: center;
+				justify-content: center;
+			}
+		}
+	}
+}

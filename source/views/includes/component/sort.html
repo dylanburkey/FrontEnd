@@ -1,0 +1,31 @@
+{% assign sort = site.data.sort[include.data] %}
+
+<div class="sort">
+  <div class="sort__wrapper">
+    <h3 class="sort__title">{{sort.title}}</h3>
+      <div class="sort-group" data-facet-name="sort">
+        <ul class="sort-group__items">
+          {% for item in sort.items %}
+            <li>
+              <div class="sort-item">
+                  {% include component/radio-link.html
+                  data= item %}
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+    </div>
+  </div>
+  <div class="sort__controls">
+    <div class="sort-controls">
+      <div class="sort-controls__wrapper">
+        <p class="sort-controls__top">
+          <a href="#!submit-sort" class="btn js-submit-btn">apply filter</a>
+        </p>
+        <p class="sort-controls__bottom">
+          <a class="sort-controls__close-btn js-hide-sort" href="{{sort.close-control.href}}" data-toggle="{{sort.close-control.id}}">{{sort.close-control.text}}</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

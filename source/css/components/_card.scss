@@ -1,0 +1,1531 @@
+$block: 'card';
+
+.#{$block} {
+	background: white;
+	border-radius: $border-radius;
+	// margin: map-get($spacing, medium) 0;
+	position: relative;
+	color: map-get($brand, text);
+	display: flex;
+	height: calc(100%);
+
+	&.swiper-slide {
+		height: auto;
+	}
+
+	@include desktop {
+		flex-direction: column;
+	}
+
+	//modifiers based on card "style"
+	// .cards & {
+	// 	display: flex;
+	// 	//height: calc(100% - #{map-get($spacing, medium) * 2});
+	// }
+
+	&.card--product-grid {
+		.card__content {
+			@include mobile-only {
+				margin-left: map-get($spacing, medium);
+			}
+		}
+		.card__title {
+			word-break: break-word;
+		}
+	}
+
+	&.card--icon {
+	  text-align: center;
+	  padding: map-get($spacing, medium);
+	  background: none;
+	  display: block;
+
+	  @include desktop {
+	  	display: flex;
+		}
+		
+		&:hover,
+		&:focus {
+			box-shadow: 0 0 10px rgba(0,0,0,.15);
+		}
+  
+	  .card__description {
+	    @include typography(p-large);
+	  }
+
+	  .card__image,
+	  .card__media {
+	  	flex-basis: auto;
+	  	width: auto;
+	    img {
+	      display: inline-block;
+	      width: auto;
+	      height: auto;
+	    }
+	  }
+
+	  .card__title {
+	    margin-top: map-get($spacing, small);
+		}
+
+		@include mobile-only {
+			display: flex;
+			align-items: center;
+			.card__content { 
+				text-align: left;
+			}
+			.card__title {
+				margin-top: 0;
+			}
+		}
+	}
+
+	&.card--call-to-action,
+	&.card--contact {
+		.card__content {
+			@include desktop {
+				padding: map-get($spacing, x-large);
+			}
+		}
+
+		.card__title {
+			+ .card__description {
+				@include typography(p-small);
+				margin-top: 0;
+			}
+		}
+	}
+
+	&.card--call-to-action {
+		.card__description {
+			flex-grow: 1;
+			margin-bottom: map-get($spacing, x-large);
+		}
+
+
+		.card__cta {
+			.btn {
+				width: 100%;
+				text-align: center;
+				justify-content: center;
+			}
+		}
+	}
+
+	&.card--contact {
+		.card__description {
+			flex-grow: 0;
+		}
+
+		.card__content {
+			ul {
+				li {
+					font-size: 14px;
+					line-height: 18px;
+					padding-left: 0;
+					list-style: none;
+					margin-left: 0;
+					&:before {
+						content: none;
+					}
+
+					a {
+						display: flex;
+						align-items: center;
+
+						span {
+							font-size: 80%;
+							margin-right: map-get($spacing, x-small);
+						}
+					}
+				}
+			}
+		}
+
+		.card__name {
+			@include typography(p-small);
+			margin-bottom: 0;
+			font-weight: bold;
+		}
+	}
+
+	&.card--article-list,
+	&.card--article-grid {
+		.card__meta {
+			font-size: 14px;
+			line-height: 19px;
+			color: map-get($color, gray-dark);
+			display: flex;
+			flex-wrap: wrap;
+			span {
+				display: flex;
+				align-items: center;
+				&:after {
+					content: "";
+					margin: 0 map-get($spacing, x-small);
+					display: inline-block;
+					height: 75%;
+					width: 1px;
+					background: map-get($color, gray);
+				}
+				&:last-of-type {
+					&:after {
+						content: none;
+					}
+				}
+
+				&.card__sub-category {
+					flex: 100%;
+					font-weight: bold;
+					@include desktop {
+						flex: inherit;
+					}
+					&:after {
+						content: none;
+						@include desktop {
+							content: "";
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.card--article-list {
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+
+		.card__image,
+		.card__media {
+			@include desktop {
+				flex-basis: calc(100%/3);
+				display: flex;
+				align-items: center;
+				max-height: 210px;
+				overflow: hidden;
+
+				.card__image-wrapper {
+					width: 100%;
+					height: 0;
+					padding-top: calc(210/293*100%);
+					position: relative;
+					margin: 0;
+					img {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						object-fit: contain;
+					}
+				}
+			}
+			@include mobile-only {
+				flex-basis: calc(100%/2);
+				width: calc(100%/2);
+				.card__image-wrapper {
+					img {
+						max-width: 200px;
+					}
+				}
+			}
+			.card__image-wrapper {
+				img {
+					@include desktop {
+						border-radius: $border-radius 0 0 $border-radius;
+					}
+				}
+			}
+		}
+
+		.card__title {
+			+ p {
+				@include typography(p-small);
+				margin-top: 0;
+			}
+		}
+
+		.card__content {
+			flex-basis: calc(100%/3*2);
+			@include desktop {
+				padding: map-get($spacing, x-large);
+			}
+			@include mobile-only {
+				flex-basis: calc(100%/2);
+			}
+		}
+		.card__meta {
+			@include mobile-only {
+				width: calc(100%/2);
+				padding-left: 0;
+			}
+		}
+		.card__title {
+			@include mobile-only {
+				margin: 0;
+				padding-left: calc(100%/2);
+			}
+		}
+		.card__description {
+			color: map-get($color, gray-darker);
+			@include font(regular);
+			font-size: 15px;
+			letter-spacing: 0;
+			line-height: 20px;
+		}
+		
+		.card__download {
+			display: block;
+			margin-top: map-get($spacing, medium);
+		}
+
+		.card__download-link {
+			color: map-get($color, red);
+			@include font(headline);
+			font-size: 15px;
+			font-weight: bold;
+			letter-spacing: 0;
+			line-height: 17px;
+			text-transform: uppercase;
+			
+			&:before {
+				@include icon(download);
+				background: transparent;
+				width: auto;
+				height: auto;
+				position: relative;
+				top: auto;
+				padding-right: map-get($spacing, xx-small);
+			}
+		}
+		
+		&:hover,
+		&:focus {
+			box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+			.card__title {
+				color: map-get($color, red);
+			}
+		}
+	}
+
+	&.card--article-grid {
+		background: transparent;
+
+		.card__content {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		.card__image,
+		.card__media {
+			position: relative;
+			margin-right: map-get($spacing, medium);
+
+			@include desktop {
+				margin-right: 0;
+			}
+
+			img {
+				@include mobile-only {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+				border-radius: 0!important;
+			}
+
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				width: 0;
+				height: 3px;
+				background: transparent;
+			}
+		}
+
+		.card__image {
+			position: relative;
+			display: block;
+			height: 0;
+			width: 100%;
+			overflow: initial;
+			padding-top: calc(5 / 7 * 100%);
+			@include mobile-only {
+				padding-top: calc(5 / 11 * 100%);
+			}
+			@include desktop {
+				img {
+					display: block;
+					height: 100%;
+					width: 100%;
+					position: absolute;
+					top: 0;
+				}
+			}
+		}
+
+		&:hover,
+		&:focus {
+			.card__title {
+				color: map-get($color, red);
+				transition: color 200ms ease;
+			}
+			.card__image,
+			.card__media {
+				&:after {
+					@include desktop {
+						width: 100%;
+						background: map-get($color, red);
+						animation: move 150ms linear;
+						transition: background 200ms ease;
+					}
+				}
+			}
+		}
+	}
+
+	&.card--image-hover {
+		@include desktop {
+			display: flex;
+			cursor: pointer;
+		}
+
+		.card__description {
+			@include transition;
+			visibility: hidden;
+			opacity: 0;
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			padding: map-get($spacing, small) map-get($spacing, medium);
+			border-radius: 0 0 $border-radius $border-radius;
+			background: rgba(0, 0, 0, .80);
+			color: white;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		.card__title {
+			display: flex;
+			align-items: center;
+			margin: 0;
+			@include desktop {
+				margin: map-get($spacing, medium);
+				text-align: center;
+				order: 0;
+				display: inline-block;
+				flex-grow: 1;
+			}
+		}
+
+		.card__image,
+		.card__media {
+			width: auto;
+			//guess
+			max-width: 80px;
+			flex-basis: auto;
+			margin-right: map-get($spacing, small);
+
+			@include mobile-only {
+				min-width: 80px;
+			}
+			
+			@include desktop {
+				max-width: 100%;
+				margin-right: 0;
+			}
+			img {
+				border-radius: $border-radius 0 0 $border-radius;
+				@include desktop {
+					border-radius: 0 0 $border-radius $border-radius;
+					width: 100%;
+					height: 100%;
+					object-fit: fill;
+				}
+			}
+		}
+
+
+		> div {
+			position: relative;
+			@include desktop {
+				order: 1
+			}
+		}
+
+		&:hover,
+		&:focus {
+			box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+			.card__title {
+				color: map-get($color, red);
+			}
+			.card__description {
+				@include desktop {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&.card--promo-grid {
+		display: block;
+		padding-right: map-get($spacing, medium);
+
+		&:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		@include desktop {
+			display: flex;
+			padding-right: 0;
+		}
+
+		.card__image,
+		.card__media {
+			float: left;
+			max-width: calc(100% / 3);
+			margin-right: map-get($spacing, medium);
+			@include desktop {
+				float: none;
+				order: 2;
+				max-width: 100%;
+				
+				img {
+					border-radius: 0;
+				}
+			}
+		}
+
+		.card__title,
+		.card__description,
+		.card__eyebrow {
+			padding-left: calc(100% / 3 + #{map-get($spacing, medium)});
+		}
+
+		.card__title {
+			@include typography(h2);
+			+ p {
+				margin-top: 0;
+			}
+
+			span {
+				display: block;
+				font-weight: normal;
+				font-size: 18px;
+				line-height: 24px;
+			}
+
+			@include desktop {
+				font-size: 26px;
+				line-height: 30px;
+				padding: 0 map-get($spacing, large) map-get($spacing, large);
+				margin-bottom: 0;
+				flex-grow: 1;
+			}
+		}
+
+		.card__description {
+			padding-bottom: map-get($spacing, large);
+			@include desktop {
+				order: 3;
+				padding: map-get($spacing, large);
+				margin-top: 0;
+			}
+		}
+
+		.card__eyebrow {
+			color: map-get($color, black);
+			padding-top: map-get($spacing, medium);
+			&:after {
+				content: "";
+				height: 2px;
+				width: 100%;
+				background: map-get($color, red);
+				display: block;
+				margin-top: map-get($spacing, small);
+			}
+
+			@include desktop {
+				margin-top: 0;
+				padding: map-get($spacing, large);
+				padding-bottom: 0;
+			}
+		}
+	}
+
+	&.card--promo-detail {
+		flex-direction: column;
+		border-radius: $border-radius $border-radius 0 0;
+		border-bottom: 3px solid map-get($color, red);
+
+		.card__content {
+			@include mobile-only {
+				display: flex;
+				flex-direction: row;
+				flex-basis: 100% !important;
+			}
+			width: 100%!important;
+			display: block;
+			padding: map-get($spacing, large);
+
+			@include desktop {
+				padding: map-get($spacing, x-large);
+			}
+
+			// the following div does not have a class because of rich text usage
+			> div {
+				@include mobile-only {
+					flex-basis: calc(100%/3 * 2);
+				}
+				@include balance-margins;
+				display: inline-block;
+				width: 66%;
+
+				&.card__image,
+				&.card__media {
+					@include mobile-only {
+						flex-basis: 33%;
+					}
+					display: inline-block;
+					width: 33%;
+				}
+			}
+
+			> div > ul {
+				list-style-position: inside;
+				list-style-type: disc;
+				color: map-get($color, gray);
+				margin-top: map-get($spacing, x-large);
+				li {
+					@include typography(p-small);
+					margin: map-get($spacing, xx-small) 0;
+					padding-left: 0;
+					list-style: none;
+					&:before {
+						content: none;
+					}
+				}
+			}
+		}
+
+		.card__offer {
+			@include mobile-only {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+			margin: 0 map-get($spacing, large) map-get($spacing, large);
+			background: map-get($brand, background);
+			border-top: 1px solid map-get($brand, border);
+			border-bottom: 1px solid map-get($brand, border);
+			display: flex;
+			align-items: center;
+			@include desktop {
+				margin: 0 map-get($spacing, x-large) map-get($spacing, x-large);
+			}
+
+			.offer,
+			.offer-separator {
+				@include balance-margins;
+				padding: map-get($spacing, small);
+				color: map-get($color, black);
+
+				@include desktop {
+					padding: map-get($spacing, medium);
+				}
+				h4 {
+					margin-bottom: 0;
+					text-transform: uppercase;
+				}
+
+				p {
+					margin-top: map-get($spacing, xx-small);
+					color: map-get($color, black);
+				}
+			}
+
+			.offer {
+				&--secondary {
+					h4 {
+						color: map-get($color, red);
+					}
+				}
+			}
+		}
+
+		&:hover,
+		&:focus {
+			box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+		}
+	}
+
+	//hover states
+	&.card--content,
+	&.card--product-grid,
+	&.card--promo-grid,
+  	&.card--product-list {
+		&:hover,
+		&:focus {
+			box-shadow: 0 0 0 1px map-get($brand, border); 
+			cursor: pointer;
+			.card__title,
+			.card__eyebrow {
+				@include transition;
+				color: map-get($color, red);
+			}
+		}
+	}
+
+	&.card--product-list {
+
+		@include mobile-only {
+			display: block;
+			padding: map-get($spacing, large);
+			height: 100%;
+		}
+
+		@include desktop {
+			display: flex;
+			flex-wrap: wrap;
+			height: auto;
+			flex-direction: row;
+		}
+
+		.card__input-output,
+		.card__short-desc,
+		.card__pricing,
+		.card__info,
+		.card__compare {
+			flex-basis: 100%;
+			width: 100%;
+			height: 100%;
+		}
+
+		.card__short-desc {
+			@include desktop {
+				margin-bottom: 0;
+			}
+		}
+
+		.card__image {
+			width: calc(100%/2);
+			margin: auto;
+			@include mobile-only {
+				float: left;
+				padding-right: map-get($spacing, large);
+				margin-bottom: map-get($spacing, large);
+				position: relative;
+				height: 100%;
+				max-height: 210px;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+					max-height: 210px;
+				}
+
+			}
+
+			@include desktop {
+				flex-basis: calc(100% / 3);
+				img {
+					border-radius: $border-radius 0 0 0;
+					max-height: 210px;
+				}
+			}
+		}
+
+		.card__info {
+			@include mobile-only {
+				padding-left: calc(100%/2);
+			}
+		}
+
+		.card__pricing,
+		.card__input-output,
+		.card__compare {
+			@include desktop {
+				float: right;
+				width: calc(100% / 3);
+				padding-left: 32px;
+			}
+		}
+
+		.card__input-output {
+		 	@include mobile-only {
+		 		clear: left;
+				margin-top: map-get($spacing, medium);
+				padding-top: map-get($spacing, small);
+				border-top: 1px solid map-get($color, gray-light);
+		 	}
+     		 @include desktop {
+        		margin: map-get($spacing, medium) 0;
+				.input-output-icons {
+					flex-direction: column;
+					&__item {
+						margin-right: 0;
+						margin-bottom: map-get($spacing, medium);
+						&:last-of-type {
+							margin-bottom: 0;
+						}
+					}
+					&-item {
+						flex-direction: column;
+						align-items: flex-start;
+					}
+					&-item__title {
+						margin-right: 0;
+						margin-bottom: map-get($spacing, xx-small);
+					}
+				}
+     		}
+		}
+
+		.card__info,
+		.card__short-desc,
+		.card__rebate {
+			@include desktop {
+				float: left;
+				width: calc(100% / 3  * 2);
+				padding-right: map-get($spacing, large);
+			}
+		}
+
+		.card__pricing {
+			@include mobile-only {
+				padding-left: calc(100%/2);
+			}
+			@include desktop {
+				border-top: none;
+				margin-top: 0;
+				.pricing__title {
+				margin-top: 0;
+				}
+			}
+		}
+		.card__rating {
+			@include mobile-only {
+				padding-left: calc(100%/2);
+			}
+		}
+
+		.card__description {
+			@include mobile-only {
+				padding-left: calc(100%/2);
+			}
+		}
+
+		.card__short-desc, 
+		.card__rebate {
+			@include desktop {
+				clear: left;
+			}
+		}
+
+
+		.card__compare {
+			@include desktop {
+				clear: both;
+			}
+		}
+
+
+		.card__content {
+			width: 100%;
+			position: relative;
+			padding: 0;
+
+			@include mobile-only {
+				&:after {
+					content: "";
+					display: table;
+					clear: both;
+				}
+			}
+
+			@include desktop {
+				display: block;
+				width: calc(100%/3 * 2);
+				padding: map-get($spacing, large);
+
+				&:after {
+					content: "";
+					right: calc(100%/3);
+					height: calc( 100% - #{map-get($spacing, large) * 2} );
+					width: 1px;
+					display: block;
+					background: map-get($brand, border);
+					position: absolute;
+				}
+			}
+		}
+		.card__title {
+			margin-top: 0;
+			@include mobile-only {
+				word-break: break-word;
+				padding-left: calc(100%/2);
+			}
+    }
+		.card__rebate {
+			margin: map-get($spacing, medium) 0;
+			@include desktop {
+				margin: map-get($spacing, small) 0 0;
+			}
+		}
+	}
+
+  &.card--product-grid {
+    @include mobile-only {
+			// display: block;
+			padding: map-get($spacing, large);
+
+			.card__title {
+				margin-bottom: 0;
+			}
+
+			.card__image + img {
+				float: left;
+				padding-right: map-get($spacing, large);
+				margin-bottom: map-get($spacing, large);
+				flex-basis: calc(100%/2);
+				width: calc(100%/2);
+			}
+
+			.card__content {
+				width: 100%;
+				@include mobile-only {
+					padding: 0;
+				}
+
+				&:after {
+					content: "";
+					display: table;
+					clear: both;
+				}
+			}
+
+			.card__wrapper, 
+			.card__rating, 
+			.card__pricing, 
+			.card__aws {
+				// padding-left: calc(100%/3);
+				padding-left: map-get($spacing, small);
+			}
+
+			.card__compare {
+				margin-top: map-get($spacing, medium);
+				clear: left;
+			}
+		}
+		@include desktop {
+			.card__image {
+				img {
+					display: block;
+				}
+			}
+		}
+    .card__compare {
+      @include desktop {
+        margin-top: map-get($spacing, small);
+      }
+    }
+  }
+
+	///
+	//product cards only
+	///
+
+	//product flag, e.g. "new" or "sale"
+	&[data-product-flag]{
+		$size: 6px;
+		$height: 28px;
+
+		&:before {
+			@include font(headline);
+			font-size: 14px;
+			line-height: $height;
+			height: $height;
+			font-weight: bold;
+			content: attr(data-product-flag);
+			background: map-get($color, gray-darker);
+			color: white;
+			text-transform: uppercase;
+			padding: 0 map-get($spacing, small);
+			position: absolute;
+			top: 10px;
+			left: -$size;
+			border-radius: 0 $border-radius/2 $border-radius/2 0;
+			box-shadow: 1px 1px 4px 0 rgba(20,20,20,0.38);
+			z-index: 1;
+		}
+
+		&:after {
+			position: absolute;
+			top: $height + 10px;
+			left: -$size;
+			content: "";
+			display: inline-block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 $size $size 0;
+			border-color: transparent map-get($color, gray-darkest) transparent transparent;
+		}
+	}
+
+	&__title {
+		color: map-get($brand, text);
+		a {
+			@include link(gray-darkest);
+			&:after {
+				@include icon(chevron-right);
+				padding-left:  map-get($spacing, xx-small);
+				@include typography(p);
+			}
+		}
+
+		+ p {
+			// margin-top: - map-get($spacing, small);
+			margin-top: 0;
+		}
+    // .cards--offers & {
+    //     font-size: 20px;
+    //     margin-top: 0;
+    //     @include desktop {
+    //       font-size: 24px;
+    //       line-height: 28px;
+    //     }
+    // }
+	}
+
+	&__image,
+	&__media {
+		flex-basis: calc(100%/3);
+		width: calc(100%/3);
+
+		@include desktop {
+			flex-basis: auto;
+			width: 100%;
+		}
+
+		img {
+			border-radius: $border-radius 0 0 $border-radius;
+			@include desktop {
+				border-radius: $border-radius $border-radius 0 0;
+			}
+		}
+	}
+
+	&__image {
+		img {
+			display: block;
+			margin: auto;
+			width: 100%;
+		}
+	}
+
+	&__media-wrap {
+		// @include mobile-only {
+		// 	height: 100%;
+		// }
+		padding-top: calc(5 / 7 * 100%);
+		height: 0;
+		position: relative;
+
+		.video,
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+
+		.video {
+			padding-top: 0;
+			min-height: 0;
+		}
+	}
+
+	&__eyebrow {
+		@include font(headline);
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 19px;
+		color: map-get($color, gray);
+		text-transform: uppercase;
+		margin-bottom: - map-get($spacing, x-small);
+		@include desktop {
+			font-size: 15px;
+		}
+	}
+
+	&__description {
+		@include font(headline);
+		color: map-get($brand, text);
+
+		span {
+			margin: map-get($spacing, x-small);
+		}
+
+		@include desktop {
+			flex-grow: 1;
+		}
+	}
+
+	&__content {
+		@include balance-margins;
+		padding: map-get($spacing, medium);
+		align-self: center;
+
+		flex-basis: calc(100%/3 * 2);
+		width: calc(100%/3 * 2);
+
+		@include desktop {
+			flex-basis: auto;
+			width: 100%;
+		}
+
+		@include desktop {
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&__list {
+		@include balance-margins;
+	}
+
+	&__rating {
+		//replace with icons in comps and update font family
+		@include font(icon);
+
+		$star-filled: map-get($icons, star);
+
+		$star-empty: "\2606";
+		color: map-get($brand, primary);
+
+		&[data-product-rating]{
+			&:before {
+				//icon font family here
+			}
+		}
+
+		&[data-product-rating="1"]{
+			&:before {
+				content: $star-filled $star-empty $star-empty $star-empty $star-empty;
+			}
+		}
+
+		&[data-product-rating="2"]{
+			&:before {
+				content: $star-filled $star-filled $star-empty $star-empty $star-empty;
+			}
+		}
+
+		&[data-product-rating="3"]{
+			&:before {
+				content: $star-filled $star-filled $star-filled $star-empty $star-empty;
+			}
+		}
+
+		&[data-product-rating="4"]{
+			&:before {
+				content: $star-filled $star-filled $star-filled $star-filled $star-empty;
+			}
+		}
+
+		&[data-product-rating="5"]{
+			&:before {
+				content: $star-filled $star-filled $star-filled $star-filled $star-filled;
+			}
+		}
+
+		span {
+			font-size: 12px;
+		}
+
+		@include desktop {
+			margin: map-get($spacing, x-small) 0 0;
+			margin-bottom: map-get($spacing, x-small);
+			
+		}
+	}
+
+	&__pricing, &__aws {
+		@include desktop {
+			border-top: 1px solid map-get($brand, border);
+			margin-top: map-get($spacing, medium);
+		}
+	}
+
+	&__aws {
+		@include font(headline);
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 19px;
+		margin-top: map-get($spacing, small);
+		&-label {
+			text-transform: uppercase;
+		}
+		@include desktop {
+			padding-top: map-get($spacing, small);
+		}
+	}
+
+	&__wrapper {
+		@include balance-margins;
+
+		// in case there is no card image, title needs top margin
+		// to accomodate for product flag
+		@include desktop {
+			> * {
+				&:first-child {
+					margin-top: map-get($spacing, medium);
+					margin-bottom: 0;
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		flex-grow: 1;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+  &__short-desc {
+    @include font(headline);
+    color: map-get($color, gray-darker);
+    font-size: 14px;
+    line-height: 19px;
+    margin: map-get($spacing, medium) 0;
+    @include desktop {
+      font-size: 15px;
+    }
+  }
+
+	&--search-results-content {
+		@include desktop {
+			flex-direction: row;
+		}
+
+		.card__image {
+			display: none;
+			@include desktop {
+				display: block;
+				flex-basis: calc(100%/3);
+				width: calc(100%/3);
+			}
+		}
+
+		.card__content {
+			width: 100%;
+			flex-basis: initial;
+			@include desktop {
+				padding: map-get($spacing, medium) map-get($spacing, medium) map-get($spacing, medium) map-get($spacing, x-large);
+				flex-basis: calc(100%/3 * 2);
+				width: calc(100%/3 * 2);
+			}
+		}
+
+		.card__title {
+			margin-bottom: map-get($spacing, large);
+		}
+
+		.card__description {
+			@include font(regular);
+			color: map-get($color, gray-darker);
+			font-size: 14px;
+			letter-spacing: 0;
+			line-height: 21px;
+			@include desktop {
+				font-size: 15px;
+				line-height: 20px;
+			}
+		}
+	}
+
+	&--search-results-doc {
+		@include desktop {
+			flex-direction: row;
+		}
+
+		.card__category {
+			@include font(regular);
+			color: map-get($color, gray-darker);
+			font-size: 14px;
+			font-weight: bold;
+			letter-spacing: 0;
+			line-height: 19px;
+		}
+
+		.card__title {
+			margin: 0;
+		}
+
+		.card__image {
+			img {
+				height: 100%;
+			}
+			@include desktop {
+				flex-basis: calc(100%/3);
+				width: calc(100%/3);
+			}
+		}
+
+		.card__content {
+			@include desktop {
+				padding: map-get($spacing, medium) map-get($spacing, medium) map-get($spacing, medium) map-get($spacing, x-large);
+				flex-basis: calc(100%/3 * 2);
+				width: calc(100%/3 * 2);
+			}
+		}
+
+		.card__meta {
+			margin-bottom: map-get($spacing, x-small);
+		}
+	}
+
+	&--discount-center {
+		border-radius:4px;
+		background-color: map-get($color, white);
+		flex-direction: column;
+		@include desktop {
+			flex-direction: row;
+			align-items: center;
+			padding: map-get($spacing, x-large) map-get($spacing, large) map-get($spacing, x-large) 0;
+		}
+
+		.card__container {
+			display: block;
+			@include desktop {
+				display: flex;
+				flex: 1;
+				height: 100%;
+				flex-basis: calc(100%/4 * 3);
+				width: calc(100%/4 * 3);
+			}
+		}
+
+		.card__title {
+			@include font(headline);
+			color: map-get($color, gray-darkest);
+			font-weight: bold;
+			letter-spacing: 0;
+			@include typography(h4);
+			margin-bottom: 0;
+			@include desktop {
+				margin: 0;
+			}
+		}
+
+		.card__quantity {
+			display: flex;
+			@include desktop {
+				display: block;
+			}
+			a {
+				margin-bottom: 0;
+				text-align: center;
+				@include mobile-only {
+					width: 100%;
+				}
+				display: flex;
+				justify-content: center;
+				@include desktop {
+					width: auto;
+					padding:  map-get($spacing, small) map-get($spacing, medium) + map-get($spacing, xx-small);
+				}
+			}
+
+			.input-quantity {
+				@include desktop {
+					justify-content: center;	
+					border: 1px solid map-get($color, gray-light );
+					padding: map-get($spacing, x-small) 0;
+				}
+				input {
+					font-weight: bold;
+				}
+			}
+		}
+
+		.card__image {
+			float: left;
+			padding:  map-get($spacing, medium);
+			@include desktop {
+				width: initial;
+				padding: 0  map-get($spacing, large) 0 map-get($spacing, small);
+				flex-basis: 40%;
+			}
+			img {
+				@include desktop {
+					width: initial;
+				}
+			}
+		}
+
+		.card__content {
+			width: initial;
+			padding: 0;
+			@include desktop {
+				align-self: flex-start;
+				padding-right:  map-get($spacing, large);
+				height: 100%;
+				flex-wrap: nowrap;
+				flex-basis: 60%;
+			}
+			
+			a {
+				color: map-get($color, gray-darkest);
+			}
+		}
+
+		.card__pricing {
+			@include desktop {
+				border-top: none;
+				border-left: 1px solid map-get($brand, border);
+				flex: 1;
+				height: 100%;
+				padding-left: map-get($spacing, large);
+				margin: 0;
+				flex-basis: calc(100%/4);
+				width: calc(100%/4);
+			}
+			span:last-of-type {
+				font-weight: bold;
+				display: block;
+			}
+		}
+
+		.card__description {
+			@include typography(p-small);
+			clear: left;
+			border-top: 1px solid map-get($brand, border);
+			border-bottom: 1px solid map-get($brand, border);
+			padding:  map-get($spacing, x-small) + map-get($spacing, small) 0;
+			color: map-get($color, gray-darker);
+			@include font(regular);
+			letter-spacing: 0;
+			@include desktop {
+				padding:  map-get($spacing, small) 0  map-get($spacing, medium)- map-get($spacing, x-small);
+				border: none;
+				flex-grow: initial;
+			}
+		}
+
+		.card__additional-info {
+			margin: 0;
+			padding-bottom:  map-get($spacing, small);
+			&:last-of-type {
+				padding-bottom: 0;
+			}
+		}
+
+		.card__meta {
+			@include typography(p-small);
+			display: flex;
+			flex-wrap: wrap;
+			color: map-get($color, gray-darkest);
+			@include font(headline);
+			letter-spacing: 0;
+			@include desktop {
+				margin: map-get($spacing, medium) -  map-get($spacing, small) 0 0;
+			}
+		}
+
+		.card__category {
+			display: flex;
+			align-items: center;
+			&:after {
+				content: "";
+				margin: 0  map-get($spacing, x-small);
+				display: inline-block;
+				height: 75%;
+				width: 1px;
+				background: map-get($color, gray);
+			}
+		}
+
+		.card__pricing-wrapper {
+			padding:  map-get($spacing, large) +  map-get($spacing, xx-small) 0;
+			@include desktop {
+				padding-top: 0;
+			}
+		}
+
+		.pricing {
+			display: flex;
+			flex-direction: column;
+			padding-bottom:  map-get($spacing, x-small) + map-get($spacing, small);
+			&:last-of-type {
+				padding-bottom: 0;
+			}
+
+			&__title {
+				margin-top: 0;
+				@include desktop {
+					margin: 0;
+				}
+			}
+
+			.current {
+				color: map-get($color, black);
+				letter-spacing: 0;
+				@include typography(p-large);
+			}
+		}
+	}
+
+	.card__compare {
+		display: flex;
+		align-items: center;
+		button {
+			border: none;
+			background: transparent;
+			@include font(headline);
+			color: map-get($color, red);
+			font-size: 14px;
+			line-height: 24px;
+			position: relative;
+			text-transform: uppercase;
+			padding: 0;
+			cursor: pointer;
+			&:focus {
+				outline: 0;
+			}
+		}
+		@include mobile-only {
+			border-top: 1px solid map-get($color, gray-light);
+			padding-top: map-get($spacing, x-small);
+		}
+		@include desktop {
+			font-size: 15px;
+			clear: left;
+		}
+		&:before {
+			@include icon(compare);
+			font-size: 16px;
+			color: map-get($color, red);
+			margin-right: map-get($spacing, xx-small);
+			@include desktop {
+				font-size: 20px;
+			}
+		}
+	}
+}

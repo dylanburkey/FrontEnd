@@ -1,0 +1,18 @@
+{% assign data = site.data.cards.contact[include.data][include.index] %}
+{% assign len = site.data.cards.contact[include.data] | size | minus: 1 %}
+
+{% if include.index <= len %}
+<div class="card card--contact">
+	<div class="card__content">
+		<h4 class="card__title">{{data.title}}</h4>
+		{% if data.description %}<p class="card__description">{{ data.description }}</p>{% endif %}
+		{% if data.contact.name %}<p class="card__name">{{data.contact.name}}</p>{% endif %}
+		{% if data.contact.phone or data.contact.email %}
+		<ul>
+			{% if data.contact.phone %}<li><a title="{{data.contact.phone}}" href="tel:{{data.contact.phone}}"><span class="icon-phone"></span> {{data.contact.phone}}</a></li>{% endif %}
+			{% if data.contact.email %}<li><a title="{{data.contact.email}}" href="mailto:{{data.contact.email}}"><span class="icon-envelope"></span> {{data.contact.email}}</a></li>{% endif %}
+		</ul>
+		{% endif %}
+	</div>
+</div>
+{% endif %}

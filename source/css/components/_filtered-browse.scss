@@ -1,0 +1,179 @@
+.filtered-browse {
+    background: map-get($brand, background);
+
+    &__no-results {
+        padding: map-get($spacing, large);
+    }
+    &__label {
+        display: none;
+    }
+    .card {
+        display: none;
+        &.active {
+            display: flex;
+            margin: map-get($spacing, medium) 0;
+        }
+    }
+    
+    .link-filters__title {
+        @include font(headline);
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: map-get($spacing, x-large)
+    }
+
+    .link-filters__items {
+        li {
+            list-style: none;
+            margin: map-get($spacing, small) 0;
+            &.active {
+                font-weight: bold;
+                button {
+                    font-weight: bold;
+                }
+            }   
+            
+            &:hover,
+            &:focus {
+                button {
+                    color: map-get($color, red);
+
+                    &:hover,
+                    &:focus {
+                        color: map-get($color, red);
+                    }
+                }
+            }
+            
+            button {
+                @include typography(p);
+                @include font(headline);
+                appearance: none;
+                background: none;
+                border: none;
+                padding: 0;
+                margin: 0;
+                cursor: pointer;
+                outline: none;
+            }
+        }
+    }
+
+    .container {
+        display: flex;
+    }
+
+    &__menu {
+        flex-basis: calc(100%/4);
+        display: flex;
+
+        &--footer {
+            &:before {
+                content: "";
+                flex-basis: calc(100% / 3);
+                display: block;
+            }
+
+            > * {
+                flex-basis: calc(100% / 3);
+            }
+
+            .filtered-browse__select--show {
+                justify-content: flex-end;
+                .select {
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+
+    &__content {
+        flex-basis: calc(100%/4 * 3)
+    }
+
+    &__select {
+        &--sort {
+            margin-left: auto;
+        }
+    }
+
+    &__pagination {
+        display:flex;
+    }
+    
+    &__pagination-items {
+        display: flex;
+        justify-content: center;
+    
+        button {
+            @include typography(p-large);
+            @include font(headline);
+            background: white;
+            line-height: 46px!important;
+            font-weight: bold;
+            appearance: none;
+            background: none;
+            padding: 0 map-get($spacing, small);
+            margin: 0;
+            border: 0;
+            border-top: 1px solid map-get($brand, border);
+            border-bottom: 1px solid map-get($brand, border);
+            cursor: pointer;
+            outline: none;
+            &:disabled {
+                color: map-get($color, black);
+                &:hover{
+                    cursor: default;
+                }
+            }
+            &.active {
+                color: map-get($color, gray);
+                text-decoration: underline;
+            }
+            &.hidden {
+                display: none;
+            }
+
+            &:first-of-type {
+                border-radius: $border-radius 0 0 $border-radius;
+                border-left: 1px solid map-get($brand, border);
+                padding-left: map-get($spacing, large);
+            }
+            &:last-of-type {
+                border-radius: 0 $border-radius $border-radius 0;
+                border-right: 1px solid map-get($brand, border);
+                padding-right: map-get($spacing, large);
+            }
+        }
+    }
+    
+    &__link, &__prev-link, &__next-link {
+        display: flex;
+        align-items: center;
+        @include font(headline);
+        color: map-get($color, gray-darkest);
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 17px;
+    }
+
+    &__prev-link, &__next-link {
+        color: map-get($color, white);
+        background-color: map-get($color, red);
+        padding: map-get($spacing, medium);
+        .icon {
+            font-size: 12px;
+        }
+        &.arrow-hidden {
+            display: none;
+        }
+    }
+
+    &__prev-link {
+        border-radius: 4px 0 0 4px;
+    }
+
+    &__next-link {
+        border-radius: 0 4px 4px 0;
+    }
+}

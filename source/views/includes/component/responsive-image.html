@@ -1,0 +1,6 @@
+<picture data-object-fit="cover">
+	<source media="(max-width: 768px)" srcset="{% if include.small %}{{ include.small | prepend: site.baseurl }}{% else %}/images/image-left.png{% endif %}">
+	<source media="(max-width: 1024px)" srcset="{% if include.medium %}{{ include.medium | prepend: site.baseurl }}{% else %}/images/image-left.png{% endif %}">
+	<source media="(min-width: 1024px)" srcset="{% if include.large %}{{ include.large | prepend: site.baseurl }}{% else %}/images/image-left.png{% endif %}">
+	<img src="{{ include.small | prepend: site.baseurl }}" alt="{{ include.alt }}"{% if include.thumbnail %} data-thumbnail="{{ include.thumbnail | prepend: site.baseurl }}"{% endif %}{% if include.fallback %} class="{{include.fallback}}" {% endif %}>
+</picture>

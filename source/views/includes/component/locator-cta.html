@@ -1,0 +1,18 @@
+{% assign lc = site.data.locator-cta[include.data] %}
+<div class="locator-cta">
+  {% if lc.title %}<h4 class="locator-cta__title">{{lc.title}}</h4>{% endif %}
+  <ul class="locator-cta__list">
+    {% for item in lc.items %}
+      <li>
+        <a href="{{item.href}}"><span class="{{item.icon}}"></span>{{item.text}}{% if item.chevron-right %}<span class="icon-chevron-right"></span>{% endif %}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% if lc.cta %}
+  <p class="locator-cta__button">
+    {% include component/button.html
+    title= lc.cta.btn-text
+    url= lc.cta.btn-href %}
+  </p>
+  {% endif %}
+</div>

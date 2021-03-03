@@ -1,0 +1,205 @@
+$block: 'press-release-detail';
+
+.#{$block} {
+
+  position: relative;
+
+  .share-cta-links {
+    @include mobile-only {
+      padding: map-get($spacing, large) 0;
+      position: absolute;
+      top: 0px;
+      width: calc(100% - 18px *2);
+      margin: 0 map-get($spacing, medium);
+    }
+
+    @include desktop {
+      top: -(map-get($spacing, large));
+      position: relative;
+      margin-top: -(map-get($spacing, x-small) + map-get($spacing, small));
+    }
+  }
+
+  .share-cta-links__item {
+    list-style-type: none;
+    @include desktop {
+      padding-right: map-get($spacing, xx-small) + map-get($spacing, small);
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
+
+    .cta-icon-print {
+      @include desktop {
+        padding-left: map-get($spacing, small);
+      }
+    }
+  }
+
+  .share-cta-links__list {
+    padding: 0;
+  }
+
+  &__article {
+    padding: 0 0 map-get($spacing, small);
+    margin-bottom: map-get($spacing, x-small) +  map-get($spacing, small);
+
+    @include desktop {
+      margin-bottom: 0;
+      flex: 1;
+      flex-basis: calc(100%/3 * 2);
+      width: calc(100%/3 * 2);
+      padding:0 map-get($spacing, xx-large) + map-get($spacing, medium) 0 0;
+    }
+  }
+  
+  &__wrapper {
+    @include desktop {
+      display: flex;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap:wrap;
+    padding: map-get($spacing, x-large) + map-get($spacing, xx-small) 0 map-get($spacing, medium) - map-get($spacing, xx-small);
+    @include desktop {
+      padding: 0 0 map-get($spacing, small);
+    }
+
+    span {
+      @include font(regular);
+      color: map-get($color, gray-darker);
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: 19px;
+      display: flex;
+      align-items: center;
+    }
+
+    .category {
+      font-weight: bold;
+      &:after {
+        content: "";
+        margin: 0 map-get($spacing, x-small);
+        display: inline-block;
+        height: 75%;
+        width: 1px;
+        background: map-get($color, gray);
+      }
+    }
+
+    .date {
+      &:after {
+        content: "";
+        margin: 0 map-get($spacing, x-small);
+        display: inline-block;
+        height: 75%;
+        width: 1px;
+        background: map-get($color, gray);
+      }
+    }
+  }
+
+  &__title {
+    @include font(headline);
+    color: map-get($color, gray-darkest);
+    @include typography(h2);
+    font-weight: bold;
+    letter-spacing: 0;
+    margin:0;
+    padding-bottom: map-get($spacing, xx-small) + map-get($spacing, small);
+    @include desktop {
+      padding-bottom: map-get($spacing, medium);
+    }
+  }
+
+  &__subtitle {
+    @include font(regular);
+    color: map-get($color, gray-darker);
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: 23px;
+    margin: 0;
+    padding-bottom: map-get($spacing, xx-small) + map-get($spacing, small) + map-get($spacing, medium);
+    @include desktop {
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+
+  &__excerpt {
+    @include font(regular);
+    color: map-get($color, gray-darker);
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 21px;
+    padding-bottom:  map-get($spacing, medium) +  map-get($spacing, xx-small);
+    p {
+      display: inline;
+    }
+  }
+
+  &__location {
+    font-weight: bold;
+  }
+
+  .rte {
+    img {
+      width: 100%;
+    }
+
+    div > sup, sub,
+    p > sup, sub {
+      line-height: 1px;
+      font-size: 60%;
+    }
+
+    @include desktop {
+    *:not(br) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  p > i {
+    font-size: 15px;
+    color: map-get($color, gray);
+  };
+
+    br {
+      line-height: 18px;
+    }
+  }
+
+  .simple-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding:  map-get($spacing, x-small) +  map-get($spacing, small)  map-get($spacing, medium) 29px;
+    border-bottom: 1px solid map-get($color, gray-light);
+    @include desktop {
+      padding: map-get($spacing, large)  map-get($spacing, x-large)  map-get($spacing, x-large);
+    }
+  }
+
+  &__rail {
+    margin: 0 -(map-get($spacing, medium));
+    @include desktop {
+      margin: 0;
+      flex: 1;
+      flex-basis: calc(100%/3);
+      width: calc(100%/3);
+    }
+  }
+
+  &__rail-content {
+      background-color: map-get($color, gray-lightest);
+  }
+
+  &__documents {
+    .container {
+      padding: 0;
+    }
+  }
+}

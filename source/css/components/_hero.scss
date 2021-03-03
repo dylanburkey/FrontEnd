@@ -1,0 +1,522 @@
+$block: 'hero';
+$max-height: 550;
+
+.#{$block} {
+  position: relative;
+
+  &--gradient-left,
+  &--gradient-center {
+    .hero__media {
+      @include mobile-only {
+        &:before {
+          content: "";
+          position: absolute;
+          height: 50%;
+          top: 0;
+          width: 100%;
+          background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.93) 95%, #000000 100%);
+        }
+      }
+    }
+  }
+  &--gradient {
+    &-center {
+      .swiper-slide {
+        @include desktop {
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            width:100%;
+            height: 100%;
+            background: radial-gradient(rgba(0,0,0,1),rgba(0,0,0,.25));
+          }
+        }
+      }
+    }
+    &-left {
+      .swiper-slide {
+        @include desktop {
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            width:100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(0,0,0,1) 0, rgba(0,0,0,0.25) 50%);;
+          }
+        }
+      }
+    }
+  }
+
+  //hero item styling, we have to apply to two different markup types, make all changes here
+  @mixin hero-item {
+    display: flex;
+    flex-direction: column;
+    background: map-get($color, black);
+    max-height: #{$max-height}px;
+
+    @include mobile-only{
+      margin-bottom: 33px;
+    }
+
+    .hero__media {
+      order: 1;
+      position: relative;
+      @include desktop {
+        width: 100%;
+        height: 0;
+        padding-top: calc(#{$max-height} / 1440 * 100%);
+        position: relative;
+        margin: 0;
+      }
+
+      @include desktop {
+        position: static;
+        &:before {
+          content: none;
+        }
+      }
+    }
+
+    .hero__content {
+      order: 0;
+      position: relative;
+      z-index: 1;
+      padding-bottom: 0;
+      margin-bottom: - map-get($spacing, xxx-large);
+      @include desktop {
+        position: absolute;
+        background: none;
+        margin-bottom: 0;
+        padding-bottom: map-get($spacing, xxx-large);
+      }
+    }
+    
+    .teaser__description {
+      margin: 0;
+      padding-bottom: map-get($spacing, x-large);
+      @include desktop {
+        padding-bottom: map-get($spacing, xx-large);
+        font-size:20px;
+        line-height: 27px;
+      }
+      @media (max-width: 1200px){
+        padding-bottom: map-get($spacing, medium);
+      }
+    }
+  }
+
+  > div {
+    position: relative;
+    &:not(.swiper-container){
+      @include hero-item;
+    }
+
+    .swiper-slide {
+      @include hero-item;
+    }  
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &--gradient {
+    &-center {
+      > div {
+        &:before {
+          background: radial-gradient(rgba(0,0,0,1),rgba(0,0,0,.25));
+          z-index: 1;
+          @include mobile-only {
+            background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.93) 100%);
+          }
+        }
+      }
+    }
+    
+    &-left {
+      > div {
+        &:before {
+          background: linear-gradient(90deg, rgba(0,0,0,1) 0, rgba(0,0,0,0.25) 100%);
+          z-index: 1;
+          @include mobile-only {
+            background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.93) 100%);
+          }
+        }
+      }
+    }
+  }
+
+
+  &__content {
+    @include gutters;
+  
+    @include desktop {
+      @include content-overlay;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .teaser {
+      margin-top: map-get($spacing, large);
+      text-align: center;
+      &__content {
+        //default color
+        .teaser__title, 
+        .teaser__description{
+          color: map-get($color, white )
+        }
+
+        &--black {
+          .teaser__title, 
+          .teaser__description{
+            color: map-get($color, black )
+          }
+        }
+
+        &--white {
+          .teaser__title, 
+          .teaser__description{
+            color: map-get($color, white )
+          }
+        }
+      }
+      &__eyebrow {
+        color: map-get($color, gray-light);
+      }
+
+      &__title {
+        @include typography(h1-banner);
+      }
+
+      &__cta {
+        .btn.tertiary {
+          color: map-get($color, white);
+          border-color: map-get($color, white);
+          &:hover,
+          &:focus {
+            color: map-get($color, gray-light);
+            border-color: map-get($color, gray-light);
+          }
+        }
+      }
+
+      @include desktop {
+        margin-top: 0;
+      }
+    }
+
+    > * {
+      //random guess, talk to design
+      @include desktop {
+        max-width: 580px;
+      }
+    }
+
+    &--left {
+      justify-content: flex-start;
+
+      .teaser {
+        text-align: left;
+      }
+    }
+
+    &--right {
+      justify-content: flex-end;
+
+      .teaser {
+        text-align: right;
+      }
+    }
+  }
+
+  picture,
+  img {
+    @include desktop{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @include mobile-only {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  //swiper things
+  .swiper-container-thumbs {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    bottom: 0;
+    height: 33px;
+    background-color: map-get($color, gray-darkest);
+    @include desktop {
+      height: 55px;
+      background: transparent;
+    }
+    .swiper-wrapper {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      .swiper-slide {
+        background: map-get($color, white);
+        cursor: pointer;
+        font-size: 0;
+        height: map-get($spacing, small);
+        width: map-get($spacing, small)!important;
+        border-radius:5px;
+        margin-right: map-get($spacing, x-small);
+        @include desktop {
+          @include font(headline);
+          font-size: 13px;
+          line-height: 16px;
+          opacity: inherit;
+          width: 100%!important;
+          height: inherit;
+          border-radius: inherit;
+          text-align: center;
+          max-width: 260px;
+          justify-content: center;
+          align-items: center;
+          padding: map-get($spacing, small) map-get($spacing, large);
+          background: map-get($color, gray-darkest);
+          color:  map-get($color, white);
+          margin-right: 0;
+          display: block;
+        }
+        @include mobile-only {
+          margin-bottom: 0;
+        }
+      }
+
+      .swiper-slide-thumb-active {
+        background: map-get($brand, primary);
+        @include desktop {
+          // color: map-get($color, black);
+          font-weight: bold;
+          background: transparent;
+          &:after,
+          &:before {
+            position: absolute;
+            background: map-get($color, gray-darkest);
+            width: 100vw;
+            content: "";
+            left: -100vw;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+          }
+          &:after {
+            left: auto;
+            right: -100vw;
+          }
+        }
+      }
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+    z-index: 2;
+    top: auto;
+    bottom: -6px;
+    height: 43px;
+
+    &:focus {
+      outline: 0;
+    }
+    @include desktop {
+      display: block;
+      opacity: 1;
+      margin-top: 0;
+      &:after {
+        color: map-get($color, white);
+        font-size: 18px;
+      }
+    }
+  }
+
+  .swiper-button-prev {
+    left: map-get($spacing, large);
+    &:after {
+      @include icon(chevron-left);
+    }
+  }
+
+  .swiper-button-next {
+    right: map-get($spacing, large);
+    &:after {
+      @include icon(chevron-right);
+    }
+  }
+
+  .gallery-thumbs {
+    z-index: 1;
+    @include desktop {
+      flex: 1;
+      flex-basis: 20%;
+    }
+    .swiper-slide {
+      &:before {
+        content: none;
+      }
+    }
+  }
+
+  .gallery-top {
+    @include desktop {
+      flex: 1;
+      flex-basis: 80%;
+    }
+  }
+
+
+  .swiper-container {
+    .teaser {
+      margin-top: 0;
+    }
+
+    .teaser__title {
+      margin: map-get($spacing, small) 0 map-get($spacing, medium);
+      @include desktop {
+        margin: map-get($spacing, medium ) 0 30px;
+      }
+      @media (max-width: 1200px){
+        margin: map-get($spacing, small) 0 map-get($spacing, small);
+      }
+    }
+
+    .teaser__cta {
+      margin: 0;
+      padding-bottom: 60px;
+      .tertiary {
+        margin-top: map-get($spacing, medium);
+      }
+    }
+
+    .teaser__eyebrow {
+      line-height: 22px;
+      @include desktop {
+      font-size: 17px;
+      line-height: 23px;
+      }
+    }
+
+    .hero__content {
+      padding: map-get($spacing, x-large) map-get($spacing, medium);
+    }
+  }
+  
+  &--carousel-vertical {
+
+    .hero__media {
+      height: 100%;
+      &:before {
+        content: none!important;
+      }
+    }
+
+    .hero__content {
+      background:none!important;
+    }
+
+    //swiper things
+    .swiper-container-thumbs {
+      z-index: 2;
+      background-color: transparent;
+      display: flex;
+      flex-direction: row;
+      @include desktop {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .swiper-button-prev {
+        @include desktop {
+          transform: rotate(90deg);
+          position: unset;
+          margin-left: map-get($spacing, x-large) - 2px;
+          &:after {
+            color: map-get($color, red);
+          }
+        }
+      }
+
+      .swiper-button-next {
+        @include desktop {
+          transform: rotate(90deg);
+          position: unset;
+          margin-left: map-get($spacing, x-small) + map-get($spacing, large);
+          &:after {
+            color: map-get($color, red);
+          }
+        }
+      }
+
+      .swiper-wrapper {
+        flex-direction: row;
+        @include desktop {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 0 30px;
+          width: auto;
+          height: auto;
+        }
+
+        .swiper-slide {
+          width: map-get($spacing, x-small) !important;
+          height: map-get($spacing, x-small) !important;
+          background: #D0D0D0!important;
+          @include desktop {
+            @include font(headline);
+            height: map-get($spacing, small) + map-get($spacing, xx-large) !important;
+            width:  map-get($spacing, small) + map-get($spacing, xx-large) !important;
+            padding: 0;
+            border:1px solid #DFDFDF;
+            margin-bottom: map-get($spacing, small);
+            &:after {
+              background:none;
+            }
+
+            &.swiper-slide-thumb-active {
+              background: map-get($color, gray)!important;
+              border-bottom: 2px solid  map-get($color, red);
+            }
+          }
+
+          img {
+            display: none;
+            @include desktop {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

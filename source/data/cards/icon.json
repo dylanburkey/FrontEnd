@@ -1,0 +1,61 @@
+{
+  "power-mig-multi-process": [
+    {
+      "image": {
+        "src": "/images/mig.png",
+        "alt": "product-1-promotions"
+      },
+      "title":"MIG"
+    },
+    {
+      "image": {
+        "src": "/images/dc-tig.png",
+        "alt": "product-1-promotions"
+      },
+      "title":"DC TIG"
+    },
+    {
+      "url": "!#sample-url",
+      "image": {
+        "src": "/images/stick.png",
+        "alt": "product-1-promotions"
+      },
+      "title":"Stick"
+    },
+    {
+      "image": {
+        "src": "/images/flux-cored.png",
+        "alt": "product-1-promotions"
+      },
+      "title":"Flux Cored",
+      "href":"#test.title",
+      "href-image":"#test.image"
+    }
+  ],
+  "power-mig-advanced-features": [
+    {
+      "image": {
+        "src": "/images/arc.png",
+        "alt": "product-1-promotions"
+      },
+      "title":"ArcFX™ Technology",
+      "description":"Visually shows how wire feed speed and voltage affect the weld outcome."
+    },
+    {
+      "image": {
+        "src": "/images/weld.png",
+        "alt": "product-1-promotions"
+      },
+      "title":"Ready. Set. Weld™",
+      "description":"Enables quick and easy setup."
+    },
+    {
+      "image": {
+        "src": "/images/pulse.png",
+        "alt": "product-1-promotions"
+      },
+      "title":"Pulse Welding",
+      "description":"Provides better control of heat input which minimized warping and burnthrough on thin materials."
+    }
+  ]
+}

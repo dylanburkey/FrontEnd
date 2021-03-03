@@ -1,0 +1,16 @@
+{% if include.e %}
+{% assign data = include.e %}
+{% else %}
+{% assign data = site.data.tiles.cert-center[include.data][include.index] %}
+{% endif %}
+
+<div class="tile tile--cert-center">
+    <div class="tile__content">
+        <h3 class="tile__title">
+            <span class="icon-safety"></span>
+            <a href="#">Equipment Certification</a>
+        </h3>
+        <p class="tile__description">Certifcates of Conformance & Origin, Manufacturer Affidavits, Portable Load
+        Bank, & Declaration of Conformity to Equipment Standards.</p>
+    </div>
+</div>

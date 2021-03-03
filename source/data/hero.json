@@ -1,0 +1,163 @@
+{
+  "homepage-featured": {
+    "items": [
+      {
+        "align": "left",
+        "image": {
+          "small": "/images/1440x650-light.png",
+          "medium": "/images/1440x650-light.png",
+          "large": "/images/1440x650-light.png",
+          "alt": "Full width promotion"
+        },
+        "teaser": {
+          "eyebrow": "Product Spotlight",
+          "title": "The All New PIPEFAB™ Welding System",
+          "text-color": "white",
+          "description": "The Power Wave® advanced welding platform allows you to standardize your entire welding operation for optimized performance and reduced waste.",
+          "buttons": [
+            {
+              "button": {
+                "title": "Get more details",
+                "href": "#"
+              }
+            },
+            {
+              "button": {
+                "title": "View Brochure",
+                "href": "#",
+                "style": "tertiary-solid"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "align": "left",
+        "image": {
+          "small": "/images/1440x650-dark.png",
+          "medium": "/images/1440x650-dark.png",
+          "large": "/images/1440x650-dark.png",
+          "alt": "Full width promotion"
+        },
+        "teaser": {
+          "eyebrow": "Product Spotlight",
+          "text-color": "white",
+          "title": "Prism™ Compact Fume Extraction System",
+          "description": "The Power Wave® advanced welding platform allows you to standardize your entire welding operation for optimized performance and reduced waste.",
+          "buttons": [
+            {
+              "button": {
+                "title": "Get more details",
+                "href": "#"
+              }
+            },
+            {
+              "button": {
+                "title": "View Brochure",
+                "href": "#",
+                "style": "tertiary-solid"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "align": "left",
+        "image": {
+          "small": "/images/1440x650-light.png",
+          "medium": "/images/1440x650-light.png",
+          "large": "/images/1440x650-light.png",
+          "alt": "Full width promotion"
+        },
+        "teaser": {
+          "eyebrow": "Product Spotlight",
+          "title": "The Hottest Shades in Virtual Welding",
+          "text-color": "white",
+          "description": "The Power Wave® advanced welding platform allows you to standardize your entire welding operation for optimized performance and reduced waste.",
+          "buttons": [
+            {
+              "button": {
+                "title": "Get more details",
+                "href": "#"
+              }
+            },
+            {
+              "button": {
+                "title": "View Brochure",
+                "href": "#",
+                "style": "tertiary-solid"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "welding-equipment-product-spotlight": {
+    "items": [
+      {
+        "align":"center",
+        "image": {
+          "small": "/images/1440x650-dark.png",
+          "medium": "/images/1440x650-dark.png",
+          "large": "/images/1440x650-dark.png",
+          "alt": "Full width promotion"
+        },
+        "teaser": {
+          "eyebrow": "Product Spotlight",
+          "title": "Intelligent Welding, Game Changing Results",
+          "text-color": "white",
+          "description": "The Power Wave® advanced welding platform allows you to standardize your entire welding operation for optimized performance and reduced waste.",
+          "buttons": [
+            {
+              "button": {
+                "title": "Get more details",
+                "href": "#"
+              }
+            },
+            {
+              "button": {
+                "title": "View Brochure",
+                "href": "#",
+                "style": "tertiary-solid"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "power-mig": {
+    "items": [
+      {
+        "align":"left",
+        "image": {
+          "small": "/images/1440x650-light.png",
+          "medium": "/images/1440x650-light.png",
+          "large": "/images/1440x650-light.png",
+          "alt": "Full width promotion"
+        },
+        "teaser": {
+          "title": "Power MIG® 360",
+          "description": "The Multi-Process Workhorse",
+          "text-color": "white",
+          "buttons": [
+            {
+              "button": {
+                "title": "Buy now",
+                "href": "#"
+              }
+            },
+            {
+              "button": {
+                "title": "Find a store",
+                "href": "#",
+                "style": "tertiary-solid btn-mobile"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

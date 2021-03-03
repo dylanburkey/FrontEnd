@@ -1,0 +1,131 @@
+$block: 'filters';
+$block2: 'sort';
+
+.#{$block}, .#{$block2} {
+  display: none;
+  &.expended {
+    display: block;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: calc(100% - #{map-get($spacing, xxx-large)});
+    transition: right 600ms;
+    height: 100vh;
+    background: #FFF;
+    .#{$block}__wrapper, .#{$block2}__wrapper {
+      overflow-y: scroll;
+      height: calc(100% - 137px);
+      padding: map-get($spacing, large);
+    }
+  }
+  @include desktop {
+    display: block;
+    .faceted-browse__sort-by & {
+      display: none;
+    }
+  }
+
+  &__title {
+    @include font(headline);
+    color: map-get($color, gray-darkest);
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 26px;
+    margin:0;
+    padding-bottom:  map-get($spacing, xx-small) + map-get($spacing, small);
+    @include desktop {
+      font-size: 22px;
+      line-height: 26px;
+      padding-bottom:  map-get($spacing, x-large) + map-get($spacing, xx-small);
+      &--toggle {
+        padding-bottom: map-get($spacing, small);
+      }
+    }
+  }
+
+  &__toggle-wrapper {
+    padding-bottom: map-get($spacing, small);
+    text-align: right;
+    a {
+      @include font(regular);
+      font-size: 13px;
+      line-height: 18px;
+      color: map-get($color, red);
+      font-weight: bold;
+      text-transform: uppercase;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .filter-group, 
+  .sort-group {
+    &:not(:only-of-type){
+      border-top: 1px solid map-get($color, gray-light);
+    }
+    padding: 12px 0;
+    &__title {
+      @include font(headline);
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: map-get($color, gray-darkest);
+      line-height: 24px;
+      margin: 0;
+      @include desktop {
+        font-size: 16px;
+      }
+    }
+    &__items {
+      padding: map-get($spacing, medium) -  map-get($spacing, xx-small) 0;
+      li {
+        margin: 0;
+        padding-bottom: map-get($spacing, medium) -  map-get($spacing, xx-small);
+        padding-left: 0;
+        list-style: none;
+        &:before {
+          content: none;
+        }
+        &:last-of-type {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .filter-item, .sort-item {
+    position: relative;
+    display: flex;
+    align-items: end;
+    &__link {
+      position: relative;
+      color: map-get($color, gray-darker);
+      @include font(regular);
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: 19px;
+      @include desktop {
+        font-size: 15px;
+      }
+    }
+    &__title {
+      margin-right: map-get($spacing, xx-small);
+    }
+  }
+
+  &__controls {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - #{map-get($spacing, xxx-large)});
+    height: 137px;
+    background-color: map-get($color, white);
+    @include desktop {
+      display: none;
+    }
+  }
+}

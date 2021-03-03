@@ -1,0 +1,148 @@
+{
+	"homepage-trending": [
+		{
+			"url": "!#test",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Robotic Wire Feeders",
+			"description": "AutoDrive&reg; wire feed solutions deliver industry-leading performance for robotic and hard automation applications.",
+			"video": {
+				"embedUrl": "https://www.youtube.com/embed/M7lc1UVf-VE"
+			}
+		}
+	],
+	"homepage-whats-trending": [
+		{
+			"url": "!#test",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title":  "Robotic Wire Feeders",
+			"description": "AutoDrive&reg; wire feed solutions deliver industry-leading performance for robotic and hard automation applications."
+		},
+		{
+			"url": "!#test",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Cutting Automation",
+			"description": "Cutting tables, pipe and tube cutting machines, and structural steel fabrication systems."
+		},
+		{
+			"url": "!#test",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Virtual Reality Welding Trainers",
+			"description": "Supplements and enhances the welding instructors ability to attract, engage and train students in a cost-effective method."
+		},
+		{
+			"url": "!#test",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title":  "CheckPoint Monitoring Solutions",
+			"description":  "More than just a data collection tool. Delivers precise information to help maximize welding productivity and performance."
+		}
+	],
+	"newsroom": [
+		{
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Lincoln Electric - Your Complete Welding Partner",
+			"description": "AutoDrive&reg; wire feed solutions deliver industry-leading performance for robotic and hard automation applications."
+		}
+	],
+	"press-release-content-image": [
+		{
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Lincoln Electric Creates Efficiency Through Compact Fume Extraction System"
+		}
+	],
+	"press-release-content-video": [
+		{
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "The Title of the Video Will Go Right Here"
+
+		},
+		{
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "The Title of the Video Will Go Right Here"
+		}
+	],
+	"carousel-items-homepage": [
+		{
+			"url": "!#test",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Cutting Edge Welding Processes for Manufacturing",
+			"eyebrow": "Automotive & Transportation"
+		},
+		{
+			"url": "!#test",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Combating Wear, Corrosion, and Abrasion Challenges",
+			"eyebrow": "Maintenance & Repair"
+		},
+		{
+			"url": "!#test",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Cutting Edge Welding Processes for Manufacturing",
+			"eyebrow": "Automotive & Transportation"
+		},
+		{
+			"url": "!#test",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Combating Wear, Corrosion, and Abrasion Challenges",
+			"eyebrow": "Maintenance & Repair"
+		}
+	],
+	"promotions-detail-magnum-pro": [
+		{
+			"url": "!#test",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Magnum Pro Curve HDE 550, 20ft",
+			"description": "Welding Gun  |  K4534-3"
+		}
+	],
+	"companion-expendables": [
+		{
+			"url": "!#test",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Insulator 550A",
+			"description": "KP2773-1"
+		},
+		{
+			"url": "!#test",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Diffuser, Slip-On, 550A",
+			"description": "KP2747-2"
+		},
+		{
+			"url": "!#test",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Magnum Pro Nozzle 550A",
+			"description": "KP2743-1-50S"
+		},
+		{
+			"url": "!#test",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Copper Plus Contact Tip 550A",
+			"description": "KP2745"
+		},
+		{
+			"url": "!#test",
+			"imageSrc": "/images/602x430.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Copper Plus Contact Tip 550A",
+			"description": "KP2745"
+		}
+	]
+}

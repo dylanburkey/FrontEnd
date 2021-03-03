@@ -1,0 +1,228 @@
+$block: 'facility-certifications';
+
+.#{$block} {
+  &__wrapper {
+    border-radius: 4px;
+    background-color: map-get($color, white);
+    border-bottom: 3.5px solid map-get($color, gray-light);
+    margin: map-get($spacing, x-large) auto;
+    width: 95%;
+    padding: map-get($spacing, x-large) map-get($spacing, xx-large) map-get($spacing, xx-large);
+    @media (max-width: 600px) {
+      padding: map-get($spacing, x-large) map-get($spacing, medium);
+    }
+  }
+
+  &__section-search {
+    width: 40%;
+    min-width: 420px;
+    @include tablet {
+      min-width: 0;
+      width: 100%;
+    }
+  }
+
+  &__dropdown {
+    @include balance-margins;
+    margin: map-get($spacing, large) 0;
+    width: 100%;
+    margin: map-get($spacing, x-large) 0;
+  }
+
+  &__dropdown-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  &__dropdown-wrap {
+    display: flex;
+  }
+
+  &__dropdown-label {
+    color: map-get($color, gray-darkest);
+    @include font(regular);
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 17px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  &__dropdown-select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+    padding-right: 30px;
+    border: 1px solid map-get($color, gray-light);
+    border-radius: 4px;
+    background-color: map-get($color, white);
+    appearance: none;
+    color: map-get($color, gray);
+    @include font(regular);
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 16px;
+    &--large {
+      width: 150px;
+    }
+  }
+
+  &__dropdown-arrow {
+    pointer-events: none;
+    position: absolute;
+    right: 18px;
+    top: 17px;
+    width: 11px;
+    height: 11px;
+    color: map-get($color, red);
+    &:before {
+      margin-left: -8px;
+      padding-left: 8px;
+      background-color: map-get($color, white);
+    }
+  }
+
+  &__section-results {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid map-get($color, gray-light);
+    border-radius: 4px;
+    margin: map-get($spacing, xx-large) 0;
+    padding: map-get($spacing, x-large) map-get($spacing, x-large);
+    @media (max-width: 600px) {
+      padding: map-get($spacing, x-large) map-get($spacing, medium);
+    }
+  }
+
+  &__section-results-title {
+    @include font(headline);
+    color: #171717;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 18px;
+    margin: 0;
+  }
+
+  &__section-results-dropdown {
+    @include mobile-only {
+      margin: map-get($spacing, medium) 0; 
+      .dropdown {
+        &__wrapper { 
+          display: flex;
+          margin: map-get($spacing, small ) 0;
+          .#{$block}__dropdown-select--large{
+            margin-left: map-get($spacing, small );
+            width: 150px;
+          }
+        }
+      }
+    }
+  }
+
+  &__section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: map-get($spacing, x-large);
+    @include mobile-only{
+      display: block;
+    }
+  }
+
+  &__result {
+    margin-bottom: map-get($spacing, x-large);
+  }
+
+  &__results-subtitle {
+    @include font(headline);
+    color: map-get($color, black);
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 18px;
+    margin: map-get($spacing, large) 0;
+  }
+
+  &__results-wrapper {
+    border-bottom: 1px solid map-get($color, gray-light)
+  }
+
+  &__result-line {
+    margin: map-get($spacing, xx-small) 0;
+  }
+
+  &__result-category {
+    @include font(regular);
+    @include typography(label);
+    color: map-get($color, gray-darker);
+    line-height: 0;
+    font-weight: bold;
+  }
+
+  &__result-text {
+    @include font(regular);
+    @include typography(label);
+    color: map-get($color, gray);
+    line-height: 0;
+    margin-left: 6px;
+    @include mobile-only{
+      word-break: break-word;
+    }
+  }
+
+  &__result-links {
+    margin-top: 10px;
+  }
+
+  &__result-link {
+    margin-right: 20px;
+    @include font(regular);
+    @include typography(label);
+    line-height: 0;
+  }
+  
+  &__select-wrapper {
+    display: flex;
+    .select {
+      .select__wrapper {
+        border: 1px solid map-get($color, gray-light);
+        display: flex;
+        border-radius: 2px;
+        background-color: map-get($color, gray-lightest);
+        &:before {
+          font-weight: bold;
+        }
+        .select-wrap {
+          height: 32px;
+          width: 168px;
+          select {
+            font-weight: 400;
+          }
+          &:after {
+            pointer-events: none;
+          }
+          .select-label {
+            display: none;
+          }
+        }
+      }
+    }
+    @include mobile-only {
+      display: block;
+      margin: map-get($spacing, x-large) 0;
+    }
+  }
+
+  &__select-label {
+    margin-right: map-get($spacing, x-small);
+    color: #171717;
+    @include font(headline);
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+}

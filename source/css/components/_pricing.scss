@@ -1,0 +1,26 @@
+.pricing {					
+	&__title {
+		@include font(headline);
+		font-size: 14px;
+		color: map-get($color, gray);
+		margin-bottom: map-get($spacing, xx-small);
+	}
+	
+	&__body {
+		display: flex;
+		align-items: center;
+		color: map-get($brand, text);
+		
+		.current {
+			@include font(headline);
+			font-weight: bold;
+		}
+		
+		.original {
+			margin-left: map-get($spacing, x-small);
+			text-decoration: line-through;
+			font-size: 14px;
+			color: map-get($color, gray);
+		}
+	}
+}

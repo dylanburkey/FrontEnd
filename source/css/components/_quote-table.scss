@@ -1,0 +1,72 @@
+$block: 'quote-table';
+
+.#{$block} {
+  padding: 60px map-get($spacing, medium);
+
+ .header {
+   background:  map-get($color, gray-light);
+   border-bottom: 1px solid map-get($color, black);
+   th {
+     vertical-align: bottom;
+     font-size: 15px;
+     @include font(regular);
+     font-weight: bold;
+     color: map-get($color, gray-darkest);
+   }
+ }
+  
+  tr {
+    border-bottom: 1px solid map-get($color, black);
+    &:last-of-type {
+      background: map-get($color, white);
+      border-bottom: none;
+    }
+  }
+
+  td {
+    padding: map-get($spacing, small);
+    vertical-align: middle;
+    p {
+      font-size: 12px;
+      @include font(regular);
+      color: map-get($color, gray-darkest);
+      margin: 0;
+      line-height: 18px;
+      &:first-of-type {
+        font-weight: bold;
+      }
+      &:nth-child(2) {
+        @include font(regular);
+        color: map-get($color, gray-darkest);
+      }
+      &:nth-child(3) {
+        padding-left: map-get($spacing, medium);
+        font-weight: bold;
+        margin-top: 12px;
+      }
+    }
+  }
+
+  th, td {
+    &:nth-child(2),
+    &:nth-child(3) {
+      text-align: center;
+    }
+
+    &:nth-child(4),
+    &:nth-child(5) {
+      text-align: right;
+    }
+  }
+
+  .total {
+    border-top:1px solid map-get($color, black);
+    td {
+      p {
+        font-size: 15px;
+        @include font(regular);
+        padding-top: map-get($spacing, xx-small);
+      }
+    }
+  }
+}

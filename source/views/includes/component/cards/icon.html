@@ -1,0 +1,28 @@
+{% assign data = site.data.cards.icon[include.data][include.index] %}
+{% assign len = site.data.cards.icon[include.data] | size | minus: 1 %}
+
+{% if include.index <= len %}
+
+  {% if data.url %}
+  <a class="card card--icon" href="{{ data.title.href }}">
+    {% else %}
+  <div class="card card--icon">
+  {% endif %}
+     
+      <div class="card__image">
+        <img src="{{ data.image.src | prepend: site.baseurl }}" alt="{{ data.image.alt }}" />
+      </div>
+      <div class="card__content" >
+        <h4 class="card__title">{{ data.title }}</h4>
+        {% if data.description %}
+        <p class="card__description">{{ data.description }}</p>
+        {% endif %}
+      </div>
+
+  {% if data.url %}
+  </a>
+    {% else %}
+  </div>
+  {% endif %}
+
+{% endif %}

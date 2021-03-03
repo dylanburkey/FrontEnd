@@ -1,0 +1,68 @@
+{
+	"bar-vertical": {
+		"wire": {
+			"title": "Pounds of wire per tip",
+			"items": [
+				{
+					"percent": "54",
+					"value": "54 lbs",
+					"height": 70,
+					"label": "Average Generic Expendables"
+				},
+				{
+					"percent": "87",
+					"value": "87 lbs",
+					"height": 131,
+					"label": "Average Premium Expendables"
+				},
+				{
+					"percent": "120",
+					"value": "120 lbs",
+					"height": 184,
+					"label": "Magnum PRO 550A Expendables",
+					"highlight": true
+				}
+			],
+			"image": {
+				"src": "/images/chart-vertical.png",
+				"alt": "vertical bar chart"
+			}
+		}
+	},
+	"bar-horizontal": {
+		"amperage": {
+			"title": "Amperage rating at 100% duty cycle (mixed gas)",
+			"bar-groups": [
+				{
+					"value-1": 135,
+					"label-1": "200A Competitor",
+					"value-2": 232,
+					"label-2": "Magnum PRO Curve HDE 250"
+				},
+				{
+					"value-1": 233,
+					"label-1": "300A Competitor",
+					"value-2": 326,
+					"label-2": "Magnum PRO Curve HDE 350"
+				},
+				{
+					"value-1": 328,
+					"label-1": "400A Competitor",
+					"value-2": 401,
+					"label-2": "Magnum PRO Curve HDE 450"
+				},
+				{
+					"value-1": 401,
+					"label-1": "500A Competitor",
+					"value-2": 531,
+					"label-2": "Magnum PRO Curve HDE 550"
+				}
+			],
+			"labels": ["0", "200", "400", "600"],
+			"image": {
+				"src": "/images/chart-horizontal.png",
+				"alt": "horizontal bar chart"
+			}
+		}
+	}
+}

@@ -1,0 +1,310 @@
+.atc-modal {
+    // position: relative;
+    // background: map-get($brand, background);
+    // box-shadow: 0 0 6px 4px rgba(18,18,18,0.07);
+    // border-radius: $border-radius;
+    // position: absolute;
+    // right: 0;
+    // left: 0;
+    // margin: auto;
+    // max-width: calc(100% - #{map-get($spacing, large)} * 2);
+    // z-index: 100;
+    // top: 50%;
+    // transform: translateY(-50%);
+    
+    // @include desktop {
+    //     max-width: 1200px;
+    //     margin: auto;
+    //     &:after {
+    //         clear: both;
+    //         display: table;
+    //         content: "";
+    //     }
+    // }
+    @include desktop {
+      min-height: 525px;
+    }
+    &__title {
+      .icon-selected {
+        margin-right: map-get($spacing, xx-small);
+      }
+    }
+
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: map-get($spacing, medium);
+        appearance: none;
+        border: none;
+        background: none;
+        font-size: 16px;
+        font-size: 0px;
+        cursor: pointer;
+        display: block;
+        z-index: 1;
+    }
+
+    &__table-preview {
+        display: flex;
+        align-items: center;
+        * {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        p {
+            strong {
+                font-size: 16px;
+            }
+        }
+
+        img {
+            margin-right: map-get($spacing, small);
+        }
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &__summary {
+        border-radius: $border-radius $border-radius 0 0;
+        @include desktop {
+            border-radius: $border-radius 0 0 0;
+            padding-bottom: 0;
+        }
+
+        table {
+            display: none;
+            @include desktop {
+                display: table;
+            }
+
+            * {
+                @include font(headline);
+                color: map-get($color, black);
+                font-size: 14px;
+            }
+            td, th {
+                @include font(headline);
+                vertical-align: middle;
+                padding: 8px;
+                background: none;
+                border-bottom: 1px solid map-get($brand, border);
+                min-width: 45px;
+            }
+
+            th {
+                font-weight: bold;
+            }
+
+            tr {
+                background: none!important;
+            }
+
+            p {
+                margin: 0!important;
+                strong {
+                    font-size: 15px;
+                }
+            }
+
+            img {
+                margin-left: auto;
+                margin-right: map-get($spacing, small);
+            }
+        }
+    }
+
+    &__summary,
+    &__upsell {
+        background: map-get($color, white);
+        padding: map-get($spacing, medium);
+        @include balance-margins;
+        @include desktop {
+            padding: map-get($spacing, x-large);
+            width: 65%;
+            border-right: 1px solid map-get($brand, border);
+        }
+    }
+
+  &__upsell {
+    @include desktop {
+      border-radius: 0 0 0 $border-radius;
+    }
+
+    .swiper-pagination {
+      display: none;
+    }
+
+    .swiper-container {
+      .card--product-grid {
+        display: flex;
+        flex-direction: column;
+        flex-basis: auto;
+        .card__image {
+          float: unset;
+        }
+
+        .card__image, .card__content {
+          width: 100%;
+          flex-basis: auto;
+        }
+
+        .card__content {
+          flex-grow: 1;
+        }
+
+        .card__wrapper, .card__rating, .card__pricing {
+          padding-left: 0;
+        }
+      }
+    }
+    &.swiper-initialized {
+      position: relative;
+      padding-right: map-get($spacing, xxx-large);
+      @include mobile-only {
+        .swiper-navigation {
+          display: none;
+        }
+      }
+      .swiper-button-disabled {
+        display: none;
+      }
+      .swiper-button-prev, .swiper-button-next {
+        color: map-get($color, red);
+        font-weight: bold;
+        width: map-get($spacing, medium);
+        height: map-get($spacing, medium);
+        &:focus {
+          outline: 0;
+        }
+        &:after {
+          font-size: 18px;
+        }
+      }
+
+
+      .swiper-button-next {
+        right: map-get($spacing, large);
+        left: auto;
+      }
+
+      .swiper-button-prev {
+        left: map-get($spacing, large);
+        right: auto;
+      }
+    }
+    &:not(.swiper-initialized) {
+      .swiper-navigation {
+        display: none;
+      }
+      .carousel-wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        overflow-x: auto;
+        .card {
+          flex-basis: 260px;
+          flex-shrink: 0;
+          margin-right: map-get($spacing, medium);
+          &:last-of-type {
+            margin-right: 0;
+          }
+          @include desktop {
+            margin-right: map-get($spacing, large);
+            flex-grow: 1;
+            max-width: 25%;
+            flex-basis: calc(100%/3 - #{map-get($spacing, large) * 2});
+            &:last-of-type {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+    &__cart {
+        padding: map-get($spacing, medium);
+        //border-top: 1px solid map-get($brand, border);
+        //border-bottom: 1px solid map-get($brand, border);
+        @include balance-margins;
+        @include desktop {
+            //border-top: 0;
+            //border-bottom: 0;
+            width: 35%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            border-radius: 0 $border-radius $border-radius 0;
+            padding: map-get($spacing, x-large);
+        }
+    }
+
+    &__cart-cta {
+        @include desktop {
+            display: flex;
+            align-items: center;
+            margin-top: map-get($spacing, large);
+        }
+
+        > div {
+            @include desktop {
+                margin-right: map-get($spacing, small);
+            }
+        }
+
+        .btn {
+            width: 100%;
+            display: block;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: map-get($spacing, medium);
+            margin-bottom: map-get($spacing, medium);
+            @include desktop {
+                display: inline-flex;
+                margin: 0;
+                padding-left: map-get($spacing, large);
+                padding-right: map-get($spacing, large);
+            }
+        }
+    }
+    
+
+    &__shipping-upsell {
+        @include balance-margins;
+        border-top: 1px solid map-get($brand, border);
+        margin-top: map-get($spacing, large);
+        padding-top: map-get($spacing, medium);
+        @include desktop {
+            margin-top: map-get($spacing, x-large);
+            padding-top: map-get($spacing, large);
+        }
+
+        * {
+            @include font(headline);
+        }
+
+        p {
+            margin: map-get($spacing, small) 0;
+            @include desktop {
+                margin: map-get($spacing, large) 0;
+            }
+        }
+        .progress-bar {
+          height: 12px;
+          border: 1px solid map-get($color, gray-light);
+          border-radius: 15px;
+          background-color: map-get($color, white);
+          box-shadow: inset -1px 1px 3px 0 rgba(36,36,36,0.27);
+          .progress-bar-content {
+            height: 11px;
+            border-radius: 15px;
+            background-color: map-get($color, red);
+          }
+        }
+    }
+}

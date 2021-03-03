@@ -1,0 +1,288 @@
+$block: 'modal';
+
+.#{$block} {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+
+  &.active {
+    .active-modal & {
+      display: block;
+    }
+  }
+  
+  .modal-content {
+    padding: map-get($spacing, large);
+    border-radius: 4px;
+    background-color: map-get($color, white);
+    box-shadow: 0 0 6px 4px rgba(18, 18, 18, 0.07);
+    margin: map-get($spacing, medium) auto;
+    position: relative;
+    max-width: calc(100% - 24px * 2);
+    @include desktop {
+      max-width: 680px;
+      padding: map-get($spacing, xx-large) map-get($spacing, xx-large) map-get($spacing, xxx-large);
+    }
+  }
+
+  .modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    background: none;
+    padding: map-get($spacing, small);
+    font-size: 0px;
+    .icon-close {
+      &:before {
+        @include typography('p-large');
+      }
+    }
+    cursor: pointer;
+    z-index: 101;
+    &:focus {
+      outline: 0;
+    }
+    @include desktop {
+      padding: map-get($spacing, large);
+      font-size: 0px;
+      .icon-close {
+        &:before {
+          @include typography('p');
+        }
+      }
+    }
+  }
+
+  .modal-title {
+    @include typography(h3);
+    @include font(headline);
+    color: map-get($color, gray-darkest);
+    font-weight: bold;
+    letter-spacing: 0;
+    margin: 0;
+    padding-bottom: map-get($spacing, large);
+    @include desktop {
+      padding-bottom: map-get($spacing, x-large);
+    }
+  }
+
+
+  &__background {
+    display: none;
+    z-index: 3;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  &__container {
+    padding: map-get($spacing, large);
+    border-radius: 4px;
+    background-color: map-get($color, white);
+    box-shadow: 0 0 6px 4px rgba(18, 18, 18, 0.07);
+    margin: map-get($spacing, medium) auto;
+    position: relative;
+    max-width: calc(100% - 24px * 2);
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+    @include desktop {
+      max-width: 680px;
+      padding: map-get($spacing, xx-large) map-get($spacing, xx-large) map-get($spacing, xxx-large);
+    }
+  }
+
+  &.active-modal {
+
+    .#{$block} {
+      &__background {
+        overflow: hidden;
+        position: absolute;
+        min-height: 100%;
+        width: 100%;
+        display: block
+      }
+    }
+
+	}
+
+  &__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    background: none;
+    padding: map-get($spacing, small);
+    font-size: 0px;
+    .icon-close {
+      &:before {
+        @include typography('p-large');
+      }
+    }
+    cursor: pointer;
+    z-index: 101;
+    &:focus {
+      outline: 0;
+    }
+    @include desktop {
+      padding: map-get($spacing, large);
+      font-size: 0px;
+      .icon-close {
+        &:before {
+          @include typography('p');
+        }
+      }
+    }
+  }
+
+  &__title {
+    @include typography(h3);
+    @include font(headline);
+    color: map-get($color, gray-darkest);
+    font-weight: bold;
+    letter-spacing: 0;
+    margin: 0;
+    padding-bottom: map-get($spacing, large);
+    @include desktop {
+      padding-bottom: map-get($spacing, x-large);
+    }
+  }
+
+  li {
+    @include typography(p);
+    @include font(regular);
+    color: map-get($color, gray-darker);
+    letter-spacing: 0;
+    margin: 0;
+    padding-bottom: map-get($spacing, x-small);
+    @include desktop {
+      padding-left: map-get($spacing, large);
+    }
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+    &:before {
+      width: 3px;
+      height: 3px;
+      top: 10px;
+      background: map-get($color, gray-darker);
+    }
+  }
+
+  &__cta {
+    padding-top: map-get($spacing, x-large);
+    @include desktop {
+      padding-top: map-get($spacing, xx-large);
+    }
+  }
+
+  &--add-to-cart {
+    background: map-get($brand, background);
+    width: 100%;
+    border-radius: $border-radius;
+    max-width: calc(100% - #{map-get($spacing, large)} * 2);
+    padding: 0;
+    max-height: 90%;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+    @include desktop {
+      max-width: 1200px;
+      margin: auto;
+    }
+    .modal-content {
+      background: map-get($brand, background);
+      width: 100%;
+      margin: 0;
+      max-width: 100%;
+      padding: 0;
+      @include desktop {
+        max-width: 1200px;
+        margin: auto;
+          &:after {
+              clear: both;
+              display: table;
+              content: "";
+          }
+      }
+    }
+  }
+
+  &--press-kit-download {
+    background: map-get($brand, background);
+    width: 100%;
+    border-radius: $border-radius;
+    max-width: calc(100% - #{map-get($spacing, large)} * 2);
+    padding: 0;
+    max-height: 90%;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 0px;
+      background: transparent;
+    }
+    @include desktop {
+      max-width: 700px;
+      margin: auto;
+    }
+    .modal-content {
+      width: 100%;
+      margin: 0;
+      max-width: 100%;
+      padding: 0;
+      height: 950px;
+      @include desktop {
+        max-width: 700px;
+        margin: auto;
+          &:after {
+              clear: both;
+              display: table;
+              content: "";
+          }
+      }
+    }
+    #ffEmbedFrame{
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+  }
+}
+
+@keyframes fadein {
+  0% {background-color: transparent;}
+  100% {background-color: rgba(0, 0, 0, 0.85)}
+}
+
+@keyframes fadeout {
+  0% {background-color: rgba(0, 0, 0, 0.85)}
+  100% {background-color: transparent;}
+}
+
+.modal-overlay {
+  display: none;
+  z-index: 3;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: auto;
+  animation: fadein .5s forwards;
+  background-color: rgba(0, 0, 0, 0.85);
+
+  .active-modal & {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    display: block
+  }
+}

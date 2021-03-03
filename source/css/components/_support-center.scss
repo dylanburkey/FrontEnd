@@ -1,0 +1,50 @@
+$block: 'support-center';
+
+.#{$block} {
+  border: 1px solid map-get($brand, border);
+  border-radius: 4px;
+  background-color: map-get($color, white);
+  padding: map-get($spacing, small) map-get($spacing, medium);
+  border-bottom: 2px solid map-get($brand, border);
+  @include desktop {
+    max-width: 393px;
+    padding:map-get($spacing, medium);
+  }
+
+  &__description {
+    @include font(headline);
+    margin: 0;
+    color: map-get($color, gray-darkest);
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 22px;
+    padding-bottom: map-get($spacing, xx-small);
+  }
+
+  &__link {
+    @include font(headline);
+    color: map-get($color, red);
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 19px;
+  }
+
+  &--assistance {
+    background:none;
+    padding:0;
+    border: none;
+    .#{$block}__description {
+      padding-right: map-get($spacing, xx-small);
+      display: initial;
+      padding-bottom: 0;
+    }
+
+    .#{$block}__link {
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: normal;
+    }
+  }
+}

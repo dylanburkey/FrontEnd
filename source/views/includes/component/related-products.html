@@ -1,0 +1,11 @@
+{% assign rp = site.data.related-products[include.data] %}
+<div class="related-products">
+  <div class="related-products__container container">
+    <h2 class="related-products__title">{{rp.title}}</h2>
+    <div class="related-products__cards">
+      {% include component/carousel.html
+      style="content"
+      dataName="companion-expendables" %}
+    </div>
+  </div>
+</div>

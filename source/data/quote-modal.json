@@ -1,0 +1,34 @@
+{
+  "generate-quote":{
+    "title":"Generate Quote",
+    "description":"You may provide additional information to include in your quote",
+    "items":[
+      {
+        "label":"Attn"
+      }
+    ],
+    "style":"generate"
+  },
+  "generate-customer-quote":{
+    "customer-quote":true,
+    "title":"Generate Customer Quote",
+    "description":"You may provide additional information to include in your quote",
+    "items":[
+      {
+        "label":"Attn"
+      },
+      {
+        "label":"Markup Percentage"
+      },
+      {
+        "label":"Name"
+      },
+      {
+        "label":"Street"
+      },
+      {
+        "label":"City"
+      }
+    ]
+  }
+}

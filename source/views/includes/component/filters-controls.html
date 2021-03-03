@@ -1,0 +1,11 @@
+<div class="filters-controls">
+  <div class="filters-controls__wrapper">
+    <p class="filters-controls__top">
+      <a href="#!submit-filters" class="btn js-submit-btn" data-plural-suffix="s">apply {% if include.data.btn-count %}<span class="btn-count"></span>{% endif %} filter<span class="btn-plural"></span></a>
+    </p>
+    <p class="filters-controls__bottom">
+      {% if include.data.clear-control %}<a class="filters-controls__clear-btn js-filters-clear" href="{{include.data.clear-control.href}}">{{include.data.clear-control.text}}</a>{% endif %}
+      <a class="filters-controls__close-btn js-hide-filters" href="{{include.data.close-control.href}}" data-toggle="{{include.data.close-control.id}}">close</a>
+    </p>
+  </div>
+</div>

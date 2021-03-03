@@ -1,0 +1,453 @@
+{
+  "filler-metal-certification": {
+    "nav-text-1": "Certificates of conformance",
+    "nav-text-2": "Agency Certifications",
+    "nav-text-3": "AWS D1.8 Certificates",
+    "nav-text-4": "Customized Certificate of Conformance",
+    "nav-text-5": "Private Label Certificates",
+    "footer-text1": "Please ",
+    "footer-link":"contact us ",
+    "footer-text2": "should you have any questions regarding the downloading of certificates",
+    "conformance": {
+      "title": "Certificates of Conformance",
+      "subtitle": "These certificates of conformance do not reference a Q1 Lot number",
+      "product-name": "Search By Product",
+      "product-name-label":"conformance-product-name-label",
+      "or-text": "or",
+      "find": "find",
+      "options": [{
+          "value": "Select a product name",
+          "text": "Select a product name",
+          "name": "option-default"
+        },
+        {
+          "value": "Product name 1",
+          "text": "Product name 1",
+          "name": "option-1"
+        },
+        {
+          "value": "Product name 2",
+          "text": "Product name 2",
+          "name": "option-2"
+        },
+        {
+          "value": "Product name 3",
+          "text": "Product name 3",
+          "name": "option-3"
+        }
+      ],
+      "exact-matches": {
+        "title": "Exact Product Matches",
+        "product-name": "Product Name",
+        "classification": "Classification",
+        "possible-matches": "Possible Product Matches",
+        "matched-products": [{
+          "product-name": "Lincolnweld 320LR",
+          "product-number": "#95273",
+          "classification": "ER320LR"
+        }]
+      },
+      "possible-matches": {
+        "title": "Possible Product Matches",
+        "subtitle": "We couldn't find any exact matches for 320. Below are some possible matches for your search",
+        "product-name": "Product Name",
+        "classification": "Classification",
+        "possible-matches": "Possible Product Matches",
+        "matched-products": [{
+            "product-name": "Lincolnweld 320LR",
+            "product-number": "#95273",
+            "classification": "ER320LR"
+          },
+          {
+            "product-name": "Bluew Max MIG 320LR",
+            "product-number": "#95274",
+            "classification": "ER320LR"
+          },
+          {
+            "product-name": "Lincoln ER 320LR",
+            "product-number": "#95287",
+            "classification": "ER320LR"
+          }
+        ]
+      },
+      "no-matches-found": {
+        "title": "No Product Matches",
+        "subtitle": "We couldn't find any matches for 12345. Try another search or choose a product from the search by product dropdown list above"
+      }
+    },
+    "q1certificates": {
+      "title": "Q1 Certificates",
+      "subtitle": "Select your certificate type below",
+      "error": true,
+      "radios": [{
+          "id": "1",
+          "title": "Certificate of Conformance",
+          "subtitle": "(Applicable certificate of conformance for a specific Q1 Lot)",
+          "link": "#"
+        },
+        {
+          "id": "2",
+          "title": "Certificate of Actual Chemistry",
+          "subtitle": "(For Q1 Schedule K Lincolnweld® Flux and Q1 Schedule H carbon and low alloy steel Lincolnweld® Wire and Lincoln® Cut Length certificates only)",
+          "link": "#"
+        }
+      ],
+      "results": {
+        "title": "Results",
+        "file-name": "File Name",
+        "description": "Description",
+        "files": [{
+          "file-name": "Fleetweld 35",
+          "description": "Fleetweld 35"
+        }]
+      },
+      "no-results": {
+        "title": "Results",
+        "subtitle": "We couldn't find any results for 12345"
+      }
+    },
+    "wire-flux": {
+      "title": "Wire and Flux Combination Certificate",
+      "get-pdf": "get pdf",
+      "results": {
+        "title": "Results",
+        "file-name": "File Name",
+        "description": "Description",
+        "files": [{
+          "file-name": "CMTR_13220339x13364702",
+          "description": "Wire Lot #13220339 and Flux Lot #13364702 Combination Certificate"
+        }]
+      },
+      "no-results": {
+        "title": "Results",
+        "subtitle": "We couldn't find any results for 12345"
+      }
+    },
+    "q2certificates": {
+      "title": "Q2 Certified and Tested Lot Controlled Materials",
+      "subtitle": "Select your certificate type below",
+      "results": {
+        "title": "Results",
+        "lot-number": "File Name",
+        "description": "Description",
+        "product-name": "Product Name",
+        "files": [{
+          "lot-number": "798A",
+          "description": "1.3mm",
+          "product-name": "Pipeliner Autoweld G80M"
+        }]
+      }
+    },
+    "agency-certifications": {
+      "title": "Agency certifications",
+      "filter-by": "filter by",
+      "results": {
+        "product-name": "Product Name",
+        "certificate-number": "Certificate Number",
+        "agency-name": "Agency Name",
+        "products": [{
+            "product-name": "ABS Approvals",
+            "certificate-number": "#5000598",
+            "agency-name": "ABS"
+          },
+          {
+            "product-name": "BV Approvals",
+            "certificate-number": "#500061",
+            "agency-name": "BV"
+          },
+          {
+            "product-name": "Lincolnweld 888 / Lincolnweld LAC-690",
+            "certificate-number": "#5068061",
+            "agency-name": "CCS"
+          },
+          {
+            "product-name": "DB Approvals",
+            "certificate-number": "#5000616",
+            "agency-name": "DB"
+          },
+          {
+            "product-name": "DNV-GL Approvals",
+            "certificate-number": "#5000606",
+            "agency-name": "DNV-GL"
+          },
+          {
+            "product-name": "Lloyds Register Approvals",
+            "certificate-number": "#5000600",
+            "agency-name": "LR - LLoyds Register"
+          }
+        ]
+      }
+    },
+    "aws": {
+      "title": "AWS D1.8 Certificates",
+      "btn-text": "find",
+      "or-text": "Or view",
+      "link": "AWS D1.8 Intermix Tests",
+      "product": {
+        "product-name": "Product",
+        "product-name-label": "aws-product-name-label",
+        "options": [{
+            "value": "Select a product name",
+            "text": "Select a product name",
+            "name": "option-default"
+          },
+          {
+            "value": "Product name 1",
+            "text": "Product name 1",
+            "name": "option-1"
+          },
+          {
+            "value": "Product name 2",
+            "text": "Product name 2",
+            "name": "option-2"
+          },
+          {
+            "value": "Product name 3",
+            "text": "Product name 3",
+            "name": "option-3"
+          }
+        ]
+      },
+      "diameter": {
+        "diameter": "Diameter",
+        "diameter-label": "aws-diameter-label",
+        "options": [{
+            "value": "All",
+            "text": "All",
+            "name": "option-default"
+          },
+          {
+            "value": "diameter-1",
+            "text": "Diameter 1",
+            "name": "option-1"
+          },
+          {
+            "value": "diameter-2",
+            "text": "Diameter 2",
+            "name": "option-2"
+          },
+          {
+            "value": "diameter-3",
+            "text": "Diameter 3",
+            "name": "option-3"
+          }
+        ]
+      },
+      "results": {
+        "title": "Results",
+        "product-name": "Product Name",
+        "diameter": "Diameter",
+        "classification": "Classification",
+        "products": [{
+            "product-name": "Metalshield MC-70 XLSTM",
+            "product-label": "#95617=D1.8-.052 (2019-12-19) 3 Lots",
+            "diameter": "0.045",
+            "classification-1": "E70T15-M20A4-CS1-H4,",
+            "classification-2": "E70T15-M21A4-CS1-H4"
+          },
+          {
+            "product-name": "Metalshield MC-70 XLSTM",
+            "product-label": "#95617=D1.8-.052 (2019-12-19) 3 Lots",
+            "diameter": "0.045",
+            "classification-1": "E70T15-M20A4-CS1-H4,",
+            "classification-2": "E70T15-M21A4-CS1-H4"
+          },
+          {
+            "product-name": "Metalshield MC-70 XLSTM",
+            "product-label": "#95617=D1.8-.052 (2019-12-19) 3 Lots",
+            "diameter": "0.045",
+            "classification-1": "E70T15-M20A4-CS1-H4,",
+            "classification-2": "E70T15-M21A4-CS1-H4"
+          }
+        ]
+      },
+      "results-or-view": {
+        "title": "Results",
+        "product-name": "Product Name",
+        "diameter": "Diameter",
+        "classification": "Classification",
+        "products": [{
+          "product-name": "AWS D1.8 Intermix Testing",
+          "product-label": "#D1.8 INTERMIX",
+          "diameter": "Multiple",
+          "classification-1": "Multiple"
+        }]
+      }
+    },
+    "aws-d11": {
+      "title": "AWS D1.1 Certificates",
+      "text": "To assist our customers who work to the AWS D1.1 code, Lincoln Electric has tested various shielding gas combinations with our GMAW and FCAW-G electrodes. This documentation meets the AWS D1.1 requirements, and permits these combinations to be used with prequalified WPSs. All other applicable D1.1 requirements for prequalification must also be met, but this testing done by Lincoln saves our customers the time and cost associated with WPS qualification testing.",
+      "results": {
+        "title": "Results",
+        "product-name": "Product Name",
+        "gas": "Gas",
+        "products": [{
+            "product-name": "Super Arc L-50",
+            "product-label": "#10500-47 D1.1",
+            "gas": "80Ar/20CO2"
+          },
+          {
+            "product-name": "Super Arc L-50",
+            "product-label": "#10500-47 D1.1",
+            "gas": "80Ar/20CO2"
+          },
+          {
+            "product-name": "Super Arc L-50",
+            "product-label": "#10500-47 D1.1",
+            "gas": "80Ar/20CO2"
+          },
+          {
+            "product-name": "Super Arc L-50",
+            "product-label": "#10500-47 D1.1",
+            "gas": "80Ar/20CO2"
+          },
+          {
+            "product-name": "Super Arc L-50",
+            "product-label": "#10500-47 D1.1",
+            "gas": "80Ar/20CO2"
+          },
+          {
+            "product-name": "Super Arc L-50",
+            "product-label": "#10500-47 D1.1",
+            "gas": "80Ar/20CO2"
+          },
+          {
+            "product-name": "Super Arc L-50",
+            "product-label": "#10500-47 D1.1",
+            "gas": "80Ar/20CO2"
+          },
+          {
+            "product-name": "Super Arc L-50",
+            "product-label": "#10500-47 D1.1",
+            "gas": "80Ar/20CO2"
+          },
+          {
+            "product-name": "Super Arc L-50",
+            "product-label": "#10500-47 D1.1",
+            "gas": "80Ar/20CO2"
+          },
+          {
+            "product-name": "Super Arc L-50",
+            "product-label": "#10500-47 D1.1",
+            "gas": "80Ar/20CO2"
+          },
+          {
+            "product-name": "Super Arc L-50",
+            "product-label": "#10500-47 D1.1",
+            "gas": "80Ar/20CO2"
+          }
+        ]
+      }
+    },
+    "customized-cert": {
+      "title": "Customized Certificate of Conformance",
+      "text": "* Required Field",
+      "btn-submit": "Submit",
+      "btn-reset": "clear form",
+      "product-name": "Product",
+      "product-name-label": "customized-cert-product-name-label",
+      "or-text": "or",
+      "error": "This is an error",
+      "product-options": [
+        {
+          "value": "Product name 1",
+          "text": "Product name 1",
+          "name": "option-1"
+        },
+        {
+          "value": "Product name 2",
+          "text": "Product name 2",
+          "name": "option-2"
+        },
+        {
+          "value": "Product name 3",
+          "text": "Product name 3",
+          "name": "option-3"
+        }
+      ],
+      "certificate-number": "Certificate Number",
+      "certificate-number-label": "certificate-number-label",
+      "certificate-number-options": [
+        {
+          "value": "Product name 1",
+          "text": "Product name 1",
+          "name": "option-1"
+        },
+        {
+          "value": "Product name 2",
+          "text": "Product name 2",
+          "name": "option-2"
+        },
+        {
+          "value": "Product name 3",
+          "text": "Product name 3",
+          "name": "option-3"
+        }
+      ]
+    },
+    "private-label": {
+      "title": "Private Label Certificates of Conformance",
+      "product-name": "Select Product Name",
+      "product-name-label": "private-label-product-name-label",
+      "brand-agency": "Brand/Agency",
+      "options": [{
+          "value": "Select Brand/Agency",
+          "text": "Select Brand/Agency",
+          "name": "option-default"
+        },
+        {
+          "value": "Brand/Agency name 1",
+          "text": "Brand/Agency name 1",
+          "name": "option-1"
+        },
+        {
+          "value": "Brand/Agency name 2",
+          "text": "Brand/Agency name 2",
+          "name": "option-2"
+        },
+        {
+          "value": "Brand/Agency name 3",
+          "text": "Brand/Agency name 3",
+          "name": "option-3"
+        }
+      ],
+      "find": "find",
+      "dropdown-text": "Select Brand/Agency",
+      "results": {
+        "product-name": "Product Name",
+        "classification": "Classification",
+        "products": [{
+            "product-name": "ProStar 6011",
+            "product-label": "#POSR6011",
+            "classification": "E6011"
+          },
+          {
+            "product-name": "ProStar 6011",
+            "product-label": "#POSR6011",
+            "classification": "E6011"
+          },
+          {
+            "product-name": "ProStar 6011",
+            "product-label": "#POSR6011",
+            "classification": "E6011"
+          },
+          {
+            "product-name": "ProStar 6011",
+            "product-label": "#POSR6011",
+            "classification": "E6011"
+          },
+          {
+            "product-name": "ProStar 6011",
+            "product-label": "#POSR6011",
+            "classification": "E6011"
+          },
+          {
+            "product-name": "ProStar 6011",
+            "product-label": "#POSR6011",
+            "classification": "E6011"
+          }
+        ]
+      }
+    }
+  }
+}

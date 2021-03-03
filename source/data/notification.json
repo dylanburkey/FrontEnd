@@ -1,0 +1,7 @@
+{
+  "notification":{
+    "description":"Optional marketing message lorem ipsum dolor sit amet consectetur adipiscing",
+    "text":"Learn More",
+    "href":"#test.learn"
+  }
+}

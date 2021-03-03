@@ -1,0 +1,138 @@
+{% assign e = site.data.hero-product[include.data] %}
+
+<div class="hero-product">
+	<div class="container">
+		<div class="hero-product__slider">
+			{% for item in e.items %}
+			<div class="hero-product__slider-item">
+				<div class="hero-product__slider-item-media">
+					{% include component/responsive-image.html
+						thumbnail=item.image.thumbnail
+						fallback=item.image.fallback
+						small=item.image.small
+						medium=item.image.medium
+						large=item.image.large
+						alt=item.image.alt
+					%}
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<div class="hero-product__meta">
+			<div class="hero-product__detail">
+				<h1 class="hero-product__title">Precision TIG 225 Ready-Pak</h1>
+				<p class="hero-product__subtitle">TIG Welder | K2535-1</p>
+				<p class="hero-product__aws"><strong>AWS: ER308</strong> <a href="#">All Conformances</a></p>
+				<p class="hero-product__add-review"><a href="#">Add Your Review</a></p>
+				<p class="hero-product__description">The Precision TIG® 275 is a versatile shop machine ideal for any type of TIG or Stick welding maintenance application, including the use of 5/32-in. (4.0 mm) stick electrode.</p>
+				<div class="hero-product__input-output-icons">
+					{% include component/input-output-icons.html data="input-output-icons" %}
+				</div>
+				<div class="hero-product__rebate">
+					{% include component/rebate.html data="rebate" %}
+				</div>
+
+			</div>
+			<div class="hero-product__add-to-cart">
+				
+				<div class="hero-product__dropdowns">
+					<div class="hero-product__dropdown">
+						{% include component/dropdown.html data="pdp-diameter" %}				
+					</div>
+					<div class="hero-product__dropdown">
+						{% include component/dropdown.html data="pdp-packages" %}				
+					</div>
+					<div class="hero-product__dropdown">
+						{% include component/dropdown.html data="pdp-wire-feeder" %}				
+					</div>
+					<form action="?test.html">
+						<input name="diameter" value="option-4" type="hidden" />
+						<input name="packages" type="hidden" />
+						<input name="models" value="model-b" type="hidden" />
+					</form>	
+				</div>
+
+				<p class="hero-product__msrp">MSRP: $350.00</p>
+
+				<div class="hero-product__pricing">
+          <div class="hero-product__price">
+            <p>Your Price</p>
+            <p class="hero-product__your-price">$2.2975/<sup>lb</sup></p>
+          </div>
+          <div class="hero-product__sign-in-view-price">
+            <p>Lincoln Electric Business Partner?</p>
+            <a href="#!sign-in-view-price">Sign in to view your price</a>
+          </div>
+				</div>
+
+				<div class="hero-product__availability hero-product__availability--in-stock">
+					<div class="hero-product__availability--left">
+						<span class="hero-product__availability-status hero-product__availability-status--in-stock">In Stock</span>
+						<span class="hero-product__availability-quantity">QTY:</span>
+					</div>
+					<div class="hero-product__availability--right">
+						<p>50 - Lost Angeles, CA US</p>
+						<p>10 - Euclid, OH US</p>
+						<p>10 - City Name, ST US</p>
+					</div>
+				</div>
+
+				<div class="hero-product__availability">
+					<div class="hero-product__availability--backorder">
+						<div class="hero-product__availability--left">
+							<span class="hero-product__availability-status hero-product__availability-status--backorder">On Backorder</span>
+							<span class="hero-product__availability-quantity">QTY:</span>
+						</div>
+						<div class="hero-product__availability--right">
+							<p>10 - Backordered</p>
+							<p>20 - Backordered</p>
+							<p>30 - Backordered</p>
+						</div>
+					</div>
+					<p class="hero-product__availability-message hero-product__availability-message--backorder">Expected Ship Date: Apr 03</p>
+				</div>
+
+				<div class="hero-product__misc">
+					<p><strong>Alloy Surcharge:</strong> $1.38/lb</p>
+					<p><strong>Pallet Weight</strong> 80lbs<span class="tooltip"><span class="icon-help"></span></span></p>	
+				</div>
+
+				<div class="hero-product__unavailable">
+					<p>This product has been discontinued or is no longer available for sale.</p>
+				</div>
+
+				<p>Select options to see price and availability</p>
+
+				<div class="hero-product__locator-cta">
+					{% include component/locator-cta.html data="viking-3350" %}
+				</div>
+
+				<div class="hero-product__quantity{% if include.disabled-quantity %} hero-product__quantity--disabled{% endif %}">
+					{% include component/input-quantity.html %}
+					<button 
+						data-action="add-to-cart" 
+						data-endpoint="https://run.mocky.io/v3/c01ea735-a2f6-4dff-92ea-76dd46a10df8"
+						data-quantity="10"
+						data-price="50.00"
+						data-sku="k1234"
+						data-loading-label="Loading..."
+						class="btn">Add to cart</button>
+				</div>
+				<a href="http://google.com?test=test" data-url="http://google.com?test=test" class="hero-product__update-price disabled">Update Price & Inventory</a>
+				<div class="js-add-to-list-wrapper">
+					<div class="hero-product__add-to-list js-add-to-list">
+						<div class="hero-product__add-to-list-select js-add-to-list-select" data-placeholder="Select a list" data-endpoint="https://run.mocky.io/v3/5cf6048e-6573-467d-be25-308320c6e731"></div>
+						<button 
+							data-action="add-to-list" 
+							data-endpoint="https://run.mocky.io/v3/63c0d95c-aba1-4d35-9449-0d51107f6a57"
+							data-sku="k1234"
+							data-loading-label="Loading..."
+							disabled="disabled"
+							class="btn link hero-product__add-to-list-submit js-add-to-list-submit">
+							<span class="icon-add"></span> Add to List</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

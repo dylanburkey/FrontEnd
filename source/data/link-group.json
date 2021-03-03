@@ -1,0 +1,30 @@
+{
+	"title": "Products",
+	"items": [
+		{
+			"text": "Equipment",
+			"url": "#!equipment",
+			"target": "_blank"
+		},
+		{
+			"text": "Consumables",
+			"url": "#!consumables"
+		},
+		{
+			"text": "Safety",
+			"url": "#!safety"
+		},
+		{
+			"text": "Accessories",
+			"url": "#!accessories"
+		},
+		{
+			"text": "New Products",
+			"url": "#!new-products"
+		},
+		{
+			"text": "Where to Buy or Rent",
+			"url": "#!where-to-buy-or-rent"
+		}
+	]
+}

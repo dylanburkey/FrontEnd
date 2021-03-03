@@ -1,0 +1,94 @@
+{% assign e = site.data.modal[include.data] %}
+
+<div class="modal modal--add-to-cart">
+  <div class="modal__background">
+    <div class="modal__container">
+      <button class="modal__close"><span class="icon-close"></span></button>
+      <div class="modal__body">
+        <div class="atc-modal">
+            <div class="atc-modal__summary">
+                <h3 class="atc-modal__title"><span class="icon-selected"></span>1 Item Added to Cart</h3>
+                <div class="atc-modal__table-preview">
+                    <img height="80" width="80" src="{{ '/images/product-2-promotions.jpg' | prepend: site.baseurl }}" />
+                    <div>
+                        <p><strong>SUPERARC L-56</strong></p>
+                        <p>MIC Wire | ED015790</p>    
+                    </div>
+                </div>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr>
+                        <td><img height="80" width="80" src="{{ '/images/product-2-promotions.jpg' | prepend: site.baseurl }}" /></td>
+                        <td>
+                            <p><strong>SUPERARC L-56</strong></p>
+                            <p>MIC Wire | ED015790</p>    
+                        </td>
+                        <td>
+                            <p><strong>12.5 lbs</strong></p>
+                            <p>(Pallet Weight: 80lbs)</p>
+                        </td>
+                        <td>
+                            <p><strong>$3.2025/lb</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>$40.05</strong></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <p><strong>Alloy Surcharge</strong></p>
+                        </td>
+                        <td></td>
+                        <td>
+                            <p><strong>$1.38/lb</strong></p>
+                        </td>
+                        <td>
+                            <p><strong>$13.80</strong></p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="atc-modal__cart">
+                <h4>Subtotal (1 item): $53.85 USD</h4>
+                <p>Taxes and shipping are calculated during checkout.</p>
+                <div class="atc-modal__cart-cta">
+                    <div>
+                        {% include component/button.html 
+                            title="View Cart"
+                            style="tertiary" 
+                            url="#!view-cart" %}
+                    </div>
+                    <div>
+                        {% include component/button.html 
+                            title="Checkout Now"
+                            url="#!checkout-now" %}
+                    </div>
+                </div>
+                <div class="atc-modal__shipping-upsell">
+                    <p><strong>You are 67.5 lbs away from free shipping!</strong></p>
+                    <div class="progress-bar"></div>
+                    <p>Orders that contain a full pallet ship free! Increase your quantity to a full pallet to recieve free shipping on your order.</p>
+                    <p><a href="#">Increase to a Full Pallet</a></p>
+                </div>
+            </div>
+            <div class="atc-modal__upsell">
+                <h4>Other Items to Consider</h4>
+                {% include component/carousel.html 
+                    style="product-grid"
+                    dataName="modal-related-products" %}
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

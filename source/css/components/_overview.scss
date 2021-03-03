@@ -1,0 +1,33 @@
+$block: 'overview';
+
+.#{$block} {
+
+  .container {
+    @include desktop {
+      display: flex;
+    }
+  }
+
+  &__main {
+    @include desktop {
+      width: 60%;
+      flex-basis: 60%;
+      padding-right: map-get($spacing, xxx-large);
+    }
+  }
+
+  &__rail {
+    background: map-get($brand, background);
+    margin-left: - map-get($spacing, medium);;
+    margin-right: - map-get($spacing, medium);;
+    padding: map-get($spacing, medium);
+
+    @include desktop {
+      @include balance-margins;
+      width: 40%;
+      flex-basis: 40%;
+      padding: map-get($spacing, medium) map-get($spacing, x-large);
+      margin: 0;
+    }
+  }
+}

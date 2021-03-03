@@ -1,0 +1,56 @@
+{
+  "quote-header-three":{
+    "description":"Quatation",
+    "items":[
+      {
+        "title":"Quote Date:",
+        "text":"05/22/2020"
+      },
+      {
+        "title":"Expiration Date:",
+        "text":"06/22/2020"
+      }
+    ]
+  },
+  "quote-header-two":{
+    "style":"sales",
+    "description":"22801 St.Clair Avenue Cleveland, OH 44117",
+    "items":[
+      {
+        "title":"Quote Date:",
+        "text":"05/22/2020"
+      },
+      {
+        "title":"Expiration Date:",
+        "text":"06/22/2020"
+      }
+    ]
+  },
+  "quatation":{
+    "description":"Quatation",
+    "items":[
+      {
+        "title":"Quote Date:",
+        "text":"05/22/2020"
+      },
+      {
+        "title":"Expiration Date:",
+        "text":"06/22/2020"
+      }
+    ]
+  },
+  "quatation-sale":{
+    "style":"sales",
+    "description":"22801 St.Clair Avenue Cleveland, OH 44117",
+    "items":[
+      {
+        "title":"Quote Date:",
+        "text":"05/22/2020"
+      },
+      {
+        "title":"Expiration Date:",
+        "text":"06/22/2020"
+      }
+    ]
+  }
+}

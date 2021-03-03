@@ -1,0 +1,62 @@
+$block: 'toggle-switch';
+
+.#{$block} {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 16px;
+  align-self: flex-end;
+  top: -(map-get($spacing, xx-small));
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  span {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: map-get($color, gray-light);
+    transition: .4s;
+    border-radius: 7.5px;
+    width: 34px;
+    &:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      background-color: map-get($color, white);
+      box-shadow: 0 -2px 4px 0 rgba(32,32,32,0.21), -2px 2px 4px 0 rgba(17,17,17,0.16);
+      bottom: -1px;
+      transition: .4s;
+      border-radius:50%;
+      color: map-get($color, orange-dark);
+      font-size: 9px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  input:checked + span {
+    background-color: map-get($color, orange-dark);
+  }
+
+  input:checked + span:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    left: -(map-get($spacing, x-small));
+    @include icon(selected);
+    color: map-get($color, orange-dark);
+    font-size: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

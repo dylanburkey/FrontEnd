@@ -1,0 +1,167 @@
+{
+	"industry-cards": [
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Automotive"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title":"Offshore"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Heavy Fabrication",
+			"description": "Offering a wide range of advanced power sources, quality-tested consumables and industry-leading application knowledge for heavy equipment"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Pipe Mill"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Pipeline"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Chemical Processing"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Maintenance & Repair"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Structural",
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Shipbuilding"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "General Fabrication",
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Power Generation"
+		}
+	],
+	"welding-equipment-categories": [
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title":"Stick Welders (SMAW)"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "TIG Welders (GTAW)"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "MIG Welders",
+			"description": "Offering a wide range of advanced power sources, quality-tested consumables and industry-leading application knowledge for heavy equipment"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Multi-Process Welders"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title":"Advanced Process Welders",
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title":  "Multi-Operational Welders"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Engine Drives"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Submerged Arc Equipment"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Wire Feeders"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Weld Flume Control"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Training Equipment"
+		}
+	],
+	"media-resources": [
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Press Kits"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Asset Request"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Investor Relations",
+			"description": "Offering a wide range of advanced power sources, quality-tested consumables and industry-leading application knowledge for heavy equipment"
+		},
+		{
+			"url": "#",
+			"imageSrc": "/images/420x300.png",
+			"imageAlt": "Image alt text, should always be added for accessibility",
+			"title": "Social Media"
+		}
+	]
+}

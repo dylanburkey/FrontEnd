@@ -1,0 +1,155 @@
+$block: 'btn';
+
+.#{$block} {
+	@include font(headline);
+	@include transition;
+	font-weight: bold;
+	display: inline-flex;
+	align-items: center;
+	text-transform: uppercase;
+	font-size: 15px;
+	line-height: 20px;
+	text-decoration: none;
+	border: 0;
+	cursor: pointer;
+	outline: 0;
+	border-radius: $border-radius;
+	padding: map-get($spacing, small) map-get($spacing, x-large);
+	@include mobile-only {
+		margin-bottom: 15px;
+	}
+
+	&:not(.link) {
+		border: 2px solid;
+		color: map-get($color, white);
+		background: map-get($color, red);
+		border-color: map-get($color, red);
+
+		&:focus,
+		&:hover {
+			color: map-get($color, white);
+			background: darken(map-get($color, red), 10%);
+			border-color: darken(map-get($color, red), 10%);
+		}
+
+		&.disabled,
+		&[disabled="disabled"] {
+			cursor: not-allowed;
+			background: map-get($color, gray-light);
+			border-color: map-get($color, gray-light);
+			pointer-events: none;
+		}
+
+		&.small {
+			//one-off padding
+			padding: 10px 20px;
+			font-size: 14px;
+			line-height: 19px;
+		}
+
+		&.secondary {
+			color: map-get($color, white);
+			background: map-get($color, gray-darkest);
+			border-color: map-get($color, gray-darkest);
+
+			&:focus,
+			&:hover {
+				color: map-get($color, white);
+				background: darken(map-get($color, gray-darkest), 10%);
+				border-color: darken(map-get($color, gray-darkest), 10%);
+			}
+		}
+
+		&.tertiary {
+			color: map-get($color, gray-darkest);
+			border-color: map-get($color, gray-darkest);
+			background: transparent;
+
+			&:focus,
+			&:hover {
+				color: map-get($color, white);
+				background: map-get($color, gray-darkest);
+				border-color: darken(map-get($color, gray-darkest), 10%);
+			}
+		}
+
+		&.tertiary-inverse {
+			color: map-get($color, white);
+			background: transparent;
+			border-color: map-get($color, white);
+
+			&:focus,
+			&:hover {
+				color: map-get($color, white);
+				background: transparent;
+				border-color: darken(map-get($color, white), 10%);
+			}
+		}
+		&.tertiary-inverse-solid {
+			color: map-get($color, white);
+			background: map-get($color, gray-darkest);
+			border-color: map-get($color, white);
+
+			&:focus,
+			&:hover {
+				color: map-get($color, white);
+				background: map-get($color, gray-darkest);
+				border-color: darken(map-get($color, white), 10%);
+			}
+		}
+
+		&.tertiary-solid {
+			color: map-get($color, white);
+			background: map-get($color, gray-darkest);
+			border-color: map-get($color, gray-darkest);
+
+			&:focus,
+			&:hover {
+				color: map-get($color, red);
+				background: map-get($color, gray-darkest);
+				border-color: map-get($color, gray-darkest);
+			}
+		}
+		&.quaternary {
+			color: map-get($color, red);
+			background: map-get($color, white);
+			border-color: map-get($color, white);
+			&:focus,
+			&:hover {
+				color: map-get($color, white);
+				background: map-get($color, gray-darkest);
+				border-color: darken(map-get($color, gray-darkest), 10%);
+			}
+		}
+
+		&.btn-mobile {
+			@include mobile-only {
+				display: block;
+				width: fit-content;
+			}
+		}
+	}
+
+	&.link {
+		text-transform: uppercase;
+		font-size: 15px;
+		line-height: 19px;
+		padding-left: 0;
+
+		@include desktop {
+			font-size: 16px;
+			line-height: 20px;
+		}
+
+		&:after {
+			@include icon(chevron-right);
+				font-size: 15px;
+				line-height: 1;
+				margin-left: map-get($spacing, x-small);
+		}
+	}
+
+	span {
+		margin-right: map-get($spacing, x-small);
+	}
+}

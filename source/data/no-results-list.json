@@ -1,0 +1,16 @@
+{
+  "no-results-list":{
+    "title":"Sorry, we couldn't find any product results for your search.",
+    "elements":[
+      {
+        "text":"Please double check your spelling"
+      },
+      {
+        "text":"Try more generic search terms (e.g., TIG welder,fume control)"
+      },
+      {
+        "text":"Navigate to a product category using the site navigation above or the links below."
+      }
+    ]
+  }
+}

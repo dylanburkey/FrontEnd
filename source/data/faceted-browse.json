@@ -1,0 +1,59 @@
+{
+  "welding-helmets": {
+    "filters": "filters",
+    "search": false,
+    "region": false,
+    "sort-by": true,
+    "products": true,
+    "article-list": false
+  },
+  "tig-welders": {
+    "filters": "filters",
+    "search": false,
+    "region": false,
+    "sort-by": true,
+    "products": true,
+    "article-list": false
+  },
+  "press-releases": {
+    "search": true,
+    "filters": "filters",
+    "region": true,
+    "buttons": [
+      {
+        "id": "filters",
+        "text": "Filter",
+        "href": "#filter"
+      }
+    ],
+    "sort-by": false,
+    "products": false,
+    "article-list": true
+  },
+  "documents": {
+    "search": false,
+    "region": false,
+    "sort-by": false,
+    "filters": false,
+    "cardStyle": "article-list",
+    "data": "documents"
+  },
+  "pages": {
+    "search": false,
+    "region": false,
+    "sort-by": false,
+    "filters": false,
+    "cardStyle": "article-list",
+    "data": "pages"
+  },
+  "discount-center": {
+    "search": false,
+    "region": false,
+    "sort-by": true,
+    "filters": "discount-center-filters",
+    "filterType": "simple",
+    "cardStyle": "discount-center",
+    "data": "discount-center-preowned",
+    "style": "simple"
+  }
+}

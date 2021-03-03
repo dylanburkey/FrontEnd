@@ -1,0 +1,21 @@
+{% assign e = site.data.hero[include.data] %}
+
+<div class="hero{% if e.carousel %} hero--carousel{% endif %}{% if e.vertical %} hero--carousel-vertical{% endif %}{% if e.gradient %} hero--gradient-{{ e.gradient }}{% endif %}">
+	{% for item in e.items %}
+	<div>
+		<div class="hero__media">
+			{% include component/responsive-image.html
+				small=item.image.small
+				medium=item.image.medium
+				large=item.image.large
+				alt=item.image.alt
+				dataSrc=item.image.dataSrc
+			%}
+		</div>
+		<div class="hero__content{% if item.align %} hero__content--{{item.align}}{% endif %}">
+		 {% include component/teaser.html
+		 		data = item.teaser %}
+		</div>
+  </div>
+  {% endfor %}
+</div>

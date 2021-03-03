@@ -1,0 +1,180 @@
+{
+  "quote-recipient-three":{
+    "wrappers":[
+      {
+        "contents":[
+          {
+            "title":"Prepared For:",
+            "texts":[
+              {
+                "description":"John Smith"
+              },
+              {
+                "description":"ABC Welding Suply"
+              },
+              {
+                "description":"1234 Anywhere Drive"
+              },
+              {
+                "description":"Anywhere, OH, 12345"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "contents":[
+          {
+            "title":"Prepared By:",
+            "texts":[
+              {
+                "description":"Miller Welding Supply Co"
+              },
+              {
+                "description":"505 Grandville Ave SW"
+              },
+              {
+                "description":"Grand Rapids, MI"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "quote-recipient-two":{
+    "style":"sales",
+    "wrappers":[
+      {
+        "contents":[
+          {
+            "title":"Prepared For:",
+            "texts":[
+              {
+                "description":"John Smith"
+              },
+              {
+                "description":"ABC Welding Suply"
+              },
+              {
+                "description":"1234 Anywhere Drive"
+              },
+              {
+                "description":"Anywhere, OH, 12345"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "contents":[
+          {
+            "title":"Account Number:",
+            "texts":[
+              {
+                "description":"00000123456"
+              }
+            ]
+          },
+          {
+            "title":"Sales Org:",
+            "texts":[
+              {
+                "description":"Lincoln Electric USA-US"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "quatation":{
+    "wrappers":[
+      {
+        "contents":[
+          {
+            "title":"Prepared For:",
+            "texts":[
+              {
+                "description":"John Smith"
+              },
+              {
+                "description":"ABC Welding Suply"
+              },
+              {
+                "description":"1234 Anywhere Drive"
+              },
+              {
+                "description":"Anywhere, OH, 12345"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "contents":[
+          {
+            "title":"Prepared By:",
+            "texts":[
+              {
+                "description":"Miller Welding Supply Co"
+              },
+              {
+                "description":"505 Grandville Ave SW"
+              },
+              {
+                "description":"Grand Rapids, MI"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "quatation-sale":{
+    "style":"sales",
+    "wrappers":[
+      {
+        "contents":[
+          {
+            "title":"Prepared For:",
+            "texts":[
+              {
+                "description":"John Smith"
+              },
+              {
+                "description":"ABC Welding Suply"
+              },
+              {
+                "description":"1234 Anywhere Drive"
+              },
+              {
+                "description":"Anywhere, OH, 12345"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "contents":[
+          {
+            "title":"Account Number:",
+            "texts":[
+              {
+                "description":"00000123456"
+              }
+            ]
+          },
+          {
+            "title":"Sales Org:",
+            "texts":[
+              {
+                "description":"Lincoln Electric USA-US"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

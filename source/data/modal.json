@@ -1,0 +1,63 @@
+{
+  "modal": {
+    "activateOnPageLoad": false,
+    "title": "Certified Pre-Owned Equipment Meets the Following Specifications:",
+    "textTrigger": "Text Trigger",
+    "items": [
+      {
+        "text": "Minor scratches and small dents are allowed"
+      },
+      {
+        "text": "Severely dented panels or covers are replaced"
+      },
+      {
+        "text": "Products are cleaned and dust free"
+      },
+      {
+        "text": "A “Used Product” sticker is adhered to the top part of the machine where it is clearly visible"
+      },
+      {
+        "text": "Products are re-boxed or re-crated with the proper “U” tags and “Used Product” stickers attached to the carton or crate"
+      },
+      {
+        "text": "Appropriate serial number label and product labels are applied"
+      },
+      {
+        "text": "Products are sold at the original factory warranty term"
+      },
+      {
+        "text": "Tested in our factory using the same testing procedures as new equipment"
+      }
+    ]
+  },
+  "discount-center-modal": {
+    "title": "Certified Pre-Owned Equipment Meets the Following Specifications:",
+    "activateOnPageLoad": true,
+    "items": [
+      {
+        "text": "Minor scratches and small dents are allowed"
+      },
+      {
+        "text": "Severely dented panels or covers are replaced"
+      },
+      {
+        "text": "Products are cleaned and dust free"
+      },
+      {
+        "text": "A “Used Product” sticker is adhered to the top part of the machine where it is clearly visible"
+      },
+      {
+        "text": "Products are re-boxed or re-crated with the proper “U” tags and “Used Product” stickers attached to the carton or crate"
+      },
+      {
+        "text": "Appropriate serial number label and product labels are applied"
+      },
+      {
+        "text": "Products are sold at the original factory warranty term"
+      },
+      {
+        "text": "Tested in our factory using the same testing procedures as new equipment"
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "global-search-tabs":{
+    "items":[
+      {
+        "nav":"Products",
+        "count":"(83)",
+        "icon": "products",
+        "active":true,
+        "no-results-list":{
+          "title":"Sorry, we couldn't find any product results for your search.",
+          "items":[
+            {
+              "text":"Please double check your spelling"
+            },
+            {
+              "text":"Try more generic search terms (e.g., TIG welder,fume control)"
+            },
+            {
+              "text":"Navigate to a product category using the site navigation above or the links below."
+            }
+          ]
+        }
+      },
+      {
+        "nav":"Documents",
+        "count":"(22)",
+        "content":"content 2",
+        "icon": "documents"
+      },
+      {
+        "nav":"Relevant Pages",
+        "count":"(27)",
+        "content":"content 3",
+        "icon": "pages"
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{% assign a = site.data.input-quantity[include.data] %}
+
+<div class="input-quantity">
+  <input type="button" value="&ndash;" data-direction="decrement" disabled="true">
+  <input type="text" data-suffix="lbs" step="2" data-value="0" data-min-value="0" value="0 lbs" name="quantity" class="quantity-field">
+  <input type="button" value="+" data-direction="increment">
+</div>

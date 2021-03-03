@@ -1,0 +1,29 @@
+{% assign e = site.data.search-bar[include.data] %}
+<section class="search-bar">
+	{% if e.smallLeft %}{% include component/background-texture.html
+	data="small-left" %}{% endif %}
+	{% if e.smallRight %}{% include component/background-texture.html
+	data="small-right" %}{% endif %}
+	{% if e.LargeLeft %}{% include component/background-texture.html
+	data="large-left" %}{% endif %}
+	{% if e.LargeRight %}{% include component/background-texture.html
+	data="large-right" %}{% endif %}
+	<div class="container">
+		<h2>{{e.title}}</h2>
+		<form class="search-field">
+			<label class="search-field-label" for="search-field-input">Search</label>
+			<input type="text" placeholder="{{e.placeholder}}" id="search-field-input" aria-label="search"/>
+			<button type="submit">Submit</button>
+		</form>
+		<div class="search-tags">
+			<p>{{e.tags.label}}</p>
+			<ul>
+				{% for i in e.tags.items %}
+				<li>
+					<a href="{{i.url}}">{{i.text}}</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</section>

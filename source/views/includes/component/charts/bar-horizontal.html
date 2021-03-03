@@ -1,0 +1,24 @@
+{% assign e = site.data.charts["bar-horizontal"][include.data] %}
+
+<div class="chart-block chart-block--horizontal">
+	<div class="title">
+    <strong>{{ e.title }}</strong>
+  </div>
+  <div class="chart chart--horizontal">
+    {% for bar-group in e.bar-groups %}
+    <div class="bar-group">
+      <div class="bar bar--horizontal bar--gray" style="width: {{ bar-group.value-1 }}px;"><span class="bar-horizontal__text">{{bar-group.label-1}}</span></div>
+      <div class="bar bar--horizontal bar--red" style="width: {{ bar-group.value-2 }}px;"><span class="bar-horizontal__text">{{bar-group.label-2}}</span></div>
+    </div>
+    {% endfor %}
+  </div>
+  <ul class="y-axis-label-list">
+    {% for label in e.labels %}
+    <li class="y-axis-label">{{label}}</li>
+    {% endfor %}
+  </ul>
+</div>
+<div class="mobile-view">
+  <img src="{{e.image.src}}" alt="{{e.image.alt}}" class="mobile-view__img">
+</div>
+

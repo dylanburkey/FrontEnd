@@ -1,0 +1,56 @@
+$block: 'active-filters';
+
+.#{$block} {
+
+  display: none;
+  @include desktop {
+    display: flex;
+    align-items: center;
+    padding: map-get($spacing, small) + map-get($spacing, xx-small) 0 map-get($spacing, x-small);
+    border-top: 1px solid map-get($color, gray-light);
+  }
+
+  &-content {
+    border: 1px solid map-get($color, gray-darker);
+    border-radius: 4px;
+    background-color: map-get($color, white);
+    margin-right: map-get($spacing, small);
+    padding: map-get($spacing, medium) - map-get($spacing, small) 10px;
+    &__description {
+      display: inline-block;
+      margin:0;
+      font-weight: bold;
+      padding-right: map-get($spacing, medium) - map-get($spacing, small);
+    }
+
+    &__description, &__title {
+      @include font(headline);
+      color: map-get($color, gray-darker);
+      font-size: 13px;
+      letter-spacing: 0;
+      line-height: 18px;
+    }
+
+
+    &__close-btn {
+      font-size: 0px;
+      &:after {
+        @include icon(close);
+        font-size: 9px;
+        line-height: 1;
+        height: 100%;
+        color: map-get($color, gray-darker);
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__clear-btn {
+    @include font(headline);
+    color: map-get($color, red);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 18px;
+  }
+}

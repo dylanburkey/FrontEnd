@@ -1,0 +1,126 @@
+@mixin desktop {
+	@media( min-width: #{$breakpoint-medium} ){
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media(max-width: 768px){
+		@content;
+	}
+}
+
+//updated for 1024px breakpoint which is considered desktop
+@mixin mobile-only {
+	@media( max-width: 1023px ){
+		@content;
+	}
+}
+
+@mixin container($size:null) {
+	max-width: calc(#{map-get($max-widths, default)} + #{map-get($spacing, medium)} * 2);
+	margin: auto;
+	padding-left: map-get($spacing, medium);
+	padding-right: map-get($spacing, medium);
+	@if($size) {
+		max-width: calc(#{map-get($max-widths, $size)} + #{map-get($spacing, medium)} * 2);
+	}
+}
+
+@mixin typography($level) {
+	font-size: map-get(map-get(map-get($typography, mobile), $level), font-size);
+	line-height: map-get(map-get(map-get($typography, mobile), $level), line-height);
+
+	@include desktop {
+		font-size: map-get(map-get(map-get($typography, desktop), $level), font-size);
+		line-height: map-get(map-get(map-get($typography, desktop), $level), line-height);
+	}
+}
+
+@mixin font($weight) {
+	font-family: map-get($font, $weight), sans-serif;
+}
+
+@mixin link($colorvar, $override:null) {
+	@if($override){
+		color: map-get($color, $colorvar) !important;
+	} @else {
+		color: map-get($color, $colorvar);
+	}
+
+	&:hover,
+	&:focus {
+		@if($override){
+		color: darken(map-get($color, $colorvar), 10%) !important;
+		} @else {
+			color: darken(map-get($color, $colorvar), 10%);
+		}
+	}
+}
+
+@mixin transition(){
+	transition: 200ms all ease-in-out;
+}
+
+@mixin balance-margins {
+	> * {
+		&:first-child {
+			margin-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@mixin gutters {
+	@include balance-margins;
+  margin: auto;
+  padding: map-get($spacing, large) map-get($spacing, medium);
+  width: 100%;
+  @include desktop {
+    padding: map-get($spacing, xxx-large) map-get($spacing, medium);
+  }
+}
+
+@mixin content-overlay {
+	@include gutters;
+  //offset the padding in the inner div so we have clean edges
+  max-width: calc(#{map-get($max-widths, default)} + #{map-get($spacing, medium)} * 2);
+	
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+@mixin icon($icon){
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+	font-family: '#{map-get($font, icon)}' !important;
+	content: map-get($icons, $icon);
+}
+
+@mixin li(){
+	padding-left: 16px;
+	position: relative;
+	&:before {
+		content: "";
+  	background: map-get($color, red);
+  	width: 4px;
+  	height: 4px;
+  	display: inline-block;
+  	border-radius: 50%;
+  	position: absolute;
+  	left: 0;
+  	top: 8px;
+	}
+}

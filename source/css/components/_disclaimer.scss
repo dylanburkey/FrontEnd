@@ -1,0 +1,53 @@
+$block: 'disclaimer';
+
+.#{$block} {
+
+  padding: map-get($spacing, small) + map-get($spacing, x-small) 0 map-get($spacing, large);
+
+  @include desktop {
+    padding: map-get($spacing, x-large) - map-get($spacing, xx-small) 0 116px;
+  }
+
+  &__title {
+    margin: 0;
+    @include font(headline);
+    color: map-get($color, gray-darkest);
+    font-size: 18px;
+    @include typography(h3);
+    letter-spacing: 0;
+    padding-bottom: 15px;
+  }
+
+  &__text, &__description, &__link {
+    @include font(regular);
+    color: map-get($color, gray-darker);
+    font-size: 14px;
+    letter-spacing: 0;
+    @include typography(p);
+    line-height: 24px;
+  }
+
+  &__link {
+    color: map-get($color, red);
+  }
+
+  &__text {
+    font-weight: bold;
+  }
+  
+  &__description {
+    display: inline;
+  }
+
+  &__wrapper {
+    padding-left: map-get($spacing, large);
+    position: relative;
+    &:before {
+      @include icon(warning);
+      color: map-get($color, yellow);
+      position: relative;
+      margin-left: -(map-get($spacing, x-small)+map-get($spacing, medium));
+      padding-right: map-get($spacing, xx-small);
+    }
+  }
+}

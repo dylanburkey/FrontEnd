@@ -1,0 +1,11 @@
+{% assign a = include.data %}
+<div data-accordion class="link-group{% if e.active %} active{% endif %}">
+    <p data-accordion-trigger class="link-group__title">{{a.title}}</p>
+    <ul data-accordion-content class="link-group__items">
+        {% for item in a.items %}
+        <li>
+            <a class="link-group__item{% if item.style %} {{item.style}}{% endif %}" href="{{item.href}}">{% if item.icon %}<span class="icon icon-{{item.icon}}"></span>{% endif %}{{item.text}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

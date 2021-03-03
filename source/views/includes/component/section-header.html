@@ -1,0 +1,13 @@
+<header class="section-header{% if include.centered %} centered{% endif %}">
+	{% if include.disclaimer %}
+	<p class="section-header__disclaimer">*BEFORE USE, READ AND UNDERSTAND THE SAFETY DATA SHEET (SDS) FOR THIS PRODUCT AND SPECIFIC INFORMATION PRINTED ON
+		THE PRODUCT CONTAINER.
+		<a href="https://www.lincolnelectric.com/en-us/support/msds/Pages/sds-search.aspx">SDS Search page</a>
+	</p>
+	{% endif %}
+	<h2 class="section-header__title {% if include.collapsable %}has-collapsable-attribute{% endif %}"
+		{% if include.sticky-navigation-item %} data-sticky-navigation-item{% endif %}>
+		{{ include.title }}
+	</h2>
+	{% if include.description %}<p class="section-header__description">{{ include.description }}</p>{% endif %}
+</header>

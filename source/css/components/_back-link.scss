@@ -1,0 +1,21 @@
+$block: 'back-link';
+
+.#{$block} {
+    padding: map-get($spacing, medium) 0;
+    max-width: calc(1224px + 18px*2);
+    margin:auto;
+    &:hover {
+      cursor: pointer
+    }
+    a {
+      font-weight: bold;
+      @include font(regular);
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 24px;
+      text-transform: uppercase;
+    }
+    &__icon {
+      font-size: 11px;
+    }
+}

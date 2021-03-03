@@ -1,0 +1,9 @@
+{% assign e = site.data.checkbox-input[include.data] %}
+
+<label class="checkbox-input">
+  <input name="{{e.text}}" id="{{e.text}}" type="checkbox" value="{{e.text}}" />
+  <p>
+    <span>{{e.text}}</span>
+    <span>({{e.count}})</span>
+  </p>
+</label>

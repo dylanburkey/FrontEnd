@@ -1,0 +1,36 @@
+{% assign e = site.data.region-selector[include.data] %}
+
+<section class="region-selector">
+  <div class="container">
+    <header>
+      <h1>{{e.title}}</h1>
+      <p class="large">{{e.description}}</p>
+    </header>
+    <div class="regions">
+    {% for region in e.regions %}
+    <div data-accordion class="region">
+      <h4 data-accordion-trigger>{{ region.title }}</h4>
+      <div data-accordion-content class="cols">
+        {% for column in region.columns %}
+          <div class="col">
+          {% for item in column.items %}
+            <p class="region-item">
+              <a href="{{ item.url }}">
+                {% if item.image %}
+                <img src="{{ item.image | prepend: site.baseurl }}" alt="{{ item.text }} flag" />
+                {% endif %}
+                <span>
+                  <span class="region-item__country">{{ item.text }}</span>
+                  <span class="region-item__language">{{ item.language }}</span>
+                </span>
+              </a>
+            </p>
+          {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+{
+  "press-release-detail":{
+    "items":[
+      {
+        "text":"Product",
+        "class":"category"
+      },
+      {
+        "text":"December 12,2019",
+        "class":"date"
+      },
+      {
+        "text":"US",
+        "class":"region"
+      }
+    ],
+    "title":"Lincoln Electric Announces the Prism  Compact Air Filtration System",
+    "subtitle":"Less noise, lower costs and maximum results for welding and cutting applications",
+    "location":"Cleveland",
+    "description":" – Lincoln Electric announces the newest system to the Prism® series—the Prism® Compact air filtration system for welding and cutting applications. The Prism Compact system introduces a compact design and quiet operation, while delivering quick and easy installation and maintenance to help promote a safe and healthy work environment."
+  }
+}

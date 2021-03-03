@@ -1,0 +1,60 @@
+{% if include.carousel %}
+	{% assign data = include.data %}
+	{% assign len = data | size | minus: 1 %}
+{% else %}
+	{% assign data = site.data.cards.product-grid[include.data][include.index] %}
+	{% assign len = site.data.cards.product-grid[include.data] | size | minus: 1 %}
+{% endif %}
+
+
+{% if include.index <= len %}
+
+<div class="card card--product-grid{% if include.class %} {{ include.class }}{% endif %}"{% if data.flag %} data-product-flag="{{ data.flag }}"{% endif %} 
+	data-product-id="{{ data.id }}" 
+	data-product-image="{{ data.imageSrc | prepend: site.baseurl }}" 
+	data-product-image-alt="{{ data.imageAlt }}"
+	data-product-title="{{ data.title }}"
+	data-product-subtitle="{{ data.description }}"
+	data-product-sku="{{ data.sku }}"
+	data-product-msrp="{{ data.pricing.list}}"
+	data-product-msrp-label="MSRP"
+	>
+	<a class="card__image" href="{{ data.url }}">		
+		<img src="{{ data.imageSrc | prepend: site.baseurl }}" alt="{{ data.imageAlt }}" />
+	</a>
+	<div class="card__content">
+		<a class="card__wrapper" href="{{ data.url }}">
+			<h4 class="card__title">{{ data.title.text }}</h4>
+			{% if data.description or data.sku %}
+			<p class="card__description">{% if data.description %}{{ data.description }}{% endif %}{% if data.sku and data.description %}<span>|</span>{% endif %}{% if data.sku %}{{ data.sku }}{% endif %}</p>
+			{% endif %}
+		</a>
+
+		{% if data.rating %}
+		<div class="card__rating" data-product-rating="{{ data.rating.stars }}">
+			<span>({{ data.rating.count }})</span>
+		</div>
+		{% endif %}
+
+		{% if data.pricing %}
+		<div class="card__pricing">
+			{% include component/pricing.html 
+				current=data.pricing.list
+				original=data.pricing.default
+				%}
+		</div>
+		{% endif %}
+		{% if data.aws %}
+		<p class="card__aws">
+			<span class="card__aws-label">{{data.aws.label}}</span>
+			<span class="card__aws-value">{{data.aws.value}}</span>
+		</p>
+		{% endif %}
+		{% if data.compare and include.compare != "false" %}
+		<div class="card__compare">
+	      <button class="compare-product">Compare</button>
+	    </div>
+	    {% endif %}
+	</div>
+</div>
+{% endif %}

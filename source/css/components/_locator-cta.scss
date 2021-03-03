@@ -1,0 +1,74 @@
+$block: 'locator-cta';
+
+.#{$block} {
+  &__title {
+    @include typography(p);
+    margin-bottom: 0;
+    @include desktop {
+      margin-bottom: map-get($spacing, small);
+    }
+  }
+
+  &__list {
+    list-style: none;
+    @include desktop {
+      display: flex;
+      align-items: center;
+    }
+    * {
+      @include font(headline);
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      @include mobile-only {
+        margin: map-get($spacing, xx-small) 0;
+      }
+
+      @include desktop {
+        &:not(:last-of-type){
+          &:after {
+            content: "|";
+            font-weight: normal;
+            color: #979797;
+            margin:0  map-get($spacing, small);
+          }
+        }
+      }
+
+      &:before {
+        content: none;
+      }
+
+      span {
+        font-size: 12px;
+        margin: 0 map-get($spacing, xx-small);
+        &:first-of-type {
+          margin-left: 0;
+        }
+
+        &.icon-chevron-right,
+        &.icon-envelope {
+          font-size: 10px;
+        }
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      @include mobile-only {
+        margin-left: auto;
+      }
+    }
+  }
+  &__button {
+    margin-top: map-get($spacing, large);
+  }
+}

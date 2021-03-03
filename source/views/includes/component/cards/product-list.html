@@ -1,0 +1,56 @@
+{% assign data = site.data.cards.product-list[include.data][include.index] %}
+
+<div class="card card--product-list"{% if data.flag %} data-product-flag="{{ data.flag }}"{% endif %} 
+  data-product-id="{{data.id}}" 
+  data-product-image="{{data.imageSrc | prepend: site.baseurl}}" 
+  data-product-image-alt="{{ data.imageAlt }}"
+  data-product-title="{{data.title}}"
+  data-product-subtitle="{{data.subtitle}}"
+  data-product-sku="{{data.sku}}"
+  data-product-msrp="{{data.pricing.list}}"
+  data-product-msrp-label="MSRP">
+
+  <a class="card__image" href="{{ data.url }}">   
+    <img src="{{ data.imageSrc | prepend: site.baseurl }}" alt="{{ data.imageAlt }}" />
+  </a>
+
+  <div class="card__content">
+    <a class="card__info" href="{{ data.url }}">
+      <h4 class="card__title">{{ data.title }}</h4>
+      {% if data.description or data.sku %}
+      <p class="card__description">{% if data.subtitle %}{{ data.subtitle }}{% endif %}{% if data.sku and data.subtitle %}<span>|</span>{% endif %}{% if data.sku %}{{ data.sku }}{% endif %}</p>
+      {% endif %}
+      {% if data.rating %}
+      <div class="card__rating" data-product-rating="{{ data.rating.stars }}">
+        <span>({{ data.rating.count }})</span>
+      </div>
+      {% endif %}
+    </a>
+
+
+    <div class="card__pricing">
+      {% include component/pricing.html
+      current=data.pricing.list
+      original=data.pricing.default
+      %}
+    </div>
+
+    <div class="card__input-output">
+      {% include component/input-output-icons.html data="input-output-icons" %}
+    </div>
+    <a href="{{ data.url }}">
+      <div class="card__short-desc">{{ data.description }}</div>
+    </a>
+    {% if data.rebate %}
+    <a href="{{ data.url }}">
+      <div class="card__rebate">
+        {% include component/rebate.html data="rebate" %}
+      </div>
+    </a>
+    {% endif %}
+
+    <div class="card__compare">
+      <button class="compare-product">Compare</button>
+    </div>
+  </div>
+</div>

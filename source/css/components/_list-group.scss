@@ -1,0 +1,70 @@
+$block: 'list-group';
+
+.#{$block} {
+  @include balance-margins;
+  padding: map-get($spacing, medium) 0;
+  border-bottom: 1px solid map-get($brand, border);
+
+  &:last-of-type {
+    border-bottom: 0;
+  }
+
+  @include desktop {
+    padding: map-get($spacing, x-large) 0;
+  }
+
+  &__items {
+    @include balance-margins;
+  }
+
+  .list-group-item {
+    padding-left: 0;
+    list-style: none;
+    &:before {
+      content: none;
+    }
+    .list-group-item-link {
+      &--pdf {
+        &:before {
+            @include icon(pdf);
+          }
+      }
+      &--excel, &--xlsx, &--xlsm, &--xlsb,
+      &--xltx, &--xltm, &--xls, &--xlt,
+      &--xml, &--cvl, &--clv {
+        &:before {
+          @include icon(xlsx);
+          padding-left: 2px;
+        }
+      }
+      &--video {
+        &:before {
+          @include icon(video);
+        }
+      }
+    }
+    > a {
+      @include li;
+      @include link(red);
+      padding-left: 0;
+      &:before {
+        background: transparent;
+        width: auto;
+        height: auto;
+        position: relative;
+        top: auto;
+        padding-right: map-get($spacing, xx-small);
+        position: absolute;
+        margin-left: -24px;
+        margin-top: 3px;
+      }
+
+      @include desktop {
+        line-height: 20px;
+      }
+    }
+    > span {
+      @include li;
+    }
+  }
+}

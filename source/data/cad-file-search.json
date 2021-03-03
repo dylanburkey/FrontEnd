@@ -1,0 +1,46 @@
+{
+  "cad-file-search": {
+    "title": "Find CAD File",
+    "subtext1": "NOTE: CAD files may not apply for all machine revisions. Content/details may be changed or updated without notice.",
+    "subtext2": " Please note if you experience any trouble downloading when clicking on the link, right click and save to your computer using the save option.  File formats include .x_t and .stp. If you don't see a file you are looking for here, you can contact us to request the CAD files by filling out the ",
+    "link": "CAD File Request Form.",
+    "product-name": "Search By Product Name",
+    "product-name-label": "search-by-product-name",
+    "product-number": "Search By Product Number",
+    "or-text": "OR",
+    "find": "Find",
+    "results": {
+      "title": "Results",
+      "product-name": "Product Name",
+      "product-number": "Product Number",
+      "files": "Files",
+      "products": [{
+        "product-name": "AC225 Stick Welder",
+        "product-number": "K1170",
+        "file-1": "Parasolid",
+        "file-2": "Step"
+      }]
+    },
+    "options": [{
+        "value": "Select a product name",
+        "text": "Select a product name",
+        "name": "option-default"
+      },
+      {
+        "value": "Product name 1",
+        "text": "Product name 1",
+        "name": "option-1"
+      },
+      {
+        "value": "Product name 2",
+        "text": "Product name 2",
+        "name": "option-2"
+      },
+      {
+        "value": "Product name 3",
+        "text": "Product name 3",
+        "name": "option-3"
+      }
+    ]
+  }
+}

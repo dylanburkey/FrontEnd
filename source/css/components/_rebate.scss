@@ -1,0 +1,44 @@
+$block: 'rebate';
+
+.#{$block} {
+  &__icon , &__text {
+    display: inline;
+    @include font(regular);
+  }
+  &__icon {
+    color: map-get($color, green);
+    &:after {
+      content: "|";
+      margin: 0 map-get($spacing, xx-small);
+    }
+    .icon {
+      font-size: 14px;
+      @include desktop {
+        vertical-align: text-bottom;
+        font-size: 18px;
+      }
+    }
+    &-text {
+      @include font(regular);
+      font-size: 13.5px;
+      font-style: italic;
+      font-weight: 800;
+      letter-spacing: 0;
+      line-height: 16px;
+      text-transform: uppercase;
+      @include desktop {
+        font-size: 14px;
+      }
+    }
+  }
+  &__text {
+    color: map-get($color, gray-darker);
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 19px;
+    @include desktop {
+      font-size: 15px;
+      line-height: 22px;
+    }
+  }
+}

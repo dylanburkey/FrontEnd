@@ -1,0 +1,93 @@
+# Where things are
+source              : ./source
+destination         : ./public
+collections_dir     : ./views/collections
+plugins_dir         : _plugins
+layouts_dir         : ./views/layouts
+data_dir            : ./data
+includes_dir        : ./views/includes
+sass:
+  sass_dir: ./css
+collections:
+  posts:
+    output          : true
+    permalink       : /:collection/:name/
+  pages:
+    output          : true
+    permalink       : /pages/:path/
+  components:
+    output          : true
+    permalink       : /:collection/:path/
+
+# Handling Reading
+safe                : false
+include             : [".htaccess", "images/", "fonts/"]
+exclude             : ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/", "js/", "data/", "css/", "html/", "fonts/", "views/layouts", "views/includes"]
+keep_files          : [".git", ".svn", "dist"]
+encoding            : "utf-8"
+markdown_ext        : "markdown,mkdown,mkdn,mkd,md"
+strict_front_matter : false
+
+# Filtering Content
+show_drafts         : null
+limit_posts         : 0
+future              : false
+unpublished         : false
+
+# Plugins
+whitelist           : []
+plugins             : ["jekyll-tidy"]
+
+# Conversion
+markdown            : kramdown
+highlighter         : rouge
+lsi                 : false
+excerpt_separator   : "\n\n"
+incremental         : false
+
+# Serving
+detach              : false
+port                : 4000
+host                : 127.0.0.1
+baseurl             : "" # does not include hostname
+disturl             : "/dist/" # does not include hostname
+show_dir_listing    : false
+
+# Outputting
+permalink           : date
+paginate_path       : /page:num
+timezone            : null
+
+quiet               : false
+verbose             : false
+defaults            : []
+
+liquid:
+  error_mode        : warn
+  strict_filters    : false
+  strict_variables  : false
+
+# Markdown Processors
+rdiscount:
+  extensions        : []
+
+redcarpet:
+  extensions        : []
+
+kramdown:
+  auto_ids          : true
+  entity_output     : as_char
+  toc_levels        : [1, 2, 3, 4, 5, 6]
+  smart_quotes      : lsquo,rsquo,ldquo,rdquo
+  input             : GFM
+  hard_wrap         : false
+  footnote_nr       : 1
+  show_warnings     : false
+
+
+# Custom
+title: Title
+
+jekyll_tidy:
+  exclude: ["index.html"]
+  compress_html: false

@@ -1,0 +1,108 @@
+$block: 'quote-modal';
+
+.#{$block} {
+  border-radius: 4px;
+  background-color: map-get($color, white);
+  position: relative;
+  right: 0;
+  left: 0;
+  max-width: calc(100% - 24px * 2);
+  z-index: 100;
+  margin: auto;
+  padding: map-get($spacing, large);
+  @include desktop {
+    max-width: 445px;
+    padding: map-get($spacing, x-large) map-get($spacing, xx-large) map-get($spacing, xx-large);
+  }
+
+  &__close {
+    position: relative;
+    float: right;
+    border: none;
+    background: none;
+    font-size: 12px;
+    cursor: pointer;
+    left: map-get($spacing, small);
+    bottom: map-get($spacing, xx-small);
+    &:focus {
+      outline: 0;
+    }
+    @include desktop {
+      font-size: 16px;
+      left: map-get($spacing, x-large);
+      bottom: map-get($spacing, medium);
+    }
+  }
+
+  &__title {
+    @include font(headline);
+    color: map-get($color, gray-darkest);
+    @include typography(h3);
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 0;
+    padding-bottom:  map-get($spacing, small);
+  }
+
+  &__description {
+    @include font(regular);
+    color: map-get($color, gray-darker);
+    @include typography(p-small);
+    letter-spacing: 0;
+    margin: 0;
+    padding-bottom: map-get($spacing, large);
+  }
+
+  &__label {
+    @include font(regular);
+    color: map-get($color, gray-darkest);
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 16px;
+    padding-bottom: map-get($spacing, small);
+  }
+
+  &__input {
+    border: 1px solid map-get($color, gray-light);
+    border-radius: 2px;
+    background-color: map-get($color, white);
+    padding: map-get($spacing, small);
+  }
+
+  &__input-field, .dropdown{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input-field {
+    padding-bottom: map-get($spacing, medium);
+  }
+
+  .dropdown__wrapper {
+    width: 100%;
+    padding-bottom: map-get($spacing, large);
+    display: block;
+  }
+
+  .dropdown {
+    align-items: flex-start;
+  }
+
+  .dropdown__trigger {
+    &:after  {
+      position: absolute;
+      right: map-get($spacing, small);
+    }
+  }
+
+  .dropdown__label {
+    padding-bottom: map-get($spacing, small);
+  }
+
+  &--generate {
+    .#{$block}__input-field {
+      padding-bottom: map-get($spacing, x-large);
+    }
+  }
+}

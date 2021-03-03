@@ -1,0 +1,204 @@
+.compare-tray {
+	
+
+	.faceted-browse & {
+		background: map-get($brand, background);
+		padding: map-get($spacing, medium);
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		z-index: 1;
+		left: 0;
+	}
+
+	@include desktop {
+		display: flex;
+	}
+
+	&__items {
+		display: flex;
+		margin-right: - map-get($spacing, medium);
+		@include desktop {
+			flex-basis: 80%;
+		}
+		@include mobile-only {
+			overflow-x: auto;
+			margin-top: map-get($spacing, medium);
+			margin-right: 0;
+		}
+	}
+	&__scroll-bullets-wrapper {
+		display: none;
+		&.active{
+			@include mobile-only{
+				display: flex;
+				justify-content: center;
+				text-align: center;
+			}
+		}
+	}
+	&__scroll-bullet {
+		background-color: map-get($color, gray-light);
+		width: 12px;
+		height: 12px;
+		margin-right: map-get($spacing, x-small);
+		border-radius: 8px;
+		&.active {
+			background-color: map-get($color, red);
+		}
+	}
+
+	&__menu {
+		@include desktop {
+			display: flex;
+			flex-direction: column;
+			flex-basis: 20%;
+			text-align: right;
+			margin-left: auto;
+			align-items: flex-end;
+		}
+	}
+
+	&__title {
+		@include mobile-only {
+			display: none;
+		}
+
+		flex-grow: 1;
+	}
+
+	&__clear-all {
+		@include link(red);
+		@include font(headline);
+		font-weight: bold;
+		appearance: none;
+		border: 0;
+		background: none;
+		text-transform: uppercase;
+		font-size: 14px;
+		line-height: 19px;
+		margin-bottom: map-get($spacing, small);
+
+		@include mobile-only {
+			position: absolute;
+			top: 0;
+			z-index: 1;
+			right: 0;
+			margin: 15px map-get($spacing, x-small);
+		}
+
+		&:after {
+			@include icon(close);
+			font-size: 11px;
+			margin-left: map-get($spacing, x-small);
+		}
+	}
+
+	&__cta {
+		a {
+			@include mobile-only {
+				display: block;
+				width: 100%;
+				text-align: center;
+			}
+		}
+
+		@include desktop {
+			margin-bottom: map-get($spacing, small);
+		}
+	}
+
+	.compare-tray-item {
+		@include transition;
+		background: map-get($color, white);
+		border-radius: $border-radius;
+		flex-basis: 25%;
+		width: 25%;
+		margin: 0 map-get($spacing, medium) 0 0;
+		display: flex;
+		padding: map-get($spacing, small);
+		position: relative;
+		color: map-get($color, black);
+		@include mobile-only {
+			flex: none;
+			min-width: 172px;
+		}
+
+		&:hover,
+		&:focus {
+			box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+			.compare-tray-item__title {
+				color: map-get($color, red);
+			}
+		}
+
+		&__content {
+			padding: map-get($spacing, small);
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__image {
+			@include mobile-only {
+				display: none;
+			}
+
+			flex-basis: calc(100%/ 3);
+			width: calc(100%/ 3);
+		}
+
+		&__title {
+			font-size: 15px;
+			line-height: 19px;
+			margin: 0;
+			@include transition;
+			margin-bottom: map-get($spacing, xx-small);
+			a {
+				@include link(black);
+			}
+		}
+
+		&__description {
+			@include font(headline);
+			font-size: 13px;
+			line-height: 16px;
+			margin: 0;
+			flex-grow: 1;
+		}
+
+		&__pricing {
+			font-size: 15px;
+			line-height: 19px;
+
+			.pricing {
+				&__title {
+					margin-bottom: map-get($spacing, xx-small);
+					font-size: 13px;
+					line-height: 16px;
+				}
+			}
+		}
+
+		&__close {
+			position: absolute;
+			appearance: none;
+			border: 0;
+			background: none;
+			outline: none;
+			right: map-get($spacing, x-small);
+			top: 22px;
+			font-size: 20px;
+			line-height: 20px;
+			font-weight: bold;
+			padding: 0;
+			z-index: 1;
+			cursor: pointer;
+			&:hover,
+			&:focus {
+				color: map-get($color, red);
+			}
+		}
+
+
+	}
+}

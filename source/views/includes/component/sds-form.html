@@ -1,0 +1,133 @@
+{% assign sdsf = site.data.sds-form[include.data] %}
+
+<div class="sds-forms">
+  <div class="sds-forms__select">
+      <div class="sds-forms__title">{{sdsf.title}}</div>
+      <a href="{{sdsf.learn-more-link}}" class="sds-forms__learn-more">{{sdsf.learn-more}}</a>
+    <div class="sds-forms__contact">
+      <p class="sds-forms__contact-text">{{sdsf.contact-title}}</p>
+      <a class="sds-forms__contact-link" href="{{contact-link}}">{{sdsf.contact-link-text}}</a>
+    </div>
+    <!-- START navigation for multiple form types -->
+    <div class="sds-forms__radio-wrapper">
+      {% for radio in sdsf.radios %}
+      <div class="sds-forms__radio">
+        <label class="sds-forms__radio-container radio-container" for="sdsf-radio-{{radio.id}}">
+          <input class="js-sds-forms-radio-inputs radio-input" type="radio" data-id="{{radio.id}}" id="sdsf-radio-{{radio.id}}" name="sdsf-radios">
+          <span class="sds-forms__radio-checkmark radio-checkmark"></span>
+          <p class="sds-forms__radio-title radio-text">{{radio.title}}
+            <a href="{{radio.link}}" class="sds-forms__radio-link">{{radio.link-text}}</a>
+          </p>
+        </label>
+      </div>
+      {% endfor %}
+    </div>
+    <!-- END navigation for multiple form types -->
+  </div>
+  <div class="sds-forms__forms">
+    {% for form in sdsf.forms %}
+    <form class="sds-forms__form {% if form.display %} active{% endif %}{% if form.safety-data-sheets %} js-safety-data-sheets-form{% endif %}" action="#" method="get" data-id="{{form.id}}">
+      <!-- START form title-->
+      <h4 class="sds-forms__forms-title">{{form.title}}</h4>
+      <h5 class="sds-forms__error-message">{{form.error}}</h5>
+      <!-- END form title-->
+      <div class="sds-forms__forms-section--products">
+        <div class="sds-forms__forms-input">
+          <label class="sds-forms__forms-input-text" for="{{form.products.product-number-label}}">{{form.products.product-number}}</label>
+          <input class="sds-forms__forms-input-type-text" placeholder= "{{form.products.product-number-placeholder}}" id="{{form.products.product-number-label}}" type="text"/>
+        </div>
+        <div class="sds-forms__forms-section-or-wrapper"> 
+          <div class="sds-forms__forms-section-or-divider"></div> 
+          <div class="sds-forms__forms-section-or-text">{{form.products.or-text}}</div>
+          <div class="sds-forms__forms-section-or-divider"></div>
+        </div>
+        <div class="sds-forms__dropdown">
+          <label class="sds-forms__dropdown-label" for="{{form.products.product-name-label}}">{{form.products.product-name}}</label>
+          <div class="sds-forms__dropdown-wrapper">
+            <span class="icon icon-chevron-down sds-forms__dropdown-arrow"></span>
+            <select class="sds-forms__dropdown-select" id="{{form.products.product-name-label}}" name="" value="default">
+              <option value="default" name="name">Select a product name</option>
+              {% for option in form.products.options %}
+              <option value="{{option.value}}" name="{{option.name}}">{{option.text}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="sds-forms__forms-section">
+        <div class="sds-forms__dropdown">
+          <label class="sds-forms__dropdown-label" for="{{form.manufacturer.manufacturer-label}}">{{form.manufacturer.title}}</label>
+          <div class="sds-forms__dropdown-wrapper">
+            <span class="icon icon-chevron-down sds-forms__dropdown-arrow"></span>
+            <select class="sds-forms__dropdown-select" id="{{form.manufacturer.manufacturer-label}}" name="">
+              {% for option in form.manufacturer.options %}
+              <option value="{{option.value}}" name={{option.name}}>{{option.text}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+      </div>
+      {% if form.language %}
+      <div class="sds-forms__forms-section">
+        <div class="sds-forms__dropdown">
+          <label class="sds-forms__dropdown-label" for="{{form.language.language-label}}">{{form.language.title}}</label>
+          <div class="sds-forms__dropdown-wrapper">
+            <span class="icon icon-chevron-down sds-forms__dropdown-arrow"></span>
+            <select class="sds-forms__dropdown-select" id="{{form.language.language-label}}" name="">
+              {% for option in form.language.options %}
+              <option value="{{option.value}}" name={{option.name}}>{{option.text}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% if form.region %}
+      <div class="sds-forms__forms-section">
+        <p class="sds-forms__forms-input-text">{{form.region.title}}</p>
+        <fieldset class="sds-forms__forms-region-radio-wrapper">
+          {% for region in form.region.items %}
+          <div class="sds-forms__region-radio">
+            <label class="sds-forms__radio-container radio-container" for="js-sdsf-form-{{form.id}}-region-{{region.id}}">
+              <input class="js-sds-forms-region-radio-inputs radio-input" type="radio" id="js-sdsf-form-{{form.id}}-region-{{region.id}}" name="sdsf-region-radios">
+              <span class="sds-forms__radio-checkmark radio-checkmark" ></span>
+              <p class="sds-forms__radio-title radio-text">{{region.item}}</p>
+            </label>
+          </div>
+          {% endfor %}
+        </fieldset>
+      </div>
+      {% endif %}
+      {% if form.process %}
+      <div class="sds-forms__forms-section">
+        <div class="sds-forms__dropdown">
+          <label class="sds-forms__dropdown-label" for="{{form.process.process-label}}">{{form.process.title}}</label>
+          <div class="sds-forms__dropdown-wrapper">
+            <span class="icon icon-chevron-down sds-forms__dropdown-arrow"></span>
+            <select class="sds-forms__dropdown-select" id="{{form.process.process-label}}" name="">
+              {% for option in form.process.options %}
+              <option value="{{option.value}}" name={{option.name}}>{{option.text}}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% include component/button.html
+        title="Find"
+        element="true"
+        url="#" %}
+    </form>
+    {% endfor %}
+  </div>
+  <div class="sds-forms__footer">
+    <p class="sds-forms__footer-text">
+      {{sdsf.footer-text-1}}
+    </p>
+    <p class="sds-forms__footer-text">
+      {{sdsf.footer-text-2}}
+      <a href ="{{sdsf.footer-link}}">{{sdsf.footer-link-text}}</a>
+      {{sdsf.footer-text-3}} 
+    </p>
+  </div>
+</div>

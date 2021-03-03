@@ -1,0 +1,48 @@
+$block: 'social-media-embeds';
+
+.#{$block} {
+
+  &__title {
+    @include font(headline);
+    @include typography(h3);
+    color: map-get($color, gray-darkest);
+    font-weight: bold;
+    letter-spacing: 0;
+    margin: 0;
+    padding-bottom: map-get($spacing, medium);
+  }
+
+  &__item {
+    padding-bottom: map-get($spacing, x-large);
+    iframe {
+      width: 100%;
+      margin: 0!important;
+      max-width: initial!important;
+    }
+
+    twitter-widget {
+      @include desktop {
+        margin: 0!important;
+      }
+    }
+  }
+
+  .cols {
+    flex-wrap: nowrap;
+  }
+
+  .col {
+    &:first-of-type {
+      @include desktop {
+        padding-right: 30px;
+        flex: 1;
+      }
+    }
+
+    &:last-of-type {
+      @include desktop {
+        padding-left: 30px;
+      }
+    }
+  }
+}

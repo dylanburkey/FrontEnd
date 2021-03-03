@@ -1,0 +1,16 @@
+{% assign data = site.data.cards.image-hover[include.data][include.index] %}
+{% assign len = site.data.cards.image-hover[include.data] | size | minus: 1 %}
+
+{% if include.index <= len %}
+<a class="card card--image-hover" href="{{ data.url }}">
+	<div>
+		<div class="card__image">
+			<img src="{{ data.imageSrc | prepend: site.baseurl }}" alt="{{ data.imageAlt }}" />
+		</div>
+		{% if data.description %}
+		<p class="card__description">{{ data.description }}{% if data.sku %}<span>|</span>{{ data.sku }}{% endif %}</p>
+		{% endif %}
+	</div>
+	<h4 class="card__title">{{ data.title }}</h4>
+</a>
+{% endif %}

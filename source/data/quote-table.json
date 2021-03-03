@@ -1,0 +1,794 @@
+{
+  "quote-table-three":{
+    "cells":[
+      {
+        "value":"Item"
+      },
+      {
+        "value":"Product Number"
+      },
+      {
+        "value":"Qty"
+      },
+      {
+        "value":"Your Price Per Unit"
+      },
+      {
+        "value":"Your Price"
+      }
+    ],
+    "rows":[
+      {
+        
+        "cells":[
+          {
+            "items":[
+              "0.053 SUPERGLAZE 4043",
+              "2 lb PLASTIC SPOOL | MIG WIRE",
+              "ALLOY SURCHARGE"
+            ]
+          },
+          {
+            "items":[
+              "ED028395"
+            ]
+          },
+          {
+            "items":[
+              "4160"
+              ]
+          },
+          {
+            "items": [
+            "$5.4047 / lb",
+            "($7.72 / lb LIST)",
+            "$1.38 / lb"
+            ]
+          },
+          {
+            "items": [
+            "$22,483.55",
+            "$5,740.80"
+            ]
+          }
+        ]
+      },
+      {
+        
+      "cells":[
+          {
+            "items": [
+            "VIKING 3350 Code Red",
+            "WELDING HELMET"
+            ]
+          },
+          {
+            "items": [
+              "K4034-4"
+            ]
+          },
+          {
+            "items": [
+              "1"
+            ]
+          },
+          {
+            "items": [
+            "$100.00",
+            "($125.00 LIST)"
+            ]
+          },
+          {
+            "items": [
+            "$100"
+            ]
+          }
+        ]
+      },
+      {
+      "cells":[
+          {
+            "items": [
+            "LN-25 Pro Wire Feeder Dual Power",
+            "PORTABLE WIRE FEEDER"
+            ]
+          },
+          {
+            "items": [
+          "K2614-6"
+            ]
+          },
+          {
+            "items": [
+          "2"
+            ]
+          },
+          {
+            "items": [
+            "$1,500.00",
+            "($1,520.00 LIST)"
+            ]
+          },
+          {
+            "items": [
+          "$3,000.00"
+            ]
+          }
+        ]
+      },
+      {
+      "cells":[
+          {
+            "items": [
+            "VIKING 3350 Black",
+            "WELDING HELMET"
+            ]
+          },
+          {
+            "items": [
+            "K3034-4"
+            ]
+          },
+          {
+            "items": [
+            "3"
+            ]
+          },
+          {
+            "items": [
+            "$100",
+            "($125.00 LIST)"]
+          },
+          {
+            "items": [
+            "$300.00"
+            ]
+          }
+        ]
+      },
+      {
+      "cells":[
+          {
+            "value":"surcharge",
+            "items": [
+            "PRODUCT SURCHARGE"
+            ]
+          },
+          {
+            "items": [
+            ""
+            ]
+          },
+          {
+            "items": [
+          ""
+            ]
+          },
+          {
+            "items": [
+          "$1.31",
+          "($1.31 LIST)"
+            ]
+          },
+          {
+            "items": [
+          "$432.30"
+            ]
+          }
+        ]
+      },
+      {
+        "style":"total",
+        "cells":[
+          {
+            "items": [
+          ""
+            ]
+          },
+          {
+            "items": [
+          ""
+            ]
+          },
+          {
+            "items": [
+          ""
+            ]
+          },
+          {
+            "items": [
+          "TOTAL"
+            ]
+          },
+          {
+            "items": [
+          "$32,056.65"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "quote-table-two":{
+    "cells":[
+      {
+        "value":"Item"
+      },
+      {
+        "value":"Product Number"
+      },
+      {
+        "value":"Qty"
+      },
+      {
+        "value":"Your Price Per Unit"
+      },
+      {
+        "value":"Your Price"
+      }
+    ],
+    "rows":[
+      {
+        "cells":[
+          {
+            "items": [
+            "0.053 SUPERGLAZE 4043",
+            "2 lb PLASTIC SPOOL | MIG WIRE"]
+          },
+          {
+            "items": [
+            "ED028395"
+            ]
+          },
+          {
+            "items": [
+            "4160"
+            ]
+          },
+          {
+            "items": [
+            "$5.4047 / lb",
+            "($7.72 / lb LIST)"
+            ]
+          },
+          {
+            "items": [
+            "$22,483.55"]
+          }
+        ]
+      },
+      {
+        "cells":[
+          {
+            "items": [
+            "ALLOY SURCHARGE"
+            ]
+          },
+          {
+            "items": [
+            ""]
+          },
+          {
+            "items": [
+            ""]
+          }, {
+            "items": [
+            "$1.38 / lb"]
+          },
+          {
+            "items": [
+            "$5,740.80"]
+          }
+        ]
+      },
+      {
+        "cells":[
+          {
+            "items": [
+            "VIKING 3350 Code Red",
+            "WELDING HELMET"]
+          },
+          {
+            "items": [
+            "K4034-4"
+            ]
+          },
+          {
+            "items": [
+            "1"
+            ]
+          },
+          {
+            "items": [
+            "$100.00",
+            "($125.00 LIST)"
+            ]
+          },
+          {
+            "items": [
+            "$100"
+            ]
+          }
+        ]
+      },
+      {
+        "cells":[
+          {
+            "items": [
+            "LN-25 Pro Wire Feeder Dual Power",
+            "PORTABLE WIRE FEEDER"]
+          },
+          {
+            "items": [
+            "K2614-6"
+            ]
+          },
+          {
+            "items": [
+            "2"
+            ]
+          },
+          {
+            "items": [
+            "$1,500.00",
+            "($1,520.00 LIST)"]
+          },
+          {
+            "items": [
+            "$3,000.00"
+            ]
+          }
+        ]
+      },
+      {
+        "cells":[
+          {
+            "items": [
+            "VIKING 3350 Black",
+            "WELDING HELMET"]
+          },
+          {
+            "items": [
+            "K3034-4"
+            ]
+          },
+          {
+            "items": [
+            "3"
+            ]
+          },
+          {
+            "items": [
+            "$100",
+            "($125.00 LIST)"
+            ]
+          },
+          {
+            "items": [
+            "$300.00"
+            ]
+          }
+        ]
+      },
+      {
+        "style":"total",
+        "cells":[
+          {
+            "items": [
+            ""
+            ]
+          },
+          {
+            "items": [
+            ""
+            ]
+          },
+          {
+            "items": [
+            ""
+            ]
+          },
+          {
+            "items": [
+          "TOTAL"
+            ]
+          },
+          {
+            "items": [
+          "$31,624.35"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "quatation":{
+    "cells":[
+      {
+        "value":"Item"
+      },
+      {
+        "value":"Product Number"
+      },
+      {
+        "value":"Qty"
+      },
+      {
+        "value":"Your Price Per Unit"
+      },
+      {
+        "value":"Your Price"
+      }
+    ],
+    "rows":[
+      {
+
+        "cells":[
+          {
+            "items":[
+              "0.053 SUPERGLAZE 4043",
+              "2 lb PLASTIC SPOOL | MIG WIRE",
+              "ALLOY SURCHARGE"
+            ]
+          },
+          {
+            "items":[
+              "ED028395"
+            ]
+          },
+          {
+            "items":[
+              "4160"
+            ]
+          },
+          {
+            "items": [
+              "$5.4047 / lb",
+              "($7.72 / lb LIST)",
+              "$1.38 / lb"
+            ]
+          },
+          {
+            "items": [
+              "$22,483.55",
+              "$5,740.80"
+            ]
+          }
+        ]
+      },
+      {
+
+        "cells":[
+          {
+            "items": [
+              "VIKING 3350 Code Red",
+              "WELDING HELMET"
+            ]
+          },
+          {
+            "items": [
+              "K4034-4"
+            ]
+          },
+          {
+            "items": [
+              "1"
+            ]
+          },
+          {
+            "items": [
+              "$100.00",
+              "($125.00 LIST)"
+            ]
+          },
+          {
+            "items": [
+              "$100"
+            ]
+          }
+        ]
+      },
+      {
+        "cells":[
+          {
+            "items": [
+              "LN-25 Pro Wire Feeder Dual Power",
+              "PORTABLE WIRE FEEDER"
+            ]
+          },
+          {
+            "items": [
+              "K2614-6"
+            ]
+          },
+          {
+            "items": [
+              "2"
+            ]
+          },
+          {
+            "items": [
+              "$1,500.00",
+              "($1,520.00 LIST)"
+            ]
+          },
+          {
+            "items": [
+              "$3,000.00"
+            ]
+          }
+        ]
+      },
+      {
+        "cells":[
+          {
+            "items": [
+              "VIKING 3350 Black",
+              "WELDING HELMET"
+            ]
+          },
+          {
+            "items": [
+              "K3034-4"
+            ]
+          },
+          {
+            "items": [
+              "3"
+            ]
+          },
+          {
+            "items": [
+              "$100",
+              "($125.00 LIST)"]
+          },
+          {
+            "items": [
+              "$300.00"
+            ]
+          }
+        ]
+      },
+      {
+        "cells":[
+          {
+            "value":"surcharge",
+            "items": [
+              "PRODUCT SURCHARGE"
+            ]
+          },
+          {
+            "items": [
+              ""
+            ]
+          },
+          {
+            "items": [
+              ""
+            ]
+          },
+          {
+            "items": [
+              "$1.31",
+              "($1.31 LIST)"
+            ]
+          },
+          {
+            "items": [
+              "$432.30"
+            ]
+          }
+        ]
+      },
+      {
+        "style":"total",
+        "cells":[
+          {
+            "items": [
+              ""
+            ]
+          },
+          {
+            "items": [
+              ""
+            ]
+          },
+          {
+            "items": [
+              ""
+            ]
+          },
+          {
+            "items": [
+              "TOTAL"
+            ]
+          },
+          {
+            "items": [
+              "$32,056.65"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "quatation-sale":{
+    "cells":[
+      {
+        "value":"Item"
+      },
+      {
+        "value":"Product Number"
+      },
+      {
+        "value":"Qty"
+      },
+      {
+        "value":"Your Price Per Unit"
+      },
+      {
+        "value":"Your Price"
+      }
+    ],
+    "rows":[
+      {
+
+        "cells":[
+          {
+            "items":[
+              "0.053 SUPERGLAZE 4043",
+              "2 lb PLASTIC SPOOL | MIG WIRE",
+              "ALLOY SURCHARGE"
+            ]
+          },
+          {
+            "items":[
+              "ED028395"
+            ]
+          },
+          {
+            "items":[
+              "4160"
+            ]
+          },
+          {
+            "items": [
+              "$5.4047 / lb",
+              "($7.72 / lb LIST)",
+              "$1.38 / lb"
+            ]
+          },
+          {
+            "items": [
+              "$22,483.55",
+              "$5,740.80"
+            ]
+          }
+        ]
+      },
+      {
+
+        "cells":[
+          {
+            "items": [
+              "VIKING 3350 Code Red",
+              "WELDING HELMET"
+            ]
+          },
+          {
+            "items": [
+              "K4034-4"
+            ]
+          },
+          {
+            "items": [
+              "1"
+            ]
+          },
+          {
+            "items": [
+              "$100.00",
+              "($125.00 LIST)"
+            ]
+          },
+          {
+            "items": [
+              "$100"
+            ]
+          }
+        ]
+      },
+      {
+        "cells":[
+          {
+            "items": [
+              "LN-25 Pro Wire Feeder Dual Power",
+              "PORTABLE WIRE FEEDER"
+            ]
+          },
+          {
+            "items": [
+              "K2614-6"
+            ]
+          },
+          {
+            "items": [
+              "2"
+            ]
+          },
+          {
+            "items": [
+              "$1,500.00",
+              "($1,520.00 LIST)"
+            ]
+          },
+          {
+            "items": [
+              "$3,000.00"
+            ]
+          }
+        ]
+      },
+      {
+        "cells":[
+          {
+            "items": [
+              "VIKING 3350 Black",
+              "WELDING HELMET"
+            ]
+          },
+          {
+            "items": [
+              "K3034-4"
+            ]
+          },
+          {
+            "items": [
+              "3"
+            ]
+          },
+          {
+            "items": [
+              "$100",
+              "($125.00 LIST)"]
+          },
+          {
+            "items": [
+              "$300.00"
+            ]
+          }
+        ]
+      },
+      {
+        "style":"total",
+        "cells":[
+          {
+            "items": [
+              ""
+            ]
+          },
+          {
+            "items": [
+              ""
+            ]
+          },
+          {
+            "items": [
+              ""
+            ]
+          },
+          {
+            "items": [
+              "TOTAL"
+            ]
+          },
+          {
+            "items": [
+              "$31,624.35"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

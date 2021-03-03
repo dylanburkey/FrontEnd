@@ -1,0 +1,53 @@
+{
+  "promotions-detail-magnum-pro": {
+    "id": "configure-your-gun",
+    "title": "Configure to Fit Your Needs ",
+    "sub-title": "Select your specs to see which gun and expendables to buy.",
+    "select-items": [
+      {
+        "label": "Rated Output",
+        "items":[
+          {
+            "option":"Rated Output"
+          },
+          {
+            "option":"Rated Output 2"
+          },
+          {
+            "option":"Rated Output 3"
+          }
+        ]
+      },
+      {
+        "label": "Duty Cycle",
+        "items":[
+          {
+            "option":"Duty Cycle"
+          },
+          {
+            "option":"Duty Cycle 2"
+          },
+          {
+            "option":"Duty Cycle 3"
+          }
+        ]
+      },
+      {
+        "label": "Gun Length",
+        "product-model": true,
+        "items":[
+          {
+            "option":"Gun Length"
+          },
+          {
+            "option":"Gun Length 2"
+          },
+          {
+            "option":"Gun Length 3"
+          }
+        ]
+      }
+    ],
+    "related-prod": true
+  }
+}

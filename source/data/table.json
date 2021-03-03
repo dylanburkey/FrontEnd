@@ -1,0 +1,510 @@
+{
+  "pdp-authenticated": {
+    "tbody-rows": [
+      {
+        "cells": [
+          {
+            "value": "<strong>Weight</strong>"
+          },
+          {
+            "value": "1.41 lbs. (0.64kg)"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "value": "<strong>Lens Switching Speed (sec)</strong>"
+          },
+          {
+            "value": "1/25,000"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "value": "<strong>Variable Shade/Control</strong>"
+          },
+          {
+            "value": "5-13/Internal"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "value": "<strong>Battery Replacement Type</strong>"
+          },
+          {
+            "value": "1 Cr2450 Replaceable Battery"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "value": "<strong>Magnifying \"Cheater\" Capable Lens</strong>"
+          },
+          {
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "value": "<strong>Grind Mode Shade/Control</strong>"
+          },
+          {
+            "value": "3.5/Internal"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "value": "<strong>Light Sensitivity Control</strong>"
+          },
+          {
+            "value": "Continuous"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "value": "<strong>Delay Control Dark To Light (sec)</strong>"
+          },
+          {
+            "value": "0.1 - 1.0 Fully Adjustable"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "value": "<strong>Arc Sensors</strong>"
+          },
+          {
+            "value": "4"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "value": "<strong>TIG Amp Rating</strong>"
+          },
+          {
+            "value": "DC > 2 Amp<br>DC > 2 Amp"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "value": "<strong>Cartridge Size</strong>"
+          },
+          {
+            "value": "4.5 in X 5.25 in (114 mm X 133 mm)"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "value": "<strong>View Size</strong>"
+          },
+          {
+            "value": "3.74 in X 3.34 in (95 mm X 85 mm)"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "value": "<strong>Temperature Rating</strong>"
+          },
+          {
+            "value": "Operating: -10°C - +55°C (14°F - 131°F)<br>Operating: -10°C - +55°C (14°F - 131°F)"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "value": "<strong>Warranty</strong>"
+          },
+          {
+            "value": "3 Years"
+          }
+        ]
+      }
+    ]
+  },
+  "pdp-consumables": {
+    "hasThead": true,
+    "thead":
+      {
+        "cells": [
+          {
+            "value": "<strong>Requirements</strong>"
+          },
+          {
+            "value": "<strong>Yield Strength(2)</strong><br><strong>MPa (ksi)</strong>"
+          },
+          {
+            "value": "<strong>Tensile Strength</strong><br><strong>MPa (ksi)</strong>"
+          },
+          {
+            "value": "<strong>Elongation %</strong>"
+          },
+          {
+            "value": "<strong>Charpy V-Notch J <br>(ft•lbf) @ -29°C (-20°F)</strong>"
+          },
+          {
+            "value": "<strong>Charpy V-Notch J <br>(ft•lbf) @ -40°C (-40°F)</strong>"
+          },
+          {
+            "value": "<strong>Voltage volts</strong>"
+          },
+          {
+            "value": "<strong>Approx. Current</strong>"
+          },
+          {
+            "value": "<strong>Melt-off Rate kg/hr (lb/hr)</strong>"
+          },
+          {
+            "value": "<strong>Charpy V-Notch J <br>(ft•lbf) @ -40°C (-40°F)</strong>"
+          },
+          {
+            "value": "<strong>Charpy V-Notch J <br>(ft•lbf) @ -40°C (-40°F)</strong>"
+          },
+          {
+            "value": "<strong>Charpy V-Notch J <br>(ft•lbf) @ -40°C (-40°F)</strong>"
+          },
+          {
+            "value": "<strong>Charpy V-Notch J <br>(ft•lbf) @ -40°C (-40°F)</strong>"
+          },
+          {
+            "value": "<strong>Charpy V-Notch J <br>(ft•lbf) @ -40°C (-40°F)</strong>"
+          }
+        ]
+      },
+    "tbody-rows": [
+      {
+        "cells": [
+          {
+            "value": "<strong>AWS ER70S-6</strong><br><strong>As-Welded with 100% CO2</strong>"
+          },
+          {
+            "value": "400 (58) min"
+          },
+          {
+            "value": "400 (70) min"
+          },
+          {
+            "value": "22 min"
+          },
+          {
+            "value": "27 (20) min"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "value": "<strong>MIL-70S-6 per MIL-E-23765/1</strong><br><strong>As-Welded with CO2 and 98% Ar/2% O2</strong>"
+          },
+          {
+            "value": "380-550 (55-80)"
+          },
+          {
+            "value": "485 (70) min"
+          },
+          {
+            "value": "22 min"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "value": "<strong>AWS ER70S-6</strong><br><strong>As-Welded with 100% CO2</strong>"
+          },
+          {
+            "value": "360 (52) min"
+          },
+          {
+            "value": "485 (70) min"
+          },
+          {
+            "value": "26 min"
+          },
+          {
+            "value": "27 (20) min"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          }
+        ]
+      }
+    ]
+  },
+  "pdp-consumables-nested-tables": {
+    "thead": {
+      "cells": [
+        {
+          "value": "<strong>Requirements</strong>"
+        },
+        {
+          "value": "<strong>Yield Strength(2)</strong><br><strong>MPa (ksi)</strong>"
+        },
+        {
+          "value": "<strong>Tensile Strength</strong><br><strong>MPa (ksi)</strong>"
+        },
+        {
+          "value": "<strong>Elongation %</strong>"
+        },
+        {
+          "colspan": "2",
+          "nested-tables": [
+            {
+              "rows": [
+                {
+                  "cells": [
+                    {
+                      "value": "<strong>Charpy V-Notch J (ft•lbf)</strong>",
+                      "colspan": "2"
+                    }
+                  ]
+                },
+                {
+                  "cells": [
+                    {
+                      "value": "@ -29°C (-29°F)"
+                    },
+                    {
+                      "value": "@ -40°C (-40°F)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "tbody-rows": [
+      {
+        "cells": [
+          {
+            "value": "<strong>AWS ER70S-6</strong><br><strong>As-Welded with 100% CO2</strong>"
+          },
+          {
+            "value": "400 (58) min"
+          },
+          {
+            "value": "400 (70) min"
+          },
+          {
+            "value": "22 min"
+          },
+          {
+            "value": "27 (20) min"
+          },
+          {
+            "value": "Not Specified"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "value": "<strong>MIL-70S-6 per MIL-E-23765/1</strong><br><strong>As-Welded with CO2 and 98% Ar/2% O2</strong>"
+          },
+          {
+            "value": "380-550 (55-80)"
+          },
+          {
+            "value": "485 (70) min"
+          },
+          {
+            "value": "22 min"
+          },
+          {
+            "value": "Not Specified"
+          },
+          {
+            "value": "Not Specified"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "value": "<strong>AWS ER70S-6</strong><br><strong>As-Welded with 100% CO2</strong>"
+          },
+          {
+            "value": "360 (52) min"
+          },
+          {
+            "value": "485 (70) min"
+          },
+          {
+            "value": "26 min"
+          },
+          {
+            "value": "27 (20) min"
+          },
+          {
+            "value": "Not Specified"
+          }
+        ]
+      }
+    ]
+  },
+  "category-landing": {
+    "thead": {
+      "cells": [
+        {
+          "value": "<strong>Model</strong>"
+        },
+        {
+          "value": "<strong>Input Power</strong>"
+        },
+        {
+          "value": "<strong>Rated Output</strong>"
+        },
+        {
+          "value": "<strong>Dimensions (H x W x D)</strong>"
+        },
+        {
+          "value": "<strong>Net Weight</strong>"
+        }
+      ]
+    },
+    "tbody-rows": [
+      {
+        "cells": [
+          {
+            "value": "<img style=\"float: left;\" width=\"50\" src=\"/images/product2.png\" alt=\"ghgh\"><strong>Invertec® V155-S TIG/Stick Welder Ready-Pak®</strong>"
+          },
+          {
+            "value": "115/230/1/50/60"
+          },
+          {
+            "value": "130A/15.2V/30%<br>155A/16.2V/30%"
+          },
+          {
+            "value": "31 in x 22 in x 26 in<br>(787 mm x 559 mm x 660 mm)"
+          },
+          {
+            "value": "507.00 (229.98 kg)"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "value": "<img style=\"float: left;\"  width=\"50\" src=\"/images/product2.png\" alt=\"ghgh\"><strong>Invertec® V160-T TIG Welder</strong>"
+          },
+          {
+            "value": "115/230/1/50/60"
+          },
+          {
+            "value": "130A/15.2V/30%<br>155A/16.2V/30%"
+          },
+          {
+            "value": "31 in x 22 in x 26 in<br>(787 mm x 559 mm x 660 mm)"
+          },
+          {
+            "value": "507.00 (229.98 kg)"
+          }
+        ]
+      }
+    ]
+  }
+}
